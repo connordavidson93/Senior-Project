@@ -5,16 +5,16 @@ using System;
 
 public class AttackState : BaseState
 {
-    private Squad squad;
+    private Base_AI ai;
 
-    public AttackState(Squad _squad) : base(_squad.gameObject)
+    public AttackState(Base_AI _ai) : base(_ai.gameObject)
     {
-        squad = _squad;
+        ai = _ai;
     }
 
     public override Type Tick()
     {
-        if(Vector3.Distance(squad.transform.position, squad.currentTarget.transform.position) > squad.range)
+        if(Vector3.Distance(ai.transform.position, ai.currentTarget.transform.position) > ai.range)
         {
             return typeof(ChaseState);
         }

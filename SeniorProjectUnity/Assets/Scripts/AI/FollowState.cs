@@ -5,20 +5,20 @@ using System;
 
 public class FollowState : BaseState
 {
-    Squad squad;
+    Base_AI ai;
     GameObject player;
 
-    public FollowState(Squad _squad) : base(_squad.gameObject)
+    public FollowState(Base_AI _ai) : base(_ai.gameObject)
     {
-        squad = _squad;
-        player = squad.player;
+        ai = _ai;
+        player = ai.player;
     }
 
     public override Type Tick()
     {
-        squad.SetDestination(player.transform.position);
+        ai.SetDestination(player.transform.position);
 
-        if(Vector3.Distance(squad.transform.position, player.transform.position) <= squad.followDistance)
+        if(Vector3.Distance(ai.transform.position, player.transform.position) <= ai.followDistance)
         {
             return typeof(IdleState);
         }

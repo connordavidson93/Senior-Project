@@ -5,16 +5,16 @@ using System;
 
 public class IdleState : BaseState
 {
-    private Squad squad;
+    private Base_AI ai;
 
-    public IdleState(Squad _squad) : base(_squad.gameObject)
+    public IdleState(Base_AI _ai) : base(_ai.gameObject)
     {
-        squad = _squad;
+        ai = _ai;
     }
 
     public override Type Tick()
     {
-        if(Vector3.Distance(squad.transform.position, squad.player.transform.position) > squad.followDistance)
+        if(Vector3.Distance(ai.transform.position, ai.player.transform.position) > ai.followDistance)
         {
             return typeof(FollowState);
         }
