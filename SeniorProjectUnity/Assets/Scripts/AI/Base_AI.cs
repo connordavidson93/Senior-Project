@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 public abstract class Base_AI : MonoBehaviour
@@ -9,30 +6,24 @@ public abstract class Base_AI : MonoBehaviour
     public FSM fsm => GetComponent<FSM>();
     public NavMeshAgent ai => GetComponent<NavMeshAgent>();
     public bool alive;
+    public bool enemyFound;
     float timeScale = 0.01f;
-    public float followDistance = 10;
     public float range = 5;
     public GameObject currentTarget;
 
     public GameObject player => GameObject.FindWithTag("Player");
 
-    private void Awake()
+    //variables for scanning
+    public float height;
+    public float sightDist;
+
+    protected virtual void Awake()
     {
         alive = true;
         InitializeFSM();
     }
 
-    protected virtual void InitializeFSM()
-    {
-        var states = new Dictionary<Type, BaseState>
-        {
-            { typeof(IdleState), new IdleState(this) },
-            { typeof(ChaseState), new ChaseState(this) },
-            { typeof(FollowState), new FollowState(this) }
-        };
-
-        fsm.SetStates(states);
-    }
+    protected abstract void InitializeFSM();
 
     public virtual void SetSpeed(float _speed)
     {

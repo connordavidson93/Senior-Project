@@ -5,10 +5,10 @@ using System;
 
 public class FollowState : BaseState
 {
-    Base_AI ai;
+    Squad ai;
     GameObject player;
 
-    public FollowState(Base_AI _ai) : base(_ai.gameObject)
+    public FollowState(Squad _ai) : base(_ai.gameObject)
     {
         ai = _ai;
         player = ai.player;
@@ -18,13 +18,23 @@ public class FollowState : BaseState
     {
         ai.SetDestination(player.transform.position);
 
-        if(Vector3.Distance(ai.transform.position, player.transform.position) <= ai.followDistance)
+        if (ai.givenOrder && ai.currentOrder != null)
+            return typeof(OrderState);
+        else if (ai.enemyFound && !ai.recalled && Vector3.Distance(ai.currentTarget.transform.position, ai.transform.position) > ai.range)
+            return typeof(ChaseState);
+        else if (ai.enemyFound && !ai.recalled && Vector3.Distance(ai.currentTarget.transform.position, ai.transform.position) <= ai.range)
+            return typeof(AttackState);
+        else if (Vector3.Distance(ai.transform.position, player.transform.position) <= ai.followDistance)
         {
+            ai.recalled = false;
             return typeof(IdleState);
         }
-        else
+        else if (Vector3.Distance(ai.transform.position, player.transform.position) > ai.followDistance)
         {
-            return null;
+            ai.ai.stoppingDistance = ai.followDistance;
+            return typeof(FollowState);
         }
+        else
+            return null;
     }
 }

@@ -1,23 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 using System;
 
+[RequireComponent(typeof(FSM))]
 public class Enemy : Base_AI
 {
-
-    private void Awake()
-    {
-        alive = true;
-        InitializeFSM();
-    }
-
     protected override void InitializeFSM()
     {
         var states = new Dictionary<Type, BaseState>
         {
-            { typeof(IdleState), new IdleState(this) },
             { typeof(ChaseState), new ChaseState(this) },
             { typeof(AttackState), new AttackState(this) }
         };

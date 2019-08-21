@@ -1,12 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using System;
-using UnityEngine.AI;
 
+[RequireComponent(typeof(FSM))]
 public class Squad : Base_AI
 {
     public enum UnitType { SPOTTER, SNIPER, STRONG }
+    public UnitType unitType;
+    public bool givenOrder;
+    public GameObject currentOrder;
+    public float followDistance = 10;
+    public bool recalled;
+
+    protected override void Awake()
+    {
+        ai.stoppingDistance = followDistance;
+        base.Awake();
+    }
 
     protected override void InitializeFSM()
     {
@@ -14,7 +24,9 @@ public class Squad : Base_AI
         {
             { typeof(IdleState), new IdleState(this) },
             { typeof(ChaseState), new ChaseState(this) },
-            { typeof(FollowState), new FollowState(this) }
+            { typeof(FollowState), new FollowState(this) },
+            { typeof(AttackState), new AttackState(this) },
+            { typeof(OrderState), new OrderState(this) }
         };
 
         fsm.SetStates(states);

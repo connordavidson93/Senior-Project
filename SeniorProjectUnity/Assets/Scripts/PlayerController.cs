@@ -35,7 +35,8 @@ public class PlayerController : MonoBehaviour
 	//variables for squad orders
 	public LayerMask squad;
 	public Camera cam;
-	public List<SquadAIFSM> squadMembers;
+	public List<Squad> squadMembers;
+	OrderController order;
 #endregion
 
 	void Awake()
@@ -76,20 +77,24 @@ public class PlayerController : MonoBehaviour
 		{
 			if(Input.GetKeyDown(KeyCode.Q) && hit.collider.tag == "order")
 			{
-				OrderController order = hit.collider.gameObject.GetComponent<OrderController>();
-				foreach (SquadAIFSM member in squadMembers)
+				order = hit.collider.gameObject.GetComponent<OrderController>();
+				foreach (Squad member in squadMembers)
 				{
 					if(member.unitType == order.unitType)
 					{
 						if(order.inProgress)
 						{
-							member.SetState(SquadAIFSM.State.RECALLED);
+							member.recalled = true;
+							order.inProgress = false;
+							print("Belay that soldier!");
 						}
 						else
 						{
-							member.order = hit.collider.gameObject;
-							member.SetState(SquadAIFSM.State.ORDER);
+							member.recalled = false;
+							member.givenOrder = true;
+							member.currentOrder = order.gameObject;
 							order.inProgress = true;
+							print("Do the thing soldier!");
 						}
 					}
 				}
@@ -98,9 +103,12 @@ public class PlayerController : MonoBehaviour
 
 		if(Input.GetKeyDown(KeyCode.R))
 		{
-			foreach (SquadAIFSM member in squadMembers)
+			foreach (Squad member in squadMembers)
 			{
-				member.SetState(SquadAIFSM.State.RECALLED);
+				member.recalled = true;
+				member.givenOrder = false;
+				member.currentOrder = null;
+				order.inProgress = false;
 			}
 		}
 	}
