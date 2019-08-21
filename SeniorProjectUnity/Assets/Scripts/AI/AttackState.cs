@@ -24,20 +24,22 @@ public class AttackState : BaseState
 
     public override Type Tick()
     {
-        if (temp != null && temp.currentOrder != null && temp.givenOrder)
+        if (!health.alive)
+            return typeof(DeathState);
+        else if (temp != null && temp.currentOrder != null && temp.givenOrder)
             return typeof(OrderState);
-        else if(Vector3.Distance(ai.transform.position, ai.currentTarget.transform.position) > ai.range)
-            return typeof(ChaseState);
-        else if (ai.currentTarget != null)
-        {
-            //do damage
-            return null;
-        }
-        else if (temp != null && temp.recalled)
-        {
+        else if (ai.currentTarget == null)
             return typeof(FollowState);
-        }
+        else if (temp != null && temp.recalled)
+            return typeof(FollowState);
+        else if (Vector3.Distance(ai.transform.position, ai.currentTarget.transform.position) > ai.stats.range)
+            return typeof(ChaseState);
+        else if (Vector3.Dot(ai.transform.forward, (ai.currentTarget.transform.position - ai.transform.position).normalized) <= 0.25)
+            return typeof(ChaseState);
         else
-            return typeof(IdleState);
+        {
+            ai.animControl.SetBool("Attack", true);
+            return typeof(AttackState);
+        }
     }
 }

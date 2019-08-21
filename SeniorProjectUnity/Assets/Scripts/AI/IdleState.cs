@@ -26,11 +26,13 @@ public class IdleState : BaseState
     {
         Scan();
         
-        if (temp != null && temp.currentOrder != null && temp.givenOrder)
+        if (!health.alive)
+            return typeof(DeathState);
+        else if (temp != null && temp.currentOrder != null && temp.givenOrder)
             return typeof(OrderState);
-        else if (ai.enemyFound && Vector3.Distance(ai.currentTarget.transform.position, ai.transform.position) > ai.range)
+        else if (ai.enemyFound && Vector3.Distance(ai.currentTarget.transform.position, ai.transform.position) > ai.stats.range)
             return typeof(ChaseState);
-        else if (ai.enemyFound && Vector3.Distance(ai.currentTarget.transform.position, ai.transform.position) <= ai.range)
+        else if (ai.enemyFound && Vector3.Distance(ai.currentTarget.transform.position, ai.transform.position) <= ai.stats.range)
             return typeof(AttackState);
         else if (temp != null && Vector3.Distance(temp.transform.position, temp.player.transform.position) > temp.followDistance)
         {
@@ -66,7 +68,7 @@ public class IdleState : BaseState
 
     void EnemyFound(RaycastHit _hit)
     {
-        if(_hit.collider.tag == "Enemy" && ai.currentTarget == null)
+        if(ai.IsEnemy(_hit.collider.tag) && ai.currentTarget == null)
         {
             ai.currentTarget = _hit.collider.gameObject;
             ai.enemyFound = true;

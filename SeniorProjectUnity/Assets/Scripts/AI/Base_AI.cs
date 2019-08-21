@@ -1,14 +1,19 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
+using System.Collections.Generic;
+using UnityEngine.Events;
 
+[RequireComponent(typeof(NavMeshAgent)), RequireComponent(typeof(FSM))]
 public abstract class Base_AI : MonoBehaviour
 {
+    public static UnityAction<GameObject> DeathAction;
+
+    public Base_Stats stats;
+    public AnimController animControl => GetComponentInChildren<AnimController>();
     public FSM fsm => GetComponent<FSM>();
     public NavMeshAgent ai => GetComponent<NavMeshAgent>();
-    public bool alive;
     public bool enemyFound;
-    float timeScale = 0.01f;
-    public float range = 5;
+    public List<string> enemyTags;
     public GameObject currentTarget;
 
     public GameObject player => GameObject.FindWithTag("Player");
@@ -19,8 +24,17 @@ public abstract class Base_AI : MonoBehaviour
 
     protected virtual void Awake()
     {
-        alive = true;
         InitializeFSM();
+    }
+
+    private void OnEnable()
+    {
+        DeathAction += TargetDied;
+    }
+
+    private void OnDisable()
+    {
+        DeathAction -= TargetDied;
     }
 
     protected abstract void InitializeFSM();
@@ -40,8 +54,24 @@ public abstract class Base_AI : MonoBehaviour
         ai.stoppingDistance = _stopDist;
     }
 
-    public virtual void Die()
+    public virtual bool IsEnemy(string _tag)
     {
-        alive = false;
+        foreach(string item in enemyTags)
+        {
+            if(item == _tag)
+                return true;
+        }
+        return false;
+    }
+
+    public abstract void Die();
+    
+    public void TargetDied(GameObject _target)
+    {
+        if(_target == currentTarget)
+        {
+            currentTarget = null;
+            enemyFound = false;
+        }
     }
 }

@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    int maxHealth;
-    bool alive;
+    public Base_Stats stats;
+    public bool alive;
     int currentHealth;
 
     private void Start()
     {
-        currentHealth = maxHealth;
+        currentHealth = stats.maxHealth;
         alive = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "hitbox" && alive)
+        {
+            TakeDamage(other.GetComponent<Damage>().totalDamage);
+        }
     }
 
     public void TakeDamage(int _damage)
@@ -19,7 +27,7 @@ public class Health : MonoBehaviour
         currentHealth -= _damage;
         if(currentHealth <= 0)
         {
-            //die
+            alive = false;
         }
     }
 }

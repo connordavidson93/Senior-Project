@@ -2,7 +2,6 @@
 using UnityEngine;
 using System;
 
-[RequireComponent(typeof(FSM))]
 public class Squad : Base_AI
 {
     public enum UnitType { SPOTTER, SNIPER, STRONG }
@@ -26,7 +25,8 @@ public class Squad : Base_AI
             { typeof(ChaseState), new ChaseState(this) },
             { typeof(FollowState), new FollowState(this) },
             { typeof(AttackState), new AttackState(this) },
-            { typeof(OrderState), new OrderState(this) }
+            { typeof(OrderState), new OrderState(this) },
+            { typeof(DeathState), new DeathState(this) }
         };
 
         fsm.SetStates(states);
@@ -49,6 +49,6 @@ public class Squad : Base_AI
 
     public override void Die()
     {
-        base.Die();
+        gameObject.SetActive(false);
     }
 }

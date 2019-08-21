@@ -8,17 +8,19 @@ public class PlayerController : MonoBehaviour
 #region VARIABLES
 	[HideInInspector] public Animator anim;
 
+	Health health => GetComponent<Health>();
+
     //basic movement
     private CharacterController cc;
+
 	public float verticalVelocity = 0.0f;
-	
 	public float jogSpeed = 10.0f;
 	public float runSpeed = 15.0f;
 	public float walkSpeed = 5.0f;
 	float speed;
 	
 	Vector3 move = Vector3.zero;
-    public bool canMove, alive = true;
+    public bool canMove = true;
     public Camera maincam;
 
     //variables for jump/roll
@@ -34,7 +36,6 @@ public class PlayerController : MonoBehaviour
 
 	//variables for squad orders
 	public LayerMask squad;
-	public Camera cam;
 	public List<Squad> squadMembers;
 	OrderController order;
 #endregion
@@ -55,7 +56,7 @@ public class PlayerController : MonoBehaviour
 
 	IEnumerator PlayGame() 
 	{
-		while(alive)
+		while(health.alive)
 		{
 			if(canMove)
 			{
@@ -71,9 +72,9 @@ public class PlayerController : MonoBehaviour
 	//input for giving orders
 	void OrderInput()
 	{
-		Debug.DrawRay((cam.transform.position + new Vector3(0,0.5f,0)), cam.transform.forward * 100, Color.red);
+		Debug.DrawRay((maincam.transform.position + new Vector3(0,0.5f,0)), maincam.transform.forward * 100, Color.red);
 		RaycastHit hit;
-		if(Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 100f, squad))
+		if(Physics.Raycast(maincam.transform.position, maincam.transform.forward, out hit, 100f, squad))
 		{
 			if(Input.GetKeyDown(KeyCode.Q) && hit.collider.tag == "order")
 			{
@@ -94,7 +95,7 @@ public class PlayerController : MonoBehaviour
 							member.givenOrder = true;
 							member.currentOrder = order.gameObject;
 							order.inProgress = true;
-							print("Do the thing soldier!");
+							print("Do the thing, soldier!");
 						}
 					}
 				}
@@ -103,12 +104,14 @@ public class PlayerController : MonoBehaviour
 
 		if(Input.GetKeyDown(KeyCode.R))
 		{
+			print("Form up!");
 			foreach (Squad member in squadMembers)
 			{
 				member.recalled = true;
 				member.givenOrder = false;
 				member.currentOrder = null;
-				order.inProgress = false;
+				if (order != null)
+					order.inProgress = false;
 			}
 		}
 	}
@@ -232,12 +235,4 @@ public class PlayerController : MonoBehaviour
 			return false;
 		}
 	}
-
-	//dynamic turning
-	//vault over small obsticals
-	//realistic jump
-	//swift attacks build up to power attacks
-	//counter-attacks
-	//shield
-	//running into wall stops you
 }

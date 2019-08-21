@@ -2,15 +2,17 @@
 using UnityEngine;
 using System;
 
-[RequireComponent(typeof(FSM))]
 public class Enemy : Base_AI
 {
+
     protected override void InitializeFSM()
     {
         var states = new Dictionary<Type, BaseState>
         {
+            { typeof(IdleState), new IdleState(this) },
             { typeof(ChaseState), new ChaseState(this) },
-            { typeof(AttackState), new AttackState(this) }
+            { typeof(AttackState), new AttackState(this) },
+            { typeof(DeathState), new DeathState(this) }
         };
 
         fsm.SetStates(states);
@@ -33,6 +35,7 @@ public class Enemy : Base_AI
 
     public override void Die()
     {
-        base.Die();
+        gameObject.SetActive(false);
+        Base_AI.DeathAction(gameObject);
     }
 }
