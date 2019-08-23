@@ -76,12 +76,13 @@ public class PlayerController : MonoBehaviour
 		RaycastHit hit;
 		if(Physics.Raycast(maincam.transform.position, maincam.transform.forward, out hit, 100f, squad))
 		{
-			if(Input.GetKeyDown(KeyCode.Q) && hit.collider.tag == "order")
+			bool found = (hit.collider.tag == "order" || hit.collider.tag == "Enemy");
+			if(Input.GetKeyDown(KeyCode.Q) && found)
 			{
 				order = hit.collider.gameObject.GetComponent<OrderController>();
 				foreach (Squad member in squadMembers)
 				{
-					if(member.unitType == order.unitType)
+					if(order != null && member.unitType == order.unitType)
 					{
 						if(order.inProgress)
 						{
@@ -97,6 +98,12 @@ public class PlayerController : MonoBehaviour
 							order.inProgress = true;
 							print("Do the thing, soldier!");
 						}
+					}
+					else if (hit.collider.tag == "Enemy")
+					{
+						member.givenOrder = true;
+						member.currentOrder = hit.collider.gameObject;
+						print("attack that fool, soldier!");
 					}
 				}
 			}

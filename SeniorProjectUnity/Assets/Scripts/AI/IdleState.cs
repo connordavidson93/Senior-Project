@@ -35,15 +35,15 @@ public class IdleState : BaseState
         else if (ai.enemyFound && Vector3.Distance(ai.currentTarget.transform.position, ai.transform.position) <= ai.stats.range)
             return typeof(AttackState);
         else if (temp != null && Vector3.Distance(temp.transform.position, temp.player.transform.position) > temp.followDistance)
-        {
             return typeof(FollowState);
-        }
+        else if (enemy != null)
+            return typeof(WanderState);
         else
-            return null;
+            return typeof(IdleState);
     }
-
+    
     //Created line of sight and if an enemy is seen changes state to be PURSUE
-    void Scan()
+    protected void Scan()
     {
         //Creates visible raycasts
         Debug.DrawRay(transform.position + Vector3.up * ai.height, transform.forward * ai.sightDist, Color.green);

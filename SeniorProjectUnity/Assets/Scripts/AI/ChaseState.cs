@@ -25,22 +25,34 @@ public class ChaseState : BaseState
     public override Type Tick()
     {
         if (!health.alive)
+        {
+            ai.RemoveTarget();
             return typeof(DeathState);
+        }
         else if (temp != null && temp.givenOrder && temp.currentOrder != null)
+        {
+            ai.RemoveTarget();
             return typeof(OrderState);
+        }
         else if (ai.currentTarget == null)
+        {
+            ai.RemoveTarget();
             return typeof(IdleState);
-        else if (Vector3.Distance(ai.transform.position, ai.currentTarget.transform.position) > ai.stats.range || Vector3.Dot(ai.transform.forward, (ai.currentTarget.transform.position - ai.transform.position).normalized) > 0.25)
+        }
+        else if (temp != null && temp.recalled)
+        {
+            ai.RemoveTarget();
+            return typeof(FollowState);
+        }
+        else if(Vector3.Distance(ai.transform.position, ai.currentTarget.transform.position) <= ai.stats.range)
+            return typeof(AttackState);
+        else if (Vector3.Distance(ai.transform.position, ai.currentTarget.transform.position) > ai.stats.range)
             {
-                //if the ai is already at stopping distance it won't turn to face enemy
                 ai.SetStoppingDist(ai.stats.range);
                 ai.SetDestination(ai.currentTarget.transform.position);
                 return typeof(ChaseState);
             }
-        else if(Vector3.Distance(ai.transform.position, ai.currentTarget.transform.position) <= ai.stats.range && Vector3.Dot(ai.transform.forward, (ai.currentTarget.transform.position - ai.transform.position).normalized) <= 0.25)
-            return typeof(AttackState);
-        else if (temp != null && temp.recalled)
-            return typeof(FollowState);
+        
         else
             return null;
     }

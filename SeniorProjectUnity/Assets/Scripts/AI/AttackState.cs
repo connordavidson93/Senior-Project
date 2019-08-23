@@ -25,13 +25,25 @@ public class AttackState : BaseState
     public override Type Tick()
     {
         if (!health.alive)
+        {
+            ai.RemoveTarget();
             return typeof(DeathState);
+        }
         else if (temp != null && temp.currentOrder != null && temp.givenOrder)
+        {
+            ai.RemoveTarget();
             return typeof(OrderState);
+        }
         else if (ai.currentTarget == null)
+        {
+            ai.RemoveTarget();
             return typeof(FollowState);
+        }
         else if (temp != null && temp.recalled)
+        {
+            ai.RemoveTarget();
             return typeof(FollowState);
+        }
         else if (Vector3.Distance(ai.transform.position, ai.currentTarget.transform.position) > ai.stats.range)
             return typeof(ChaseState);
         else if (Vector3.Dot(ai.transform.forward, (ai.currentTarget.transform.position - ai.transform.position).normalized) <= 0.25)
@@ -42,4 +54,6 @@ public class AttackState : BaseState
             return typeof(AttackState);
         }
     }
+
+    
 }
