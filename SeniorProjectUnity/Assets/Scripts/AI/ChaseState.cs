@@ -44,16 +44,28 @@ public class ChaseState : BaseState
             ai.RemoveTarget();
             return typeof(FollowState);
         }
-        else if(Vector3.Distance(ai.transform.position, ai.currentTarget.transform.position) <= ai.stats.range)
+        else if(Vector3.Distance(ai.transform.position, ai.currentTarget.transform.position) <= ai.stats.range 
+        && Vector3.Dot(ai.transform.forward, (ai.currentTarget.transform.position - ai.transform.position).normalized) > 0.25)
+        {
             return typeof(AttackState);
+        }
+        else if (ai.ai.remainingDistance <= ai.stats.range && ai.enemyFound && ai.currentTarget != null
+        && Vector3.Dot(ai.transform.forward, (ai.currentTarget.transform.position - ai.transform.position).normalized) <= 0.25)
+        {
+            ai.transform.LookAt(ai.currentTarget.transform);
+            return typeof(ChaseState);
+        }
         else if (Vector3.Distance(ai.transform.position, ai.currentTarget.transform.position) > ai.stats.range)
-            {
-                ai.SetStoppingDist(ai.stats.range);
-                ai.SetDestination(ai.currentTarget.transform.position);
-                return typeof(ChaseState);
-            }
-        
+        {
+            ai.SetStoppingDist(ai.stats.range);
+            ai.SetDestination(ai.currentTarget.transform.position);
+
+            return typeof(ChaseState);
+        }
         else
+        {
+            Debug.Log("Chase error");
             return null;
+        }
     }
 }
