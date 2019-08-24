@@ -20,6 +20,8 @@ public class FollowState : BaseState
 
         if (!health.alive)
             return typeof(DeathState);
+        else if (ai.damaged)
+            return typeof(DamagedState);
         else if (ai.givenOrder && ai.currentOrder != null)
             return typeof(OrderState);
         else if (ai.enemyFound && !ai.recalled && Vector3.Distance(ai.currentTarget.transform.position, ai.transform.position) > ai.stats.range)

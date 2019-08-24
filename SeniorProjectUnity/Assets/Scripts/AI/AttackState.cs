@@ -29,6 +29,8 @@ public class AttackState : BaseState
             ai.RemoveTarget();
             return typeof(DeathState);
         }
+        else if (ai.damaged)
+            return typeof(DamagedState);
         else if (temp != null && temp.currentOrder != null && temp.givenOrder)
         {
             ai.RemoveTarget();

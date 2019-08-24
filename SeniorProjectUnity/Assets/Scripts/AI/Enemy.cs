@@ -13,7 +13,8 @@ public class Enemy : Base_AI
             { typeof(ChaseState), new ChaseState(this) },
             { typeof(AttackState), new AttackState(this) },
             { typeof(DeathState), new DeathState(this) },
-            { typeof(WanderState), new WanderState(this) }
+            { typeof(WanderState), new WanderState(this) },
+            { typeof(DamagedState), new DamagedState(this) }
         };
 
         fsm.SetStates(states);

@@ -28,6 +28,8 @@ public class IdleState : BaseState
         
         if (!health.alive)
             return typeof(DeathState);
+        else if (ai.damaged)
+            return typeof(DamagedState);
         else if (temp != null && temp.currentOrder != null && temp.givenOrder)
             return typeof(OrderState);
         else if (ai.enemyFound && Vector3.Distance(ai.currentTarget.transform.position, ai.transform.position) > ai.stats.range)

@@ -15,6 +15,7 @@ public abstract class Base_AI : MonoBehaviour
     public bool enemyFound;
     public List<string> enemyTags;
     public GameObject currentTarget;
+    public bool damaged;
 
     public GameObject player => GameObject.FindWithTag("Player");
 

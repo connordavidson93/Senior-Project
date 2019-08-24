@@ -29,6 +29,8 @@ public class ChaseState : BaseState
             ai.RemoveTarget();
             return typeof(DeathState);
         }
+        else if (ai.damaged)
+            return typeof(DamagedState);
         else if (temp != null && temp.givenOrder && temp.currentOrder != null)
         {
             ai.RemoveTarget();

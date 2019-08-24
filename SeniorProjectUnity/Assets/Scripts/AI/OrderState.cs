@@ -14,7 +14,9 @@ public class OrderState : BaseState
 
     public override Type Tick()
     {
-        if(!ai.givenOrder || ai.currentOrder == null || ai.recalled)
+        if (ai.damaged)
+            return typeof(DamagedState);
+        else if(!ai.givenOrder || ai.currentOrder == null || ai.recalled)
             return typeof(FollowState);
         else if(ai.givenOrder && ai.currentOrder.name == ai.enemyTags[0])
         {

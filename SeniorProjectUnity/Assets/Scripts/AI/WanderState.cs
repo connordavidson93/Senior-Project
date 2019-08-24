@@ -24,7 +24,9 @@ public class WanderState : BaseState
     public override Type Tick()
     {
         Scan();
-        if (ai.enemyFound && Vector3.Distance(ai.currentTarget.transform.position, ai.transform.position) > ai.stats.range)
+        if (ai.damaged)
+            return typeof(DamagedState);
+        else if (ai.enemyFound && Vector3.Distance(ai.currentTarget.transform.position, ai.transform.position) > ai.stats.range)
             return typeof(ChaseState);
         else if (ai.enemyFound && Vector3.Distance(ai.currentTarget.transform.position, ai.transform.position) <= ai.stats.range)
             return typeof(AttackState);

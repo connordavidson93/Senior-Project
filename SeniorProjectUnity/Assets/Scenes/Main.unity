@@ -730,6 +730,7 @@ MonoBehaviour:
   - squad
   - Player
   currentTarget: {fileID: 0}
+  damaged: 0
   height: 0.75
   sightDist: 20
 --- !u!114 &622476006
@@ -2303,7 +2304,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!135 &1501221087
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2350,6 +2351,7 @@ MonoBehaviour:
   enemyTags:
   - Enemy
   currentTarget: {fileID: 0}
+  damaged: 0
   height: 0.75
   sightDist: 20
   unitType: 0

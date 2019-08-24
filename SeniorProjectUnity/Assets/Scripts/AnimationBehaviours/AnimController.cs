@@ -6,6 +6,7 @@ public class AnimController : MonoBehaviour
 {
     public Animator anim => GetComponent<Animator>();
     public GameObject hitBox;
+    Base_AI ai => GetComponentInParent<Base_AI>();
 
     public void SetBool(string _name, bool _state)
     {
@@ -20,5 +21,10 @@ public class AnimController : MonoBehaviour
     public void ToggleHitBox()
     {
         hitBox.SetActive(!hitBox.activeSelf);
+    }
+
+    public void RecoverFromDamager()
+    {
+        ai.damaged = false;
     }
 }
