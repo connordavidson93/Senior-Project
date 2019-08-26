@@ -18,6 +18,7 @@ public class FSM : MonoBehaviour
 
     private void Start()
     {
+        canPlay = true;
         stateCheck = StartCoroutine(CheckStates());
     }
 
@@ -31,16 +32,12 @@ public class FSM : MonoBehaviour
         while(canPlay)
         {
             if(currentState == null)
-            {
                 currentState = availableStates.Values.First();
-            }
 
             Type nextState = currentState?.Tick();
 
             if(nextState != null && nextState != currentState?.GetType())
-            {
                 SwitchToNewState(nextState);
-            }
             yield return waitTime;
         }
     }

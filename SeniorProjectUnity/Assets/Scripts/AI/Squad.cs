@@ -1,59 +1,55 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using System;
-using UnityEngine.AI;
 
-public class Squad : MonoBehaviour
+public class Squad : Base_AI
 {
     public enum UnitType { SPOTTER, SNIPER, STRONG }
-
-    public FSM fsm => GetComponent<FSM>();
-    public NavMeshAgent ai => GetComponent<NavMeshAgent>();
     public UnitType unitType;
-    public bool alive;
-    float timeScale = 0.01f;
+    public bool givenOrder;
+    public GameObject currentOrder;
     public float followDistance = 10;
-    public float range = 5;
-    public GameObject currentTarget;
+    public bool recalled;
 
-    public GameObject player => GameObject.FindWithTag("Player");
-
-    private void Awake()
+    protected override void Awake()
     {
-        alive = true;
-        InitializeFSM();
+        ai.stoppingDistance = followDistance;
+        base.Awake();
     }
 
-    void InitializeFSM()
+    protected override void InitializeFSM()
     {
         var states = new Dictionary<Type, BaseState>
         {
             { typeof(IdleState), new IdleState(this) },
             { typeof(ChaseState), new ChaseState(this) },
-            { typeof(FollowState), new FollowState(this) }
+            { typeof(FollowState), new FollowState(this) },
+            { typeof(AttackState), new AttackState(this) },
+            { typeof(OrderState), new OrderState(this) },
+            { typeof(DeathState), new DeathState(this) },
+            { typeof(DamagedState), new DamagedState(this) }
         };
 
         fsm.SetStates(states);
     }
 
-    public void SetSpeed(float _speed)
+    public override void SetSpeed(float _speed)
     {
-        ai.speed = _speed;
+        base.SetSpeed(_speed);
     }
 
-    public void SetDestination(Vector3 _destination)
+    public override void SetDestination(Vector3 _destination)
     {
-        ai.destination = _destination;
+        base.SetDestination(_destination);
     }
 
-    public void SetStoppingDist(float _stopDist)
+    public override void SetStoppingDist(float _stopDist)
     {
-        ai.stoppingDistance = _stopDist;
+        base.SetStoppingDist(_stopDist);
     }
 
-    public void Die()
+    public override void Die()
     {
-        alive = false;
+        gameObject.SetActive(false);
     }
 }
