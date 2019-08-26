@@ -26,7 +26,8 @@ public class Squad : Base_AI
             { typeof(FollowState), new FollowState(this) },
             { typeof(AttackState), new AttackState(this) },
             { typeof(OrderState), new OrderState(this) },
-            { typeof(DeathState), new DeathState(this) }
+            { typeof(DeathState), new DeathState(this) },
+            { typeof(DamagedState), new DamagedState(this) }
         };
 
         fsm.SetStates(states);

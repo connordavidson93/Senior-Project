@@ -15,6 +15,7 @@ public abstract class Base_AI : MonoBehaviour
     public bool enemyFound;
     public List<string> enemyTags;
     public GameObject currentTarget;
+    public bool damaged;
 
     public GameObject player => GameObject.FindWithTag("Player");
 
@@ -64,14 +65,19 @@ public abstract class Base_AI : MonoBehaviour
         return false;
     }
 
+    public void RemoveTarget()
+    {
+        currentTarget = null;
+        enemyFound = false;
+    }
+
     public abstract void Die();
     
     public void TargetDied(GameObject _target)
     {
         if(_target == currentTarget)
         {
-            currentTarget = null;
-            enemyFound = false;
+            RemoveTarget();
         }
     }
 }

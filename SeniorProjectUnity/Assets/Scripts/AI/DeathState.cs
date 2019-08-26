@@ -5,11 +5,10 @@ using System;
 
 public class DeathState : BaseState
 {
-    private Base_AI ai;
 
-    public DeathState(Base_AI _ai) : base(_ai.gameObject)
+    public DeathState(Base_AI _ai) : base(_ai.gameObject, _ai)
     {
-        ai = _ai;
+        
     }
 
     public override Type Tick()

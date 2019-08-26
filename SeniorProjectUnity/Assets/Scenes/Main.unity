@@ -252,8 +252,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 377648624}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.76}
-  m_LocalScale: {x: 1, y: 1, z: 2.3533}
+  m_LocalPosition: {x: 0, y: 0, z: 1.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 796925379}
   m_RootOrder: 0
@@ -305,7 +305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 1e20321cc4eb2574cb99f6516c61f14e, type: 2}
-  alive: 0
+  alive: 1
 --- !u!1 &603590016
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,7 +610,8 @@ GameObject:
   - component: {fileID: 622476004}
   - component: {fileID: 622476006}
   - component: {fileID: 622476003}
-  m_Layer: 0
+  - component: {fileID: 622476000}
+  m_Layer: 12
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -646,6 +647,20 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &622476000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622475997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ba41f3b2bfee87498f7685160c52cfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitType: 0
+  inProgress: 0
 --- !u!4 &622476002
 Transform:
   m_ObjectHideFlags: 0
@@ -715,6 +730,7 @@ MonoBehaviour:
   - squad
   - Player
   currentTarget: {fileID: 0}
+  damaged: 0
   height: 0.75
   sightDist: 20
 --- !u!114 &622476006
@@ -2335,6 +2351,7 @@ MonoBehaviour:
   enemyTags:
   - Enemy
   currentTarget: {fileID: 0}
+  damaged: 0
   height: 0.75
   sightDist: 20
   unitType: 0
@@ -3195,5 +3212,10 @@ PrefabInstance:
       propertyPath: squadMembers.Array.data[0]
       value: 
       objectReference: {fileID: 1501221089}
+    - target: {fileID: 4349601396795417861, guid: 093e5c13babd7b041b9ac8fc951a0a26,
+        type: 3}
+      propertyPath: squad.m_Bits
+      value: 6144
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 093e5c13babd7b041b9ac8fc951a0a26, type: 3}
