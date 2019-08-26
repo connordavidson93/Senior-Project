@@ -22,6 +22,11 @@ public class AttackState : BaseState
 
     public override Type Tick()
     {
+        if (enemy != null)
+        {
+            Debug.Log(enemy.CheckSpace());
+        }
+
         if (!health.alive)
         {
             ai.RemoveTarget();
