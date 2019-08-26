@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class OrderController : MonoBehaviour
 {
-    public SquadAIFSM.UnitType unitType;
+    public Squad.UnitType unitType;
     public bool inProgress;
 }

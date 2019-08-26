@@ -8,23 +8,37 @@ public class FollowState : BaseState
     Squad squad;
     GameObject player;
 
-    public FollowState(Squad _squad) : base(_squad.gameObject)
+    public FollowState(Squad _ai) : base(_ai.gameObject, _ai)
     {
-        squad = _squad;
-        player = squad.player;
+        squad = _ai;
+        player = ai.player;
     }
 
     public override Type Tick()
     {
         squad.SetDestination(player.transform.position);
 
-        if(Vector3.Distance(squad.transform.position, player.transform.position) <= squad.followDistance)
+        if (!health.alive)
+            return typeof(DeathState);
+        else if (squad.damaged)
+            return typeof(DamagedState);
+        else if (squad.givenOrder && squad.currentOrder != null)
+            return typeof(OrderState);
+        else if (squad.enemyFound && !squad.recalled && Vector3.Distance(squad.currentTarget.transform.position, squad.transform.position) > squad.stats.range)
+            return typeof(ChaseState);
+        else if (squad.enemyFound && !squad.recalled && Vector3.Distance(squad.currentTarget.transform.position, squad.transform.position) <= squad.stats.range)
+            return typeof(AttackState);
+        else if (Vector3.Distance(squad.transform.position, player.transform.position) <= squad.followDistance)
         {
+            squad.recalled = false;
             return typeof(IdleState);
         }
-        else
+        else if (Vector3.Distance(squad.transform.position, player.transform.position) > squad.followDistance)
         {
-            return null;
+            squad.SetStoppingDist(squad.followDistance);
+            return typeof(FollowState);
         }
+        else
+            return null;
     }
 }
