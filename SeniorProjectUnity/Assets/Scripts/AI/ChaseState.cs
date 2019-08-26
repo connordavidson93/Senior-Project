@@ -5,13 +5,11 @@ using System;
 
 public class ChaseState : BaseState
 {
-    Base_AI ai;
     Squad temp;
     Enemy enemy;
 
-    public ChaseState(Base_AI _ai) : base(_ai.gameObject)
+    public ChaseState(Base_AI _ai) : base(_ai.gameObject, _ai)
     {
-        ai = _ai;
         if(ai is Squad)
         {
             temp = ai as Squad;

@@ -5,37 +5,37 @@ using System;
 
 public class FollowState : BaseState
 {
-    Squad ai;
+    Squad squad;
     GameObject player;
 
-    public FollowState(Squad _ai) : base(_ai.gameObject)
+    public FollowState(Squad _ai) : base(_ai.gameObject, _ai)
     {
-        ai = _ai;
+        squad = _ai;
         player = ai.player;
     }
 
     public override Type Tick()
     {
-        ai.SetDestination(player.transform.position);
+        squad.SetDestination(player.transform.position);
 
         if (!health.alive)
             return typeof(DeathState);
-        else if (ai.damaged)
+        else if (squad.damaged)
             return typeof(DamagedState);
-        else if (ai.givenOrder && ai.currentOrder != null)
+        else if (squad.givenOrder && squad.currentOrder != null)
             return typeof(OrderState);
-        else if (ai.enemyFound && !ai.recalled && Vector3.Distance(ai.currentTarget.transform.position, ai.transform.position) > ai.stats.range)
+        else if (squad.enemyFound && !squad.recalled && Vector3.Distance(squad.currentTarget.transform.position, squad.transform.position) > squad.stats.range)
             return typeof(ChaseState);
-        else if (ai.enemyFound && !ai.recalled && Vector3.Distance(ai.currentTarget.transform.position, ai.transform.position) <= ai.stats.range)
+        else if (squad.enemyFound && !squad.recalled && Vector3.Distance(squad.currentTarget.transform.position, squad.transform.position) <= squad.stats.range)
             return typeof(AttackState);
-        else if (Vector3.Distance(ai.transform.position, player.transform.position) <= ai.followDistance)
+        else if (Vector3.Distance(squad.transform.position, player.transform.position) <= squad.followDistance)
         {
-            ai.recalled = false;
+            squad.recalled = false;
             return typeof(IdleState);
         }
-        else if (Vector3.Distance(ai.transform.position, player.transform.position) > ai.followDistance)
+        else if (Vector3.Distance(squad.transform.position, player.transform.position) > squad.followDistance)
         {
-            ai.SetStoppingDist(ai.followDistance);
+            squad.SetStoppingDist(squad.followDistance);
             return typeof(FollowState);
         }
         else

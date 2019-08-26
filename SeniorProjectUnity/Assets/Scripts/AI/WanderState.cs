@@ -3,14 +3,12 @@ using UnityEngine;
 
 public class WanderState : BaseState
 {
-    Base_AI ai;
     Squad temp;
     Enemy enemy;
     bool wandering;
 
-    public WanderState(Base_AI _ai) : base(_ai.gameObject)
+    public WanderState(Base_AI _ai) : base(_ai.gameObject, _ai)
     {
-        ai = _ai;
         if(ai is Squad)
         {
             temp = ai as Squad;
@@ -45,39 +43,6 @@ public class WanderState : BaseState
                 wandering = false;
 
             return typeof(WanderState);
-        }
-    }
-
-    //Created line of sight and if an enemy is seen changes state to be PURSUE
-    protected void Scan()
-    {
-        //Creates visible raycasts
-        Debug.DrawRay(transform.position + Vector3.up * ai.height, transform.forward * ai.sightDist, Color.green);
-        Debug.DrawRay(transform.position + Vector3.up * ai.height, (transform.forward + transform.right).normalized * ai.sightDist, Color.green);
-        Debug.DrawRay(transform.position + Vector3.up * ai.height, (transform.forward - transform.right).normalized * ai.sightDist, Color.green);
-        
-        //sends out a ray
-        RaycastHit hit;
-        if(Physics.Raycast(transform.position, transform.forward, out hit, ai.sightDist))
-        {
-            EnemyFound(hit);
-        }
-        if(Physics.Raycast(transform.position, (transform.forward + transform.right).normalized, out hit, ai.sightDist))
-        {
-            EnemyFound(hit);
-        }
-        if(Physics.Raycast(transform.position, (transform.forward + transform.right).normalized, out hit, ai.sightDist))
-        {
-            EnemyFound(hit);
-        }
-    }
-
-    void EnemyFound(RaycastHit _hit)
-    {
-        if(ai.IsEnemy(_hit.collider.tag) && ai.currentTarget == null)
-        {
-            ai.currentTarget = _hit.collider.gameObject;
-            ai.enemyFound = true;
         }
     }
 }

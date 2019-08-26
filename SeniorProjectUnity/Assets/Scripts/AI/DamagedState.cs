@@ -5,11 +5,9 @@ using System;
 
 public class DamagedState : BaseState
 {
-    Base_AI ai;
 
-    public DamagedState(Base_AI _ai) : base(_ai.gameObject)
+    public DamagedState(Base_AI _ai) : base(_ai.gameObject, _ai)
     {
-        ai = _ai;
     }
 
     public override Type Tick()

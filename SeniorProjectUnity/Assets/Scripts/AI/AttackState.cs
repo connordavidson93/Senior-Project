@@ -5,13 +5,11 @@ using System;
 
 public class AttackState : BaseState
 {
-    private Base_AI ai;
     private Squad temp;
     private Enemy enemy;
 
-    public AttackState(Base_AI _ai) : base(_ai.gameObject)
+    public AttackState(Base_AI _ai) : base(_ai.gameObject, _ai)
     {
-        ai = _ai;
         if (ai is Squad)
         {
             temp = ai as Squad;

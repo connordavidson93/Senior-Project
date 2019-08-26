@@ -5,34 +5,34 @@ using System;
 
 public class OrderState : BaseState
 {
-    private Squad ai;
+    private Squad squad;
 
-    public OrderState(Squad _ai) : base(_ai.gameObject)
+    public OrderState(Squad _ai) : base(_ai.gameObject, _ai)
     {
-        ai = _ai;
+        squad = _ai;
     }
 
     public override Type Tick()
     {
-        if (ai.damaged)
+        if (squad.damaged)
             return typeof(DamagedState);
-        else if(!ai.givenOrder || ai.currentOrder == null || ai.recalled)
+        else if(!squad.givenOrder || squad.currentOrder == null || squad.recalled)
             return typeof(FollowState);
-        else if(ai.givenOrder && ai.currentOrder.name == ai.enemyTags[0])
+        else if(squad.givenOrder && squad.currentOrder.name == squad.enemyTags[0])
         {
-            ai.enemyFound = true;
-            ai.currentTarget = ai.currentOrder;
-            ai.currentOrder = null;
-            ai.givenOrder = false;
+            squad.enemyFound = true;
+            squad.currentTarget = squad.currentOrder;
+            squad.currentOrder = null;
+            squad.givenOrder = false;
             return typeof(ChaseState);
         }
-        else if (ai.transform.position != ai.currentOrder.transform.position)
+        else if (squad.transform.position != squad.currentOrder.transform.position)
         {
-            ai.SetDestination(ai.currentOrder.transform.position);
-            ai.ai.stoppingDistance = 0;
+            squad.SetDestination(squad.currentOrder.transform.position);
+            squad.ai.stoppingDistance = 0;
             return typeof(OrderState);
         }
-        else if (ai.transform.position == ai.currentOrder.transform.position)
+        else if (squad.transform.position == squad.currentOrder.transform.position)
         {
             return typeof(OrderState);
         }

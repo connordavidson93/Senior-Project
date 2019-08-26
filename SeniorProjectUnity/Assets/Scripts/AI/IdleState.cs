@@ -5,13 +5,11 @@ using System;
 
 public class IdleState : BaseState
 {
-    private Base_AI ai;
     private Squad temp;
     private Enemy enemy;
 
-    public IdleState(Base_AI _ai) : base(_ai.gameObject)
+    public IdleState(Base_AI _ai) : base(_ai.gameObject, _ai)
     {
-        ai = _ai;
         if (ai is Squad)
         {
             temp = ai as Squad;
@@ -44,36 +42,5 @@ public class IdleState : BaseState
             return typeof(IdleState);
     }
     
-    //Created line of sight and if an enemy is seen changes state to be PURSUE
-    protected void Scan()
-    {
-        //Creates visible raycasts
-        Debug.DrawRay(transform.position + Vector3.up * ai.height, transform.forward * ai.sightDist, Color.green);
-        Debug.DrawRay(transform.position + Vector3.up * ai.height, (transform.forward + transform.right).normalized * ai.sightDist, Color.green);
-        Debug.DrawRay(transform.position + Vector3.up * ai.height, (transform.forward - transform.right).normalized * ai.sightDist, Color.green);
-        
-        //sends out a ray
-        RaycastHit hit;
-        if(Physics.Raycast(transform.position, transform.forward, out hit, ai.sightDist))
-        {
-            EnemyFound(hit);
-        }
-        if(Physics.Raycast(transform.position, (transform.forward + transform.right).normalized, out hit, ai.sightDist))
-        {
-            EnemyFound(hit);
-        }
-        if(Physics.Raycast(transform.position, (transform.forward + transform.right).normalized, out hit, ai.sightDist))
-        {
-            EnemyFound(hit);
-        }
-    }
-
-    void EnemyFound(RaycastHit _hit)
-    {
-        if(ai.IsEnemy(_hit.collider.tag) && ai.currentTarget == null)
-        {
-            ai.currentTarget = _hit.collider.gameObject;
-            ai.enemyFound = true;
-        }
-    }
+    
 }
