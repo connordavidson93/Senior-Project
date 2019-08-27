@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 377648625}
   - component: {fileID: 377648626}
   - component: {fileID: 377648627}
-  m_Layer: 2
+  m_Layer: 13
   m_Name: HurtBox
   m_TagString: hitbox
   m_Icon: {fileID: 0}
@@ -799,19 +799,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cba9ac6f7348904d83c6ef89164197d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: 1e20321cc4eb2574cb99f6516c61f14e, type: 2}
+  stats: {fileID: 11400000, guid: 9dae81bc0de7b0540b90154b08d4d5ab, type: 2}
   enemyFound: 0
   enemyTags:
   - squad
   - Player
   currentTarget: {fileID: 0}
   damaged: 0
-  height: 0.75
-  sightDist: 20
-  occupiedSpaceRadius: 5
+  occupiedSpaceRadius: 3
   mask:
     serializedVersion: 2
     m_Bits: 4096
+  height: 0.75
+  sightDist: 20
 --- !u!114 &622476006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1561,19 +1561,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cba9ac6f7348904d83c6ef89164197d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: 1e20321cc4eb2574cb99f6516c61f14e, type: 2}
+  stats: {fileID: 11400000, guid: 9dae81bc0de7b0540b90154b08d4d5ab, type: 2}
   enemyFound: 0
   enemyTags:
   - squad
   - Player
   currentTarget: {fileID: 0}
   damaged: 0
-  height: 0.75
-  sightDist: 20
-  occupiedSpaceRadius: 5
+  occupiedSpaceRadius: 3
   mask:
     serializedVersion: 2
     m_Bits: 4096
+  height: 0.75
+  sightDist: 20
 --- !u!54 &792381669
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1616,7 +1616,7 @@ Transform:
   m_Children:
   - {fileID: 998430270}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &796925374
 GameObject:
@@ -2824,7 +2824,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!135 &1501221087
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2872,6 +2872,10 @@ MonoBehaviour:
   - Enemy
   currentTarget: {fileID: 0}
   damaged: 0
+  occupiedSpaceRadius: 3
+  mask:
+    serializedVersion: 2
+    m_Bits: 3072
   height: 0.75
   sightDist: 20
   unitType: 0
@@ -3029,7 +3033,7 @@ GameObject:
   - component: {fileID: 1596306440}
   - component: {fileID: 1596306442}
   - component: {fileID: 1596306441}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: HurtBox
   m_TagString: hitbox
   m_Icon: {fileID: 0}
@@ -3089,7 +3093,7 @@ GameObject:
   - component: {fileID: 1683197548}
   - component: {fileID: 1683197549}
   - component: {fileID: 1683197550}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: HurtBox
   m_TagString: hitbox
   m_Icon: {fileID: 0}
@@ -3180,7 +3184,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1716277041
 GameObject:
@@ -4075,5 +4079,6 @@ PrefabInstance:
       propertyPath: squad.m_Bits
       value: 6144
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4349601396416852119, guid: 093e5c13babd7b041b9ac8fc951a0a26, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 093e5c13babd7b041b9ac8fc951a0a26, type: 3}

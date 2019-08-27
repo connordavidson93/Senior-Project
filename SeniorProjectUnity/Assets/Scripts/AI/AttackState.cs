@@ -22,11 +22,6 @@ public class AttackState : BaseState
 
     public override Type Tick()
     {
-        if (enemy != null)
-        {
-            Debug.Log(enemy.CheckSpace());
-        }
-
         if (!health.alive)
         {
             ai.RemoveTarget();
@@ -51,12 +46,22 @@ public class AttackState : BaseState
         }
         else if (Vector3.Distance(ai.transform.position, ai.currentTarget.transform.position) > ai.stats.range)
             return typeof(ChaseState);
-        else if (Vector3.Dot(ai.transform.forward, (ai.currentTarget.transform.position - ai.transform.position).normalized) <= 0.25)
+        else if (Vector3.Dot(ai.transform.forward, (ai.currentTarget.transform.position - ai.transform.position).normalized) <= 0.75f)
         {
             return typeof(ChaseState);
         }
+        else if (ai.CheckSpace() != null)
+        {
+            Vector3 direction = transform.position - ai.CheckSpace().transform.position;
+            direction.Normalize();
+            Vector3 destination = transform.position + direction;
+            ai.SetDestination(destination);
+            return typeof(AttackState);
+        }
         else
         {
+            if (ai.ai.destination != ai.currentTarget.transform.position)
+                ai.SetDestination(ai.currentTarget.transform.position);
             ai.animControl.SetBool("Attack", true);
             return typeof(AttackState);
         }

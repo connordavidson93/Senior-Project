@@ -4,9 +4,6 @@ using System;
 
 public class Enemy : Base_AI
 {
-    public float occupiedSpaceRadius;
-    public LayerMask mask;
-
     protected override void InitializeFSM()
     {
         var states = new Dictionary<Type, BaseState>
@@ -20,20 +17,6 @@ public class Enemy : Base_AI
         };
 
         fsm.SetStates(states);
-    }
-
-    public bool CheckSpace()
-    {
-        Collider[] cols = Physics.OverlapSphere(gameObject.transform.position, occupiedSpaceRadius, mask, QueryTriggerInteraction.Ignore);
-        
-        foreach(Collider col in cols)
-        {
-            if (col.tag == "Enemy")
-            {
-                return true;
-            }
-        }
-        return false;
     }
 
     public override void SetSpeed(float _speed)
@@ -54,6 +37,6 @@ public class Enemy : Base_AI
     public override void Die()
     {
         gameObject.SetActive(false);
-        Base_AI.DeathAction(gameObject);
+        DeathAction(gameObject);
     }
 }
