@@ -45,12 +45,12 @@ public class ChaseState : BaseState
             return typeof(FollowState);
         }
         else if(Vector3.Distance(ai.transform.position, ai.currentTarget.transform.position) <= ai.stats.range 
-        && Vector3.Dot(ai.transform.forward, (ai.currentTarget.transform.position - ai.transform.position).normalized) > 0.25)
+        && Vector3.Dot(ai.transform.forward, (ai.currentTarget.transform.position - ai.transform.position).normalized) > 0.75f)
         {
             return typeof(AttackState);
         }
         else if (ai.ai.remainingDistance <= ai.stats.range && ai.enemyFound && ai.currentTarget != null
-        && Vector3.Dot(ai.transform.forward, (ai.currentTarget.transform.position - ai.transform.position).normalized) <= 0.25)
+        && Vector3.Dot(ai.transform.forward, (ai.currentTarget.transform.position - ai.transform.position).normalized) <= 0.75f)
         {
             ai.transform.LookAt(ai.currentTarget.transform);
             return typeof(ChaseState);

@@ -4,7 +4,6 @@ using System;
 
 public class Enemy : Base_AI
 {
-
     protected override void InitializeFSM()
     {
         var states = new Dictionary<Type, BaseState>
@@ -38,6 +37,6 @@ public class Enemy : Base_AI
     public override void Die()
     {
         gameObject.SetActive(false);
-        Base_AI.DeathAction(gameObject);
+        DeathAction(gameObject);
     }
 }

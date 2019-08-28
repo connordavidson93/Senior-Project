@@ -23,9 +23,8 @@ public class PlayerController : MonoBehaviour
     public bool canMove = true;
     public Camera maincam;
 
-    //variables for jump/roll
+    //variables for fall/roll
     public float gravity = 30.0f;
-	public float jumpForce = 15.0f;
 	public bool rolling;
 
 	//variables for being grounded
@@ -136,12 +135,6 @@ public class PlayerController : MonoBehaviour
 			}
 
 			if(Input.GetButtonDown("Jump"))
-			{
-				verticalVelocity += jumpForce;
-				anim.SetInteger("Jump", 1);
-			}
-
-			if(Input.GetKeyDown(KeyCode.LeftAlt))
 			{
 				anim.SetInteger("Jump", 2);
 				rolling = true;

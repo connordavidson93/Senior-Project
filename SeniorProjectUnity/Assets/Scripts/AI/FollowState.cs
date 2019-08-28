@@ -7,6 +7,7 @@ public class FollowState : BaseState
 {
     Squad squad;
     GameObject player;
+    bool offsetCalculated;
 
     public FollowState(Squad _ai) : base(_ai.gameObject, _ai)
     {
@@ -16,8 +17,6 @@ public class FollowState : BaseState
 
     public override Type Tick()
     {
-        squad.SetDestination(player.transform.position);
-
         if (!health.alive)
             return typeof(DeathState);
         else if (squad.damaged)
@@ -36,6 +35,7 @@ public class FollowState : BaseState
         else if (Vector3.Distance(squad.transform.position, player.transform.position) > squad.followDistance)
         {
             squad.SetStoppingDist(squad.followDistance);
+            squad.SetDestination(player.transform.position);
             return typeof(FollowState);
         }
         else
