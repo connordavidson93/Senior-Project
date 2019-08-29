@@ -10,6 +10,9 @@ public class Damage : MonoBehaviour
 
     private void Start()
     {
-        totalDamage = weaponDamage + stats.strength;
+        if (stats != null)
+            totalDamage = weaponDamage + stats.strength;
+        else
+            totalDamage = weaponDamage;
     }
 }

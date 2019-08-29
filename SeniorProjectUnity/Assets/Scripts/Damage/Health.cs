@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
 {
     public Base_Stats stats;
     public bool alive;
+    public bool shielded;
     int currentHealth;
     public Base_AI ai => GetComponent<Base_AI>();
 
@@ -17,10 +18,17 @@ public class Health : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "hitbox" && alive)
+        if(other.tag == "hitbox" && other.name == "Explosion" && gameObject.name == "Player")
+            return;
+        if(other.tag == "hitbox" && alive && !shielded)
         {
             TakeDamage(other.GetComponent<Damage>().totalDamage);
         }
+        else if(shielded && gameObject.tag == "Player")
+        {
+            GetComponent<PlayerController>().BuildPower(other.GetComponent<Damage>().totalDamage);
+        }
+            
     }
 
     public void TakeDamage(int _damage)

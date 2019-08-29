@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
 	Vector3 move = Vector3.zero;
     public bool canMove = true;
     public Camera maincam;
+	WaitForSeconds oneHundredth;
 
     //variables for fall/roll
     public float gravity = 30.0f;
@@ -37,6 +38,12 @@ public class PlayerController : MonoBehaviour
 	public LayerMask squad;
 	public List<Squad> squadMembers;
 	OrderController order;
+
+	//variables for shielding
+	public GameObject shield, explosion;
+	public int powerBuildUpMax = 100;
+	int currentPower;
+
 #endregion
 
 	void Awake()
@@ -47,6 +54,7 @@ public class PlayerController : MonoBehaviour
 
 	void Start() 
 	{
+		oneHundredth = new WaitForSeconds(0.01f);
 		anim = GetComponent<Animator>();
 		cc = GetComponent<CharacterController>();
 		speed = jogSpeed;
@@ -64,7 +72,7 @@ public class PlayerController : MonoBehaviour
 				DefendInput();
 				OrderInput();
 			}
-			yield return new WaitForSeconds(0.01f);
+			yield return oneHundredth;
 		}
 	}
 
@@ -180,14 +188,47 @@ public class PlayerController : MonoBehaviour
 	//Input for attacking
 	void AttackInput()
 	{
-		if(Input.GetMouseButtonDown(0) && !rolling)
+		if (Input.GetMouseButtonDown(0) && !rolling)
 		{
 			anim.SetFloat("Mouse0", 1);
 		}
-		else if(Input.GetMouseButtonUp(0))
+		else if (Input.GetMouseButtonUp(0))
 		{
 			anim.SetFloat("Mouse0", 0);
 		}
+
+		if (Input.GetMouseButtonDown(1))
+		{
+			shield.SetActive(true);
+			health.shielded = true;
+		}
+		else if (Input.GetMouseButtonUp(1))
+		{
+			shield.SetActive(false);
+			health.shielded = false;
+		}
+
+		if (Input.GetKeyDown(KeyCode.G))
+			ReleasePower();
+	}
+
+	public void BuildPower(int _amount)
+	{
+		print("building power");
+
+		if(currentPower < powerBuildUpMax)
+			currentPower += _amount;
+		if(currentPower >= powerBuildUpMax)
+			print("at max power");
+	}
+
+	void ReleasePower()
+	{
+		if(currentPower >= powerBuildUpMax)
+		{
+			currentPower = 0;
+			explosion.transform.localScale = new Vector3(20f, 20f, 20f);
+		}	
 	}
 
 	//input for defending
