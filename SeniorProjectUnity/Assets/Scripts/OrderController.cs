@@ -6,4 +6,5 @@ public class OrderController : MonoBehaviour
 {
     public Squad.UnitType unitType;
     public bool inProgress;
+    public Transform endLocation;
 }

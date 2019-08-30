@@ -44,6 +44,11 @@ public class PlayerController : MonoBehaviour
 	public int powerBuildUpMax = 100;
 	int currentPower;
 
+	//variables for attack ram
+	public OrderController playerDefinedRam;
+	public GameObject playerDefniendRamEnd;
+	bool ramPlaced;
+
 #endregion
 
 	void Awake()
@@ -126,6 +131,35 @@ public class PlayerController : MonoBehaviour
 				member.currentOrder = null;
 				if (order != null)
 					order.inProgress = false;
+			}
+		}
+
+		if(Input.GetKeyDown(KeyCode.V))
+		{
+			if(Physics.Raycast(maincam.transform.position, maincam.transform.forward, out hit, 100f) && !ramPlaced)
+			{
+				playerDefinedRam.gameObject.SetActive(true);
+				playerDefinedRam.gameObject.transform.position = hit.transform.position;
+				ramPlaced = true;
+			}
+			else if(Physics.Raycast(maincam.transform.position, maincam.transform.forward, out hit, 100f) && ramPlaced)
+			{
+				playerDefniendRamEnd.gameObject.SetActive(true);
+				playerDefniendRamEnd.transform.position = hit.transform.position;
+				playerDefinedRam.inProgress = true;
+
+				foreach (Squad member in squadMembers)
+				{
+					if(playerDefinedRam != null && member.unitType == playerDefinedRam.unitType)
+					{
+						member.recalled = false;
+						member.givenOrder = true;
+						member.currentOrder = playerDefinedRam.gameObject;
+						playerDefinedRam.inProgress = true;
+						ramPlaced = false;
+						print("RAM ATTACK SOLDIER!");
+					}
+				}
 			}
 		}
 	}
