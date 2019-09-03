@@ -49,7 +49,21 @@ public class PlayerController : MonoBehaviour
 	public GameObject playerDefniendRamEnd;
 	bool ramPlaced;
 
+	//variables for countering
+	bool counterWindow;
+	public GameObject counterSymbol;
+
 #endregion
+
+	private void OnEnable()
+	{
+		AnimController.CounterAction += CounterActionHandler;
+	}
+
+	private void OnDisable()
+	{
+		AnimController.CounterAction -= CounterActionHandler;
+	}
 
 	void Awake()
 	{
@@ -76,6 +90,8 @@ public class PlayerController : MonoBehaviour
 				AttackInput();
 				DefendInput();
 				OrderInput();
+				if(counterWindow)
+					CounterInput();
 			}
 			yield return oneHundredth;
 		}
@@ -246,6 +262,28 @@ public class PlayerController : MonoBehaviour
 			ReleasePower();
 	}
 
+	//input for defending
+	void DefendInput()
+	{
+		if(Input.GetMouseButtonDown(1) && !rolling)
+		{
+			anim.SetFloat("Mouse1", 1);
+		}
+		else if(Input.GetMouseButtonUp(1))
+		{
+			anim.SetFloat("Mouse1", 0);
+		}
+	}
+
+	void CounterInput()
+	{
+		print("window Open");
+		if(Input.GetKeyDown(KeyCode.Z))
+		{
+			print("Countering");
+		}
+	}
+
 	public void BuildPower(int _amount)
 	{
 		print("building power");
@@ -265,18 +303,7 @@ public class PlayerController : MonoBehaviour
 		}	
 	}
 
-	//input for defending
-	void DefendInput()
-	{
-		if(Input.GetMouseButtonDown(1) && !rolling)
-		{
-			anim.SetFloat("Mouse1", 1);
-		}
-		else if(Input.GetMouseButtonUp(1))
-		{
-			anim.SetFloat("Mouse1", 0);
-		}
-	}
+	
 
 	//checks if the player is on the ground
 	//parameters: none
@@ -309,5 +336,11 @@ public class PlayerController : MonoBehaviour
 			}
 			return false;
 		}
+	}
+
+	void CounterActionHandler(bool _state)
+	{
+		counterWindow = _state;
+		counterSymbol.SetActive(_state);
 	}
 }
