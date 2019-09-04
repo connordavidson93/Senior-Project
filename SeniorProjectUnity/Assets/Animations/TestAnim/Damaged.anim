@@ -230,7 +230,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.5833333
-    functionName: RecoverFromDamager
+    functionName: RecoverFromDamage
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
