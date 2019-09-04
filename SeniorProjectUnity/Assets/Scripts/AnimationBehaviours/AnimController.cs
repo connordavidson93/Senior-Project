@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AnimController : MonoBehaviour
 {
+    public static UnityAction<bool> CounterAction;
+
     public Animator anim => GetComponent<Animator>();
     public GameObject hitBox;
     Base_AI ai => GetComponentInParent<Base_AI>();
@@ -26,5 +29,15 @@ public class AnimController : MonoBehaviour
     public void RecoverFromDamager()
     {
         ai.damaged = false;
+    }
+
+    public void StartCounterWindow()
+    {
+        CounterAction(true);
+    }
+
+    public void EndCounterWindow()
+    {
+        CounterAction(false);
     }
 }

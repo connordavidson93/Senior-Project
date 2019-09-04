@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
 	Vector3 move = Vector3.zero;
     public bool canMove = true;
     public Camera maincam;
+	WaitForSeconds oneHundredth;
 
     //variables for fall/roll
     public float gravity = 30.0f;
@@ -37,7 +38,32 @@ public class PlayerController : MonoBehaviour
 	public LayerMask squad;
 	public List<Squad> squadMembers;
 	OrderController order;
+
+	//variables for shielding
+	public GameObject shield, explosion;
+	public int powerBuildUpMax = 100;
+	int currentPower;
+
+	//variables for attack ram
+	public OrderController playerDefinedRam;
+	public GameObject playerDefniendRamEnd;
+	bool ramPlaced;
+
+	//variables for countering
+	bool counterWindow;
+	public GameObject counterSymbol;
+
 #endregion
+
+	private void OnEnable()
+	{
+		AnimController.CounterAction += CounterActionHandler;
+	}
+
+	private void OnDisable()
+	{
+		AnimController.CounterAction -= CounterActionHandler;
+	}
 
 	void Awake()
 	{
@@ -47,6 +73,7 @@ public class PlayerController : MonoBehaviour
 
 	void Start() 
 	{
+		oneHundredth = new WaitForSeconds(0.01f);
 		anim = GetComponent<Animator>();
 		cc = GetComponent<CharacterController>();
 		speed = jogSpeed;
@@ -63,8 +90,10 @@ public class PlayerController : MonoBehaviour
 				AttackInput();
 				DefendInput();
 				OrderInput();
+				if(counterWindow)
+					CounterInput();
 			}
-			yield return new WaitForSeconds(0.01f);
+			yield return oneHundredth;
 		}
 	}
 
@@ -120,8 +149,38 @@ public class PlayerController : MonoBehaviour
 					order.inProgress = false;
 			}
 		}
+
+		if(Input.GetKeyDown(KeyCode.V))
+		{
+			if(Physics.Raycast(maincam.transform.position, maincam.transform.forward, out hit, 100f) && !ramPlaced)
+			{
+				playerDefinedRam.gameObject.SetActive(true);
+				playerDefinedRam.gameObject.transform.position = hit.point;
+				ramPlaced = true;
+			}
+			else if(Physics.Raycast(maincam.transform.position, maincam.transform.forward, out hit, 100f) && ramPlaced)
+			{
+				playerDefniendRamEnd.gameObject.SetActive(true);
+				playerDefniendRamEnd.transform.position = hit.point;
+				playerDefinedRam.inProgress = true;
+
+				foreach (Squad member in squadMembers)
+				{
+					if(playerDefinedRam != null && member.unitType == playerDefinedRam.unitType)
+					{
+						member.recalled = false;
+						member.givenOrder = true;
+						member.currentOrder = playerDefinedRam.gameObject;
+						playerDefinedRam.inProgress = true;
+						ramPlaced = false;
+						print("RAM ATTACK SOLDIER!");
+					}
+				}
+			}
+		}
 	}
 
+	//input for movement
 	void MoveInput()
     {
 		anim.SetBool("Grounded", isGrounded());
@@ -180,14 +239,28 @@ public class PlayerController : MonoBehaviour
 	//Input for attacking
 	void AttackInput()
 	{
-		if(Input.GetMouseButtonDown(0) && !rolling)
+		if (Input.GetMouseButtonDown(0) && !rolling)
 		{
 			anim.SetFloat("Mouse0", 1);
 		}
-		else if(Input.GetMouseButtonUp(0))
+		else if (Input.GetMouseButtonUp(0))
 		{
 			anim.SetFloat("Mouse0", 0);
 		}
+
+		if (Input.GetMouseButtonDown(1))
+		{
+			shield.SetActive(true);
+			health.shielded = true;
+		}
+		else if (Input.GetMouseButtonUp(1))
+		{
+			shield.SetActive(false);
+			health.shielded = false;
+		}
+
+		if (Input.GetKeyDown(KeyCode.G))
+			ReleasePower();
 	}
 
 	//input for defending
@@ -202,6 +275,39 @@ public class PlayerController : MonoBehaviour
 			anim.SetFloat("Mouse1", 0);
 		}
 	}
+
+	//input for counter attack
+	void CounterInput()
+	{
+		print("window Open");
+		if(Input.GetKeyDown(KeyCode.Z))
+		{
+			print("Countering");
+		}
+	}
+
+	//builds the current power loaded
+	public void BuildPower(int _amount)
+	{
+		print("building power");
+
+		if(currentPower < powerBuildUpMax)
+			currentPower += _amount;
+		if(currentPower >= powerBuildUpMax)
+			print("at max power");
+	}
+
+	//releases pent up power when it is full
+	void ReleasePower()
+	{
+		if(currentPower >= powerBuildUpMax)
+		{
+			currentPower = 0;
+			explosion.transform.localScale = new Vector3(20f, 20f, 20f);
+		}	
+	}
+
+	
 
 	//checks if the player is on the ground
 	//parameters: none
@@ -234,5 +340,12 @@ public class PlayerController : MonoBehaviour
 			}
 			return false;
 		}
+	}
+
+	//handles the action that is called when an enemy is open for a counter attack
+	void CounterActionHandler(bool _state)
+	{
+		counterWindow = _state;
+		counterSymbol.SetActive(_state);
 	}
 }
