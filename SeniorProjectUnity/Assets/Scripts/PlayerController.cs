@@ -155,13 +155,13 @@ public class PlayerController : MonoBehaviour
 			if(Physics.Raycast(maincam.transform.position, maincam.transform.forward, out hit, 100f) && !ramPlaced)
 			{
 				playerDefinedRam.gameObject.SetActive(true);
-				playerDefinedRam.gameObject.transform.position = hit.transform.position;
+				playerDefinedRam.gameObject.transform.position = hit.point;
 				ramPlaced = true;
 			}
 			else if(Physics.Raycast(maincam.transform.position, maincam.transform.forward, out hit, 100f) && ramPlaced)
 			{
 				playerDefniendRamEnd.gameObject.SetActive(true);
-				playerDefniendRamEnd.transform.position = hit.transform.position;
+				playerDefniendRamEnd.transform.position = hit.point;
 				playerDefinedRam.inProgress = true;
 
 				foreach (Squad member in squadMembers)
@@ -180,6 +180,7 @@ public class PlayerController : MonoBehaviour
 		}
 	}
 
+	//input for movement
 	void MoveInput()
     {
 		anim.SetBool("Grounded", isGrounded());
@@ -275,6 +276,7 @@ public class PlayerController : MonoBehaviour
 		}
 	}
 
+	//input for counter attack
 	void CounterInput()
 	{
 		print("window Open");
@@ -284,6 +286,7 @@ public class PlayerController : MonoBehaviour
 		}
 	}
 
+	//builds the current power loaded
 	public void BuildPower(int _amount)
 	{
 		print("building power");
@@ -294,6 +297,7 @@ public class PlayerController : MonoBehaviour
 			print("at max power");
 	}
 
+	//releases pent up power when it is full
 	void ReleasePower()
 	{
 		if(currentPower >= powerBuildUpMax)
@@ -338,6 +342,7 @@ public class PlayerController : MonoBehaviour
 		}
 	}
 
+	//handles the action that is called when an enemy is open for a counter attack
 	void CounterActionHandler(bool _state)
 	{
 		counterWindow = _state;
