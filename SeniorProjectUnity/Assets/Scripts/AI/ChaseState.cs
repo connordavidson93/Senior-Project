@@ -52,7 +52,7 @@ public class ChaseState : BaseState
         else if (ai.ai.remainingDistance <= ai.stats.range && ai.enemyFound && ai.currentTarget != null
         && Vector3.Dot(ai.transform.forward, (ai.currentTarget.transform.position - ai.transform.position).normalized) <= 0.75f)
         {
-            ai.transform.LookAt(ai.currentTarget.transform);
+            ai.transform.LookAt(new Vector3(ai.currentTarget.transform.position.x, ai.transform.position.y, ai.currentTarget.transform.position.z));
             return typeof(ChaseState);
         }
         else if (Vector3.Distance(ai.transform.position, ai.currentTarget.transform.position) > ai.stats.range)

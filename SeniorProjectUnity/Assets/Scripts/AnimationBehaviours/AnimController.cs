@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class AnimController : MonoBehaviour
 {
-    public static UnityAction<bool> CounterAction;
+    public static UnityAction<bool, GameObject> CounterAction;
 
     public Animator anim => GetComponent<Animator>();
     public GameObject hitBox;
@@ -33,11 +33,11 @@ public class AnimController : MonoBehaviour
 
     public void StartCounterWindow()
     {
-        CounterAction(true);
+        CounterAction(true, transform.parent.gameObject);
     }
 
     public void EndCounterWindow()
     {
-        CounterAction(false);
+        CounterAction(false, null);
     }
 }

@@ -2453,7 +2453,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338349226}
-  m_LocalRotation: {x: 0.016627032, y: 0.09924845, z: -0.0016586089, w: 0.9949224}
+  m_LocalRotation: {x: 0.01662705, y: 0.09924843, z: -0.0016586103, w: 0.9949224}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3495,6 +3495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1704276694}
   - component: {fileID: 1704276693}
+  - component: {fileID: 1704276695}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3529,6 +3530,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1704276695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704276692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7981b61fb03fa07469336a80b08a4f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1716277041
 GameObject:
   m_ObjectHideFlags: 0
@@ -4553,6 +4566,11 @@ PrefabInstance:
       propertyPath: counterSymbol
       value: 
       objectReference: {fileID: 1420194955}
+    - target: {fileID: 4349601396795417861, guid: 093e5c13babd7b041b9ac8fc951a0a26,
+        type: 3}
+      propertyPath: counterDamage
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4349601396416852119, guid: 093e5c13babd7b041b9ac8fc951a0a26, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 093e5c13babd7b041b9ac8fc951a0a26, type: 3}
