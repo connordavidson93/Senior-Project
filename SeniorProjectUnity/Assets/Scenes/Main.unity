@@ -233,7 +233,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh19858
+  m_Name: pb_Mesh20112
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -694,7 +694,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &622475998
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2453,7 +2453,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338349226}
-  m_LocalRotation: {x: 0.01662705, y: 0.09924843, z: -0.0016586103, w: 0.9949224}
+  m_LocalRotation: {x: 0.016627032, y: 0.09924845, z: -0.0016586089, w: 0.9949224}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3073,7 +3073,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!135 &1501221087
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3542,6 +3542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7981b61fb03fa07469336a80b08a4f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionOffset: 2
 --- !u!1 &1716277041
 GameObject:
   m_ObjectHideFlags: 0
