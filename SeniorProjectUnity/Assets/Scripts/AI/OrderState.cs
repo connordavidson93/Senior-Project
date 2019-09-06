@@ -45,6 +45,7 @@ public class OrderState : BaseState
                 {
                     squad.SetDestination(order.endLocation.position);
                     squad.SetSpeed(10);
+                    squad.ramHurtBox.SetActive(true);
                     return typeof(OrderState);
                 }
                 else if(order.endLocation == null)
@@ -60,6 +61,7 @@ public class OrderState : BaseState
                     squad.givenOrder = false;
                     order.endLocation.gameObject.SetActive(false);
                     order.gameObject.SetActive(false);
+                    squad.ramHurtBox.SetActive(false);
                     endRam = false;
                     squad.SetSpeed(3.5f);
                     return typeof(IdleState);

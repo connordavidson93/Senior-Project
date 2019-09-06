@@ -33,6 +33,11 @@ public class AnimController : MonoBehaviour
         hitBox.SetActive(!hitBox.activeSelf);
     }
 
+    public void ForceToggleHitBox(bool _state)
+    {
+        hitBox.SetActive(_state);
+    }
+
     public void RecoverFromDamage()
     {
         ai.damaged = false;
