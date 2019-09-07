@@ -287,9 +287,7 @@ public class PlayerController : MonoBehaviour
 		{
 			print("COUNTER ATTACK");
 			transform.LookAt(new Vector3(attackingEnemy.transform.position.x, transform.position.y, attackingEnemy.transform.position.z));
-			anim.SetFloat("Mouse0", 1);
-			attackingEnemy.GetComponent<Enemy>().animControl.SetBool("BeCountered", true);
-			CounterControll.PairCounterAction(gameObject, attackingEnemy);
+			CounterControll.PairCounterAction(this, attackingEnemy.GetComponent<Enemy>());
 		}
 	}
 

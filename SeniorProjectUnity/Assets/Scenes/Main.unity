@@ -233,7 +233,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20112
+  m_Name: pb_Mesh20206
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -531,6 +531,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4349601397223509917}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &575922615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575922614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c12282dbd45d640b237c9ae50f365d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitBox: {fileID: 0}
 --- !u!114 &575922619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -694,7 +707,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!54 &622475998
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3117,7 +3130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!135 &1501221087
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3589,6 +3602,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   directionOffset: 2
+  enemyAnim: {fileID: 7400000, guid: 090975e8e18ae66499c25d3ab9fbfbb6, type: 2}
+  playerAnim: {fileID: 7400000, guid: 81c59db9ed2a8cb45a185a453314b219, type: 2}
 --- !u!1 &1716277041
 GameObject:
   m_ObjectHideFlags: 0
@@ -4617,6 +4632,21 @@ PrefabInstance:
         type: 3}
       propertyPath: counterDamage
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4349601396774981244, guid: 093e5c13babd7b041b9ac8fc951a0a26,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4349601396774981244, guid: 093e5c13babd7b041b9ac8fc951a0a26,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4349601396774981244, guid: 093e5c13babd7b041b9ac8fc951a0a26,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4349601396416852119, guid: 093e5c13babd7b041b9ac8fc951a0a26, type: 3}

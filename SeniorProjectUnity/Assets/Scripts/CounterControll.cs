@@ -5,8 +5,11 @@ using UnityEngine.Events;
 
 public class CounterControll : MonoBehaviour
 {
-    public static UnityAction<GameObject, GameObject> PairCounterAction;
+    public static UnityAction<PlayerController, Enemy> PairCounterAction;
     public int directionOffset = 2;
+    public AnimationClip enemyAnim, playerAnim;
+    PlayerController player;
+    Enemy enemy;
 
     private void OnEnable()
     {
@@ -18,18 +21,24 @@ public class CounterControll : MonoBehaviour
         PairCounterAction -= PairCounterActionHandler;
     }
 
-    void PairCounterActionHandler(GameObject _player, GameObject _enemy)
+    void PairCounterActionHandler(PlayerController _player, Enemy _enemy)
     {
-        Vector3 direction = _player.transform.position - _enemy.transform.position;
-        direction.Normalize();
-        Vector3 pos = _player.transform.position - (direction * directionOffset);
+        player = _player;
+        enemy = _enemy;
 
-        _enemy.transform.position = pos;
+        Vector3 direction = player.transform.position - enemy.transform.position;
+        direction.Normalize();
+        Vector3 pos = player.transform.position - (direction * directionOffset);
+        
+        enemy.transform.position = pos;
 
         //prevent player from putting input while counter animation is playing
-        //_player.GetComponent<PlayerController>().canMove = false;
+        player.canMove = false;
+        player.counterSymbol.SetActive(false);
+
         print("play paired animation");
-        
+	    player.anim.Play(playerAnim.name);
+	    enemy.anim.Play(enemyAnim.name);
         //_enemy.GetComponent<Health>().TakeDamage(_player.GetComponent<PlayerController>().counterDamage);
     }
 }

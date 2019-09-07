@@ -9,7 +9,7 @@ public abstract class Base_AI : MonoBehaviour
     public static UnityAction<GameObject> DeathAction;
 
     public Base_Stats stats;
-    public AnimController animControl => GetComponentInChildren<AnimController>();
+    public Animator anim => GetComponentInChildren<Animator>();
     public FSM fsm => GetComponent<FSM>();
     public NavMeshAgent ai => GetComponent<NavMeshAgent>();
     public bool enemyFound;

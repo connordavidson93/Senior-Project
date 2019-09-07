@@ -20,7 +20,7 @@ public class DamagedState : BaseState
             return typeof(IdleState);
         else
         {
-            ai.animControl.SetBool("Damaged", true);
+            ai.anim.SetBool("Damaged", true);
             return typeof(DamagedState);
         }
     }

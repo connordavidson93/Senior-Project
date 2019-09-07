@@ -60,7 +60,7 @@ public class AttackState : BaseState
         {
             if (ai.ai.destination != ai.currentTarget.transform.position)
                 ai.SetDestination(ai.currentTarget.transform.position);
-            ai.animControl.SetBool("Attack", true);
+            ai.anim.SetBool("Attack", true);
             return typeof(AttackState);
         }
     }
