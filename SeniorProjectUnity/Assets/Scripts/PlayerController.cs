@@ -52,6 +52,8 @@ public class PlayerController : MonoBehaviour
 	//variables for countering
 	bool counterWindow;
 	public GameObject counterSymbol;
+	GameObject attackingEnemy;
+	public int counterDamage;
 
 #endregion
 
@@ -90,8 +92,10 @@ public class PlayerController : MonoBehaviour
 				AttackInput();
 				DefendInput();
 				OrderInput();
-				if(counterWindow)
+				if(counterWindow && attackingEnemy != null && Vector3.Distance(transform.position, attackingEnemy.transform.position) <= 5)
 					CounterInput();
+				else
+					CounterActionHandler(false, null);
 			}
 			yield return oneHundredth;
 		}
@@ -279,10 +283,11 @@ public class PlayerController : MonoBehaviour
 	//input for counter attack
 	void CounterInput()
 	{
-		print("window Open");
-		if(Input.GetKeyDown(KeyCode.Z))
+		if(Input.GetKeyDown(KeyCode.Z) && attackingEnemy != null)
 		{
-			print("Countering");
+			print("COUNTER ATTACK");
+			transform.LookAt(new Vector3(attackingEnemy.transform.position.x, transform.position.y, attackingEnemy.transform.position.z));
+			CounterControll.PairCounterAction(this, attackingEnemy.GetComponent<Enemy>());
 		}
 	}
 
@@ -306,8 +311,6 @@ public class PlayerController : MonoBehaviour
 			explosion.transform.localScale = new Vector3(20f, 20f, 20f);
 		}	
 	}
-
-	
 
 	//checks if the player is on the ground
 	//parameters: none
@@ -343,9 +346,16 @@ public class PlayerController : MonoBehaviour
 	}
 
 	//handles the action that is called when an enemy is open for a counter attack
-	void CounterActionHandler(bool _state)
+	void CounterActionHandler(bool _state, GameObject _enemy)
 	{
+		attackingEnemy = _enemy;
 		counterWindow = _state;
 		counterSymbol.SetActive(_state);
+
+		if(attackingEnemy != null && Vector3.Distance(transform.position, attackingEnemy.transform.position) > 5)
+		{
+			counterWindow = false;
+			counterSymbol.SetActive(false);
+		}
 	}
 }

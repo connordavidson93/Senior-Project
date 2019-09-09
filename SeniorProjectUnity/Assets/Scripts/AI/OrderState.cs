@@ -39,12 +39,13 @@ public class OrderState : BaseState
             if(Vector3.Distance(squad.transform.position, squad.ai.destination) <= 1)
             {
                 endRam = true;
-                squad.animControl.SetBool("Ram", true);
+                squad.anim.SetBool("Ram", true);
                 OrderController order = squad.currentOrder.GetComponent<OrderController>();
                 if(order.endLocation != null && Vector3.Distance(order.endLocation.position, squad.ai.destination) > 1)
                 {
                     squad.SetDestination(order.endLocation.position);
                     squad.SetSpeed(10);
+                    squad.ramHurtBox.SetActive(true);
                     return typeof(OrderState);
                 }
                 else if(order.endLocation == null)
@@ -54,12 +55,13 @@ public class OrderState : BaseState
                 }
                 else if (Vector3.Distance(order.endLocation.position, squad.ai.destination) <= 1 && Vector3.Distance(squad.transform.position, squad.ai.destination) <= 1)
                 {
-                    squad.animControl.SetBool("Ram", false);
+                    squad.anim.SetBool("Ram", false);
                     order.inProgress = false;
                     squad.currentOrder = null;
                     squad.givenOrder = false;
                     order.endLocation.gameObject.SetActive(false);
                     order.gameObject.SetActive(false);
+                    squad.ramHurtBox.SetActive(false);
                     endRam = false;
                     squad.SetSpeed(3.5f);
                     return typeof(IdleState);
