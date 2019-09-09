@@ -18,6 +18,7 @@ public abstract class Base_AI : MonoBehaviour
     public bool damaged;
     public float occupiedSpaceRadius;
     public LayerMask mask;
+    public EnemyManager enemyManager;
 
     public GameObject player => GameObject.FindWithTag("Player");
 

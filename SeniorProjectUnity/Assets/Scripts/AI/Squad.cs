@@ -50,6 +50,6 @@ public class Squad : Base_AI
 
     public override void Die()
     {
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 }

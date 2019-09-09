@@ -7,8 +7,9 @@ public class AttackState : BaseState
 {
     private Squad temp;
     private Enemy enemy;
+    private EnemyManager enemyManager;
 
-    public AttackState(Base_AI _ai) : base(_ai.gameObject, _ai)
+    public AttackState(Base_AI _ai, EnemyManager _enemyManager = null) : base(_ai.gameObject, _ai)
     {
         if (ai is Squad)
         {
@@ -17,6 +18,7 @@ public class AttackState : BaseState
         else if (ai is Enemy)
         {
             enemy = ai as Enemy;
+            enemyManager = _enemyManager;
         }
     }
 
@@ -36,6 +38,8 @@ public class AttackState : BaseState
         }
         else if (ai.currentTarget == null)
         {
+            if(enemyManager != null)
+                enemyManager.RemoveFromQueue(enemy);
             ai.RemoveTarget();
             return typeof(FollowState);
         }
@@ -56,14 +60,28 @@ public class AttackState : BaseState
             ai.SetDestination(destination);
             return typeof(AttackState);
         }
+        else if(enemy != null && enemyManager != null)
+        {
+            //need to remove current enemy from queue after they have finished attacking
+            if(!enemyManager.IsInQueue(enemy))
+                enemyManager.AddToQueue(enemy);
+            if(enemyManager.CheckNext(enemy) == enemy)
+            {
+                if (ai.ai.destination != ai.currentTarget.transform.position)
+                    ai.SetDestination(ai.currentTarget.transform.position);
+                ai.anim.SetBool("Attack", true);
+            }
+            return typeof(AttackState);
+        }
         else
         {
+            if(temp == null)
+                return null;
+
             if (ai.ai.destination != ai.currentTarget.transform.position)
                 ai.SetDestination(ai.currentTarget.transform.position);
             ai.anim.SetBool("Attack", true);
-            return typeof(AttackState);
+            return typeof(AttackState);            
         }
     }
-
-    
 }

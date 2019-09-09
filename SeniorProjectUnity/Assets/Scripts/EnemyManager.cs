@@ -1,0 +1,67 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using System;
+using UnityEngine;
+
+public class EnemyManager : MonoBehaviour
+{
+    Dictionary<GameObject, List<Enemy>> targets= new Dictionary<GameObject, List<Enemy>>();
+
+    public void AddToQueue(Enemy _enemy)
+    {
+        if(IsInDictionary(_enemy.currentTarget))
+            targets[_enemy.currentTarget].Add(_enemy);
+        else
+        {
+            targets.Add(_enemy.currentTarget, new List<Enemy>());
+            targets[_enemy.currentTarget].Add(_enemy);
+        }
+    }
+
+    public Enemy CheckNext(Enemy _enemy)
+    {
+        if(IsInDictionary(_enemy.currentTarget))
+            return targets[_enemy.currentTarget][0];
+        else
+            return null;
+    }
+
+    public Enemy GetNext(Enemy _enemy)
+    {
+        if(IsInDictionary(_enemy.currentTarget))
+        {
+            Enemy temp = targets[_enemy.currentTarget][0];
+            targets[_enemy.currentTarget].RemoveAt(0);
+            return temp;
+        }
+        else
+            return null;
+    }
+
+    public void ClearQueue(Enemy _enemy)
+    {
+        if(IsInDictionary(_enemy.currentTarget))
+            targets[_enemy.currentTarget].Clear();
+    }
+
+    public bool IsInQueue(Enemy _enemy)
+    {
+        if(IsInDictionary(_enemy.currentTarget))
+            return targets[_enemy.currentTarget].Contains(_enemy);
+        else
+            return false;
+    }
+
+    public void RemoveFromQueue(Enemy _enemy)
+    {
+        foreach(KeyValuePair<GameObject, List<Enemy>> kvp in targets)
+        {
+            //if(targets[kvp.Key].RemoveAll(_enemy));
+        }
+    }
+
+    bool IsInDictionary(GameObject _target)
+    {
+        return targets.ContainsKey(_target);
+    }
+}

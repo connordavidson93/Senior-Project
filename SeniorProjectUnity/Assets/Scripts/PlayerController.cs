@@ -55,6 +55,10 @@ public class PlayerController : MonoBehaviour
 	GameObject attackingEnemy;
 	public int counterDamage;
 
+	//variables for healing squad
+	public float healDistance = 5f;
+	public int healPower = 20;
+
 #endregion
 
 	private void OnEnable()
@@ -109,7 +113,9 @@ public class PlayerController : MonoBehaviour
 		if(Physics.Raycast(maincam.transform.position, maincam.transform.forward, out hit, 100f, squad))
 		{
 			bool found = (hit.collider.tag == "order" || hit.collider.tag == "Enemy");
-			if(Input.GetKeyDown(KeyCode.Q) && found)
+			bool downedSquad = (hit.collider.tag == "squad");
+
+			if(Input.GetKeyDown(KeyCode.F) && found)
 			{
 				order = hit.collider.gameObject.GetComponent<OrderController>();
 				foreach (Squad member in squadMembers)
@@ -139,6 +145,20 @@ public class PlayerController : MonoBehaviour
 					}
 				}
 			}
+			else if (Input.GetKeyDown(KeyCode.F) && downedSquad)
+			{
+				Health squadHealth = hit.collider.gameObject.GetComponent<Health>();
+				if(health == null)
+				{
+					Debug.Log("Squad memeber doesn't have health assigned!");
+				}
+				else if(!squadHealth.alive && Vector3.Distance(transform.position, squadHealth.transform.position) <= healDistance)
+				{
+					//play healing animation
+					squadHealth.Heal(healPower);
+					squadHealth.alive = true;
+				}
+			}
 		}
 
 		if(Input.GetKeyDown(KeyCode.R))
@@ -154,7 +174,7 @@ public class PlayerController : MonoBehaviour
 			}
 		}
 
-		if(Input.GetKeyDown(KeyCode.V))
+		if(Input.GetKeyDown(KeyCode.Q))
 		{
 			if(Physics.Raycast(maincam.transform.position, maincam.transform.forward, out hit, 100f) && !ramPlaced)
 			{
@@ -283,10 +303,9 @@ public class PlayerController : MonoBehaviour
 	//input for counter attack
 	void CounterInput()
 	{
-		if(Input.GetKeyDown(KeyCode.Z) && attackingEnemy != null)
+		if(Input.GetKeyDown(KeyCode.V) && attackingEnemy != null)
 		{
 			print("COUNTER ATTACK");
-			transform.LookAt(new Vector3(attackingEnemy.transform.position.x, transform.position.y, attackingEnemy.transform.position.z));
 			CounterControll.PairCounterAction(this, attackingEnemy.GetComponent<Enemy>());
 		}
 	}

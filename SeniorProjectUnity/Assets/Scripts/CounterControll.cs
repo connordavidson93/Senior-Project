@@ -32,11 +32,13 @@ public class CounterControll : MonoBehaviour
         
         enemy.transform.position = pos;
 
+		player.transform.LookAt(new Vector3(enemy.transform.position.x, player.transform.position.y, enemy.transform.position.z));
+		enemy.transform.LookAt(new Vector3(player.transform.position.x, enemy.transform.position.y, player.transform.position.z));
+
         //prevent player from putting input while counter animation is playing
         player.canMove = false;
         player.counterSymbol.SetActive(false);
 
-        print("play paired animation");
 	    player.anim.Play(playerAnim.name);
 	    enemy.anim.Play(enemyAnim.name);
         //_enemy.GetComponent<Health>().TakeDamage(_player.GetComponent<PlayerController>().counterDamage);
