@@ -6,10 +6,10 @@ public class Squad : Base_AI
 {
     public enum UnitType { SPOTTER, SNIPER, STRONG }
     public UnitType unitType;
-    public bool givenOrder;
+    public bool givenOrder, recalled;
     public GameObject currentOrder, ramHurtBox;
     public float followDistance = 10;
-    public bool recalled;
+    public int healPower;
 
     protected override void Awake()
     {

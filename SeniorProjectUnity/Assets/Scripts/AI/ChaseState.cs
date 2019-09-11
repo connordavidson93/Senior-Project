@@ -5,18 +5,19 @@ using System;
 
 public class ChaseState : BaseState
 {
-    Squad temp;
+    Squad squad;
     Enemy enemy;
 
     public ChaseState(Base_AI _ai) : base(_ai.gameObject, _ai)
     {
-        if(ai is Squad)
+        switch (ai)
         {
-            temp = ai as Squad;
-        }
-        else if(ai is Enemy)
-        {
-            enemy = ai as Enemy;
+            case Squad temp:
+                squad = temp;
+                break;
+            case Enemy temp:
+                enemy = temp;
+                break;
         }
     }
 
@@ -29,27 +30,36 @@ public class ChaseState : BaseState
         }
         else if (ai.damaged)
             return typeof(DamagedState);
-        else if (temp != null && temp.givenOrder && temp.currentOrder != null)
+        else if (squad != null && squad.givenOrder && squad.currentOrder != null)
         {
             ai.RemoveTarget();
             return typeof(OrderState);
         }
-        else if (ai.currentTarget == null)
+        else if (ai.currentTarget == null || !ai.enemyFound)
         {
             ai.RemoveTarget();
             return typeof(IdleState);
         }
-        else if (temp != null && temp.recalled)
+        else if (squad != null && squad.recalled)
         {
             ai.RemoveTarget();
             return typeof(FollowState);
         }
-        else if(Vector3.Distance(ai.transform.position, ai.currentTarget.transform.position) <= ai.stats.range 
+        // else if (ai.CheckSpace() != null)
+        // {
+        //     Debug.Log("too close");
+        //     Vector3 direction = transform.position - ai.CheckSpace().transform.position;
+        //     direction.Normalize();
+        //     Vector3 destination = transform.position + (direction*2);
+        //     ai.SetDestination(destination);
+        //     return typeof(ChaseState);
+        // }
+        else if(ai.currentTarget != null && Vector3.Distance(ai.transform.position, ai.currentTarget.transform.position) <= ai.stats.range 
         && Vector3.Dot(ai.transform.forward, (ai.currentTarget.transform.position - ai.transform.position).normalized) > 0.75f)
         {
             return typeof(AttackState);
         }
-        else if (ai.ai.remainingDistance <= ai.stats.range && ai.enemyFound && ai.currentTarget != null
+        else if (ai.currentTarget != null && Vector3.Distance(ai.transform.position, ai.currentTarget.transform.position) <= ai.stats.range
         && Vector3.Dot(ai.transform.forward, (ai.currentTarget.transform.position - ai.transform.position).normalized) <= 0.75f)
         {
             ai.transform.LookAt(new Vector3(ai.currentTarget.transform.position.x, ai.transform.position.y, ai.currentTarget.transform.position.z));

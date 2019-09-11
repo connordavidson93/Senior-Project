@@ -18,13 +18,13 @@ public class Health : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "hitbox" && other.name == "Explosion" && gameObject.name == "Player")
+        if(other.CompareTag("hitbox") && other.name == "Explosion" && gameObject.name == "Player")
             return;
-        if(other.tag == "hitbox" && alive && !shielded)
+        if(other.CompareTag("hitbox") && alive && !shielded)
         {
             TakeDamage(other.GetComponent<Damage>().totalDamage);
         }
-        else if(shielded && gameObject.tag == "Player")
+        else if(shielded && gameObject.CompareTag("Player"))
         {
             GetComponent<PlayerController>().BuildPower(other.GetComponent<Damage>().totalDamage);
         }

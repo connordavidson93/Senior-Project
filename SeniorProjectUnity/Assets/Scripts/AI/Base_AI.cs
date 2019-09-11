@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(NavMeshAgent)), RequireComponent(typeof(FSM))]
@@ -67,9 +68,9 @@ public abstract class Base_AI : MonoBehaviour
 
         foreach (Collider col in cols)
         {
-            if (col.tag == gameObject.tag && gameObject != col.gameObject)
+            if (col.CompareTag(gameObject.tag) && gameObject != col.gameObject)
                 return col;
-            else if (col.tag == "Player" && gameObject.tag == "squad")
+            else if (col.CompareTag("Player") && gameObject.CompareTag("squad"))
                 return col;
         }
         return null;
@@ -109,12 +110,7 @@ public abstract class Base_AI : MonoBehaviour
     /// <returns></returns>
     public virtual bool IsEnemy(string _tag)
     {
-        foreach(string item in enemyTags)
-        {
-            if(item == _tag)
-                return true;
-        }
-        return false;
+        return enemyTags.Any(item => item == _tag);
     }
 
     /// <summary>
@@ -130,7 +126,7 @@ public abstract class Base_AI : MonoBehaviour
     /// if the current target is dead, remove that target
     /// </summary>
     /// <param name="_target"></param>
-    public void TargetDied(GameObject _target)
+    private void TargetDied(GameObject _target)
     {
         if(_target == currentTarget)
         {

@@ -7,6 +7,7 @@ public class OrderState : BaseState
 {
     private Squad squad;
     bool endRam;
+    private static readonly int Ram = Animator.StringToHash("Ram");
 
     public OrderState(Squad _ai) : base(_ai.gameObject, _ai)
     {
@@ -39,7 +40,7 @@ public class OrderState : BaseState
             if(Vector3.Distance(squad.transform.position, squad.ai.destination) <= 1)
             {
                 endRam = true;
-                squad.anim.SetBool("Ram", true);
+                squad.anim.SetBool(Ram, true);
                 OrderController order = squad.currentOrder.GetComponent<OrderController>();
                 if(order.endLocation != null && Vector3.Distance(order.endLocation.position, squad.ai.destination) > 1)
                 {
@@ -55,7 +56,7 @@ public class OrderState : BaseState
                 }
                 else if (Vector3.Distance(order.endLocation.position, squad.ai.destination) <= 1 && Vector3.Distance(squad.transform.position, squad.ai.destination) <= 1)
                 {
-                    squad.anim.SetBool("Ram", false);
+                    squad.anim.SetBool(Ram, false);
                     order.inProgress = false;
                     squad.currentOrder = null;
                     squad.givenOrder = false;

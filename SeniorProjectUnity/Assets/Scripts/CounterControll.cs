@@ -26,14 +26,18 @@ public class CounterControll : MonoBehaviour
         player = _player;
         enemy = _enemy;
 
-        Vector3 direction = player.transform.position - enemy.transform.position;
-        direction.Normalize();
-        Vector3 pos = player.transform.position - (direction * directionOffset);
+        var playerPos = player.transform.position;
+        var enemyPos = enemy.transform.position;
         
-        enemy.transform.position = pos;
+        Vector3 direction = playerPos - enemyPos;
+        direction.Normalize();
+        Vector3 pos = playerPos - (direction * directionOffset);
+        
+        enemyPos = pos;
+        enemy.transform.position = enemyPos;
 
-		player.transform.LookAt(new Vector3(enemy.transform.position.x, player.transform.position.y, enemy.transform.position.z));
-		enemy.transform.LookAt(new Vector3(player.transform.position.x, enemy.transform.position.y, player.transform.position.z));
+        player.transform.LookAt(new Vector3(enemyPos.x, playerPos.y, enemyPos.z));
+		enemy.transform.LookAt(new Vector3(playerPos.x, enemyPos.y, playerPos.z));
 
         //prevent player from putting input while counter animation is playing
         player.canMove = false;

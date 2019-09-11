@@ -5,20 +5,22 @@ using System;
 
 public class AttackState : BaseState
 {
-    private Squad temp;
+    private Squad squad;
     private Enemy enemy;
     private EnemyManager enemyManager;
+    private static readonly int Attack = Animator.StringToHash("Attack");
 
     public AttackState(Base_AI _ai, EnemyManager _enemyManager = null) : base(_ai.gameObject, _ai)
     {
-        if (ai is Squad)
+        switch (ai)
         {
-            temp = ai as Squad;
-        }
-        else if (ai is Enemy)
-        {
-            enemy = ai as Enemy;
-            enemyManager = _enemyManager;
+            case Squad temp:
+                squad = temp;
+                break;
+            case Enemy temp:
+                enemy = temp;
+                enemyManager = _enemyManager;
+                break;
         }
     }
 
@@ -26,12 +28,18 @@ public class AttackState : BaseState
     {
         if (!health.alive)
         {
+            if(enemyManager != null)
+                enemyManager.RemoveFromQueue(enemy);
             ai.RemoveTarget();
             return typeof(DeathState);
         }
         else if (ai.damaged)
+        {
+            if(enemyManager != null)
+                enemyManager.RemoveFromQueue(enemy);
             return typeof(DamagedState);
-        else if (temp != null && temp.currentOrder != null && temp.givenOrder)
+        }
+        else if (squad != null && squad.currentOrder != null && squad.givenOrder)
         {
             ai.RemoveTarget();
             return typeof(OrderState);
@@ -43,44 +51,54 @@ public class AttackState : BaseState
             ai.RemoveTarget();
             return typeof(FollowState);
         }
-        else if (temp != null && temp.recalled)
+        else if (squad != null && squad.recalled)
         {
             ai.RemoveTarget();
             return typeof(FollowState);
         }
         else if (Vector3.Distance(ai.transform.position, ai.currentTarget.transform.position) > ai.stats.range)
+        {
+            if(enemyManager != null)
+                enemyManager.RemoveFromQueue(enemy);
             return typeof(ChaseState);
+        }
         else if (Vector3.Dot(ai.transform.forward, (ai.currentTarget.transform.position - ai.transform.position).normalized) <= 0.75f)
+        {
+            if(enemyManager != null)
+                enemyManager.RemoveFromQueue(enemy);
             return typeof(ChaseState);
+        }
         else if (ai.CheckSpace() != null)
         {
-            Vector3 direction = transform.position - ai.CheckSpace().transform.position;
+            var position = transform.position;
+            Vector3 direction = position - ai.CheckSpace().transform.position;
             direction.Normalize();
-            Vector3 destination = transform.position + direction;
+            Vector3 destination = position + direction;
             ai.SetDestination(destination);
+            if(enemyManager != null)
+                enemyManager.RemoveFromQueue(enemy);
             return typeof(AttackState);
         }
         else if(enemy != null && enemyManager != null)
         {
-            //need to remove current enemy from queue after they have finished attacking
             if(!enemyManager.IsInQueue(enemy))
                 enemyManager.AddToQueue(enemy);
             if(enemyManager.CheckNext(enemy) == enemy)
             {
                 if (ai.ai.destination != ai.currentTarget.transform.position)
                     ai.SetDestination(ai.currentTarget.transform.position);
-                ai.anim.SetBool("Attack", true);
+                ai.anim.SetBool(Attack, true);
             }
             return typeof(AttackState);
         }
         else
         {
-            if(temp == null)
+            if(squad == null)
                 return null;
 
             if (ai.ai.destination != ai.currentTarget.transform.position)
                 ai.SetDestination(ai.currentTarget.transform.position);
-            ai.anim.SetBool("Attack", true);
+            ai.anim.SetBool(Attack, true);
             return typeof(AttackState);            
         }
     }
