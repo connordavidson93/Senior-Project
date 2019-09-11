@@ -31,6 +31,11 @@ public class Health : MonoBehaviour
             
     }
 
+    public void Heal(int _amount)
+    {
+        currentHealth += _amount;
+    }
+
     public void TakeDamage(int _damage)
     {
         if(ai != null)
