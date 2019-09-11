@@ -56,7 +56,7 @@ public class EnemyManager : MonoBehaviour
     {
         foreach(KeyValuePair<GameObject, List<Enemy>> kvp in targets)
         {
-            //if(targets[kvp.Key].RemoveAll(_enemy));
+            targets[kvp.Key].RemoveAll(d => d == _enemy);
         }
     }
 

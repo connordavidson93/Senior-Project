@@ -11,6 +11,7 @@ public class AnimController : MonoBehaviour
     public GameObject hitBox;
     Base_AI ai => GetComponentInParent<Base_AI>();
     PlayerController pc => GetComponentInParent<PlayerController>();
+    public EnemyManager enemyManager;
 
     public void SetBool(string _name, bool _state)
     {
@@ -59,5 +60,10 @@ public class AnimController : MonoBehaviour
             pc.canMove = true;
         else
             Debug.Log("No PlayerController for this animator!");
+    }
+
+    public void RemoveEnemyFromQueue()
+    {
+        enemyManager.RemoveFromQueue(GetComponentInParent<Enemy>());
     }
 }
