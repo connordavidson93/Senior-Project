@@ -10,6 +10,7 @@ public class Squad : Base_AI
     public GameObject currentOrder, ramHurtBox;
     public float followDistance = 10;
     public int healPower;
+    public Health healTargetHealth;
 
     protected override void Awake()
     {

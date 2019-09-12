@@ -95,6 +95,11 @@ public class PlayerController : MonoBehaviour
 		StartCoroutine(PlayGame());
 	}
 
+	public void Restart()
+	{
+		StartCoroutine(PlayGame());
+	}
+	
 	private IEnumerator PlayGame() 
 	{
 		while(health.alive)
@@ -112,6 +117,7 @@ public class PlayerController : MonoBehaviour
 			}
 			yield return oneHundredth;
 		}
+		Die();
 	}
 
 	//input for giving orders
@@ -369,6 +375,13 @@ public class PlayerController : MonoBehaviour
 			}
 			return false;
 		}
+	}
+
+	private void Die()
+	{
+		squadMembers[0].currentOrder = gameObject;
+		squadMembers[0].givenOrder = true;
+		squadMembers[0].healTargetHealth = health;
 	}
 
 	//handles the action that is called when an enemy is open for a counter attack

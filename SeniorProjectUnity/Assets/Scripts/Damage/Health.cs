@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
     public bool shielded;
     int currentHealth;
     public Base_AI ai => GetComponent<Base_AI>();
+    public PlayerController player => GetComponent<PlayerController>();
 
     private void Start()
     {
@@ -34,6 +35,11 @@ public class Health : MonoBehaviour
     public void Heal(int _amount)
     {
         currentHealth += _amount;
+        alive = true;
+        if (player != null)
+        {
+            player.Restart();
+        }
     }
 
     public void TakeDamage(int _damage)
