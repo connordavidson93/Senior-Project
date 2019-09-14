@@ -33,6 +33,10 @@ public class PlayerController : MonoBehaviour
 	//variables for slopes
 	Vector3 forward;
 
+	//variables for attacking
+	public int strengthBonus;
+	public Base_Stats playerStats;
+
 	//variables for squad orders
 	public LayerMask squad;
 	public List<Squad> squadMembers;
@@ -281,6 +285,10 @@ public class PlayerController : MonoBehaviour
 		if (Input.GetMouseButtonDown(0) && !rolling)
 		{
 			anim.SetFloat(Mouse0, 1);
+			if(currentPower > 0)
+				currentPower -= strengthBonus;
+			if (currentPower < 0)
+				currentPower = 0;
 		}
 		else if (Input.GetMouseButtonUp(0))
 		{
@@ -330,8 +338,12 @@ public class PlayerController : MonoBehaviour
 	{
 		print("building power");
 
-		if(currentPower < powerBuildUpMax)
+		if (currentPower < powerBuildUpMax)
+		{
 			currentPower += _amount;
+			playerStats.strength += strengthBonus;
+		}
+	
 		if(currentPower >= powerBuildUpMax)
 			print("at max power");
 	}
