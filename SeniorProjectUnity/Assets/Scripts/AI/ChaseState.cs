@@ -45,15 +45,6 @@ public class ChaseState : BaseState
             ai.RemoveTarget();
             return typeof(FollowState);
         }
-        // else if (ai.CheckSpace() != null)
-        // {
-        //     Debug.Log("too close");
-        //     Vector3 direction = transform.position - ai.CheckSpace().transform.position;
-        //     direction.Normalize();
-        //     Vector3 destination = transform.position + (direction*2);
-        //     ai.SetDestination(destination);
-        //     return typeof(ChaseState);
-        // }
         else if(ai.currentTarget != null && Vector3.Distance(ai.transform.position, ai.currentTarget.transform.position) <= ai.stats.range 
         && Vector3.Dot(ai.transform.forward, (ai.currentTarget.transform.position - ai.transform.position).normalized) > 0.75f)
         {
