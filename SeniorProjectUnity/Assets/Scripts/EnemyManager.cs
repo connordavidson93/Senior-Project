@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    Dictionary<GameObject, List<Enemy>> targets= new Dictionary<GameObject, List<Enemy>>();
+    private Dictionary<GameObject, List<Enemy>> targets = new Dictionary<GameObject, List<Enemy>>();
 
     public void AddToQueue(Enemy _enemy)
     {
@@ -54,7 +54,7 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
-    bool IsInDictionary(GameObject _target)
+    private bool IsInDictionary(GameObject _target)
     {
         return targets.ContainsKey(_target);
     }

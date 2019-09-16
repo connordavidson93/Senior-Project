@@ -9,8 +9,8 @@ public class AnimController : MonoBehaviour
 
     public Animator anim => GetComponent<Animator>();
     public GameObject hitBox;
-    Base_AI ai => GetComponentInParent<Base_AI>();
-    PlayerController pc => GetComponentInParent<PlayerController>();
+    private Base_AI ai => GetComponentInParent<Base_AI>();
+    private PlayerController pc => GetComponentInParent<PlayerController>();
     public EnemyManager enemyManager;
 
     public void SetBool(string _name, bool _state)

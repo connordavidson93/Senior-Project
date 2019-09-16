@@ -8,7 +8,6 @@ public class AttackState : BaseState
     private Squad squad;
     private Enemy enemy;
     private EnemyManager enemyManager;
-    private static readonly int Attack = Animator.StringToHash("Attack");
 
     public AttackState(Base_AI _ai, EnemyManager _enemyManager = null) : base(_ai.gameObject, _ai)
     {
@@ -87,7 +86,7 @@ public class AttackState : BaseState
             {
                 if (ai.ai.destination != ai.currentTarget.transform.position)
                     ai.SetDestination(ai.currentTarget.transform.position);
-                ai.anim.SetBool(Attack, true);
+                ai.anim.SetBool(StaticVars.attack, true);
             }
             return typeof(AttackState);
         }
@@ -98,7 +97,7 @@ public class AttackState : BaseState
 
             if (ai.ai.destination != ai.currentTarget.transform.position)
                 ai.SetDestination(ai.currentTarget.transform.position);
-            ai.anim.SetBool(Attack, true);
+            ai.anim.SetBool(StaticVars.attack, true);
             return typeof(AttackState);            
         }
     }

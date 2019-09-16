@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class WanderState : BaseState
 {
-    Squad squad;
-    Enemy enemy;
-    bool wandering;
+    private Squad squad;
+    private Enemy enemy;
+    private bool wandering;
 
     public WanderState(Base_AI _ai) : base(_ai.gameObject, _ai)
     {

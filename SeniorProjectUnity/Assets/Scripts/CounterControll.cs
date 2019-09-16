@@ -1,27 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class CounterControll : MonoBehaviour
 {
-    public static UnityAction<PlayerController, Enemy> PairCounterAction;
     public int directionOffset = 2;
     public AnimationClip enemyAnim, playerAnim;
-    PlayerController player;
-    Enemy enemy;
+    private PlayerController player;
+    private Enemy enemy;
 
     private void OnEnable()
     {
-        PairCounterAction += PairCounterActionHandler;
+        StaticVars.PairCounterAction += PairCounterActionHandler;
     }
 
     private void OnDisable()
     {
-        PairCounterAction -= PairCounterActionHandler;
+        StaticVars.PairCounterAction -= PairCounterActionHandler;
     }
 
-    void PairCounterActionHandler(PlayerController _player, Enemy _enemy)
+    private void PairCounterActionHandler(PlayerController _player, Enemy _enemy)
     {
         player = _player;
         enemy = _enemy;

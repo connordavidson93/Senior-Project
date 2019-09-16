@@ -5,8 +5,8 @@ using System;
 
 public class ChaseState : BaseState
 {
-    Squad squad;
-    Enemy enemy;
+    private Squad squad;
+    private Enemy enemy;
 
     public ChaseState(Base_AI _ai) : base(_ai.gameObject, _ai)
     {

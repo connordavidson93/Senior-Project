@@ -44,7 +44,7 @@ public abstract class BaseState
         }
     }
 
-    void EnemyFound(RaycastHit _hit)
+    private void EnemyFound(RaycastHit _hit)
     {
         if (!ai.IsEnemy(_hit.collider.tag) || ai.currentTarget != null) return;
         ai.currentTarget = _hit.collider.gameObject;
