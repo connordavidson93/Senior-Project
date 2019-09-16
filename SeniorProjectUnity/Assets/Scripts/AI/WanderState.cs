@@ -3,19 +3,20 @@ using UnityEngine;
 
 public class WanderState : BaseState
 {
-    Squad temp;
+    Squad squad;
     Enemy enemy;
     bool wandering;
 
     public WanderState(Base_AI _ai) : base(_ai.gameObject, _ai)
     {
-        if(ai is Squad)
+        switch (ai)
         {
-            temp = ai as Squad;
-        }
-        else if(ai is Enemy)
-        {
-            enemy = ai as Enemy;
+            case Squad temp:
+                squad = temp;
+                break;
+            case Enemy temp:
+                enemy = temp;
+                break;
         }
     }
 
@@ -39,7 +40,7 @@ public class WanderState : BaseState
                 ai.SetDestination(randDest);
                 ai.SetStoppingDist(0);
             }
-            else if (ai.ai.remainingDistance == 0)
+            else if (ai.ai.remainingDistance <= 0.1f)
                 wandering = false;
 
             return typeof(WanderState);

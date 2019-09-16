@@ -20,10 +20,7 @@ public class EnemyManager : MonoBehaviour
 
     public Enemy CheckNext(Enemy _enemy)
     {
-        if(IsInDictionary(_enemy.currentTarget))
-            return targets[_enemy.currentTarget][0];
-        else
-            return null;
+        return IsInDictionary(_enemy.currentTarget) ? targets[_enemy.currentTarget][0] : null;
     }
 
     public Enemy GetNext(Enemy _enemy)
@@ -46,15 +43,12 @@ public class EnemyManager : MonoBehaviour
 
     public bool IsInQueue(Enemy _enemy)
     {
-        if(IsInDictionary(_enemy.currentTarget))
-            return targets[_enemy.currentTarget].Contains(_enemy);
-        else
-            return false;
+        return IsInDictionary(_enemy.currentTarget) && targets[_enemy.currentTarget].Contains(_enemy);
     }
 
     public void RemoveFromQueue(Enemy _enemy)
     {
-        foreach(KeyValuePair<GameObject, List<Enemy>> kvp in targets)
+        foreach(var kvp in targets)
         {
             targets[kvp.Key].RemoveAll(d => d == _enemy);
         }
