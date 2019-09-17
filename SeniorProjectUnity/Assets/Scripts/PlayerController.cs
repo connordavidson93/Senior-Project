@@ -276,7 +276,7 @@ public class PlayerController : MonoBehaviour
 			anim.SetFloat(StaticVars.moveX, moveX);
 			anim.SetFloat(StaticVars.moveZ, moveZ);
 		}
-
+		
 		//Rotates the character to follow the camera
 		var eulerAngles = transform.eulerAngles;
 		Vector3 angles = new Vector3(eulerAngles.x, maincam.transform.eulerAngles.y, eulerAngles.z);

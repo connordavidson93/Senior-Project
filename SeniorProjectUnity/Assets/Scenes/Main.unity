@@ -233,7 +233,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21796
+  m_Name: pb_Mesh20052
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2330,7 +2330,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338349226}
-  m_LocalRotation: {x: 0.016627021, y: 0.09924844, z: -0.0016586053, w: 0.9949224}
+  m_LocalRotation: {x: 0.016627055, y: 0.09924843, z: -0.0016586084, w: 0.9949224}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2989,12 +2989,6 @@ MonoBehaviour:
   stats: {fileID: 11400000, guid: 1e20321cc4eb2574cb99f6516c61f14e, type: 2}
   alive: 1
   shielded: 0
---- !u!1 &1534122950 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1534122950, guid: 093e5c13babd7b041b9ac8fc951a0a26,
-    type: 3}
-  m_PrefabInstance: {fileID: 4349601397223509917}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1589962746
 GameObject:
   m_ObjectHideFlags: 0
@@ -4349,9 +4343,5 @@ PrefabInstance:
       propertyPath: playerDefinedRamEnd
       value: 
       objectReference: {fileID: 1962468761}
-    - target: {fileID: 575922615, guid: 093e5c13babd7b041b9ac8fc951a0a26, type: 3}
-      propertyPath: hitBox
-      value: 
-      objectReference: {fileID: 1534122950}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 093e5c13babd7b041b9ac8fc951a0a26, type: 3}
