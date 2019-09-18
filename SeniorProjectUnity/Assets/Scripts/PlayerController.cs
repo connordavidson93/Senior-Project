@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     
     [Header("Basic Movement")]
     public Camera maincam;
-    public bool canMove = true, rolling;
+    public bool canMove = true, receiveInput = true, rolling;
 	public float verticalVelocity = 0.0f, jogSpeed = 10.0f, runSpeed = 15.0f, walkSpeed = 5.0f, gravity = 30.0f;
 	private float speed;
 	private Vector3 move = Vector3.zero;
@@ -107,13 +107,15 @@ public class PlayerController : MonoBehaviour
 	{
 		while(health.alive)
 		{
-			if(canMove)
+			if (receiveInput)
 			{
-				MoveInput();
+				if (canMove)
+					MoveInput();
 				AttackInput();
 				DefendInput();
 				OrderInput();
-				if(counterWindow && attackingEnemy != null && Vector3.Distance(transform.position, attackingEnemy.transform.position) <= 5)
+				if (counterWindow && attackingEnemy != null &&
+				    Vector3.Distance(transform.position, attackingEnemy.transform.position) <= 5)
 					CounterInput();
 				else
 					CounterActionHandler(false, null);
@@ -292,8 +294,10 @@ public class PlayerController : MonoBehaviour
 	//Input for attacking
 	private void AttackInput()
 	{
+		//currently this forces the player to hold the mouse button in order to attack
 		if (Input.GetMouseButtonDown(0) && !rolling)
 		{
+			canMove = false;
 			anim.SetFloat(StaticVars.mouse0, 1);
 			if(currentPower > 0)
 				currentPower -= strengthBonus;
@@ -306,6 +310,7 @@ public class PlayerController : MonoBehaviour
 		else if (Input.GetMouseButtonUp(0))
 		{
 			anim.SetFloat(StaticVars.mouse0, 0);
+			canMove = true;
 		}
 
 		if (Input.GetMouseButtonDown(1))

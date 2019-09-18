@@ -24,11 +24,17 @@ public class WanderState : BaseState
     {
         Scan();
         if (ai.damaged)
+        {
+            ai.anim.SetBool(StaticVars.walk, false);
             return typeof(DamagedState);
+        }
         else if (ai.enemyFound && Vector3.Distance(ai.currentTarget.transform.position, ai.transform.position) > ai.stats.range)
             return typeof(ChaseState);
         else if (ai.enemyFound && Vector3.Distance(ai.currentTarget.transform.position, ai.transform.position) <= ai.stats.range)
+        {
+            ai.anim.SetBool(StaticVars.walk, false);
             return typeof(AttackState);
+        }
         else
         {
             if (!wandering)
@@ -42,7 +48,7 @@ public class WanderState : BaseState
             }
             else if (ai.ai.remainingDistance <= 0.1f)
                 wandering = false;
-
+            ai.anim.SetBool(StaticVars.walk, true);
             return typeof(WanderState);
         }
     }

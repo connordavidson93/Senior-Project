@@ -24,4 +24,6 @@ public static class StaticVars
     public static readonly int mouse1 = Animator.StringToHash("Mouse1");
     public static readonly int attack = Animator.StringToHash("Attack");
     public static readonly int ram = Animator.StringToHash("Ram");
+    public static readonly int walk = Animator.StringToHash("Walk");
+    public static readonly int run = Animator.StringToHash("Run");
 }

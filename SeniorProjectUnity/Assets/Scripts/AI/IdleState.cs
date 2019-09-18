@@ -40,6 +40,8 @@ public class IdleState : BaseState
         else if (enemy != null)
             return typeof(WanderState);
         else
+        {
             return typeof(IdleState);
+        }
     }
 }

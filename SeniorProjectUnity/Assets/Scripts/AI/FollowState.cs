@@ -26,14 +26,19 @@ public class FollowState : BaseState
         else if (squad.enemyFound && !squad.recalled && Vector3.Distance(squad.currentTarget.transform.position, squad.transform.position) > squad.stats.range)
             return typeof(ChaseState);
         else if (squad.enemyFound && !squad.recalled && Vector3.Distance(squad.currentTarget.transform.position, squad.transform.position) <= squad.stats.range)
+        {
+            ai.anim.SetBool(StaticVars.walk, false);
             return typeof(AttackState);
+        }
         else if (Vector3.Distance(squad.transform.position, player.transform.position) <= squad.followDistance)
         {
             squad.recalled = false;
+            ai.anim.SetBool(StaticVars.walk, false);
             return typeof(IdleState);
         }
         else if (Vector3.Distance(squad.transform.position, player.transform.position) > squad.followDistance)
         {
+            ai.anim.SetBool(StaticVars.walk, true);
             squad.SetStoppingDist(squad.followDistance);
             squad.SetDestination(player.transform.position);
             return typeof(FollowState);
