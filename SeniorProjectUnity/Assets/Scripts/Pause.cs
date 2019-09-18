@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class Pause : MonoBehaviour
 {
-    bool paused;
-    Coroutine pause;
+    private bool paused;
+
+    private Coroutine pause;
     //makes coroutine work when timeScale = 0
-    WaitForSecondsRealtime timer => new WaitForSecondsRealtime(0.01f);
     public GameObject pauseScreen;
 
     private void Start()
@@ -25,7 +25,7 @@ public class Pause : MonoBehaviour
             {
                 TogglePause();
             }
-            yield return timer;
+            yield return StaticVars.realTimeOneHundredth;
         }
     }
 

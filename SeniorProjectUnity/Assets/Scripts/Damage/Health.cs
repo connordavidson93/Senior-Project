@@ -7,7 +7,7 @@ public class Health : MonoBehaviour
     public Base_Stats stats;
     public bool alive;
     public bool shielded;
-    int currentHealth;
+    private int currentHealth;
     public Base_AI ai => GetComponent<Base_AI>();
     public PlayerController player => GetComponent<PlayerController>();
 

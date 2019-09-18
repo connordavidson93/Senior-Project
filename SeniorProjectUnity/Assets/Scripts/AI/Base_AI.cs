@@ -11,7 +11,7 @@ public abstract class Base_AI : MonoBehaviour
 
     public Base_Stats stats;
     public Animator anim => GetComponentInChildren<Animator>();
-    public FSM fsm => GetComponent<FSM>();
+    protected FSM fsm => GetComponent<FSM>();
     public NavMeshAgent ai => GetComponent<NavMeshAgent>();
     public bool enemyFound;
     public List<string> enemyTags;
@@ -108,7 +108,7 @@ public abstract class Base_AI : MonoBehaviour
     /// </summary>
     /// <param name="_tag"></param>
     /// <returns></returns>
-    public virtual bool IsEnemy(string _tag)
+    public bool IsEnemy(string _tag)
     {
         return enemyTags.Any(item => item == _tag);
     }
