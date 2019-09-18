@@ -7,8 +7,9 @@ public class Health : MonoBehaviour
     public Base_Stats stats;
     public bool alive;
     public bool shielded;
-    int currentHealth;
+    private int currentHealth;
     public Base_AI ai => GetComponent<Base_AI>();
+    public PlayerController player => GetComponent<PlayerController>();
 
     private void Start()
     {
@@ -18,13 +19,13 @@ public class Health : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "hitbox" && other.name == "Explosion" && gameObject.name == "Player")
+        if(other.CompareTag("hitbox") && other.name == "Explosion" && gameObject.name == "Player")
             return;
-        if(other.tag == "hitbox" && alive && !shielded)
+        if(other.CompareTag("hitbox") && alive && !shielded)
         {
             TakeDamage(other.GetComponent<Damage>().totalDamage);
         }
-        else if(shielded && gameObject.tag == "Player")
+        else if(shielded && gameObject.CompareTag("Player"))
         {
             GetComponent<PlayerController>().BuildPower(other.GetComponent<Damage>().totalDamage);
         }
@@ -34,6 +35,11 @@ public class Health : MonoBehaviour
     public void Heal(int _amount)
     {
         currentHealth += _amount;
+        alive = true;
+        if (player != null)
+        {
+            player.Restart();
+        }
     }
 
     public void TakeDamage(int _damage)

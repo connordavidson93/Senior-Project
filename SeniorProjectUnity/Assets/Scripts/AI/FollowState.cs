@@ -5,9 +5,9 @@ using System;
 
 public class FollowState : BaseState
 {
-    Squad squad;
-    GameObject player;
-    bool offsetCalculated;
+    private Squad squad;
+    private GameObject player;
+    private bool offsetCalculated;
 
     public FollowState(Squad _ai) : base(_ai.gameObject, _ai)
     {

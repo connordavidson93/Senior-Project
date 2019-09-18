@@ -1,39 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class CounterControll : MonoBehaviour
 {
-    public static UnityAction<PlayerController, Enemy> PairCounterAction;
     public int directionOffset = 2;
     public AnimationClip enemyAnim, playerAnim;
-    PlayerController player;
-    Enemy enemy;
+    private PlayerController player;
+    private Enemy enemy;
 
     private void OnEnable()
     {
-        PairCounterAction += PairCounterActionHandler;
+        StaticVars.PairCounterAction += PairCounterActionHandler;
     }
 
     private void OnDisable()
     {
-        PairCounterAction -= PairCounterActionHandler;
+        StaticVars.PairCounterAction -= PairCounterActionHandler;
     }
 
-    void PairCounterActionHandler(PlayerController _player, Enemy _enemy)
+    private void PairCounterActionHandler(PlayerController _player, Enemy _enemy)
     {
         player = _player;
         enemy = _enemy;
 
-        Vector3 direction = player.transform.position - enemy.transform.position;
-        direction.Normalize();
-        Vector3 pos = player.transform.position - (direction * directionOffset);
+        var playerPos = player.transform.position;
+        var enemyPos = enemy.transform.position;
         
-        enemy.transform.position = pos;
+        Vector3 direction = playerPos - enemyPos;
+        direction.Normalize();
+        Vector3 pos = playerPos - (direction * directionOffset);
+        
+        enemyPos = pos;
+        enemy.transform.position = enemyPos;
 
-		player.transform.LookAt(new Vector3(enemy.transform.position.x, player.transform.position.y, enemy.transform.position.z));
-		enemy.transform.LookAt(new Vector3(player.transform.position.x, enemy.transform.position.y, player.transform.position.z));
+        player.transform.LookAt(new Vector3(enemyPos.x, playerPos.y, enemyPos.z));
+		enemy.transform.LookAt(new Vector3(playerPos.x, enemyPos.y, playerPos.z));
 
         //prevent player from putting input while counter animation is playing
         player.canMove = false;

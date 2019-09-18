@@ -13,8 +13,8 @@ public class FSM : MonoBehaviour
     public bool canPlay;
     public float timeScale;
     public UnityAction<BaseState> OnStateChanged;
-    Coroutine stateCheck;
-    WaitForSeconds waitTime => new WaitForSeconds(timeScale);
+    private Coroutine stateCheck;
+    private WaitForSeconds waitTime => new WaitForSeconds(timeScale);
 
     private void Start()
     {
@@ -27,7 +27,7 @@ public class FSM : MonoBehaviour
         availableStates = _states;
     }
 
-    IEnumerator CheckStates()
+    private IEnumerator CheckStates()
     {
         while(canPlay)
         {

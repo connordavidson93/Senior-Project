@@ -1,92 +1,109 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using static AnimController;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {   
-#region VARIABLES
+	#region VARIABLES
 	[HideInInspector] public Animator anim;
 
-	Health health => GetComponent<Health>();
+	private Health health => GetComponent<Health>();
 
     //basic movement
     private CharacterController cc;
-
-	public float verticalVelocity = 0.0f;
-	public float jogSpeed = 10.0f;
-	public float runSpeed = 15.0f;
-	public float walkSpeed = 5.0f;
-	float speed;
-	
-	Vector3 move = Vector3.zero;
-    public bool canMove = true;
+    
+    [Header("Basic Movement")]
     public Camera maincam;
-	WaitForSeconds oneHundredth;
-
-    //variables for fall/roll
-    public float gravity = 30.0f;
-	public bool rolling;
+    public bool canMove = true, rolling;
+	public float verticalVelocity = 0.0f, jogSpeed = 10.0f, runSpeed = 15.0f, walkSpeed = 5.0f, gravity = 30.0f;
+	private float speed;
+	private Vector3 move = Vector3.zero;
 
 	//variables for being grounded
 	public LayerMask ground;
 
-	//varibles for slopes
-	Vector3 forward;
+	//variables for slopes
+	private Vector3 forward;
+
+	[Header("Attack")]
+	//variables for attacking
+	public Base_Stats playerStats;
+	public int strengthBonus = 10, powerLossSpeed = 5, powerBuildUpMax = 100;
+	private int currentPower;
+	
+	//variables for coroutines
+	public int powerWaitTime = 5;
+	private WaitForSeconds longWait => new WaitForSeconds(powerWaitTime);
+	private bool loosingPower;
+	private Coroutine loosePower, playGame;
 
 	//variables for squad orders
+	[Header("Squad")]
 	public LayerMask squad;
 	public List<Squad> squadMembers;
-	OrderController order;
-
-	//variables for shielding
-	public GameObject shield, explosion;
-	public int powerBuildUpMax = 100;
-	int currentPower;
+	private OrderController order;
 
 	//variables for attack ram
 	public OrderController playerDefinedRam;
-	public GameObject playerDefniendRamEnd;
-	bool ramPlaced;
+	public GameObject playerDefinedRamEnd;
+	private bool ramPlaced;
+
+	//variables for shielding
+	[Header("Defense")] 
+	public GameObject shield; 
+	public GameObject explosion;
+	private bool shielding;
 
 	//variables for countering
-	bool counterWindow;
+	[Header("Counter Attack")]
 	public GameObject counterSymbol;
-	GameObject attackingEnemy;
+	private bool counterWindow;
+	private GameObject attackingEnemy;
 	public int counterDamage;
 
 	//variables for healing squad
+	[Header("Healing")]
 	public float healDistance = 5f;
 	public int healPower = 20;
 
-#endregion
+	#endregion
 
 	private void OnEnable()
 	{
-		AnimController.CounterAction += CounterActionHandler;
+		CounterAction += CounterActionHandler;
 	}
 
 	private void OnDisable()
 	{
-		AnimController.CounterAction -= CounterActionHandler;
+		CounterAction -= CounterActionHandler;
 	}
 
-	void Awake()
+	private void Awake()
 	{
-		//locks the cursor to the center of the screne and turns it invisible
+		//locks the cursor to the center of the screen and turns it invisible
 		Cursor.lockState = CursorLockMode.Locked;
 	}
 
-	void Start() 
+	private void Start() 
 	{
-		oneHundredth = new WaitForSeconds(0.01f);
 		anim = GetComponent<Animator>();
 		cc = GetComponent<CharacterController>();
 		speed = jogSpeed;
-		StartCoroutine(PlayGame());
+		playGame = StartCoroutine(PlayGame());
 	}
 
-	IEnumerator PlayGame() 
+	//restarts the PlayGame coroutine
+	public void Restart()
+	{
+		StopCoroutine(playGame);
+		playGame = StartCoroutine(PlayGame());
+	}
+	
+	//coroutine that controls the main game
+	private IEnumerator PlayGame()
 	{
 		while(health.alive)
 		{
@@ -101,26 +118,40 @@ public class PlayerController : MonoBehaviour
 				else
 					CounterActionHandler(false, null);
 			}
-			yield return oneHundredth;
+			yield return StaticVars.oneHundredth;
+		}
+		Die();
+	}
+
+	//coroutine that controls the speed at which power is lost
+	private IEnumerator LoosePower()
+	{
+		yield return longWait;
+
+		while (currentPower < 0)
+		{
+			currentPower -= powerLossSpeed;
+			yield return StaticVars.oneSec;
 		}
 	}
 
 	//input for giving orders
-	void OrderInput()
+	private void OrderInput()
 	{
-		Debug.DrawRay((maincam.transform.position + new Vector3(0,0.5f,0)), maincam.transform.forward * 100, Color.red);
-		RaycastHit hit;
-		if(Physics.Raycast(maincam.transform.position, maincam.transform.forward, out hit, 100f, squad))
+		var camTransform = maincam.transform;
+		Debug.DrawRay((camTransform.position + new Vector3(0,0.5f,0)), camTransform.forward * 100, Color.red);
+		if(Physics.Raycast(camTransform.position, camTransform.forward, out var hit, 100f, squad))
 		{
-			bool found = (hit.collider.tag == "order" || hit.collider.tag == "Enemy");
-			bool downedSquad = (hit.collider.tag == "squad");
+			var found = (hit.collider.CompareTag("order") || hit.collider.CompareTag("Enemy"));
+			var downedSquad = (hit.collider.CompareTag("squad"));
 
 			if(Input.GetKeyDown(KeyCode.F) && found)
 			{
 				order = hit.collider.gameObject.GetComponent<OrderController>();
-				foreach (Squad member in squadMembers)
+				var isOrderNotNull = order != null;
+				foreach (var member in squadMembers)
 				{
-					if(order != null && member.unitType == order.unitType)
+					if(isOrderNotNull && member.unitType == order.unitType)
 					{
 						if(order.inProgress)
 						{
@@ -137,7 +168,7 @@ public class PlayerController : MonoBehaviour
 							print("Do the thing, soldier!");
 						}
 					}
-					else if (hit.collider.tag == "Enemy")
+					else if (hit.collider.CompareTag("Enemy"))
 					{
 						member.givenOrder = true;
 						member.currentOrder = hit.collider.gameObject;
@@ -147,10 +178,10 @@ public class PlayerController : MonoBehaviour
 			}
 			else if (Input.GetKeyDown(KeyCode.F) && downedSquad)
 			{
-				Health squadHealth = hit.collider.gameObject.GetComponent<Health>();
+				var squadHealth = hit.collider.gameObject.GetComponent<Health>();
 				if(health == null)
 				{
-					Debug.Log("Squad memeber doesn't have health assigned!");
+					Debug.Log("Squad member doesn't have health assigned!");
 				}
 				else if(!squadHealth.alive && Vector3.Distance(transform.position, squadHealth.transform.position) <= healDistance)
 				{
@@ -164,13 +195,13 @@ public class PlayerController : MonoBehaviour
 		if(Input.GetKeyDown(KeyCode.R))
 		{
 			print("Form up!");
-			foreach (Squad member in squadMembers)
+			foreach (var member in squadMembers)
 			{
 				member.recalled = true;
 				member.givenOrder = false;
+				if (member.currentOrder != null)
+					member.currentOrder.GetComponent<OrderController>().inProgress = false;
 				member.currentOrder = null;
-				if (order != null)
-					order.inProgress = false;
 			}
 		}
 
@@ -179,47 +210,44 @@ public class PlayerController : MonoBehaviour
 			if(Physics.Raycast(maincam.transform.position, maincam.transform.forward, out hit, 100f) && !ramPlaced)
 			{
 				playerDefinedRam.gameObject.SetActive(true);
-				playerDefinedRam.gameObject.transform.position = hit.point;
+				playerDefinedRam.transform.position = hit.point;
 				ramPlaced = true;
 			}
 			else if(Physics.Raycast(maincam.transform.position, maincam.transform.forward, out hit, 100f) && ramPlaced)
 			{
-				playerDefniendRamEnd.gameObject.SetActive(true);
-				playerDefniendRamEnd.transform.position = hit.point;
+				playerDefinedRamEnd.gameObject.SetActive(true);
+				playerDefinedRamEnd.transform.position = hit.point;
 				playerDefinedRam.inProgress = true;
 
-				foreach (Squad member in squadMembers)
+				foreach (var member in squadMembers.Where(member => playerDefinedRam != null && member.unitType == playerDefinedRam.unitType))
 				{
-					if(playerDefinedRam != null && member.unitType == playerDefinedRam.unitType)
-					{
-						member.recalled = false;
-						member.givenOrder = true;
-						member.currentOrder = playerDefinedRam.gameObject;
-						playerDefinedRam.inProgress = true;
-						ramPlaced = false;
-						print("RAM ATTACK SOLDIER!");
-					}
+					member.recalled = false;
+					member.givenOrder = true;
+					member.currentOrder = playerDefinedRam.gameObject;
+					playerDefinedRam.inProgress = true;
+					ramPlaced = false;
+					print("RAM ATTACK SOLDIER!");
 				}
 			}
 		}
 	}
 
 	//input for movement
-	void MoveInput()
+	private void MoveInput()
     {
-		anim.SetBool("Grounded", isGrounded());
+		anim.SetBool(StaticVars.grounded, IsGrounded());
 		//base movement
-		if(isGrounded())
+		if(IsGrounded())
 		{
 			verticalVelocity = 0;
 			if(!rolling)
 			{
-				anim.SetInteger("Jump", 0);
+				anim.SetInteger(StaticVars.jump, 0);
 			}
 
 			if(Input.GetButtonDown("Jump"))
 			{
-				anim.SetInteger("Jump", 2);
+				anim.SetInteger(StaticVars.jump, 2);
 				rolling = true;
 			}
 
@@ -245,31 +273,39 @@ public class PlayerController : MonoBehaviour
 			float moveX = Input.GetAxis("Horizontal");
 			float moveZ = Input.GetAxis("Vertical");
 			move = transform.TransformDirection(new Vector3(moveX, -Mathf.Abs(forward.y), moveZ)) * speed;
-			anim.SetFloat("MoveX", moveX);
-			anim.SetFloat("MoveZ", moveZ);
+			anim.SetFloat(StaticVars.moveX, moveX);
+			anim.SetFloat(StaticVars.moveZ, moveZ);
 		}
-
+		
 		//Rotates the character to follow the camera
-		Vector3 angles = new Vector3(transform.eulerAngles.x, maincam.transform.eulerAngles.y, transform.eulerAngles.z);
+		var eulerAngles = transform.eulerAngles;
+		Vector3 angles = new Vector3(eulerAngles.x, maincam.transform.eulerAngles.y, eulerAngles.z);
 		transform.rotation = Quaternion.Euler(angles);
 		
 		//calculates movement
 		verticalVelocity -= gravity * Time.deltaTime;
-		anim.SetFloat("MoveY", verticalVelocity);
+		anim.SetFloat(StaticVars.moveY, verticalVelocity);
 		Vector3 movement = move + verticalVelocity * Vector3.up;
 		cc.Move(movement * Time.deltaTime);
 	}
 
 	//Input for attacking
-	void AttackInput()
+	private void AttackInput()
 	{
 		if (Input.GetMouseButtonDown(0) && !rolling)
 		{
-			anim.SetFloat("Mouse0", 1);
+			anim.SetFloat(StaticVars.mouse0, 1);
+			if(currentPower > 0)
+				currentPower -= strengthBonus;
+			if (currentPower <= 0)
+			{
+				loosingPower = true;
+				currentPower = 0;
+			}
 		}
 		else if (Input.GetMouseButtonUp(0))
 		{
-			anim.SetFloat("Mouse0", 0);
+			anim.SetFloat(StaticVars.mouse0, 0);
 		}
 
 		if (Input.GetMouseButtonDown(1))
@@ -288,26 +324,26 @@ public class PlayerController : MonoBehaviour
 	}
 
 	//input for defending
-	void DefendInput()
+	private void DefendInput()
 	{
 		if(Input.GetMouseButtonDown(1) && !rolling)
 		{
-			anim.SetFloat("Mouse1", 1);
+			shielding = true;
+			anim.SetFloat(StaticVars.mouse1, 1);
 		}
 		else if(Input.GetMouseButtonUp(1))
 		{
-			anim.SetFloat("Mouse1", 0);
+			shielding = false;
+			anim.SetFloat(StaticVars.mouse1, 0);
 		}
 	}
 
 	//input for counter attack
-	void CounterInput()
+	private void CounterInput()
 	{
-		if(Input.GetKeyDown(KeyCode.V) && attackingEnemy != null)
-		{
-			print("COUNTER ATTACK");
-			CounterControll.PairCounterAction(this, attackingEnemy.GetComponent<Enemy>());
-		}
+		if (!Input.GetKeyDown(KeyCode.V) || attackingEnemy == null) return;
+		print("COUNTER ATTACK");
+		StaticVars.PairCounterAction(this, attackingEnemy.GetComponent<Enemy>());
 	}
 
 	//builds the current power loaded
@@ -315,66 +351,84 @@ public class PlayerController : MonoBehaviour
 	{
 		print("building power");
 
-		if(currentPower < powerBuildUpMax)
+		if (currentPower < powerBuildUpMax)
+		{
 			currentPower += _amount;
-		if(currentPower >= powerBuildUpMax)
+			playerStats.strength += strengthBonus;
+		}
+		else
+		{
+			if (!loosingPower)
+			{
+				if(loosePower != null)
+					StopCoroutine(loosePower);
+				loosePower = StartCoroutine(LoosePower());
+			}
+
+			currentPower = powerBuildUpMax;
+			loosingPower = true;
 			print("at max power");
+		}
 	}
 
 	//releases pent up power when it is full
-	void ReleasePower()
+	private void ReleasePower()
 	{
-		if(currentPower >= powerBuildUpMax)
-		{
-			currentPower = 0;
-			explosion.transform.localScale = new Vector3(20f, 20f, 20f);
-		}	
+		if (currentPower < powerBuildUpMax) return;
+		currentPower = 0;
+		explosion.transform.localScale = new Vector3(20f, 20f, 20f);
+		loosingPower = false;
 	}
 
 	//checks if the player is on the ground
 	//parameters: none
 	//returns: true if isGrounded, false if not
 	//there was a glitch where going down/uphill made the character see itself as not grounded when using cc.isGrounded
-	private bool isGrounded()
+	private bool IsGrounded()
 	{
 		if(cc.isGrounded)
+			return true;
+		
+		var bottom = cc.transform.position - new Vector3(0, cc.height / 2, 0);
+
+		//checks via raycast to see if the player is close enough to the ground to count as being grounded
+		//also changes the forward vector so player doesn't bounce down slopes
+		if(Physics.Raycast(bottom, -Vector3.up, out var hit, 0.2f, ground))
 		{
+			forward = Vector3.Cross(transform.right, hit.normal);
+			var strafeDir = Vector3.Cross(transform.forward, hit.normal);
+
+			//checks to see which direction is more correct
+			if(Mathf.Abs(strafeDir.y) > Mathf.Abs(forward.y))
+			{
+				forward = strafeDir;
+			}
 			return true;
 		}
-		else
-		{
-			Vector3 bottom = cc.transform.position - new Vector3(0, cc.height / 2, 0);
+		return false;
+	}
 
-			RaycastHit hit;
-			//checks via raycast to see if the player is close enough to the ground to count as being grounded
-			//also changes the forward vector so player doesn't bounce down slopes
-			if(Physics.Raycast(bottom, -Vector3.up, out hit, 0.2f, ground))
-			{
-				forward = Vector3.Cross(transform.right, hit.normal);
-				Vector3 strafeDir = Vector3.Cross(transform.forward, hit.normal);
-
-				//checks to see which direction is more correct
-				if(Mathf.Abs(strafeDir.y) > Mathf.Abs(forward.y))
-				{
-					forward = strafeDir;
-				}
-				return true;
-			}
-			return false;
-		}
+	//summons a squad member to come revive the player
+	private void Die()
+	{
+		squadMembers[0].currentOrder = gameObject;
+		squadMembers[0].givenOrder = true;
+		squadMembers[0].healTargetHealth = health;
 	}
 
 	//handles the action that is called when an enemy is open for a counter attack
-	void CounterActionHandler(bool _state, GameObject _enemy)
+	private void CounterActionHandler(bool _state, GameObject _enemy)
 	{
+		if(shielding)
+			return;
+
 		attackingEnemy = _enemy;
 		counterWindow = _state;
 		counterSymbol.SetActive(_state);
 
-		if(attackingEnemy != null && Vector3.Distance(transform.position, attackingEnemy.transform.position) > 5)
-		{
-			counterWindow = false;
-			counterSymbol.SetActive(false);
-		}
+		if (attackingEnemy == null ||
+		    !(Vector3.Distance(transform.position, attackingEnemy.transform.position) > 5)) return;
+		counterWindow = false;
+		counterSymbol.SetActive(false);
 	}
 }

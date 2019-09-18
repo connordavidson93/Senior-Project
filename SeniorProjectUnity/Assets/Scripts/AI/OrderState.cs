@@ -6,8 +6,8 @@ using System;
 public class OrderState : BaseState
 {
     private Squad squad;
-    bool endRam;
-
+    private bool endRam;
+    
     public OrderState(Squad _ai) : base(_ai.gameObject, _ai)
     {
         squad = _ai;
@@ -23,7 +23,7 @@ public class OrderState : BaseState
         {
             return typeof(FollowState);
         }
-        else if(squad.givenOrder && squad.currentOrder.name == squad.enemyTags[0])
+        else if(squad.currentOrder.name == squad.enemyTags[0])
         {
             squad.enemyFound = true;
             squad.currentTarget = squad.currentOrder;
@@ -31,15 +31,27 @@ public class OrderState : BaseState
             squad.givenOrder = false;
             return typeof(ChaseState);
         }
-        else if (squad.givenOrder && squad.currentOrder.name == "Ram")
+        else if (squad.currentOrder.name == "Player")
+        {
+            squad.SetStoppingDist(5);
+            if (Vector3.Distance(gameObject.transform.position, squad.currentOrder.transform.position) <= 5f)
+            {
+                squad.healTargetHealth.Heal(squad.healPower);
+                squad.currentOrder = null;
+                squad.givenOrder = false;
+            }
+
+            return typeof(OrderState);
+        }
+        else if (squad.currentOrder.name == "Ram")
         {
             if(!endRam)
                 squad.SetDestination(squad.currentOrder.transform.position);
-            squad.ai.stoppingDistance = 0;
+            squad.SetStoppingDist(0);
             if(Vector3.Distance(squad.transform.position, squad.ai.destination) <= 1)
             {
                 endRam = true;
-                squad.anim.SetBool("Ram", true);
+                squad.anim.SetBool(StaticVars.ram, true);
                 OrderController order = squad.currentOrder.GetComponent<OrderController>();
                 if(order.endLocation != null && Vector3.Distance(order.endLocation.position, squad.ai.destination) > 1)
                 {
@@ -55,7 +67,7 @@ public class OrderState : BaseState
                 }
                 else if (Vector3.Distance(order.endLocation.position, squad.ai.destination) <= 1 && Vector3.Distance(squad.transform.position, squad.ai.destination) <= 1)
                 {
-                    squad.anim.SetBool("Ram", false);
+                    squad.anim.SetBool(StaticVars.ram, false);
                     order.inProgress = false;
                     squad.currentOrder = null;
                     squad.givenOrder = false;
