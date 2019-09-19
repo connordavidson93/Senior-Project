@@ -6,9 +6,7 @@ using System;
 public class DamagedState : BaseState
 {
 
-    public DamagedState(Base_AI _ai) : base(_ai.gameObject, _ai)
-    {
-    }
+    public DamagedState(Base_AI _ai) : base(_ai.gameObject, _ai) {}
 
     public override Type Tick()
     {
@@ -17,7 +15,7 @@ public class DamagedState : BaseState
         else if (!ai.damaged && ai.enemyFound && ai.currentTarget != null)
             return typeof(ChaseState);
         else if (!ai.damaged && (!ai.enemyFound || ai.currentTarget == null))
-            return typeof(IdleState);
+            return typeof(SearchState);
         else
         {
             ai.anim.SetBool("Damaged", true);

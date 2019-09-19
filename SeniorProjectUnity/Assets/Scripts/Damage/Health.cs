@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
     private int currentHealth;
     public Base_AI ai => GetComponent<Base_AI>();
     public PlayerController player => GetComponent<PlayerController>();
+    public GameObject attaker;
 
     private void Start()
     {
@@ -23,6 +24,7 @@ public class Health : MonoBehaviour
             return;
         if(other.CompareTag("hitbox") && alive && !shielded)
         {
+            attaker = other.gameObject;
             TakeDamage(other.GetComponent<Damage>().totalDamage);
         }
         else if(shielded && gameObject.CompareTag("Player"))

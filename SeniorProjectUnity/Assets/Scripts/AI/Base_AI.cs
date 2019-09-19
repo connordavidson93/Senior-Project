@@ -58,6 +58,11 @@ public abstract class Base_AI : MonoBehaviour
     /// </summary>
     public abstract void Die();
 
+    public void ForceState(BaseState _state)
+    {
+        fsm.ForceState(_state);
+    }
+    
     /// <summary>
     /// checks the space around the character to see if the another teammate is too close
     /// </summary>
