@@ -30,8 +30,7 @@ public class Health : MonoBehaviour
         else if(shielded && gameObject.CompareTag("Player"))
         {
             GetComponent<PlayerController>().BuildPower(other.GetComponent<Damage>().totalDamage);
-        }
-            
+        } 
     }
 
     public void Heal(int _amount)

@@ -64,8 +64,6 @@ public class SearchState : BaseState
             }
             
             transform.Rotate(new Vector3(0, 5, 0) * Time.deltaTime);
-            
-            
         }
         else if (currentCoolDown <= 0)
         {

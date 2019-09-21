@@ -46,7 +46,7 @@ public class AnimController : MonoBehaviour
 
     public void StartCounterWindow()
     {
-        CounterAction(true, transform.parent.gameObject);
+        CounterAction(true, gameObject);
     }
 
     public void EndCounterWindow()
