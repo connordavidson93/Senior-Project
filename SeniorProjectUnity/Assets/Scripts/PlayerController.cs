@@ -144,6 +144,8 @@ public class PlayerController : MonoBehaviour
 	{
 		float moveX = Input.GetAxisRaw("Horizontal");
 		float moveZ = Input.GetAxisRaw("Vertical");
+		health.dodging = true;
+		
 		if (moveX == 0 && moveZ == 0)
 		{
 			moveZ = 1;
@@ -170,6 +172,7 @@ public class PlayerController : MonoBehaviour
 
 		characterArt.transform.localRotation = Quaternion.identity;
 		canMove = true;
+		health.dodging = false;
 	}
 
 	//input for giving orders
