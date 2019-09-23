@@ -25,6 +25,8 @@ public class Health : MonoBehaviour
         if (hitter == null || hitter.owner == gameObject)
             return;
         
+        print(hitter.owner);
+        
         if(alive && !shielded)
         {
             attacker = hitter.owner;
