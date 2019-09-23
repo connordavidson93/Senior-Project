@@ -11,10 +11,8 @@ public class FSM : MonoBehaviour
 
     public BaseState currentState { get; private set; }
     public bool canPlay;
-    public float timeScale;
     public UnityAction<BaseState> OnStateChanged;
-    Coroutine stateCheck;
-    WaitForSeconds waitTime => new WaitForSeconds(timeScale);
+    private Coroutine stateCheck;
 
     private void Start()
     {
@@ -27,7 +25,7 @@ public class FSM : MonoBehaviour
         availableStates = _states;
     }
 
-    IEnumerator CheckStates()
+    private IEnumerator CheckStates()
     {
         while(canPlay)
         {
@@ -38,7 +36,7 @@ public class FSM : MonoBehaviour
 
             if(nextState != null && nextState != currentState?.GetType())
                 SwitchToNewState(nextState);
-            yield return waitTime;
+            yield return StaticVars.oneHundredth;
         }
     }
 
@@ -46,5 +44,13 @@ public class FSM : MonoBehaviour
     {
         currentState = availableStates[_nextState];
         OnStateChanged?.Invoke(currentState);
+    }
+
+    public void ForceState(BaseState _state)
+    {
+        foreach (var state in availableStates.Where(state => state.Value == _state))
+        {
+            currentState = _state;
+        }
     }
 }

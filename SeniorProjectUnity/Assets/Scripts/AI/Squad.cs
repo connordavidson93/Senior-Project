@@ -6,10 +6,11 @@ public class Squad : Base_AI
 {
     public enum UnitType { SPOTTER, SNIPER, STRONG }
     public UnitType unitType;
-    public bool givenOrder;
-    public GameObject currentOrder;
+    public bool givenOrder, recalled;
+    public GameObject currentOrder, ramHurtBox;
     public float followDistance = 10;
-    public bool recalled;
+    public int healPower;
+    public Health healTargetHealth;
 
     protected override void Awake()
     {
@@ -27,7 +28,8 @@ public class Squad : Base_AI
             { typeof(AttackState), new AttackState(this) },
             { typeof(OrderState), new OrderState(this) },
             { typeof(DeathState), new DeathState(this) },
-            { typeof(DamagedState), new DamagedState(this) }
+            { typeof(DamagedState), new DamagedState(this) },
+            { typeof(SearchState), new SearchState(this) }
         };
 
         fsm.SetStates(states);
@@ -50,6 +52,6 @@ public class Squad : Base_AI
 
     public override void Die()
     {
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 }

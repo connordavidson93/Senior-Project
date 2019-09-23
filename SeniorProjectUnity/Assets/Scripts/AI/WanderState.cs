@@ -3,19 +3,20 @@ using UnityEngine;
 
 public class WanderState : BaseState
 {
-    Squad temp;
-    Enemy enemy;
-    bool wandering;
+    private Squad squad;
+    private Enemy enemy;
+    private bool wandering;
 
     public WanderState(Base_AI _ai) : base(_ai.gameObject, _ai)
     {
-        if(ai is Squad)
+        switch (ai)
         {
-            temp = ai as Squad;
-        }
-        else if(ai is Enemy)
-        {
-            enemy = ai as Enemy;
+            case Squad temp:
+                squad = temp;
+                break;
+            case Enemy temp:
+                enemy = temp;
+                break;
         }
     }
 
@@ -23,11 +24,17 @@ public class WanderState : BaseState
     {
         Scan();
         if (ai.damaged)
+        {
+            ai.anim.SetBool(StaticVars.walk, false);
             return typeof(DamagedState);
+        }
         else if (ai.enemyFound && Vector3.Distance(ai.currentTarget.transform.position, ai.transform.position) > ai.stats.range)
             return typeof(ChaseState);
         else if (ai.enemyFound && Vector3.Distance(ai.currentTarget.transform.position, ai.transform.position) <= ai.stats.range)
+        {
+            ai.anim.SetBool(StaticVars.walk, false);
             return typeof(AttackState);
+        }
         else
         {
             if (!wandering)
@@ -39,9 +46,9 @@ public class WanderState : BaseState
                 ai.SetDestination(randDest);
                 ai.SetStoppingDist(0);
             }
-            else if (ai.ai.remainingDistance == 0)
+            else if (ai.ai.remainingDistance <= 0.1f)
                 wandering = false;
-
+            ai.anim.SetBool(StaticVars.walk, true);
             return typeof(WanderState);
         }
     }
