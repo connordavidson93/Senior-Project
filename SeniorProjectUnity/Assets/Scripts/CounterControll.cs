@@ -38,7 +38,7 @@ public class CounterControll : MonoBehaviour
 		enemy.transform.LookAt(new Vector3(playerPos.x, enemyPos.y, playerPos.z));
 
         //prevent player from putting input while counter animation is playing
-        player.canMove = false;
+        player.receiveInput = false;
         player.counterSymbol.SetActive(false);
 
 	    player.anim.Play(playerAnim.name);

@@ -46,7 +46,7 @@ public class AnimController : MonoBehaviour
 
     public void StartCounterWindow()
     {
-        CounterAction(true, transform.parent.gameObject);
+        CounterAction(true, gameObject);
     }
 
     public void EndCounterWindow()
@@ -57,6 +57,14 @@ public class AnimController : MonoBehaviour
     public void RestorePlayerInput()
     {
         if(pc != null)
+            pc.receiveInput = true;
+        else
+            Debug.Log("No PlayerController for this animator!");
+    }
+
+    public void RestorePlayerMovement()
+    {
+        if (pc != null)
             pc.canMove = true;
         else
             Debug.Log("No PlayerController for this animator!");
