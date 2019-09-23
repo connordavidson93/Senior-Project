@@ -59,12 +59,14 @@ public class AttackState : BaseState
         {
             if(enemyManager != null)
                 enemyManager.RemoveFromQueue(enemy);
+            ai.anim.SetBool(StaticVars.attack, false);
             return typeof(ChaseState);
         }
         else if (Vector3.Dot(ai.transform.forward, (ai.currentTarget.transform.position - ai.transform.position).normalized) <= 0.75f)
         {
             if(enemyManager != null)
                 enemyManager.RemoveFromQueue(enemy);
+            ai.anim.SetBool(StaticVars.attack, false);
             return typeof(ChaseState);
         }
         else if (ai.CheckSpace() != null)

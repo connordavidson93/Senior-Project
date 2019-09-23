@@ -17,8 +17,10 @@ public class PlayerController : MonoBehaviour
     
     [Header("Basic Movement")]
     public Camera maincam;
-    public bool canMove = true, rolling;
-	public float verticalVelocity = 0.0f, jogSpeed = 10.0f, runSpeed = 15.0f, walkSpeed = 5.0f, gravity = 30.0f;
+
+    public GameObject characterArt;
+    public bool canMove = true, receiveInput = true, rolling;
+	public float verticalVelocity = 0.0f, jogSpeed = 10.0f, runSpeed = 15.0f, walkSpeed = 5.0f, gravity = 30.0f, rollDist = 5f;
 	private float speed;
 	private Vector3 move = Vector3.zero;
 
@@ -38,7 +40,7 @@ public class PlayerController : MonoBehaviour
 	public int powerWaitTime = 5;
 	private WaitForSeconds longWait => new WaitForSeconds(powerWaitTime);
 	private bool loosingPower;
-	private Coroutine loosePower, playGame;
+	private Coroutine loosePower, playGame, roll;
 
 	//variables for squad orders
 	[Header("Squad")]
@@ -107,13 +109,15 @@ public class PlayerController : MonoBehaviour
 	{
 		while(health.alive)
 		{
-			if(canMove)
+			if (receiveInput)
 			{
-				MoveInput();
+				if (canMove)
+					MoveInput();
 				AttackInput();
 				DefendInput();
 				OrderInput();
-				if(counterWindow && attackingEnemy != null && Vector3.Distance(transform.position, attackingEnemy.transform.position) <= 5)
+				if (counterWindow && attackingEnemy != null &&
+				    Vector3.Distance(transform.position, attackingEnemy.transform.position) <= 5)
 					CounterInput();
 				else
 					CounterActionHandler(false, null);
@@ -133,6 +137,39 @@ public class PlayerController : MonoBehaviour
 			currentPower -= powerLossSpeed;
 			yield return StaticVars.oneSec;
 		}
+	}
+
+	//move the character a specified distance for dodge rolling
+	private IEnumerator Roll()
+	{
+		float moveX = Input.GetAxisRaw("Horizontal");
+		float moveZ = Input.GetAxisRaw("Vertical");
+		if (moveX == 0 && moveZ == 0)
+		{
+			moveZ = 1;
+		}
+		
+		while (rolling)
+		{
+			if (IsGrounded())
+			{
+				verticalVelocity = 0;
+				move = transform.TransformDirection(new Vector3(moveX,-Mathf.Abs(forward.y), moveZ)) * rollDist;
+			}
+
+			//Rotates the character to be facing the input direction
+			float angle = Mathf.Atan2(moveX, moveZ) * Mathf.Rad2Deg;
+			characterArt.transform.localRotation = Quaternion.Euler(0, angle, 0);
+			
+			//calculates movement
+			verticalVelocity -= gravity * Time.deltaTime;
+			Vector3 movement = move + verticalVelocity * Vector3.up;
+			cc.Move(movement * Time.deltaTime);
+			yield return StaticVars.oneHundredth;
+		}
+
+		characterArt.transform.localRotation = Quaternion.identity;
+		canMove = true;
 	}
 
 	//input for giving orders
@@ -249,6 +286,11 @@ public class PlayerController : MonoBehaviour
 			{
 				anim.SetInteger(StaticVars.jump, 2);
 				rolling = true;
+				canMove = false;
+				if(roll != null)
+					StopCoroutine(roll);
+				roll = StartCoroutine(Roll());
+				return;
 			}
 
 			//sets the speed
@@ -292,8 +334,10 @@ public class PlayerController : MonoBehaviour
 	//Input for attacking
 	private void AttackInput()
 	{
+		//currently this forces the player to hold the mouse button in order to attack
 		if (Input.GetMouseButtonDown(0) && !rolling)
 		{
+			canMove = false;
 			anim.SetFloat(StaticVars.mouse0, 1);
 			if(currentPower > 0)
 				currentPower -= strengthBonus;
@@ -306,6 +350,7 @@ public class PlayerController : MonoBehaviour
 		else if (Input.GetMouseButtonUp(0))
 		{
 			anim.SetFloat(StaticVars.mouse0, 0);
+			canMove = true;
 		}
 
 		if (Input.GetMouseButtonDown(1))

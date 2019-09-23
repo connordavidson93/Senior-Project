@@ -7,6 +7,7 @@ public class Damage : MonoBehaviour
     [HideInInspector] public int totalDamage;
     public Base_Stats stats;
     public int weaponDamage;
+    public GameObject owner;
 
     private void Start()
     {

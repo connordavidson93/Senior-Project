@@ -10,7 +10,7 @@ public abstract class Base_AI : MonoBehaviour
     public static UnityAction<GameObject> DeathAction;
 
     public Base_Stats stats;
-    public Animator anim => GetComponentInChildren<Animator>();
+    public Animator anim => GetComponent<Animator>();
     protected FSM fsm => GetComponent<FSM>();
     public NavMeshAgent ai => GetComponent<NavMeshAgent>();
     public bool enemyFound;
@@ -58,6 +58,11 @@ public abstract class Base_AI : MonoBehaviour
     /// </summary>
     public abstract void Die();
 
+    public void ForceState(BaseState _state)
+    {
+        fsm.ForceState(_state);
+    }
+    
     /// <summary>
     /// checks the space around the character to see if the another teammate is too close
     /// </summary>
