@@ -144,6 +144,10 @@ public class PlayerController : MonoBehaviour
 	{
 		float moveX = Input.GetAxisRaw("Horizontal");
 		float moveZ = Input.GetAxisRaw("Vertical");
+		if (moveX == 0 && moveZ == 0)
+		{
+			moveZ = 1;
+		}
 		
 		while (rolling)
 		{

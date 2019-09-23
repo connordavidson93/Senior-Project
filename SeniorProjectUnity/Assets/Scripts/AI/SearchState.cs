@@ -21,7 +21,7 @@ public class SearchState : BaseState
 
         if (ai.damaged)
         {
-            ai.currentTarget = health.attaker;
+            ai.currentTarget = health.attacker;
             start = true;
             return typeof(DamagedState);
         }
