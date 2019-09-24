@@ -289,10 +289,6 @@ public class PlayerController : MonoBehaviour
 			{
 				anim.SetInteger(StaticVars.jump, 2);
 				rolling = true;
-				canMove = false;
-				if(roll != null)
-					StopCoroutine(roll);
-				roll = StartCoroutine(Roll());
 				return;
 			}
 
@@ -478,5 +474,14 @@ public class PlayerController : MonoBehaviour
 		    !(Vector3.Distance(transform.position, attackingEnemy.transform.position) > 5)) return;
 		counterWindow = false;
 		counterSymbol.SetActive(false);
+	}
+
+	//called by roll control animator behaviour to make roll movement line up with the animation
+	public void StartRoll()
+	{
+		canMove = false;
+		if(roll != null)
+			StopCoroutine(roll);
+		roll = StartCoroutine(Roll());
 	}
 }
