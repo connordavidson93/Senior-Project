@@ -76,11 +76,13 @@ public class PlayerController : MonoBehaviour
 	private void OnEnable()
 	{
 		CounterAction += CounterActionHandler;
+		Base_AI.DeathAction += DeathActionHandler;
 	}
 
 	private void OnDisable()
 	{
 		CounterAction -= CounterActionHandler;
+		Base_AI.DeathAction -= DeathActionHandler;
 	}
 
 	private void Awake()
@@ -320,7 +322,7 @@ public class PlayerController : MonoBehaviour
 		
 		//Rotates the character to follow the camera
 		var eulerAngles = transform.eulerAngles;
-		Vector3 angles = new Vector3(eulerAngles.x, maincam.transform.eulerAngles.y, eulerAngles.z);
+		var angles = new Vector3(eulerAngles.x, maincam.transform.eulerAngles.y, eulerAngles.z);
 		transform.rotation = Quaternion.Euler(angles);
 		
 		//calculates movement
@@ -459,6 +461,15 @@ public class PlayerController : MonoBehaviour
 		squadMembers[0].givenOrder = true;
 		squadMembers[0].healTargetHealth = health;
 	}
+	
+	//called by roll control animator behaviour to make roll movement line up with the animation
+	public void StartRoll()
+	{
+		canMove = false;
+		if(roll != null)
+			StopCoroutine(roll);
+		roll = StartCoroutine(Roll());
+	}
 
 	//handles the action that is called when an enemy is open for a counter attack
 	private void CounterActionHandler(bool _state, GameObject _enemy)
@@ -476,12 +487,10 @@ public class PlayerController : MonoBehaviour
 		counterSymbol.SetActive(false);
 	}
 
-	//called by roll control animator behaviour to make roll movement line up with the animation
-	public void StartRoll()
+	//handles the action that is called when an AI dies
+	private void DeathActionHandler(GameObject _other)
 	{
-		canMove = false;
-		if(roll != null)
-			StopCoroutine(roll);
-		roll = StartCoroutine(Roll());
+		if (attackingEnemy == _other)
+			attackingEnemy = null;
 	}
 }

@@ -41,8 +41,8 @@ public class WanderState : BaseState
             {
                 wandering = true;
                 Vector3 randDest = Vector3.zero;
-                randDest.x = UnityEngine.Random.Range(-5, 5);
-                randDest.z = UnityEngine.Random.Range(-5, 5);
+                randDest.x = UnityEngine.Random.Range(-ai.wanderRange, ai.wanderRange);
+                randDest.z = UnityEngine.Random.Range(-ai.wanderRange, ai.wanderRange);
                 ai.SetDestination(randDest);
                 ai.SetStoppingDist(0);
             }

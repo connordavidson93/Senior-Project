@@ -380,6 +380,32 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1102 &-4741806554067351552
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MaleDamaged_Events
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 529aaba9976ca8c43a0a77f6ec2f7524, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1109 &-4638272067397230596
 AnimatorTransition:
   m_ObjectHideFlags: 1
@@ -825,37 +851,37 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Damaged
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Ram
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Walk
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: InCombat
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Dead
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -891,7 +917,10 @@ AnimatorStateMachine:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Base Layer
-  m_ChildStates: []
+  m_ChildStates:
+  - serializedVersion: 1
+    m_State: {fileID: -4741806554067351552}
+    m_Position: {x: 200, y: 0, z: 0}
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: -2991981156903125133}
@@ -905,22 +934,22 @@ AnimatorStateMachine:
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
+  - first: {fileID: -2991981156903125133}
+    second:
+    - {fileID: 2897410521122306755}
+    - {fileID: -36928287147155759}
+    - {fileID: 6641840129812744106}
+  - first: {fileID: 8664693762638851518}
+    second:
+    - {fileID: -6323319172308118754}
+    - {fileID: -1801799012795872971}
+    - {fileID: 8803143800896125928}
   - first: {fileID: 8801441230534033405}
     second:
     - {fileID: 2223104415653478266}
     - {fileID: 7731030691967884321}
     - {fileID: -1600848955934743516}
     - {fileID: -4638272067397230596}
-  - first: {fileID: 8664693762638851518}
-    second:
-    - {fileID: -6323319172308118754}
-    - {fileID: -1801799012795872971}
-    - {fileID: 8803143800896125928}
-  - first: {fileID: -2991981156903125133}
-    second:
-    - {fileID: 2897410521122306755}
-    - {fileID: -36928287147155759}
-    - {fileID: 6641840129812744106}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 30, y: -130, z: 0}
   m_EntryPosition: {x: -200, y: 100, z: 0}

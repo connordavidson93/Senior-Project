@@ -52,7 +52,7 @@ public class AttackState : BaseState
                 enemyManager.RemoveFromQueue(enemy);
             ai.RemoveTarget();
             ai.anim.SetBool(StaticVars.attack, false);
-            return typeof(FollowState);
+            return typeof(SearchState);
         }
         else if (squad != null && squad.recalled)
         {
