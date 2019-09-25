@@ -8,7 +8,7 @@ public class AnimController : MonoBehaviour
     public static UnityAction<bool, GameObject> CounterAction;
 
     public Animator anim => GetComponent<Animator>();
-    public GameObject hitBox;
+    public List<GameObject> hitBoxes;
     private Base_AI ai => GetComponentInParent<Base_AI>();
     private PlayerController pc => GetComponentInParent<PlayerController>();
     public EnemyManager enemyManager;
@@ -29,14 +29,9 @@ public class AnimController : MonoBehaviour
             Debug.Log("No Animator for this object!");
     }
 
-    public void ToggleHitBox()
+    public void ToggleHitBox(int _index)
     {
-        hitBox.SetActive(!hitBox.activeSelf);
-    }
-
-    public void ForceToggleHitBox(bool _state)
-    {
-        hitBox.SetActive(_state);
+        hitBoxes[_index].SetActive(!hitBoxes[_index].activeSelf);
     }
 
     public void RecoverFromDamage()

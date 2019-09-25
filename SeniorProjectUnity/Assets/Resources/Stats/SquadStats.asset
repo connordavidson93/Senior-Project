@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0846d942d575f624b9c25fa64805eea4, type: 3}
   m_Name: SquadStats
   m_EditorClassIdentifier: 
-  range: 5
+  range: 3
   speed: 5
   strength: 5
   defense: 0

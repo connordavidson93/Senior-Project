@@ -45,7 +45,7 @@ ModelImporter:
       takeName: Take 001
       internalID: 1827226128182048838
       firstFrame: 1
-      lastFrame: 60
+      lastFrame: 440
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -73,8 +73,8 @@ ModelImporter:
       name: FemaleCombatIdle
       takeName: Take 001
       internalID: 3462740401783414122
-      firstFrame: 80
-      lastFrame: 105
+      firstFrame: 490
+      lastFrame: 580
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -102,8 +102,8 @@ ModelImporter:
       name: FemaleAttack
       takeName: Take 001
       internalID: 384112826588446939
-      firstFrame: 110
-      lastFrame: 155
+      firstFrame: 620
+      lastFrame: 675
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

@@ -5,8 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public Base_Stats stats;
-    public bool alive;
-    public bool shielded;
+    public bool alive, shielded, dodging;
     private int currentHealth;
     public Base_AI ai => GetComponent<Base_AI>();
     public PlayerController player => GetComponent<PlayerController>();
@@ -22,7 +21,7 @@ public class Health : MonoBehaviour
     {
         var hitter = other.GetComponent<Damage>();
 
-        if (hitter == null || hitter.owner == gameObject)
+        if (hitter == null || hitter.owner == gameObject || dodging)
             return;
         
         if(alive && !shielded)

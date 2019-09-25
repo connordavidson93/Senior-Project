@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class SearchState : BaseState
 {
-    private int coolDownTimer = 3000, wanderChance = 5, turnChance = 6, currentCoolDown;
+    private int coolDownTimer = 3000, wanderChance = 3, turnChance = 2, currentCoolDown;
     private bool turn, wander, start;
+    private float endRot;
     
     public SearchState(Base_AI _ai) : base(_ai.gameObject, _ai) {}
 
@@ -33,6 +35,7 @@ public class SearchState : BaseState
         else if (ai.enemyFound && Vector3.Distance(ai.currentTarget.transform.position, ai.transform.position) <= ai.stats.range)
         {
             start = true;
+            ai.anim.SetBool(StaticVars.walk, false);
             return typeof(AttackState);
         }
         else if (UnityEngine.Random.Range(0, wanderChance) == 0 && !turn || wander)
@@ -41,9 +44,9 @@ public class SearchState : BaseState
             {
                 wander = true;
                 var randDest = Vector3.zero;
-                var pos = ai.transform.position;
-                randDest.x = UnityEngine.Random.Range(-5, 5) * pos.x;
-                randDest.z = UnityEngine.Random.Range(-5, 5) * pos.z;
+                var pos = ai.player.transform.position;
+                randDest.x = UnityEngine.Random.Range(-ai.wanderRange, ai.wanderRange) * pos.x;
+                randDest.z = UnityEngine.Random.Range(-ai.wanderRange, ai.wanderRange) * pos.z;
                 randDest.y = pos.y;
                 ai.SetDestination(randDest);
                 ai.SetStoppingDist(0);
@@ -61,13 +64,18 @@ public class SearchState : BaseState
             if (!turn)
             {
                 turn = true;
+                endRot = transform.rotation.y + 20;
             }
             
-            transform.Rotate(new Vector3(0, 5, 0) * Time.deltaTime);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, endRot, 0), Time.deltaTime);
+            if (transform.rotation.y >= endRot + 5 || transform.rotation.y <= endRot + 5)
+                turn = false;
         }
         else if (currentCoolDown <= 0)
         {
             start = true;
+            ai.anim.SetBool(StaticVars.walk, false);
+            ai.anim.SetBool(StaticVars.inCombat, false);
             return typeof(IdleState);
         }
 
