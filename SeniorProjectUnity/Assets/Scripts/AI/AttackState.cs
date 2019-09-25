@@ -30,17 +30,20 @@ public class AttackState : BaseState
             if(enemyManager != null)
                 enemyManager.RemoveFromQueue(enemy);
             ai.RemoveTarget();
+            ai.anim.SetBool(StaticVars.attack, false);
             return typeof(DeathState);
         }
         else if (ai.damaged)
         {
             if(enemyManager != null)
                 enemyManager.RemoveFromQueue(enemy);
+            ai.anim.SetBool(StaticVars.attack, false);
             return typeof(DamagedState);
         }
         else if (squad != null && squad.currentOrder != null && squad.givenOrder)
         {
             ai.RemoveTarget();
+            ai.anim.SetBool(StaticVars.attack, false);
             return typeof(OrderState);
         }
         else if (ai.currentTarget == null)
@@ -48,11 +51,13 @@ public class AttackState : BaseState
             if(enemyManager != null)
                 enemyManager.RemoveFromQueue(enemy);
             ai.RemoveTarget();
-            return typeof(FollowState);
+            ai.anim.SetBool(StaticVars.attack, false);
+            return typeof(SearchState);
         }
         else if (squad != null && squad.recalled)
         {
             ai.RemoveTarget();
+            ai.anim.SetBool(StaticVars.attack, false);
             return typeof(FollowState);
         }
         else if (Vector3.Distance(ai.transform.position, ai.currentTarget.transform.position) > ai.stats.range)
