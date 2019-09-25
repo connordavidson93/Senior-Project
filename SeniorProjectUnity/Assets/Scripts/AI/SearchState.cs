@@ -9,8 +9,22 @@ public class SearchState : BaseState
     private int coolDownTimer = 3000, wanderChance = 3, turnChance = 2, currentCoolDown;
     private bool turn, wander, start;
     private float endRot;
+    private Squad squad;
+    private Enemy enemy;
     
-    public SearchState(Base_AI _ai) : base(_ai.gameObject, _ai) {}
+    
+    public SearchState(Base_AI _ai) : base(_ai.gameObject, _ai)
+    {
+        switch (ai)
+        {
+            case Squad temp:
+                squad = temp;
+                break;
+            case Enemy temp:
+                enemy = temp;
+                break;
+        }
+    }
 
     public override Type Tick()
     {
@@ -78,6 +92,10 @@ public class SearchState : BaseState
             ai.anim.SetBool(StaticVars.inCombat, false);
             return typeof(IdleState);
         }
+        else if (squad != null && squad.recalled)
+            return typeof(FollowState);
+        else if (squad != null && squad.givenOrder && squad.currentOrder != null)
+            return typeof(OrderState);
 
         currentCoolDown--;
         ai.anim.SetBool(StaticVars.inCombat, true);

@@ -33,8 +33,13 @@ public class PlayerController : MonoBehaviour
 	[Header("Attack")]
 	//variables for attacking
 	public Base_Stats playerStats;
+
 	public int strengthBonus = 10, powerLossSpeed = 5, powerBuildUpMax = 100;
+	[HideInInspector] public int attackNum;
 	private int currentPower;
+	public float maxAttackDelay = 2; 
+	private float lastTimeClicked;
+	[HideInInspector] public bool attaking;
 	
 	//variables for coroutines
 	public int powerWaitTime = 5;
@@ -187,6 +192,7 @@ public class PlayerController : MonoBehaviour
 			var found = (hit.collider.CompareTag("order") || hit.collider.CompareTag("Enemy"));
 			var downedSquad = (hit.collider.CompareTag("squad"));
 
+			//sends a squad-mate to perform an order
 			if(Input.GetKeyDown(KeyCode.F) && found)
 			{
 				order = hit.collider.gameObject.GetComponent<OrderController>();
@@ -218,6 +224,7 @@ public class PlayerController : MonoBehaviour
 					}
 				}
 			}
+			//sends a squad-mate to heal another downed squad member
 			else if (Input.GetKeyDown(KeyCode.F) && downedSquad)
 			{
 				var squadHealth = hit.collider.gameObject.GetComponent<Health>();
@@ -234,6 +241,7 @@ public class PlayerController : MonoBehaviour
 			}
 		}
 
+		//recalls the squad to the player
 		if(Input.GetKeyDown(KeyCode.R))
 		{
 			print("Form up!");
@@ -246,7 +254,8 @@ public class PlayerController : MonoBehaviour
 				member.currentOrder = null;
 			}
 		}
-
+		
+		//sets the ram start and end location
 		if(Input.GetKeyDown(KeyCode.Q))
 		{
 			if(Physics.Raycast(maincam.transform.position, maincam.transform.forward, out hit, 100f) && !ramPlaced)
@@ -335,11 +344,26 @@ public class PlayerController : MonoBehaviour
 	//Input for attacking
 	private void AttackInput()
 	{
+		if (!IsGrounded())
+			return;
+		
+		if(Time.time - lastTimeClicked > maxAttackDelay)
+		{
+			attackNum = 0;
+			anim.SetInteger(StaticVars.mouse0, attackNum);
+		}
+		
 		//currently this forces the player to hold the mouse button in order to attack
 		if (Input.GetMouseButtonDown(0) && !rolling)
 		{
+			attaking = true;
+			attackNum++;
+			attackNum = Mathf.Clamp(attackNum, 0, 2);
+			
 			canMove = false;
-			anim.SetFloat(StaticVars.mouse0, 1);
+			if(attackNum == 1)
+				anim.SetInteger(StaticVars.mouse0, attackNum);
+			
 			if(currentPower > 0)
 				currentPower -= strengthBonus;
 			if (currentPower <= 0)
@@ -350,19 +374,7 @@ public class PlayerController : MonoBehaviour
 		}
 		else if (Input.GetMouseButtonUp(0))
 		{
-			anim.SetFloat(StaticVars.mouse0, 0);
-			canMove = true;
-		}
-
-		if (Input.GetMouseButtonDown(1))
-		{
-			shield.SetActive(true);
-			health.shielded = true;
-		}
-		else if (Input.GetMouseButtonUp(1))
-		{
-			shield.SetActive(false);
-			health.shielded = false;
+			lastTimeClicked = Time.time;
 		}
 
 		if (Input.GetKeyDown(KeyCode.G))
@@ -372,15 +384,21 @@ public class PlayerController : MonoBehaviour
 	//input for defending
 	private void DefendInput()
 	{
-		if(Input.GetMouseButtonDown(1) && !rolling)
+		if(Input.GetMouseButtonDown(1) && !rolling && !attaking)
 		{
 			shielding = true;
 			anim.SetFloat(StaticVars.mouse1, 1);
+			shield.SetActive(true);
+			health.shielded = true;
+			counterSymbol.SetActive(false);
+			counterWindow = false;
 		}
 		else if(Input.GetMouseButtonUp(1))
 		{
 			shielding = false;
 			anim.SetFloat(StaticVars.mouse1, 0);
+			shield.SetActive(false);
+			health.shielded = false;
 		}
 	}
 
@@ -474,17 +492,17 @@ public class PlayerController : MonoBehaviour
 	//handles the action that is called when an enemy is open for a counter attack
 	private void CounterActionHandler(bool _state, GameObject _enemy)
 	{
-		if(shielding)
-			return;
-
 		attackingEnemy = _enemy;
+
+		if (shielding || attackingEnemy == null || Vector3.Distance(transform.position, attackingEnemy.transform.position) > 5)
+		{
+			counterWindow = false;
+			counterSymbol.SetActive(false);
+			return;
+		}
+
 		counterWindow = _state;
 		counterSymbol.SetActive(_state);
-
-		if (attackingEnemy == null ||
-		    !(Vector3.Distance(transform.position, attackingEnemy.transform.position) > 5)) return;
-		counterWindow = false;
-		counterSymbol.SetActive(false);
 	}
 
 	//handles the action that is called when an AI dies
