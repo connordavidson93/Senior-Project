@@ -287,6 +287,7 @@ MonoBehaviour:
   totalDamage: 0
   stats: {fileID: 11400000, guid: 1e20321cc4eb2574cb99f6516c61f14e, type: 2}
   weaponDamage: 10
+  owner: {fileID: 0}
 --- !u!1 &388985483
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,7 +381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c12282dbd45d640b237c9ae50f365d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitBox: {fileID: 0}
+  hitBoxes: []
   enemyManager: {fileID: 0}
 --- !u!114 &575922619
 MonoBehaviour:
@@ -397,7 +398,8 @@ MonoBehaviour:
   stats: {fileID: 11400000, guid: 1e20321cc4eb2574cb99f6516c61f14e, type: 2}
   alive: 1
   shielded: 0
-  attaker: {fileID: 0}
+  dodging: 0
+  attacker: {fileID: 0}
 --- !u!1 &603590016
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,7 +467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c12282dbd45d640b237c9ae50f365d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitBox: {fileID: 1683197547}
+  hitBoxes: []
   enemyManager: {fileID: 1704276696}
 --- !u!135 &603590020
 SphereCollider:
@@ -662,6 +664,7 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   damaged: 0
   occupiedSpaceRadius: 3
+  wanderRange: 5
   mask:
     serializedVersion: 2
     m_Bits: 4096
@@ -683,7 +686,8 @@ MonoBehaviour:
   stats: {fileID: 11400000, guid: 1e20321cc4eb2574cb99f6516c61f14e, type: 2}
   alive: 1
   shielded: 0
-  attaker: {fileID: 0}
+  dodging: 0
+  attacker: {fileID: 0}
 --- !u!1 &646153683
 GameObject:
   m_ObjectHideFlags: 3
@@ -752,7 +756,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 646153683}
-  m_LocalRotation: {x: 0.18923078, y: 0.092731945, z: -0.0179539, w: 0.97737926}
+  m_LocalRotation: {x: 0.18730046, y: 0.16729957, z: -0.032390945, w: 0.9674091}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -994,7 +998,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710345962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 531, y: -260.82, z: 543.95}
+  m_LocalPosition: {x: 511.8, y: -265.25, z: 530.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 646153685}
@@ -1177,8 +1181,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764152395}
-  m_LocalRotation: {x: 0.11877559, y: 0.09377931, z: -0.011269209, w: 0.98841834}
-  m_LocalPosition: {x: 531, y: -260.82, z: 543.95}
+  m_LocalRotation: {x: 0.11756396, y: 0.16918917, z: -0.020331008, w: 0.97833556}
+  m_LocalPosition: {x: 511.8, y: -265.25, z: 530.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1387,7 +1391,8 @@ MonoBehaviour:
   stats: {fileID: 11400000, guid: 1e20321cc4eb2574cb99f6516c61f14e, type: 2}
   alive: 1
   shielded: 0
-  attaker: {fileID: 0}
+  dodging: 0
+  attacker: {fileID: 0}
 --- !u!195 &792381667
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1430,6 +1435,7 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   damaged: 0
   occupiedSpaceRadius: 3
+  wanderRange: 5
   mask:
     serializedVersion: 2
     m_Bits: 4096
@@ -1512,7 +1518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c12282dbd45d640b237c9ae50f365d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitBox: {fileID: 377648624}
+  hitBoxes: []
   enemyManager: {fileID: 0}
 --- !u!23 &796925377
 MeshRenderer:
@@ -1786,7 +1792,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 866211911}
-  m_LocalRotation: {x: 0.118775584, y: 0.09377931, z: -0.011269207, w: 0.9884184}
+  m_LocalRotation: {x: 0.11756396, y: 0.16918916, z: -0.020331016, w: 0.97833556}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1861,7 +1867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c12282dbd45d640b237c9ae50f365d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitBox: {fileID: 1596306439}
+  hitBoxes: []
   enemyManager: {fileID: 1704276696}
 --- !u!135 &998430273
 SphereCollider:
@@ -2273,6 +2279,7 @@ MonoBehaviour:
   totalDamage: 0
   stats: {fileID: 11400000, guid: 1e20321cc4eb2574cb99f6516c61f14e, type: 2}
   weaponDamage: 100
+  owner: {fileID: 0}
 --- !u!135 &1296856077
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2354,7 +2361,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338349226}
-  m_LocalRotation: {x: 0.016635844, y: 0.09444077, z: -0.001578353, w: 0.9953903}
+  m_LocalRotation: {x: 0.016466126, y: 0.17038254, z: -0.0028475544, w: 0.9852363}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3023,6 +3030,7 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   damaged: 0
   occupiedSpaceRadius: 3
+  wanderRange: 5
   mask:
     serializedVersion: 2
     m_Bits: 3072
@@ -3103,7 +3111,8 @@ MonoBehaviour:
   stats: {fileID: 11400000, guid: 1e20321cc4eb2574cb99f6516c61f14e, type: 2}
   alive: 1
   shielded: 0
-  attaker: {fileID: 0}
+  dodging: 0
+  attacker: {fileID: 0}
 --- !u!1 &1589962746
 GameObject:
   m_ObjectHideFlags: 0
@@ -3225,6 +3234,7 @@ MonoBehaviour:
   totalDamage: 0
   stats: {fileID: 11400000, guid: 1e20321cc4eb2574cb99f6516c61f14e, type: 2}
   weaponDamage: 5
+  owner: {fileID: 0}
 --- !u!65 &1596306442
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3298,6 +3308,7 @@ MonoBehaviour:
   totalDamage: 0
   stats: {fileID: 11400000, guid: 1e20321cc4eb2574cb99f6516c61f14e, type: 2}
   weaponDamage: 5
+  owner: {fileID: 0}
 --- !u!1 &1684355089
 GameObject:
   m_ObjectHideFlags: 0
@@ -3602,7 +3613,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29788
+  m_Name: pb_Mesh32638
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4629,17 +4640,17 @@ PrefabInstance:
     - target: {fileID: 4349601396795417857, guid: 093e5c13babd7b041b9ac8fc951a0a26,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 531
+      value: 511.8
       objectReference: {fileID: 0}
     - target: {fileID: 4349601396795417857, guid: 093e5c13babd7b041b9ac8fc951a0a26,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -262.57
+      value: -267
       objectReference: {fileID: 0}
     - target: {fileID: 4349601396795417857, guid: 093e5c13babd7b041b9ac8fc951a0a26,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 548.3
+      value: 535.3
       objectReference: {fileID: 0}
     - target: {fileID: 4349601396795417857, guid: 093e5c13babd7b041b9ac8fc951a0a26,
         type: 3}
