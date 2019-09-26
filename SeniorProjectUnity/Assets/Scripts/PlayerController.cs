@@ -384,10 +384,12 @@ public class PlayerController : MonoBehaviour
 	//input for defending
 	private void DefendInput()
 	{
-		if(Input.GetMouseButtonDown(1) && !rolling && !attaking)
+		if(Input.GetMouseButtonDown(1) && !rolling)
 		{
-			shielding = true;
 			anim.SetFloat(StaticVars.mouse1, 1);
+			if (attaking) 
+				return;
+			shielding = true;
 			shield.SetActive(true);
 			health.shielded = true;
 			counterSymbol.SetActive(false);
