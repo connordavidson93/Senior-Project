@@ -14,6 +14,7 @@ public static class StaticVars
 
     //delegate Actions
     public static UnityAction<PlayerController, Enemy> PairCounterAction;
+    public static UnityAction<GameObject> DeathAction;
     
     //cashed properties for access to animator parameters
     public static readonly int grounded = Animator.StringToHash("Grounded");

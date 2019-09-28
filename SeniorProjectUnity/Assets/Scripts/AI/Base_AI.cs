@@ -7,8 +7,6 @@ using UnityEngine.Events;
 [RequireComponent(typeof(NavMeshAgent)), RequireComponent(typeof(FSM))]
 public abstract class Base_AI : MonoBehaviour
 {
-    public static UnityAction<GameObject> DeathAction;
-
     public Base_Stats stats;
     public Animator anim => GetComponent<Animator>();
     protected FSM fsm => GetComponent<FSM>();
@@ -34,12 +32,12 @@ public abstract class Base_AI : MonoBehaviour
 
     private void OnEnable()
     {
-        DeathAction += TargetDied;
+        StaticVars.DeathAction += TargetDied;
     }
 
     private void OnDisable()
     {
-        DeathAction -= TargetDied;
+        StaticVars.DeathAction -= TargetDied;
     }
 
     private void OnDrawGizmos()

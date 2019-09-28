@@ -81,13 +81,13 @@ public class PlayerController : MonoBehaviour
 	private void OnEnable()
 	{
 		CounterAction += CounterActionHandler;
-		Base_AI.DeathAction += DeathActionHandler;
+		StaticVars.DeathAction += DeathActionHandler;
 	}
 
 	private void OnDisable()
 	{
 		CounterAction -= CounterActionHandler;
-		Base_AI.DeathAction -= DeathActionHandler;
+		StaticVars.DeathAction -= DeathActionHandler;
 	}
 
 	private void Awake()
@@ -482,6 +482,7 @@ public class PlayerController : MonoBehaviour
 	//summons a squad member to come revive the player
 	private void Die()
 	{
+		StaticVars.DeathAction(gameObject);
 		squadMembers[0].currentOrder = gameObject;
 		squadMembers[0].givenOrder = true;
 		squadMembers[0].healTargetHealth = health;

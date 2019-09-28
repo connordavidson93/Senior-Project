@@ -37,7 +37,7 @@ public class Enemy : Base_AI
 
     public override void Die()
     {
-        DeathAction(gameObject);
+        StaticVars.DeathAction(gameObject);
         gameObject.SetActive(false);
     }
 }

@@ -426,7 +426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!54 &622475998
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2690,7 +2690,7 @@ MonoBehaviour:
   currentOrder: {fileID: 0}
   ramHurtBox: {fileID: 1219473893}
   followDistance: 10
-  healPower: 0
+  healPower: 30
   healTargetHealth: {fileID: 0}
 --- !u!114 &1501221090
 MonoBehaviour:
