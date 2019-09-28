@@ -387,20 +387,11 @@ public class PlayerController : MonoBehaviour
 		if(Input.GetMouseButtonDown(1) && !rolling)
 		{
 			anim.SetFloat(StaticVars.mouse1, 1);
-			if (attaking) 
-				return;
-			shielding = true;
-			shield.SetActive(true);
-			health.shielded = true;
-			counterSymbol.SetActive(false);
-			counterWindow = false;
 		}
 		else if(Input.GetMouseButtonUp(1))
 		{
-			shielding = false;
 			anim.SetFloat(StaticVars.mouse1, 0);
-			shield.SetActive(false);
-			health.shielded = false;
+			ToggleShield(false);
 		}
 	}
 
@@ -411,6 +402,20 @@ public class PlayerController : MonoBehaviour
 		print("COUNTER ATTACK");
 		StaticVars.PairCounterAction(this, attackingEnemy.GetComponent<Enemy>());
 	}
+
+	public void ToggleShield(bool _state)
+	{
+		shielding = _state;
+		shield.SetActive(_state);
+		health.shielded = _state;
+		
+		if (_state)
+		{
+			counterSymbol.SetActive(false);
+			counterWindow = false;
+		}
+	}
+	
 
 	//builds the current power loaded
 	public void BuildPower(int _amount)
