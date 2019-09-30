@@ -7,6 +7,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(NavMeshAgent)), RequireComponent(typeof(FSM))]
 public abstract class Base_AI : MonoBehaviour
 {
+    [Header("Base  AI Variables")]
     public Base_Stats stats;
     public Animator anim => GetComponent<Animator>();
     protected FSM fsm => GetComponent<FSM>();

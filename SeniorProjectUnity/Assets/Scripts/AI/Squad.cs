@@ -5,6 +5,8 @@ using System;
 public class Squad : Base_AI
 {
     public enum UnitType { SPOTTER, SNIPER, STRONG }
+    
+    [Header("Squad Variables")]
     public UnitType unitType;
     public bool givenOrder, recalled;
     public GameObject currentOrder, ramHurtBox;

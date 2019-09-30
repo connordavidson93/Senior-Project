@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 using static AnimController;
 
 [RequireComponent(typeof(CharacterController))]
@@ -63,6 +64,7 @@ public class PlayerController : MonoBehaviour
 	public GameObject shield; 
 	public GameObject explosion;
 	private bool shielding;
+	public Slider powerSlider;
 
 	//variables for countering
 	[Header("Counter Attack")]
@@ -142,6 +144,7 @@ public class PlayerController : MonoBehaviour
 		while (currentPower < 0)
 		{
 			currentPower -= powerLossSpeed;
+			UpdatePowerUI();
 			yield return StaticVars.oneSec;
 		}
 	}
@@ -314,10 +317,12 @@ public class PlayerController : MonoBehaviour
 			}
 			else if(Input.GetKeyDown(KeyCode.LeftControl))
 			{
+				anim.SetBool(StaticVars.walk, true);
 				speed = walkSpeed;
 			}
 			else if (Input.GetKeyUp(KeyCode.LeftControl))
 			{
+				anim.SetBool(StaticVars.walk, false);
 				speed = jogSpeed;
 			}
 
@@ -353,7 +358,6 @@ public class PlayerController : MonoBehaviour
 			anim.SetInteger(StaticVars.mouse0, attackNum);
 		}
 		
-		//currently this forces the player to hold the mouse button in order to attack
 		if (Input.GetMouseButtonDown(0) && !rolling)
 		{
 			attaking = true;
@@ -364,13 +368,7 @@ public class PlayerController : MonoBehaviour
 			if(attackNum == 1)
 				anim.SetInteger(StaticVars.mouse0, attackNum);
 			
-			if(currentPower > 0)
-				currentPower -= strengthBonus;
-			if (currentPower <= 0)
-			{
-				loosingPower = true;
-				currentPower = 0;
-			}
+			
 		}
 		else if (Input.GetMouseButtonUp(0))
 		{
@@ -420,8 +418,6 @@ public class PlayerController : MonoBehaviour
 	//builds the current power loaded
 	public void BuildPower(int _amount)
 	{
-		print("building power");
-
 		if (currentPower < powerBuildUpMax)
 		{
 			currentPower += _amount;
@@ -438,8 +434,8 @@ public class PlayerController : MonoBehaviour
 
 			currentPower = powerBuildUpMax;
 			loosingPower = true;
-			print("at max power");
 		}
+		UpdatePowerUI();
 	}
 
 	//releases pent up power when it is full
@@ -449,6 +445,7 @@ public class PlayerController : MonoBehaviour
 		currentPower = 0;
 		explosion.transform.localScale = new Vector3(20f, 20f, 20f);
 		loosingPower = false;
+		UpdatePowerUI();
 	}
 
 	//checks if the player is on the ground
@@ -477,6 +474,26 @@ public class PlayerController : MonoBehaviour
 			return true;
 		}
 		return false;
+	}
+
+	//calculates how much power the player has after attacking
+	//called from Animator Behaviour
+	public void CalcAttackPower()
+	{
+		if(currentPower > 0)
+			currentPower -= strengthBonus;
+		if (currentPower <= 0)
+		{
+			loosingPower = true;
+			currentPower = 0;
+		}
+		UpdatePowerUI();
+	}
+	
+	//updates the power level UI element
+	private void UpdatePowerUI()
+	{
+		powerSlider.value = currentPower;
 	}
 
 	//summons a squad member to come revive the player

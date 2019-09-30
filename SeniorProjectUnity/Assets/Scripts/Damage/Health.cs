@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
@@ -10,9 +11,16 @@ public class Health : MonoBehaviour
     public Base_AI ai => GetComponent<Base_AI>();
     public PlayerController player => GetComponent<PlayerController>();
     public GameObject attacker;
-
+    public Slider healthSlider;
+    private bool sliderNull;
+    private bool playerNull;
+    
     private void Start()
     {
+        if (healthSlider == null)
+            sliderNull = true;
+        if (player == null)
+            playerNull = true;
         currentHealth = stats.maxHealth;
         alive = true;
     }
@@ -39,10 +47,11 @@ public class Health : MonoBehaviour
     {
         currentHealth += _amount;
         alive = true;
-        if (player != null)
+        if (!playerNull)
         {
             player.Restart();
         }
+        SetUISlider();
     }
 
     public void TakeDamage(int _damage)
@@ -54,5 +63,12 @@ public class Health : MonoBehaviour
         {
             alive = false;
         }
+        SetUISlider();
+    }
+
+    public void SetUISlider()
+    {
+        if (!sliderNull)
+            healthSlider.value = currentHealth;
     }
 }

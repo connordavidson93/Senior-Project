@@ -41,6 +41,11 @@ public class SearchState : BaseState
             start = true;
             return typeof(DamagedState);
         }
+        else if (squad != null && squad.recalled)
+            return typeof(FollowState);
+        else if (squad != null && squad.givenOrder && squad.currentOrder != null)
+            return typeof(OrderState);
+
         else if (ai.enemyFound && Vector3.Distance(ai.currentTarget.transform.position, ai.transform.position) > ai.stats.range)
         {
             start = true;
@@ -59,8 +64,8 @@ public class SearchState : BaseState
                 wander = true;
                 var randDest = Vector3.zero;
                 var pos = ai.player.transform.position;
-                randDest.x = UnityEngine.Random.Range(-ai.wanderRange, ai.wanderRange) * pos.x;
-                randDest.z = UnityEngine.Random.Range(-ai.wanderRange, ai.wanderRange) * pos.z;
+                randDest.x = UnityEngine.Random.Range(-ai.wanderRange, ai.wanderRange) + pos.x;
+                randDest.z = UnityEngine.Random.Range(-ai.wanderRange, ai.wanderRange) + pos.z;
                 randDest.y = pos.y;
                 ai.SetDestination(randDest);
                 ai.SetStoppingDist(0);
@@ -92,11 +97,6 @@ public class SearchState : BaseState
             ai.anim.SetBool(StaticVars.inCombat, false);
             return typeof(IdleState);
         }
-        else if (squad != null && squad.recalled)
-            return typeof(FollowState);
-        else if (squad != null && squad.givenOrder && squad.currentOrder != null)
-            return typeof(OrderState);
-
         currentCoolDown--;
         ai.anim.SetBool(StaticVars.inCombat, true);
         return typeof(SearchState);
