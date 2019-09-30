@@ -140,8 +140,7 @@ public class PlayerController : MonoBehaviour
 	private IEnumerator LoosePower()
 	{
 		yield return longWait;
-
-		while (currentPower < 0)
+		while (currentPower > 0)
 		{
 			currentPower -= powerLossSpeed;
 			UpdatePowerUI();
@@ -425,17 +424,12 @@ public class PlayerController : MonoBehaviour
 		}
 		else
 		{
-			if (!loosingPower)
-			{
-				if(loosePower != null)
-					StopCoroutine(loosePower);
-				loosePower = StartCoroutine(LoosePower());
-			}
-
 			currentPower = powerBuildUpMax;
-			loosingPower = true;
 		}
 		UpdatePowerUI();
+		if(loosePower != null)
+			StopCoroutine(loosePower);
+		loosePower = StartCoroutine(LoosePower());
 	}
 
 	//releases pent up power when it is full
@@ -484,7 +478,6 @@ public class PlayerController : MonoBehaviour
 			currentPower -= strengthBonus;
 		if (currentPower <= 0)
 		{
-			loosingPower = true;
 			currentPower = 0;
 		}
 		UpdatePowerUI();
