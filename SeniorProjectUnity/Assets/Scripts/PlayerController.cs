@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour
 	//variables for attacking
 	public Base_Stats playerStats;
 
+	private int tempStrength;
+
 	public int strengthBonus = 10, powerLossSpeed = 5, powerBuildUpMax = 100;
 	[HideInInspector] public int attackNum;
 	private int currentPower;
@@ -90,6 +92,8 @@ public class PlayerController : MonoBehaviour
 	{
 		CounterAction -= CounterActionHandler;
 		StaticVars.DeathAction -= DeathActionHandler;
+		
+		Reset();
 	}
 
 	private void Awake()
@@ -98,8 +102,9 @@ public class PlayerController : MonoBehaviour
 		Cursor.lockState = CursorLockMode.Locked;
 	}
 
-	private void Start() 
+	private void Start()
 	{
+		tempStrength = playerStats.strength;
 		anim = GetComponent<Animator>();
 		cc = GetComponent<CharacterController>();
 		speed = jogSpeed;
@@ -146,6 +151,8 @@ public class PlayerController : MonoBehaviour
 			UpdatePowerUI();
 			yield return StaticVars.oneSec;
 		}
+
+		playerStats.strength = tempStrength;
 	}
 
 	//move the character a specified distance for dodge rolling
@@ -420,7 +427,8 @@ public class PlayerController : MonoBehaviour
 		if (currentPower < powerBuildUpMax)
 		{
 			currentPower += _amount;
-			playerStats.strength += strengthBonus;
+			//causes player strength to constantly increase
+			playerStats.strength = tempStrength + strengthBonus;
 		}
 		else
 		{
@@ -436,6 +444,7 @@ public class PlayerController : MonoBehaviour
 	private void ReleasePower()
 	{
 		if (currentPower < powerBuildUpMax) return;
+		playerStats.strength = tempStrength;
 		currentPower = 0;
 		explosion.transform.localScale = new Vector3(20f, 20f, 20f);
 		loosingPower = false;
@@ -505,6 +514,11 @@ public class PlayerController : MonoBehaviour
 		if(roll != null)
 			StopCoroutine(roll);
 		roll = StartCoroutine(Roll());
+	}
+
+	private void Reset()
+	{
+		playerStats.strength = tempStrength;
 	}
 
 	//handles the action that is called when an enemy is open for a counter attack

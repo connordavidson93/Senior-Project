@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Health : MonoBehaviour
@@ -27,6 +25,14 @@ public class Health : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!sliderNull)
+        {
+            if (!healthSlider.IsActive())
+            {
+                healthSlider.gameObject.SetActive(true);
+            }
+        }
+        
         var hitter = other.GetComponent<Damage>();
 
         if (hitter == null || hitter.owner == gameObject || dodging)
@@ -66,7 +72,7 @@ public class Health : MonoBehaviour
         SetUISlider();
     }
 
-    public void SetUISlider()
+    private void SetUISlider()
     {
         if (!sliderNull)
             healthSlider.value = currentHealth;
