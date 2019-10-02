@@ -36,7 +36,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
-        m_Texture: {fileID: 2800000, guid: dae71bbab6006d54f8f0cfc4ad704bcf, type: 3}
+        m_Texture: {fileID: 2800000, guid: da78459b0a7bd55408da68e841af4122, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMapT2DA:
@@ -168,7 +168,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HeightMap:
-        m_Texture: {fileID: 2800000, guid: 830a7d568b6e20d41b33c0e358e0f0cb, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6fc0e32ca5e53c74ab8ebc265a4df884, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HeightMapT2DA:
@@ -184,11 +184,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: dae71bbab6006d54f8f0cfc4ad704bcf, type: 3}
+        m_Texture: {fileID: 2800000, guid: da78459b0a7bd55408da68e841af4122, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
-        m_Texture: {fileID: 2800000, guid: 415e030c9d03d6040b6777004a84888a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 23e952c359855f24284f004e33a60d53, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMapT2DA:
@@ -204,7 +204,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 121d58dc89695b84f87b2b9e2a7515f2, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5ef39e8f8b26d1d4598bcd8e5cba903d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMapOS:
@@ -434,11 +434,11 @@ Material:
     - _StencilRefDistortionVec: 64
     - _StencilRefGBuffer: 2
     - _StencilRefMV: 128
-    - _StencilWriteMask: 7
-    - _StencilWriteMaskDepth: 32
+    - _StencilWriteMask: 3
+    - _StencilWriteMaskDepth: 48
     - _StencilWriteMaskDistortionVec: 64
-    - _StencilWriteMaskGBuffer: 3
-    - _StencilWriteMaskMV: 128
+    - _StencilWriteMaskGBuffer: 51
+    - _StencilWriteMaskMV: 176
     - _Stiffness: 1
     - _SubsurfaceMask: 1
     - _SubsurfaceProfile: 0
