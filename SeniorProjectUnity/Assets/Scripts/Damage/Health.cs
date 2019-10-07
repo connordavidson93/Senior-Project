@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
@@ -10,15 +9,30 @@ public class Health : MonoBehaviour
     public Base_AI ai => GetComponent<Base_AI>();
     public PlayerController player => GetComponent<PlayerController>();
     public GameObject attacker;
-
+    public Slider healthSlider;
+    private bool sliderNull;
+    private bool playerNull;
+    
     private void Start()
     {
+        if (healthSlider == null)
+            sliderNull = true;
+        if (player == null)
+            playerNull = true;
         currentHealth = stats.maxHealth;
         alive = true;
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!sliderNull)
+        {
+            if (!healthSlider.IsActive())
+            {
+                healthSlider.gameObject.SetActive(true);
+            }
+        }
+        
         var hitter = other.GetComponent<Damage>();
 
         if (hitter == null || hitter.owner == gameObject || dodging)
@@ -39,10 +53,11 @@ public class Health : MonoBehaviour
     {
         currentHealth += _amount;
         alive = true;
-        if (player != null)
+        if (!playerNull)
         {
             player.Restart();
         }
+        SetUISlider();
     }
 
     public void TakeDamage(int _damage)
@@ -54,5 +69,12 @@ public class Health : MonoBehaviour
         {
             alive = false;
         }
+        SetUISlider();
+    }
+
+    private void SetUISlider()
+    {
+        if (!sliderNull)
+            healthSlider.value = currentHealth;
     }
 }

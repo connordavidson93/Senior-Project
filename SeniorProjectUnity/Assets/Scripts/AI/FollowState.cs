@@ -22,7 +22,10 @@ public class FollowState : BaseState
         else if (squad.damaged)
             return typeof(DamagedState);
         else if (squad.givenOrder && squad.currentOrder != null)
+        {
+            squad.recalled = false;
             return typeof(OrderState);
+        }
         else if (squad.enemyFound && !squad.recalled && Vector3.Distance(squad.currentTarget.transform.position, squad.transform.position) > squad.stats.range)
             return typeof(ChaseState);
         else if (squad.enemyFound && !squad.recalled && Vector3.Distance(squad.currentTarget.transform.position, squad.transform.position) <= squad.stats.range)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Runtime.InteropServices;
+using UnityEngine.Rendering;
 
 public class OrderState : BaseState
 {
@@ -25,6 +26,8 @@ public class OrderState : BaseState
         }
         else if(!squad.givenOrder || squad.currentOrder == null || squad.recalled)
         {
+            squad.givenOrder = false;
+            squad.currentOrder = null;
             return typeof(FollowState);
         }
         else if(squad.currentOrder.name == squad.enemyTags[0])
