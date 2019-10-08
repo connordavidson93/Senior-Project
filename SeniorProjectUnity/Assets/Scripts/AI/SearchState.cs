@@ -9,8 +9,22 @@ public class SearchState : BaseState
     private int coolDownTimer = 3000, wanderChance = 3, turnChance = 2, currentCoolDown;
     private bool turn, wander, start;
     private float endRot;
+    private Squad squad;
+    private Enemy enemy;
     
-    public SearchState(Base_AI _ai) : base(_ai.gameObject, _ai) {}
+    
+    public SearchState(Base_AI _ai) : base(_ai.gameObject, _ai)
+    {
+        switch (ai)
+        {
+            case Squad temp:
+                squad = temp;
+                break;
+            case Enemy temp:
+                enemy = temp;
+                break;
+        }
+    }
 
     public override Type Tick()
     {
@@ -27,6 +41,11 @@ public class SearchState : BaseState
             start = true;
             return typeof(DamagedState);
         }
+        else if (squad != null && squad.recalled)
+            return typeof(FollowState);
+        else if (squad != null && squad.givenOrder && squad.currentOrder != null)
+            return typeof(OrderState);
+
         else if (ai.enemyFound && Vector3.Distance(ai.currentTarget.transform.position, ai.transform.position) > ai.stats.range)
         {
             start = true;
@@ -45,8 +64,8 @@ public class SearchState : BaseState
                 wander = true;
                 var randDest = Vector3.zero;
                 var pos = ai.player.transform.position;
-                randDest.x = UnityEngine.Random.Range(-ai.wanderRange, ai.wanderRange) * pos.x;
-                randDest.z = UnityEngine.Random.Range(-ai.wanderRange, ai.wanderRange) * pos.z;
+                randDest.x = UnityEngine.Random.Range(-ai.wanderRange, ai.wanderRange) + pos.x;
+                randDest.z = UnityEngine.Random.Range(-ai.wanderRange, ai.wanderRange) + pos.z;
                 randDest.y = pos.y;
                 ai.SetDestination(randDest);
                 ai.SetStoppingDist(0);
@@ -78,7 +97,6 @@ public class SearchState : BaseState
             ai.anim.SetBool(StaticVars.inCombat, false);
             return typeof(IdleState);
         }
-
         currentCoolDown--;
         ai.anim.SetBool(StaticVars.inCombat, true);
         return typeof(SearchState);
