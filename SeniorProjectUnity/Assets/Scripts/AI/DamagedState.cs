@@ -18,7 +18,7 @@ public class DamagedState : BaseState
             return typeof(SearchState);
         else
         {
-            ai.anim.SetBool("Damaged", true);
+            ai.anim.SetBool(StaticVars.damaged, true);
             return typeof(DamagedState);
         }
     }
