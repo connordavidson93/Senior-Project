@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 using static AnimController;
 
 [RequireComponent(typeof(CharacterController))]
@@ -33,8 +34,15 @@ public class PlayerController : MonoBehaviour
 	[Header("Attack")]
 	//variables for attacking
 	public Base_Stats playerStats;
+
+	private int tempStrength;
+
 	public int strengthBonus = 10, powerLossSpeed = 5, powerBuildUpMax = 100;
+	[HideInInspector] public int attackNum;
 	private int currentPower;
+	public float maxAttackDelay = 2; 
+	private float lastTimeClicked;
+	[HideInInspector] public bool attaking;
 	
 	//variables for coroutines
 	public int powerWaitTime = 5;
@@ -58,6 +66,7 @@ public class PlayerController : MonoBehaviour
 	public GameObject shield; 
 	public GameObject explosion;
 	private bool shielding;
+	public Slider powerSlider;
 
 	//variables for countering
 	[Header("Counter Attack")]
@@ -76,13 +85,15 @@ public class PlayerController : MonoBehaviour
 	private void OnEnable()
 	{
 		CounterAction += CounterActionHandler;
-		Base_AI.DeathAction += DeathActionHandler;
+		StaticVars.DeathAction += DeathActionHandler;
 	}
 
 	private void OnDisable()
 	{
 		CounterAction -= CounterActionHandler;
-		Base_AI.DeathAction -= DeathActionHandler;
+		StaticVars.DeathAction -= DeathActionHandler;
+		
+		Reset();
 	}
 
 	private void Awake()
@@ -91,8 +102,9 @@ public class PlayerController : MonoBehaviour
 		Cursor.lockState = CursorLockMode.Locked;
 	}
 
-	private void Start() 
+	private void Start()
 	{
+		tempStrength = playerStats.strength;
 		anim = GetComponent<Animator>();
 		cc = GetComponent<CharacterController>();
 		speed = jogSpeed;
@@ -133,12 +145,14 @@ public class PlayerController : MonoBehaviour
 	private IEnumerator LoosePower()
 	{
 		yield return longWait;
-
-		while (currentPower < 0)
+		while (currentPower > 0)
 		{
 			currentPower -= powerLossSpeed;
+			UpdatePowerUI();
 			yield return StaticVars.oneSec;
 		}
+
+		playerStats.strength = tempStrength;
 	}
 
 	//move the character a specified distance for dodge rolling
@@ -187,6 +201,7 @@ public class PlayerController : MonoBehaviour
 			var found = (hit.collider.CompareTag("order") || hit.collider.CompareTag("Enemy"));
 			var downedSquad = (hit.collider.CompareTag("squad"));
 
+			//sends a squad-mate to perform an order
 			if(Input.GetKeyDown(KeyCode.F) && found)
 			{
 				order = hit.collider.gameObject.GetComponent<OrderController>();
@@ -218,6 +233,7 @@ public class PlayerController : MonoBehaviour
 					}
 				}
 			}
+			//sends a squad-mate to heal another downed squad member
 			else if (Input.GetKeyDown(KeyCode.F) && downedSquad)
 			{
 				var squadHealth = hit.collider.gameObject.GetComponent<Health>();
@@ -234,6 +250,7 @@ public class PlayerController : MonoBehaviour
 			}
 		}
 
+		//recalls the squad to the player
 		if(Input.GetKeyDown(KeyCode.R))
 		{
 			print("Form up!");
@@ -246,7 +263,8 @@ public class PlayerController : MonoBehaviour
 				member.currentOrder = null;
 			}
 		}
-
+		
+		//sets the ram start and end location
 		if(Input.GetKeyDown(KeyCode.Q))
 		{
 			if(Physics.Raycast(maincam.transform.position, maincam.transform.forward, out hit, 100f) && !ramPlaced)
@@ -305,10 +323,12 @@ public class PlayerController : MonoBehaviour
 			}
 			else if(Input.GetKeyDown(KeyCode.LeftControl))
 			{
+				anim.SetBool(StaticVars.walk, true);
 				speed = walkSpeed;
 			}
 			else if (Input.GetKeyUp(KeyCode.LeftControl))
 			{
+				anim.SetBool(StaticVars.walk, false);
 				speed = jogSpeed;
 			}
 
@@ -335,34 +355,30 @@ public class PlayerController : MonoBehaviour
 	//Input for attacking
 	private void AttackInput()
 	{
-		//currently this forces the player to hold the mouse button in order to attack
+		if (!IsGrounded())
+			return;
+		
+		if(Time.time - lastTimeClicked > maxAttackDelay)
+		{
+			attackNum = 0;
+			anim.SetInteger(StaticVars.mouse0, attackNum);
+		}
+		
 		if (Input.GetMouseButtonDown(0) && !rolling)
 		{
+			attaking = true;
+			attackNum++;
+			attackNum = Mathf.Clamp(attackNum, 0, 2);
+			
 			canMove = false;
-			anim.SetFloat(StaticVars.mouse0, 1);
-			if(currentPower > 0)
-				currentPower -= strengthBonus;
-			if (currentPower <= 0)
-			{
-				loosingPower = true;
-				currentPower = 0;
-			}
+			if(attackNum == 1)
+				anim.SetInteger(StaticVars.mouse0, attackNum);
+			
+			
 		}
 		else if (Input.GetMouseButtonUp(0))
 		{
-			anim.SetFloat(StaticVars.mouse0, 0);
-			canMove = true;
-		}
-
-		if (Input.GetMouseButtonDown(1))
-		{
-			shield.SetActive(true);
-			health.shielded = true;
-		}
-		else if (Input.GetMouseButtonUp(1))
-		{
-			shield.SetActive(false);
-			health.shielded = false;
+			lastTimeClicked = Time.time;
 		}
 
 		if (Input.GetKeyDown(KeyCode.G))
@@ -374,13 +390,12 @@ public class PlayerController : MonoBehaviour
 	{
 		if(Input.GetMouseButtonDown(1) && !rolling)
 		{
-			shielding = true;
 			anim.SetFloat(StaticVars.mouse1, 1);
 		}
 		else if(Input.GetMouseButtonUp(1))
 		{
-			shielding = false;
 			anim.SetFloat(StaticVars.mouse1, 0);
+			ToggleShield(false);
 		}
 	}
 
@@ -392,38 +407,48 @@ public class PlayerController : MonoBehaviour
 		StaticVars.PairCounterAction(this, attackingEnemy.GetComponent<Enemy>());
 	}
 
+	public void ToggleShield(bool _state)
+	{
+		shielding = _state;
+		shield.SetActive(_state);
+		health.shielded = _state;
+		
+		if (_state)
+		{
+			counterSymbol.SetActive(false);
+			counterWindow = false;
+		}
+	}
+	
+
 	//builds the current power loaded
 	public void BuildPower(int _amount)
 	{
-		print("building power");
-
 		if (currentPower < powerBuildUpMax)
 		{
 			currentPower += _amount;
-			playerStats.strength += strengthBonus;
+			//causes player strength to constantly increase
+			playerStats.strength = tempStrength + strengthBonus;
 		}
 		else
 		{
-			if (!loosingPower)
-			{
-				if(loosePower != null)
-					StopCoroutine(loosePower);
-				loosePower = StartCoroutine(LoosePower());
-			}
-
 			currentPower = powerBuildUpMax;
-			loosingPower = true;
-			print("at max power");
 		}
+		UpdatePowerUI();
+		if(loosePower != null)
+			StopCoroutine(loosePower);
+		loosePower = StartCoroutine(LoosePower());
 	}
 
 	//releases pent up power when it is full
 	private void ReleasePower()
 	{
 		if (currentPower < powerBuildUpMax) return;
+		playerStats.strength = tempStrength;
 		currentPower = 0;
 		explosion.transform.localScale = new Vector3(20f, 20f, 20f);
 		loosingPower = false;
+		UpdatePowerUI();
 	}
 
 	//checks if the player is on the ground
@@ -454,9 +479,29 @@ public class PlayerController : MonoBehaviour
 		return false;
 	}
 
+	//calculates how much power the player has after attacking
+	//called from Animator Behaviour
+	public void CalcAttackPower()
+	{
+		if(currentPower > 0)
+			currentPower -= strengthBonus;
+		if (currentPower <= 0)
+		{
+			currentPower = 0;
+		}
+		UpdatePowerUI();
+	}
+	
+	//updates the power level UI element
+	private void UpdatePowerUI()
+	{
+		powerSlider.value = currentPower;
+	}
+
 	//summons a squad member to come revive the player
 	private void Die()
 	{
+		StaticVars.DeathAction(gameObject);
 		squadMembers[0].currentOrder = gameObject;
 		squadMembers[0].givenOrder = true;
 		squadMembers[0].healTargetHealth = health;
@@ -471,20 +516,25 @@ public class PlayerController : MonoBehaviour
 		roll = StartCoroutine(Roll());
 	}
 
+	private void Reset()
+	{
+		playerStats.strength = tempStrength;
+	}
+
 	//handles the action that is called when an enemy is open for a counter attack
 	private void CounterActionHandler(bool _state, GameObject _enemy)
 	{
-		if(shielding)
-			return;
-
 		attackingEnemy = _enemy;
+
+		if (shielding || attackingEnemy == null || Vector3.Distance(transform.position, attackingEnemy.transform.position) > 5)
+		{
+			counterWindow = false;
+			counterSymbol.SetActive(false);
+			return;
+		}
+
 		counterWindow = _state;
 		counterSymbol.SetActive(_state);
-
-		if (attackingEnemy == null ||
-		    !(Vector3.Distance(transform.position, attackingEnemy.transform.position) > 5)) return;
-		counterWindow = false;
-		counterSymbol.SetActive(false);
 	}
 
 	//handles the action that is called when an AI dies
