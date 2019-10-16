@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Photoscanned_Cliff_01
+  m_Name: M_tree_stumps
   m_Shader: {fileID: 4800000, guid: 640b54fae8b8970468a91c4bf1c7f474, type: 3}
   m_ShaderKeywords: _MASKMAP _METALLICGLOSSMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE
   m_LightmapFlags: 4
@@ -29,7 +29,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
-        m_Texture: {fileID: 2800000, guid: 792508a5d9dfc0a47a874cf73c407350, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2523b7b3e411637478d9440f46378d85, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
@@ -41,7 +41,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 95f188ae7ba6fce4dbb61962f00c0b0d, type: 3}
+        m_Texture: {fileID: 2800000, guid: c8752f8b472c8a243a589f8a0f96e1f5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CoatMaskMap:
@@ -93,23 +93,23 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 792508a5d9dfc0a47a874cf73c407350, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2523b7b3e411637478d9440f46378d85, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
-        m_Texture: {fileID: 2800000, guid: cf23912e8be934c4395752b98b6f0c4d, type: 3}
+        m_Texture: {fileID: 2800000, guid: aafde22c22647d94a936f2fa29cc5640, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetalicRAmbientOcclusionGSmoothnessA:
-        m_Texture: {fileID: 2800000, guid: cf23912e8be934c4395752b98b6f0c4d, type: 3}
+        m_Texture: {fileID: 2800000, guid: aafde22c22647d94a936f2fa29cc5640, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: cf23912e8be934c4395752b98b6f0c4d, type: 3}
+        m_Texture: {fileID: 2800000, guid: aafde22c22647d94a936f2fa29cc5640, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 95f188ae7ba6fce4dbb61962f00c0b0d, type: 3}
+        m_Texture: {fileID: 2800000, guid: c8752f8b472c8a243a589f8a0f96e1f5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMapOS:
@@ -117,7 +117,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: cf23912e8be934c4395752b98b6f0c4d, type: 3}
+        m_Texture: {fileID: 2800000, guid: aafde22c22647d94a936f2fa29cc5640, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
@@ -173,7 +173,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _AORemapMax: 1
+    - _AORemapMax: 0.9999999
     - _AORemapMin: 0
     - _ATDistance: 1
     - _AlbedoAffectEmissive: 0
@@ -279,7 +279,7 @@ Material:
     - _SnowNormalScale: 0
     - _SnowSmoothnessPower: 1
     - _SnowTiling: 15
-    - _Snow_Amount: 0
+    - _Snow_Amount: 0.13
     - _Snow_AmountGrowSpeed: 3
     - _Snow_Min_Height: -1000
     - _Snow_Min_Height_Blending: 1
@@ -317,7 +317,7 @@ Material:
     - _ZWrite: 1
     - __dirty: 1
     m_Colors:
-    - _BaseColor: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
