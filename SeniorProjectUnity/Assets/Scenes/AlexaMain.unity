@@ -321,6 +321,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187526801}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &208054770 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2003291544813253447, guid: cf86d05b7fef0974ca73cbc3919dbd3a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2003291544235894794}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd64a7c84dec6e34598fa99f2969e532, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &213141924
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,6 +1338,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604053128}
   m_CullTransparentMesh: 0
+--- !u!1 &616458807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4349601396795417867, guid: 093e5c13babd7b041b9ac8fc951a0a26,
+    type: 3}
+  m_PrefabInstance: {fileID: 4349601397223509917}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &620003915
 GameObject:
   m_ObjectHideFlags: 0
@@ -1848,7 +1866,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 646153683}
-  m_LocalRotation: {x: 0.18792991, y: 0.14723788, z: -0.028506752, w: 0.9706651}
+  m_LocalRotation: {x: 0.18792987, y: 0.14723788, z: -0.028506747, w: 0.9706651}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -9931,10 +9949,15 @@ PrefabInstance:
       propertyPath: enemies.Array.data[1]
       value: 
       objectReference: {fileID: 1948138949}
+    - target: {fileID: 2003291544813253447, guid: cf86d05b7fef0974ca73cbc3919dbd3a,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 616458807}
     - target: {fileID: 2003291544181167130, guid: cf86d05b7fef0974ca73cbc3919dbd3a,
         type: 3}
       propertyPath: onTriggerEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2003291544181167130, guid: cf86d05b7fef0974ca73cbc3919dbd3a,
         type: 3}
@@ -9950,7 +9973,17 @@ PrefabInstance:
         type: 3}
       propertyPath: onTriggerEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 622475997}
+      objectReference: {fileID: 208054770}
+    - target: {fileID: 2003291544181167130, guid: cf86d05b7fef0974ca73cbc3919dbd3a,
+        type: 3}
+      propertyPath: onTriggerEvent.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: InitEnemies
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003291544181167130, guid: cf86d05b7fef0974ca73cbc3919dbd3a,
+        type: 3}
+      propertyPath: onTriggerEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf86d05b7fef0974ca73cbc3919dbd3a, type: 3}
 --- !u!1001 &4349601397223509917

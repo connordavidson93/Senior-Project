@@ -9,6 +9,17 @@ public class ArenaEnemyTracker : MonoBehaviour
     public UnityEvent enemiesClearedEvent;
     private bool canCheck;
 
+    public GameObject player;
+
+    public void InitEnemies()
+    {
+        foreach(GameObject enemy in enemies)
+        {
+            enemy.GetComponent<Enemy>().currentTarget = player;
+            enemy.GetComponent<Enemy>().SetDestination(player.transform.position);
+        }
+    }
+
     public void StartCheck()
     {
         canCheck = true;
