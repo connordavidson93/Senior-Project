@@ -37,8 +37,8 @@ public class IdleState : BaseState
             return typeof(AttackState);
         else if (squad != null && Vector3.Distance(squad.transform.position, squad.player.transform.position) > squad.followDistance)
             return typeof(FollowState);
-        else if (enemy != null)
-            return typeof(WanderState);
+        //else if (enemy != null)
+            //return typeof(WanderState);
         else
         {
             return typeof(IdleState);
