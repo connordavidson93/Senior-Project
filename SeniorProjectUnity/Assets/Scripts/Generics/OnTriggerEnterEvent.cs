@@ -7,13 +7,13 @@ public class OnTriggerEnterEvent : MonoBehaviour
 {
     public UnityEvent onTriggerEvent;
     public bool useTag;
-    public string tag;
+    public string objTag;
 
     private void OnTriggerEnter(Collider other)
     {
         if (useTag)
         {
-            if(other.tag == tag)
+            if(other.tag == objTag)
             {
                 onTriggerEvent.Invoke();
             }
