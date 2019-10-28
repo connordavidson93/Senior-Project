@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using static AnimController;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
@@ -78,6 +79,11 @@ public class PlayerController : MonoBehaviour
 	[Header("Healing")]
 	public float healDistance = 5f;
 	public int healPower = 20;
+
+	[Header("Order UI")]
+	public UnityEvent ramOrderEvent;
+	public UnityEvent killOrderEvent;
+	public UnityEvent returnOrderEvent;
 
 	#endregion
 
@@ -222,6 +228,7 @@ public class PlayerController : MonoBehaviour
 							member.currentOrder = order.gameObject;
 							order.inProgress = true;
 							print("Do the thing, soldier!");
+							ramOrderEvent.Invoke();
 						}
 					}
 					else if (hit.collider.CompareTag("Enemy"))
@@ -229,6 +236,7 @@ public class PlayerController : MonoBehaviour
 						member.givenOrder = true;
 						member.currentOrder = hit.collider.gameObject;
 						print("attack that fool, soldier!");
+						killOrderEvent.Invoke();
 					}
 				}
 			}
@@ -261,6 +269,7 @@ public class PlayerController : MonoBehaviour
 					member.currentOrder.GetComponent<OrderController>().inProgress = false;
 				member.currentOrder = null;
 			}
+			returnOrderEvent.Invoke();
 		}
 		
 		//sets the ram start and end location
@@ -268,12 +277,14 @@ public class PlayerController : MonoBehaviour
 		{
 			if(Physics.Raycast(maincam.transform.position, maincam.transform.forward, out hit, 100f) && !ramPlaced)
 			{
+				//insert custom vfx ram point whatever (start)
 				playerDefinedRam.gameObject.SetActive(true);
 				playerDefinedRam.transform.position = hit.point;
 				ramPlaced = true;
 			}
 			else if(Physics.Raycast(maincam.transform.position, maincam.transform.forward, out hit, 100f) && ramPlaced)
 			{
+				//insert custom vfx ram point whatever (end)
 				playerDefinedRamEnd.gameObject.SetActive(true);
 				playerDefinedRamEnd.transform.position = hit.point;
 				playerDefinedRam.inProgress = true;
@@ -286,6 +297,7 @@ public class PlayerController : MonoBehaviour
 					playerDefinedRam.inProgress = true;
 					ramPlaced = false;
 					print("RAM ATTACK SOLDIER!");
+					ramOrderEvent.Invoke();
 				}
 			}
 		}
