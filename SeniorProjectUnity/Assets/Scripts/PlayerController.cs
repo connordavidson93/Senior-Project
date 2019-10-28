@@ -47,7 +47,6 @@ public class PlayerController : MonoBehaviour
 	//variables for coroutines
 	public int powerWaitTime = 5;
 	private WaitForSeconds longWait => new WaitForSeconds(powerWaitTime);
-	private bool loosingPower;
 	private Coroutine loosePower, playGame, roll;
 
 	//variables for squad orders
@@ -66,7 +65,7 @@ public class PlayerController : MonoBehaviour
 	public GameObject shield; 
 	public GameObject explosion;
 	private bool shielding;
-	public Slider powerSlider;
+	public Image powerSlider;
 
 	//variables for countering
 	[Header("Counter Attack")]
@@ -447,7 +446,6 @@ public class PlayerController : MonoBehaviour
 		playerStats.strength = tempStrength;
 		currentPower = 0;
 		explosion.transform.localScale = new Vector3(20f, 20f, 20f);
-		loosingPower = false;
 		UpdatePowerUI();
 	}
 
@@ -495,7 +493,7 @@ public class PlayerController : MonoBehaviour
 	//updates the power level UI element
 	private void UpdatePowerUI()
 	{
-		powerSlider.value = currentPower;
+		powerSlider.fillAmount = (float)currentPower / 100;
 	}
 
 	//summons a squad member to come revive the player
