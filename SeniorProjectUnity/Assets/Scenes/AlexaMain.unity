@@ -672,6 +672,7 @@ GameObject:
   - component: {fileID: 371857731}
   - component: {fileID: 371857730}
   - component: {fileID: 371857729}
+  - component: {fileID: 371857739}
   m_Layer: 12
   m_Name: Enemy (1)
   m_TagString: Enemy
@@ -853,6 +854,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &371857739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371857728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa4effee25d29c749bd6b446c88e4539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  base_mat: {fileID: 2100000, guid: ac0b6c1d1a66fa04e9a8d583692784b6, type: 2}
+  highlight_mat: {fileID: 2100000, guid: dfc419a99acfd5748b964425b666fe44, type: 2}
+  rend: {fileID: 781499911}
 --- !u!1 &377648624
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,7 +1314,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dfc419a99acfd5748b964425b666fe44, type: 2}
+  - {fileID: 2100000, guid: ac0b6c1d1a66fa04e9a8d583692784b6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1350,6 +1366,7 @@ GameObject:
   - component: {fileID: 622476000}
   - component: {fileID: 622476007}
   - component: {fileID: 622476001}
+  - component: {fileID: 622476008}
   m_Layer: 12
   m_Name: Enemy
   m_TagString: Enemy
@@ -1531,6 +1548,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &622476008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622475997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa4effee25d29c749bd6b446c88e4539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  base_mat: {fileID: 2100000, guid: ac0b6c1d1a66fa04e9a8d583692784b6, type: 2}
+  highlight_mat: {fileID: 2100000, guid: dfc419a99acfd5748b964425b666fe44, type: 2}
+  rend: {fileID: 603590021}
 --- !u!1 &640469842
 GameObject:
   m_ObjectHideFlags: 0
@@ -1711,6 +1743,7 @@ GameObject:
   - component: {fileID: 695868422}
   - component: {fileID: 695868421}
   - component: {fileID: 695868425}
+  - component: {fileID: 695868426}
   m_Layer: 11
   m_Name: Ram
   m_TagString: order
@@ -1748,7 +1781,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: cb38213969e1b6e4e88b523dc7e48057, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1805,6 +1838,21 @@ MonoBehaviour:
   unitType: 2
   inProgress: 0
   endLocation: {fileID: 1974438886}
+--- !u!114 &695868426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695868420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa4effee25d29c749bd6b446c88e4539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  base_mat: {fileID: 2100000, guid: cb38213969e1b6e4e88b523dc7e48057, type: 2}
+  highlight_mat: {fileID: 2100000, guid: 93415a9f5c024ef4986064aeba2cff21, type: 2}
+  rend: {fileID: 695868422}
 --- !u!1 &710345962
 GameObject:
   m_ObjectHideFlags: 0
@@ -2414,7 +2462,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dfc419a99acfd5748b964425b666fe44, type: 2}
+  - {fileID: 2100000, guid: ac0b6c1d1a66fa04e9a8d583692784b6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2733,7 +2781,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36864
+  m_Name: pb_Mesh22544
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4599,7 +4647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -8937,7 +8985,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dfc419a99acfd5748b964425b666fe44, type: 2}
+  - {fileID: 2100000, guid: ac0b6c1d1a66fa04e9a8d583692784b6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
