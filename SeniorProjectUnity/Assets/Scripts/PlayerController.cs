@@ -266,13 +266,13 @@ public class PlayerController : MonoBehaviour
 		//sets the ram start and end location
 		if(Input.GetKeyDown(KeyCode.Q))
 		{
-			if(Physics.Raycast(maincam.transform.position, maincam.transform.forward, out hit, 100f) && !ramPlaced)
+			if(Physics.Raycast(maincam.transform.position, maincam.transform.forward, out hit, 100f, ground) && !ramPlaced)
 			{
 				playerDefinedRam.gameObject.SetActive(true);
 				playerDefinedRam.transform.position = hit.point;
 				ramPlaced = true;
 			}
-			else if(Physics.Raycast(maincam.transform.position, maincam.transform.forward, out hit, 100f) && ramPlaced)
+			else if(Physics.Raycast(maincam.transform.position, maincam.transform.forward, out hit, 100f, ground) && ramPlaced)
 			{
 				playerDefinedRamEnd.gameObject.SetActive(true);
 				playerDefinedRamEnd.transform.position = hit.point;
@@ -372,8 +372,6 @@ public class PlayerController : MonoBehaviour
 			canMove = false;
 			if(attackNum == 1)
 				anim.SetInteger(StaticVars.mouse0, attackNum);
-			
-			
 		}
 		else if (Input.GetMouseButtonUp(0))
 		{
