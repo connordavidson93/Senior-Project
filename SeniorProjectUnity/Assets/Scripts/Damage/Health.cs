@@ -9,7 +9,7 @@ public class Health : MonoBehaviour
     public Base_AI ai => GetComponent<Base_AI>();
     public PlayerController player => GetComponent<PlayerController>();
     public GameObject attacker;
-    public Slider healthSlider;
+    public Image healthSlider;
     private bool sliderNull;
     private bool playerNull;
     
@@ -75,6 +75,6 @@ public class Health : MonoBehaviour
     private void SetUISlider()
     {
         if (!sliderNull)
-            healthSlider.value = currentHealth;
+            healthSlider.fillAmount = (float)currentHealth / 100;
     }
 }
