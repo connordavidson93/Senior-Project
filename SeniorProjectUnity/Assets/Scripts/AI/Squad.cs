@@ -13,6 +13,7 @@ public class Squad : Base_AI
     public float followDistance = 10;
     public int healPower;
     public Health healTargetHealth;
+    public SquadCommandUI scui;
 
     protected override void Awake()
     {
@@ -24,7 +25,7 @@ public class Squad : Base_AI
     {
         var states = new Dictionary<Type, BaseState>
         {
-            { typeof(IdleState), new IdleState(this) },
+            { typeof(IdleState), new IdleState(this, scui) },
             { typeof(ChaseState), new ChaseState(this) },
             { typeof(FollowState), new FollowState(this) },
             { typeof(AttackState), new AttackState(this) },
