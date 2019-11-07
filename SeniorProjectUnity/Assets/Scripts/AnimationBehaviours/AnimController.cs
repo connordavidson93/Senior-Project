@@ -14,6 +14,7 @@ public class AnimController : MonoBehaviour
     private PlayerController pc => GetComponentInParent<PlayerController>();
     public EnemyManager enemyManager;
 
+    //sets the bool of the animator to the given state
     public void SetBool(string _name, bool _state)
     {
         if(anim != null)
@@ -22,6 +23,7 @@ public class AnimController : MonoBehaviour
             Debug.Log("No Animator for this object!");
     }
 
+    //sets the animator bool to false (all these bool are in Static Vars)
     public void ResetBool(string _name)
     {
         if(anim != null)
@@ -30,6 +32,7 @@ public class AnimController : MonoBehaviour
             Debug.Log("No Animator for this object!");
     }
 
+    //toggles the given hitbox
     public void ToggleHitBox(int _index)
     {
         hitBoxes[_index].SetActive(!hitBoxes[_index].activeSelf);
@@ -40,21 +43,25 @@ public class AnimController : MonoBehaviour
         vfx[_index].SetActive(!vfx[_index].activeSelf);
     }
 
+    //makes an ai realize that the damaged animation is over and it can do stuff again
     public void RecoverFromDamage()
     {
         ai.damaged = false;
     }
 
+    //lets the player know they can counter
     public void StartCounterWindow()
     {
         CounterAction(true, gameObject);
     }
 
+    //lets the player know they can no longer counter
     public void EndCounterWindow()
     {
         CounterAction(false, null);
     }
 
+    //makes it so the player can receive input again, used after countering is over
     public void RestorePlayerInput()
     {
         if(pc != null)
@@ -63,6 +70,7 @@ public class AnimController : MonoBehaviour
             Debug.Log("No PlayerController for this animator!");
     }
 
+    //makes it so the player can move again, used after countering
     public void RestorePlayerMovement()
     {
         if (pc != null)
@@ -71,6 +79,7 @@ public class AnimController : MonoBehaviour
             Debug.Log("No PlayerController for this animator!");
     }
 
+    //removes an enemy from the attack queue
     public void RemoveEnemyFromQueue()
     {
         enemyManager.RemoveFromQueue(GetComponentInParent<Enemy>());
