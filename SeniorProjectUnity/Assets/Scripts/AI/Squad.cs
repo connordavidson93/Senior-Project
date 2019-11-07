@@ -21,6 +21,7 @@ public class Squad : Base_AI
         base.Awake();
     }
 
+    //sets the states that the squad member can use
     protected override void InitializeFSM()
     {
         var states = new Dictionary<Type, BaseState>
@@ -38,21 +39,25 @@ public class Squad : Base_AI
         fsm.SetStates(states);
     }
 
+    //sets the speed of the ai
     public override void SetSpeed(float _speed)
     {
         base.SetSpeed(_speed);
     }
 
+    //sets the navmesh destination of the ai
     public override void SetDestination(Vector3 _destination)
     {
         base.SetDestination(_destination);
     }
 
+    //sets the navmesh stopping distance of the ai
     public override void SetStoppingDist(float _stopDist)
     {
         base.SetStoppingDist(_stopDist);
     }
 
+    //kills the ai
     public override void Die()
     {
         StaticVars.DeathAction(gameObject);
