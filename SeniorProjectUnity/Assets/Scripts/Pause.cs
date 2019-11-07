@@ -29,6 +29,7 @@ public class Pause : MonoBehaviour
         }
     }
 
+    //toggles the pause of the game
     public void TogglePause()
     {
         if(!paused)
