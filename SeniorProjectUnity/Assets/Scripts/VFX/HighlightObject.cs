@@ -8,6 +8,7 @@ public class HighlightObject : MonoBehaviour
 
 	void OnMouseOver()
 	{
+		print("mousing over");
 		rend.material = highlight_mat;
 	}
 
