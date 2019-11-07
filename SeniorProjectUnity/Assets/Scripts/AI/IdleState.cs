@@ -2,18 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.Events;
 
 public class IdleState : BaseState
 {
     private Squad squad;
     private Enemy enemy;
+    private SquadCommandUI scui;
 
-    public IdleState(Base_AI _ai) : base(_ai.gameObject, _ai)
+    public IdleState(Base_AI _ai, SquadCommandUI _scui = null) : base(_ai.gameObject, _ai)
     {
         switch (ai)
         {
             case Squad temp:
                 squad = temp;
+                scui = _scui;
                 break;
             case Enemy ai1:
                 enemy = ai1;
@@ -41,6 +44,8 @@ public class IdleState : BaseState
             //return typeof(WanderState);
         else
         {
+            if(squad != null)
+                scui.ChangeOrder(3);
             return typeof(IdleState);
         }
     }
