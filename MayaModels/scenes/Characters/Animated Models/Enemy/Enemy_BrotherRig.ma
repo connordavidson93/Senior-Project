@@ -1,12 +1,13 @@
 //Maya ASCII 2018 scene
 //Name: Enemy_BrotherRig.ma
-//Last modified: Mon, Nov 11, 2019 11:16:20 AM
+//Last modified: Mon, Nov 11, 2019 11:31:28 AM
 //Codeset: 1252
 file -rdi 1 -ns "DividedBaseEnemyMale" -rfn "DividedBaseEnemyMaleRN" -op "v=0;p=17;f=0"
 		 -typ "mayaAscii" "C:/Users/10796568/Documents/Repositories/Senior Project/MayaModels//scenes/Characters/Rigged Models/DividedBaseEnemyMale.ma";
 file -r -ns "DividedBaseEnemyMale" -dr 1 -rfn "DividedBaseEnemyMaleRN" -op "v=0;p=17;f=0"
 		 -typ "mayaAscii" "C:/Users/10796568/Documents/Repositories/Senior Project/MayaModels//scenes/Characters/Rigged Models/DividedBaseEnemyMale.ma";
 requires maya "2018";
+requires "stereoCamera" "10.0";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
@@ -18,13 +19,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "17FC32C0-4106-5CCD-73F7-E19A7501C4E0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.050552790188519658 13.836472238053457 43.855457059140072 ;
-	setAttr ".r" -type "double3" -10.538352722383779 720.20000000095308 -3.1060293541106343e-17 ;
+	setAttr ".t" -type "double3" -0.45910007996227575 7.5607160898779382 47.596634028734186 ;
+	setAttr ".r" -type "double3" 0.26164727748874528 718.20000000089817 7.7688595409985588e-19 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D57389F9-4519-F11E-EACE-01AE6B39C612";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 44.993166420181325;
+	setAttr ".coi" 46.091463591525063;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -78,19 +79,19 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "9E4FEBDE-49B7-209D-38D5-A881EC2A640A";
+	rename -uid "0755FC76-458B-9975-5C9E-3A9248DB51A4";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "5D63C7AC-4D82-46CA-04B7-228D3AFEEABD";
+	rename -uid "C56CC59B-4BBE-7B88-7921-79B35BE27426";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "6BB79BBF-4F36-1E78-928B-199F6C78610C";
+	rename -uid "6F7AD608-4D6D-031D-4DE9-0EB6509CC5DD";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "65D5E9EF-46A7-1EB6-8010-DEBEAA46F7D3";
+	rename -uid "B6A10FAC-4653-29F0-1F74-37A97A415F55";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "5E654237-4E88-2D4E-5E5C-77B8692C1686";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "A4917FF4-410A-5923-2565-81A320418029";
+	rename -uid "530BED14-4CA0-75A6-ADB0-67AAA42677A2";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "E8B04063-42F3-5D11-3A1B-FFA7622E497E";
 	setAttr ".g" yes;
@@ -742,10 +743,20 @@ createNode reference -n "DividedBaseEnemyMaleRN";
 	setAttr ".phl[643]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"DividedBaseEnemyMaleRN"
-		"DividedBaseEnemyMaleRN" 0
-		"DividedBaseEnemyMaleRN" 1472
+		"DividedBaseEnemyMaleRN" 5
+		2 "|DividedBaseEnemyMale:Mannequin|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:BaseMesh|DividedBaseEnemyMale:BaseMeshShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|DividedBaseEnemyMale:Mannequin|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:BaseMesh|DividedBaseEnemyMale:BaseMeshShapeOrig" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Club|DividedBaseEnemyMale:Club_Ctrl|DividedBaseEnemyMale:Club|DividedBaseEnemyMale:ClubShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Sheild|DividedBaseEnemyMale:Sheild_Ctrl|DividedBaseEnemyMale:Sheild|DividedBaseEnemyMale:SheildShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:Ground|DividedBaseEnemyMale:GroundShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		"DividedBaseEnemyMaleRN" 1467
 		2 "|DividedBaseEnemyMale:Mannequin|DividedBaseEnemyMale:Skeleton|DividedBaseEnemyMale:IK|DividedBaseEnemyMale:L_Leg_01_Jnt" 
-		"rotate" " -type \"double3\" 5.04341656134986138 -39.4264535003179688 8.68213000903486076"
+		"rotate" " -type \"double3\" 5.04341656134974148 -39.4264535003179688 8.68213000903490872"
 		
 		2 "|DividedBaseEnemyMale:Mannequin|DividedBaseEnemyMale:Skeleton|DividedBaseEnemyMale:IK|DividedBaseEnemyMale:L_Leg_01_Jnt" 
 		"rotateX" " -av"
@@ -754,13 +765,9 @@ createNode reference -n "DividedBaseEnemyMaleRN";
 		2 "|DividedBaseEnemyMale:Mannequin|DividedBaseEnemyMale:Skeleton|DividedBaseEnemyMale:IK|DividedBaseEnemyMale:L_Leg_01_Jnt" 
 		"rotateZ" " -av"
 		2 "|DividedBaseEnemyMale:Mannequin|DividedBaseEnemyMale:Skeleton|DividedBaseEnemyMale:IK|DividedBaseEnemyMale:L_Leg_01_Jnt|DividedBaseEnemyMale:L_Leg_02_Jnt" 
-		"rotate" " -type \"double3\" 0 34.28593974077144679 0"
+		"rotate" " -type \"double3\" 0 34.2859397407714539 0"
 		2 "|DividedBaseEnemyMale:Mannequin|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:BaseMesh|DividedBaseEnemyMale:BaseMeshShape" 
 		"uvPivot" " -type \"double2\" 0 0"
-		2 "|DividedBaseEnemyMale:Mannequin|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:BaseMesh|DividedBaseEnemyMale:BaseMeshShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|DividedBaseEnemyMale:Mannequin|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:BaseMesh|DividedBaseEnemyMale:BaseMeshShapeOrig" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl" 
 		"visibility" " -av 1"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl" 
@@ -2373,8 +2380,6 @@ createNode reference -n "DividedBaseEnemyMaleRN";
 		"scaleY" " -av"
 		2 "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Club|DividedBaseEnemyMale:Club_Ctrl" 
 		"scaleZ" " -av"
-		2 "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Club|DividedBaseEnemyMale:Club_Ctrl|DividedBaseEnemyMale:Club|DividedBaseEnemyMale:ClubShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Sheild|DividedBaseEnemyMale:Sheild_Ctrl" 
 		"visibility" " -av 1"
 		2 "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Sheild|DividedBaseEnemyMale:Sheild_Ctrl" 
@@ -2401,16 +2406,12 @@ createNode reference -n "DividedBaseEnemyMaleRN";
 		"scaleY" " -av"
 		2 "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Sheild|DividedBaseEnemyMale:Sheild_Ctrl" 
 		"scaleZ" " -av"
-		2 "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Sheild|DividedBaseEnemyMale:Sheild_Ctrl|DividedBaseEnemyMale:Sheild|DividedBaseEnemyMale:SheildShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:directionalLight1" "translate" 
 		" -type \"double3\" -28.31951159515146799 8.11514012154582609 0"
 		2 "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:directionalLight1" "translateX" 
 		" -av"
 		2 "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:Ground|DividedBaseEnemyMale:GroundShape" 
 		"uvPivot" " -type \"double2\" 0.5 0.5"
-		2 "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:Ground|DividedBaseEnemyMale:GroundShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:ambientLight1" "translate" 
 		" -type \"double3\" -20.98276695072329545 0 0"
 		2 "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:ambientLight1" "translateX" 
@@ -7043,7 +7044,7 @@ createNode animCurveTL -n "COG_Ctrl_translateY";
 		 368 -0.91862496397663129 370 -0.91862496397663129 375 -0.91862496397663129 380 -0.91862496397663129
 		 383 -0.92646557253778372 389 -0.92646557253778372 392 -0.92646557253778372 393 -0.92646557253778372
 		 404 -0.91862496397663129 406 -0.91862496397663129 407 -0.91862496397663129 410 -0.91862496397663129
-		 411 -0.91862496397663129 414 -0.91862496397663129 420 -0.91862496397663129;
+		 411 -0.91862496397663129 414 -0.65912574176576655 420 -0.91862496397663129;
 createNode animCurveTL -n "COG_Ctrl_translateZ";
 	rename -uid "AC56842A-4FC2-AE18-4E86-1881BB65D616";
 	setAttr ".tan" 18;
@@ -10164,7 +10165,7 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
-	setAttr -s 2 ".sol";
+	setAttr -s 4 ".sol";
 connectAttr "Transform_Ctrl_Lower_IKFK.o" "DividedBaseEnemyMaleRN.phl[1]";
 connectAttr "Transform_Ctrl_UpperIKFK.o" "DividedBaseEnemyMaleRN.phl[2]";
 connectAttr "Transform_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[3]";
