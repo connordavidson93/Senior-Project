@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: cbfe36cfddfde964d9dfce63a355d5dd
+    path: Assets/Scenes/UI_Master_Scene.unity
+    guid: 4178f01ef8852e24b90ace2fadcf236f
+  - enabled: 1
+    path: Assets/Scenes/AlexaMain.unity
+    guid: b6a2979670eabd8459ee5f28d032e419
   m_configObjects: {}
