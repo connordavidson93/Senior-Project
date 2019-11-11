@@ -7,6 +7,7 @@ public class Destructable : MonoBehaviour
 {
     public string destroyingObject;
 
+    //deactivates a game object on trigger enter
     private void OnTriggerEnter(Collider other)
     {
         var damage = other.GetComponent<Damage>();

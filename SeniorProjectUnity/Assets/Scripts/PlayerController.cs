@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using static AnimController;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
@@ -79,6 +80,11 @@ public class PlayerController : MonoBehaviour
 	public float healDistance = 5f;
 	public int healPower = 20;
 
+	[Header("Order UI")]
+	public UnityEvent ramOrderEvent;
+	public UnityEvent killOrderEvent;
+	public UnityEvent returnOrderEvent;
+
 	#endregion
 
 	private void OnEnable()
@@ -124,11 +130,15 @@ public class PlayerController : MonoBehaviour
 		{
 			if (receiveInput)
 			{
+				//if the player can move, activates the move input
 				if (canMove)
 					MoveInput();
+
 				AttackInput();
 				DefendInput();
 				OrderInput();
+
+				//if an enemy is attacking, activates the counter input
 				if (counterWindow && attackingEnemy != null &&
 				    Vector3.Distance(transform.position, attackingEnemy.transform.position) <= 5)
 					CounterInput();
@@ -140,17 +150,19 @@ public class PlayerController : MonoBehaviour
 		Die();
 	}
 
-	//coroutine that controls the speed at which power is lost
+	//coroutine that controls the speed at which power for power attack is lost
 	private IEnumerator LoosePower()
 	{
+		//waits for a bit before starting to loose power
 		yield return longWait;
 		while (currentPower > 0)
 		{
+			//slowly removes the power level
 			currentPower -= powerLossSpeed;
 			UpdatePowerUI();
 			yield return StaticVars.oneSec;
 		}
-
+		//once the power is gone return the player to normal attack strength
 		playerStats.strength = tempStrength;
 	}
 
@@ -161,6 +173,7 @@ public class PlayerController : MonoBehaviour
 		float moveZ = Input.GetAxisRaw("Vertical");
 		health.dodging = true;
 		
+		//if the player isn't inputing anything roll forward
 		if (moveX == 0 && moveZ == 0)
 		{
 			moveZ = 1;
@@ -168,6 +181,7 @@ public class PlayerController : MonoBehaviour
 		
 		while (rolling)
 		{
+			//if the player is on the ground, roll
 			if (IsGrounded())
 			{
 				verticalVelocity = 0;
@@ -185,6 +199,7 @@ public class PlayerController : MonoBehaviour
 			yield return StaticVars.oneHundredth;
 		}
 
+		//makes the character face forward again and enables move input
 		characterArt.transform.localRotation = Quaternion.identity;
 		canMove = true;
 		health.dodging = false;
@@ -193,28 +208,38 @@ public class PlayerController : MonoBehaviour
 	//input for giving orders
 	private void OrderInput()
 	{
+		//draws the player raycast line so we can see it in scene view
 		var camTransform = maincam.transform;
 		Debug.DrawRay((camTransform.position + new Vector3(0,0.5f,0)), camTransform.forward * 100, Color.red);
+
+		//sends out a ray to see if it is hitting anything
 		if(Physics.Raycast(camTransform.position, camTransform.forward, out var hit, 100f, squad))
 		{
+			//checks if the hit is an order or an enemy or a squad member
 			var found = (hit.collider.CompareTag("order") || hit.collider.CompareTag("Enemy"));
 			var downedSquad = (hit.collider.CompareTag("squad"));
 
-			//sends a squad-mate to perform an order
+			//sends a squad-mate to perform an order on player command
 			if(Input.GetKeyDown(KeyCode.F) && found)
 			{
+				//checks that the order is valid
 				order = hit.collider.gameObject.GetComponent<OrderController>();
 				var isOrderNotNull = order != null;
+
+				//finds the squadmember that can do the order (the forloop is a remnant of when there was more than one squad member)
 				foreach (var member in squadMembers)
 				{
+					//checks that the current memeber can do the order
 					if(isOrderNotNull && member.unitType == order.unitType)
 					{
+						//if that squad member is already doing the order, order them to stop doing it
 						if(order.inProgress)
 						{
 							member.recalled = true;
 							order.inProgress = false;
 							print("Belay that soldier!");
 						}
+						//if that squad member is not doing the order, send them to do it
 						else
 						{
 							member.recalled = false;
@@ -222,24 +247,29 @@ public class PlayerController : MonoBehaviour
 							member.currentOrder = order.gameObject;
 							order.inProgress = true;
 							print("Do the thing, soldier!");
+							ramOrderEvent.Invoke();
 						}
 					}
+					//if the order is an enemy, send the squand member to attack
 					else if (hit.collider.CompareTag("Enemy"))
 					{
 						member.givenOrder = true;
 						member.currentOrder = hit.collider.gameObject;
 						print("attack that fool, soldier!");
+						killOrderEvent.Invoke();
 					}
 				}
 			}
 			//sends a squad-mate to heal another downed squad member
 			else if (Input.GetKeyDown(KeyCode.F) && downedSquad)
 			{
+				//bug check to make sure the squad member has health componenet
 				var squadHealth = hit.collider.gameObject.GetComponent<Health>();
 				if(health == null)
 				{
 					Debug.Log("Squad member doesn't have health assigned!");
 				}
+				//if they are dead, heal the downed person
 				else if(!squadHealth.alive && Vector3.Distance(transform.position, squadHealth.transform.position) <= healDistance)
 				{
 					//play healing animation
@@ -253,6 +283,7 @@ public class PlayerController : MonoBehaviour
 		if(Input.GetKeyDown(KeyCode.R))
 		{
 			print("Form up!");
+			//calls each member of the squad, cancels their orders, and sets them to follow the player
 			foreach (var member in squadMembers)
 			{
 				member.recalled = true;
@@ -261,23 +292,29 @@ public class PlayerController : MonoBehaviour
 					member.currentOrder.GetComponent<OrderController>().inProgress = false;
 				member.currentOrder = null;
 			}
+			returnOrderEvent.Invoke();
 		}
 		
 		//sets the ram start and end location
 		if(Input.GetKeyDown(KeyCode.Q))
 		{
-			if(Physics.Raycast(maincam.transform.position, maincam.transform.forward, out hit, 100f) && !ramPlaced)
+			//checks if we have placed the start ram location, if not, set it
+			if(Physics.Raycast(maincam.transform.position, maincam.transform.forward, out hit, 100f, ground) && !ramPlaced)
 			{
+				//insert custom vfx ram point whatever (start)
 				playerDefinedRam.gameObject.SetActive(true);
 				playerDefinedRam.transform.position = hit.point;
 				ramPlaced = true;
 			}
-			else if(Physics.Raycast(maincam.transform.position, maincam.transform.forward, out hit, 100f) && ramPlaced)
+			//checks if the end location hasn't been placed and the start location has. if so, place the end location
+			else if(Physics.Raycast(maincam.transform.position, maincam.transform.forward, out hit, 100f, ground) && ramPlaced)
 			{
+				//insert custom vfx ram point whatever (end)
 				playerDefinedRamEnd.gameObject.SetActive(true);
 				playerDefinedRamEnd.transform.position = hit.point;
 				playerDefinedRam.inProgress = true;
 
+				//finds the squad member who can ram and sends them to ram from start location to end location
 				foreach (var member in squadMembers.Where(member => playerDefinedRam != null && member.unitType == playerDefinedRam.unitType))
 				{
 					member.recalled = false;
@@ -286,6 +323,7 @@ public class PlayerController : MonoBehaviour
 					playerDefinedRam.inProgress = true;
 					ramPlaced = false;
 					print("RAM ATTACK SOLDIER!");
+					ramOrderEvent.Invoke();
 				}
 			}
 		}
@@ -295,15 +333,16 @@ public class PlayerController : MonoBehaviour
 	private void MoveInput()
     {
 		anim.SetBool(StaticVars.grounded, IsGrounded());
-		//base movement
+		//checks if player is on ground
 		if(IsGrounded())
 		{
 			verticalVelocity = 0;
+			//if the player is not rolling, let the animator know
 			if(!rolling)
 			{
 				anim.SetInteger(StaticVars.jump, 0);
 			}
-
+			//makes the player start the roll on player input
 			if(Input.GetButtonDown("Jump"))
 			{
 				anim.SetInteger(StaticVars.jump, 2);
@@ -311,20 +350,23 @@ public class PlayerController : MonoBehaviour
 				return;
 			}
 
-			//sets the speed
+			//sets the speed to run
 			if(Input.GetKeyDown(KeyCode.LeftShift))
 			{
 				speed = runSpeed;
 			}
+			//sets the speed to jog
 			else if (Input.GetKeyUp(KeyCode.LeftShift))
 			{
 				speed = jogSpeed;
 			}
+			//sets the speed to walk
 			else if(Input.GetKeyDown(KeyCode.LeftControl))
 			{
 				anim.SetBool(StaticVars.walk, true);
 				speed = walkSpeed;
 			}
+			//sets the speed to jog
 			else if (Input.GetKeyUp(KeyCode.LeftControl))
 			{
 				anim.SetBool(StaticVars.walk, false);
@@ -354,32 +396,35 @@ public class PlayerController : MonoBehaviour
 	//Input for attacking
 	private void AttackInput()
 	{
+		//if the player isn't on the ground they can't attack
 		if (!IsGrounded())
 			return;
 		
+		//used to make the combo attack animations work, if the delay runs out goes back to the first attack in the combo
 		if(Time.time - lastTimeClicked > maxAttackDelay)
 		{
 			attackNum = 0;
 			anim.SetInteger(StaticVars.mouse0, attackNum);
 		}
-		
+		//starts the attack
 		if (Input.GetMouseButtonDown(0) && !rolling)
 		{
 			attaking = true;
+			//attack num is used by the animator to determine which animation should be used
 			attackNum++;
 			attackNum = Mathf.Clamp(attackNum, 0, 2);
 			
 			canMove = false;
+			//if it's the first attack, let the animator know to use the first animation
 			if(attackNum == 1)
 				anim.SetInteger(StaticVars.mouse0, attackNum);
-			
-			
 		}
+		//starts the delay that resets attack num
 		else if (Input.GetMouseButtonUp(0))
 		{
 			lastTimeClicked = Time.time;
 		}
-
+		//unleashes the power attack
 		if (Input.GetKeyDown(KeyCode.G))
 			ReleasePower();
 	}
@@ -387,10 +432,12 @@ public class PlayerController : MonoBehaviour
 	//input for defending
 	private void DefendInput()
 	{
+		//if player is not rolling, pull up shield
 		if(Input.GetMouseButtonDown(1) && !rolling)
 		{
 			anim.SetFloat(StaticVars.mouse1, 1);
 		}
+		//put down shield
 		else if(Input.GetMouseButtonUp(1))
 		{
 			anim.SetFloat(StaticVars.mouse1, 0);
@@ -401,17 +448,21 @@ public class PlayerController : MonoBehaviour
 	//input for counter attack
 	private void CounterInput()
 	{
+		//prevents glitches
 		if (!Input.GetKeyDown(KeyCode.V) || attackingEnemy == null) return;
 		print("COUNTER ATTACK");
+		//starts the paired animation for counter attacks
 		StaticVars.PairCounterAction(this, attackingEnemy.GetComponent<Enemy>());
 	}
 
+	//activates the player shield for defense
 	public void ToggleShield(bool _state)
 	{
 		shielding = _state;
 		shield.SetActive(_state);
 		health.shielded = _state;
 		
+		//prevents the player from countering while their shield is up
 		if (_state)
 		{
 			counterSymbol.SetActive(false);
@@ -434,6 +485,9 @@ public class PlayerController : MonoBehaviour
 			currentPower = powerBuildUpMax;
 		}
 		UpdatePowerUI();
+		
+		//when the player has power it gets lost if they are not currently building power
+		//this restarts that check every time they get more power
 		if(loosePower != null)
 			StopCoroutine(loosePower);
 		loosePower = StartCoroutine(LoosePower());
@@ -442,7 +496,10 @@ public class PlayerController : MonoBehaviour
 	//releases pent up power when it is full
 	private void ReleasePower()
 	{
+		//the power attack can only be used when at max power
 		if (currentPower < powerBuildUpMax) return;
+
+		//returns player strength to normal and unleashes the EXPLOSION
 		playerStats.strength = tempStrength;
 		currentPower = 0;
 		explosion.transform.localScale = new Vector3(20f, 20f, 20f);
@@ -464,10 +521,12 @@ public class PlayerController : MonoBehaviour
 		//also changes the forward vector so player doesn't bounce down slopes
 		if(Physics.Raycast(bottom, -Vector3.up, out var hit, 0.2f, ground))
 		{
+			//calculates the forward movement direction
 			forward = Vector3.Cross(transform.right, hit.normal);
+			//calculates the side to side movement direction
 			var strafeDir = Vector3.Cross(transform.forward, hit.normal);
 
-			//checks to see which direction is more correct
+			//checks to see which direction, forward or strafe, is more correct to prevent slope bouncing
 			if(Mathf.Abs(strafeDir.y) > Mathf.Abs(forward.y))
 			{
 				forward = strafeDir;
@@ -481,6 +540,7 @@ public class PlayerController : MonoBehaviour
 	//called from Animator Behaviour
 	public void CalcAttackPower()
 	{
+		//reduces the players power level when attacking
 		if(currentPower > 0)
 			currentPower -= strengthBonus;
 		if (currentPower <= 0)
@@ -497,6 +557,7 @@ public class PlayerController : MonoBehaviour
 	}
 
 	//summons a squad member to come revive the player
+	//this should be changed so the player can choose to have them come or not
 	private void Die()
 	{
 		StaticVars.DeathAction(gameObject);
@@ -514,6 +575,7 @@ public class PlayerController : MonoBehaviour
 		roll = StartCoroutine(Roll());
 	}
 
+	//resets the players strength to normal
 	private void Reset()
 	{
 		playerStats.strength = tempStrength;
@@ -524,13 +586,15 @@ public class PlayerController : MonoBehaviour
 	{
 		attackingEnemy = _enemy;
 
+		//makes sure the player is able to counter
+		//if they are shielding or the enemy is too far away they cannot counter
 		if (shielding || attackingEnemy == null || Vector3.Distance(transform.position, attackingEnemy.transform.position) > 5)
 		{
 			counterWindow = false;
 			counterSymbol.SetActive(false);
 			return;
 		}
-
+		//lets the user know that countering is possible
 		counterWindow = _state;
 		counterSymbol.SetActive(_state);
 	}
@@ -538,6 +602,7 @@ public class PlayerController : MonoBehaviour
 	//handles the action that is called when an AI dies
 	private void DeathActionHandler(GameObject _other)
 	{
+		//if the dead enemy was attacking the player, remove them from the notice so the attack queue in EnemyManager updates
 		if (attackingEnemy == _other)
 			attackingEnemy = null;
 	}
