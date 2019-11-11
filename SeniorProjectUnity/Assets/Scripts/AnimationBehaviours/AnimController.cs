@@ -9,6 +9,7 @@ public class AnimController : MonoBehaviour
 
     public Animator anim => GetComponent<Animator>();
     public List<GameObject> hitBoxes;
+    public List<GameObject> vfx;
     private Base_AI ai => GetComponentInParent<Base_AI>();
     private PlayerController pc => GetComponentInParent<PlayerController>();
     public EnemyManager enemyManager;
@@ -35,6 +36,11 @@ public class AnimController : MonoBehaviour
     public void ToggleHitBox(int _index)
     {
         hitBoxes[_index].SetActive(!hitBoxes[_index].activeSelf);
+    }
+
+    public void ToggleVFX(int _index)
+    {
+        vfx[_index].SetActive(!vfx[_index].activeSelf);
     }
 
     //makes an ai realize that the damaged animation is over and it can do stuff again
