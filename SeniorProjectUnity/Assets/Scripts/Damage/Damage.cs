@@ -9,6 +9,7 @@ public class Damage : MonoBehaviour
     public int weaponDamage;
     public GameObject owner;
 
+    //sets the amount of damage this weapon does
     private void Start()
     {
         if (stats != null)

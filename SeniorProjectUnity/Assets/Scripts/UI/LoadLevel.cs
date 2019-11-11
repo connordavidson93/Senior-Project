@@ -25,6 +25,7 @@ public class LoadLevel : MonoBehaviour {
 		}
 		
 		SceneManager.sceneLoaded += OnSceneLoaded;
+		DontDestroyOnLoad(gameObject);
 	}
 
 	public void SetScene(string _levelName)
@@ -35,13 +36,14 @@ public class LoadLevel : MonoBehaviour {
 	public void Load()
 	{
 		gameStateManager.GetComponent<Animator>().SetTrigger("LoadLevel");
-		SceneManager.LoadScene(levelName, LoadSceneMode.Additive);		
+		SceneManager.LoadScene(levelName);		
 	}
 
 	public void OnSceneLoaded(Scene _scene, LoadSceneMode _loaded)
 	{
 		gameStateManager.GetComponent<Animator>().SetTrigger("StartGame");
 		levelLoadedEvent.Invoke();
+		SceneManager.sceneLoaded -= OnSceneLoaded;
 //		SceneManager.SetActiveScene(SceneManager.GetSceneByName(levelName));
 	}
 
