@@ -6,7 +6,7 @@ public class HighlightObject : MonoBehaviour
 	public Material highlight_mat;
     public Renderer rend;
 
-	void OnMouseOver()
+	void OnMouseEnter()
 	{
 		print("mousing over");
 		rend.material = highlight_mat;
