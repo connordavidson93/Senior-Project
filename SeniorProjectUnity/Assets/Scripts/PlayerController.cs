@@ -424,9 +424,9 @@ public class PlayerController : MonoBehaviour
 		{
 			lastTimeClicked = Time.time;
 		}
-		//unleashes the power attack
-		if (Input.GetKeyDown(KeyCode.G))
-			ReleasePower();
+//		//unleashes the power attack
+//		if (Input.GetKeyDown(KeyCode.G))
+//			ReleasePower();
 	}
 
 	//input for defending
@@ -493,18 +493,18 @@ public class PlayerController : MonoBehaviour
 		loosePower = StartCoroutine(LoosePower());
 	}
 
-	//releases pent up power when it is full
-	private void ReleasePower()
-	{
-		//the power attack can only be used when at max power
-		if (currentPower < powerBuildUpMax) return;
-
-		//returns player strength to normal and unleashes the EXPLOSION
-		playerStats.strength = tempStrength;
-		currentPower = 0;
-		explosion.transform.localScale = new Vector3(20f, 20f, 20f);
-		UpdatePowerUI();
-	}
+//	//releases pent up power when it is full
+//	private void ReleasePower()
+//	{
+//		//the power attack can only be used when at max power
+//		if (currentPower < powerBuildUpMax) return;
+//
+//		//returns player strength to normal and unleashes the EXPLOSION
+//		playerStats.strength = tempStrength;
+//		currentPower = 0;
+//		explosion.transform.localScale = new Vector3(20f, 20f, 20f);
+//		UpdatePowerUI();
+//	}
 
 	//checks if the player is on the ground
 	//parameters: none
