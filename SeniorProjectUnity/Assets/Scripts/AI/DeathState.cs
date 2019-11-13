@@ -12,6 +12,7 @@ public class DeathState : BaseState
 
     public override Type Tick()
     {
+        //if alive go to idle
         if(health.alive)
             return typeof(IdleState);
         
