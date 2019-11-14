@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
 	//variables for shielding
 	[Header("Defense")] 
 	public GameObject shield; 
-	public GameObject explosion;
+	//public GameObject explosion;
 	private bool shielding;
 	public Image powerSlider;
 
@@ -553,7 +553,10 @@ public class PlayerController : MonoBehaviour
 	//updates the power level UI element
 	private void UpdatePowerUI()
 	{
-		powerSlider.fillAmount = (float)currentPower / 100;
+		if(powerSlider != null)
+			powerSlider.fillAmount = (float)currentPower / 100;
+		else
+			Debug.Log("ERROR: No power slider");
 	}
 
 	//summons a squad member to come revive the player
