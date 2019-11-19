@@ -199,6 +199,9 @@ public class PlayerController : MonoBehaviour
 			yield return StaticVars.oneHundredth;
 		}
 
+		//end the roll animation
+		anim.SetInteger(StaticVars.jump, 0);
+
 		//makes the character face forward again and enables move input
 		characterArt.transform.localRotation = Quaternion.identity;
 		canMove = true;
@@ -337,11 +340,7 @@ public class PlayerController : MonoBehaviour
 		if(IsGrounded())
 		{
 			verticalVelocity = 0;
-			//if the player is not rolling, let the animator know
-			if(!rolling)
-			{
-				anim.SetInteger(StaticVars.jump, 0);
-			}
+			
 			//makes the player start the roll on player input
 			if(Input.GetButtonDown("Jump"))
 			{
