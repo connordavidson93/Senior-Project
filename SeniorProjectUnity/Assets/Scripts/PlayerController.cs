@@ -263,7 +263,7 @@ public class PlayerController : MonoBehaviour
 					}
 				}
 			}
-			//sends a squad-mate to heal another downed squad member
+			//heals a downed squad member if the player is close enough
 			else if (Input.GetKeyDown(KeyCode.F) && downedSquad)
 			{
 				//bug check to make sure the squad member has health componenet
@@ -276,6 +276,7 @@ public class PlayerController : MonoBehaviour
 				else if(!squadHealth.alive && Vector3.Distance(transform.position, squadHealth.transform.position) <= healDistance)
 				{
 					//play healing animation
+					anim.SetBool(StaticVars.heal, true);
 					squadHealth.Heal(healPower);
 					squadHealth.alive = true;
 				}
