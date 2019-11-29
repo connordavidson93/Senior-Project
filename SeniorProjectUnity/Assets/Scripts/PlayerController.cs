@@ -449,7 +449,7 @@ public class PlayerController : MonoBehaviour
 	private void CounterInput()
 	{
 		//prevents glitches
-		if (!Input.GetKeyDown(KeyCode.V) || attackingEnemy == null) return;
+		if (!Input.GetKeyDown(KeyCode.E) || attackingEnemy == null) return;
 		print("COUNTER ATTACK");
 		//starts the paired animation for counter attacks
 		StaticVars.PairCounterAction(this, attackingEnemy.GetComponent<Enemy>());
