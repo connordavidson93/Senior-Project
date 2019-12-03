@@ -45,7 +45,7 @@ public class RagdollController : MonoBehaviour
         thisRigidbody.isKinematic = !thisRigidbody.isKinematic;
         foreach (var rb in rigidbodies)
         {
-            if (rb != thisRigidbody)
+            if (rb != thisRigidbody && rb.name != "HurtBox")
                 rb.isKinematic = !rb.isKinematic;
         }
     }
