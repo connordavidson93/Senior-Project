@@ -32,7 +32,7 @@ RectTransform:
   m_Children:
   - {fileID: 1463527984}
   m_Father: {fileID: 4349601396795417857}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4942,67 +4942,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1296856074
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1296856075}
-  - component: {fileID: 1296856077}
-  - component: {fileID: 1296856076}
-  m_Layer: 13
-  m_Name: Explosion
-  m_TagString: hitbox
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1296856075
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1296856074}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 4349601396795417857}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1296856077
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1296856074}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1296856076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1296856074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 989cb90778d25ea4ea466142c9735d3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalDamage: 0
-  stats: {fileID: 11400000, guid: fdf3bb45bb1255b4e8d8fe58a9102a39, type: 2}
-  weaponDamage: 100
-  owner: {fileID: 4349601396795417867}
 --- !u!1 &1337984660
 GameObject:
   m_ObjectHideFlags: 0
@@ -5174,7 +5113,6 @@ Transform:
   m_Children:
   - {fileID: 7304585683074353579}
   - {fileID: 1134460483}
-  - {fileID: 1296856075}
   - {fileID: 1113645459}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -5236,7 +5174,6 @@ MonoBehaviour:
   playerDefinedRam: {fileID: 0}
   playerDefinedRamEnd: {fileID: 0}
   shield: {fileID: 1134460482}
-  explosion: {fileID: 1296856074}
   powerSlider: {fileID: 0}
   counterSymbol: {fileID: 1463527983}
   counterDamage: 100
@@ -5362,6 +5299,16 @@ MonoBehaviour:
   dodging: 0
   attacker: {fileID: 0}
   healthSlider: {fileID: 0}
+  playerDeathEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  playerReviveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!208 &18624402
 NavMeshObstacle:
   m_ObjectHideFlags: 0

@@ -48,7 +48,7 @@ public class OrderState : BaseState
             //checks that the squad member is near to the player
             if (Vector3.Distance(gameObject.transform.position, squad.currentOrder.transform.position) <= 5f)
             {
-                //play heal animation
+                squad.anim.SetBool(StaticVars.heal, true);
                 squad.healTargetHealth.Heal(squad.healPower);
                 squad.currentOrder = null;
                 squad.givenOrder = false;
