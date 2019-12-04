@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class Health : MonoBehaviour
     public Image healthSlider;
     private bool sliderNull;
     private bool playerNull;
+
+    public UnityEvent playerDeathEvent;
+    public UnityEvent playerReviveEvent;
     
     private void Start()
     {
@@ -80,6 +84,11 @@ public class Health : MonoBehaviour
         if(currentHealth <= 0)
         {
             alive = false;
+
+            if(!playerNull)
+            {
+                playerDeathEvent.Invoke();
+            }
         }
         SetUISlider();
     }

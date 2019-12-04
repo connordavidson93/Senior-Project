@@ -52,7 +52,7 @@ public class IdleState : BaseState
             //return typeof(WanderState);
         else
         {
-            if(squad != null)
+            if(squad != null && scui != null)
                 scui.ChangeOrder(3);
             return typeof(IdleState);
         }

@@ -5,6 +5,7 @@ using System;
 
 public class DeathState : BaseState
 {
+    private bool died;
     public DeathState(Base_AI _ai) : base(_ai.gameObject, _ai)
     {
         
@@ -15,8 +16,13 @@ public class DeathState : BaseState
         //if alive go to idle
         if(health.alive)
             return typeof(IdleState);
+
+        if (!died)
+        {
+            ai.Die();
+            died = true;
+        }
         
-        ai.Die();
         return typeof(DeathState);
     }
 }
