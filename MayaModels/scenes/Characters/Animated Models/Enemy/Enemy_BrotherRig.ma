@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Enemy_BrotherRig.ma
-//Last modified: Mon, Nov 11, 2019 11:31:28 AM
+//Last modified: Tue, Nov 12, 2019 03:18:07 PM
 //Codeset: 1252
 file -rdi 1 -ns "DividedBaseEnemyMale" -rfn "DividedBaseEnemyMaleRN" -op "v=0;p=17;f=0"
 		 -typ "mayaAscii" "C:/Users/10796568/Documents/Repositories/Senior Project/MayaModels//scenes/Characters/Rigged Models/DividedBaseEnemyMale.ma";
@@ -19,13 +19,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "17FC32C0-4106-5CCD-73F7-E19A7501C4E0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.45910007996227575 7.5607160898779382 47.596634028734186 ;
-	setAttr ".r" -type "double3" 0.26164727748874528 718.20000000089817 7.7688595409985588e-19 ;
+	setAttr ".t" -type "double3" -12.897732326447166 12.772911970034798 49.325644855453362 ;
+	setAttr ".r" -type "double3" -5.7383527230158444 703.80000000023699 -1.0350201743287573e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D57389F9-4519-F11E-EACE-01AE6B39C612";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 46.091463591525063;
+	setAttr ".coi" 50.024254288787191;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -79,25 +79,25 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "0755FC76-458B-9975-5C9E-3A9248DB51A4";
+	rename -uid "459009E5-4762-AF1C-D3FE-76917FF3B2D6";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "C56CC59B-4BBE-7B88-7921-79B35BE27426";
+	rename -uid "70F5A3AD-4672-54CF-C6DF-80940FB4189F";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "6F7AD608-4D6D-031D-4DE9-0EB6509CC5DD";
+	rename -uid "428A0F6F-4339-8780-9A8E-0ABA32E44F60";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "B6A10FAC-4653-29F0-1F74-37A97A415F55";
+	rename -uid "363AF8DC-41A3-710B-5CAD-EFBB569B1270";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "5E654237-4E88-2D4E-5E5C-77B8692C1686";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "530BED14-4CA0-75A6-ADB0-67AAA42677A2";
+	rename -uid "C9309C10-4FB3-E3C3-57CF-4EA967A555CB";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "E8B04063-42F3-5D11-3A1B-FFA7622E497E";
 	setAttr ".g" yes;
 createNode reference -n "DividedBaseEnemyMaleRN";
 	rename -uid "F68449C9-4680-AD92-4CEC-4284871E63F9";
-	setAttr -s 643 ".phl";
+	setAttr -s 611 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -709,38 +709,6 @@ createNode reference -n "DividedBaseEnemyMaleRN";
 	setAttr ".phl[609]" 0;
 	setAttr ".phl[610]" 0;
 	setAttr ".phl[611]" 0;
-	setAttr ".phl[612]" 0;
-	setAttr ".phl[613]" 0;
-	setAttr ".phl[614]" 0;
-	setAttr ".phl[615]" 0;
-	setAttr ".phl[616]" 0;
-	setAttr ".phl[617]" 0;
-	setAttr ".phl[618]" 0;
-	setAttr ".phl[619]" 0;
-	setAttr ".phl[620]" 0;
-	setAttr ".phl[621]" 0;
-	setAttr ".phl[622]" 0;
-	setAttr ".phl[623]" 0;
-	setAttr ".phl[624]" 0;
-	setAttr ".phl[625]" 0;
-	setAttr ".phl[626]" 0;
-	setAttr ".phl[627]" 0;
-	setAttr ".phl[628]" 0;
-	setAttr ".phl[629]" 0;
-	setAttr ".phl[630]" 0;
-	setAttr ".phl[631]" 0;
-	setAttr ".phl[632]" 0;
-	setAttr ".phl[633]" 0;
-	setAttr ".phl[634]" 0;
-	setAttr ".phl[635]" 0;
-	setAttr ".phl[636]" 0;
-	setAttr ".phl[637]" 0;
-	setAttr ".phl[638]" 0;
-	setAttr ".phl[639]" 0;
-	setAttr ".phl[640]" 0;
-	setAttr ".phl[641]" 0;
-	setAttr ".phl[642]" 0;
-	setAttr ".phl[643]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"DividedBaseEnemyMaleRN"
 		"DividedBaseEnemyMaleRN" 5
@@ -754,9 +722,9 @@ createNode reference -n "DividedBaseEnemyMaleRN";
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:Ground|DividedBaseEnemyMale:GroundShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		"DividedBaseEnemyMaleRN" 1467
+		"DividedBaseEnemyMaleRN" 1441
 		2 "|DividedBaseEnemyMale:Mannequin|DividedBaseEnemyMale:Skeleton|DividedBaseEnemyMale:IK|DividedBaseEnemyMale:L_Leg_01_Jnt" 
-		"rotate" " -type \"double3\" 5.04341656134974148 -39.4264535003179688 8.68213000903490872"
+		"rotate" " -type \"double3\" -10.0760341600638661 -41.9631362153333356 10.14895189377121021"
 		
 		2 "|DividedBaseEnemyMale:Mannequin|DividedBaseEnemyMale:Skeleton|DividedBaseEnemyMale:IK|DividedBaseEnemyMale:L_Leg_01_Jnt" 
 		"rotateX" " -av"
@@ -765,7 +733,9 @@ createNode reference -n "DividedBaseEnemyMaleRN";
 		2 "|DividedBaseEnemyMale:Mannequin|DividedBaseEnemyMale:Skeleton|DividedBaseEnemyMale:IK|DividedBaseEnemyMale:L_Leg_01_Jnt" 
 		"rotateZ" " -av"
 		2 "|DividedBaseEnemyMale:Mannequin|DividedBaseEnemyMale:Skeleton|DividedBaseEnemyMale:IK|DividedBaseEnemyMale:L_Leg_01_Jnt|DividedBaseEnemyMale:L_Leg_02_Jnt" 
-		"rotate" " -type \"double3\" 0 34.2859397407714539 0"
+		"rotate" " -type \"double3\" 0 55.98393610606878212 0"
+		2 "|DividedBaseEnemyMale:Mannequin|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:BaseMesh|DividedBaseEnemyMale:BaseMeshShape" 
+		"visibility" " -k 0 1"
 		2 "|DividedBaseEnemyMale:Mannequin|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:BaseMesh|DividedBaseEnemyMale:BaseMeshShape" 
 		"uvPivot" " -type \"double2\" 0 0"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl" 
@@ -853,8 +823,7 @@ createNode reference -n "DividedBaseEnemyMaleRN";
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl" 
 		"visibility" " -av 1"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl" 
-		"translate" " -type \"double3\" -1.89442551400027748 0.05816563073702926 -0.58305250887325333"
-		
+		"translate" " -type \"double3\" -1.12803327489668836 0 -0.64359544309524674"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl" 
 		"translateX" " -av"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl" 
@@ -880,7 +849,8 @@ createNode reference -n "DividedBaseEnemyMaleRN";
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl" 
 		"visibility" " -av 1"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl" 
-		"translate" " -type \"double3\" -0.31416133446041639 0 -0.8771239765024017"
+		"translate" " -type \"double3\" 0.31245424343194039 0.16354733341174063 -1.09002365437344517"
+		
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl" 
 		"translateX" " -av"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl" 
@@ -888,7 +858,7 @@ createNode reference -n "DividedBaseEnemyMaleRN";
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl" 
 		"translateZ" " -av"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl" 
-		"rotate" " -type \"double3\" 0 -8.8317133237078842 0"
+		"rotate" " -type \"double3\" 0 -54.12409625191356355 0"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl" 
 		"rotateX" " -av"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl" 
@@ -1166,8 +1136,7 @@ createNode reference -n "DividedBaseEnemyMaleRN";
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl" 
 		"visibility" " -av 1"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl" 
-		"translate" " -type \"double3\" -0.43941675541243486 0.3990017844715914 0.59388580734661534"
-		
+		"translate" " -type \"double3\" 1.77230790488755874 0 -1.39014389777124259"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl" 
 		"translateX" " -av"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl" 
@@ -1201,7 +1170,7 @@ createNode reference -n "DividedBaseEnemyMaleRN";
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl" 
 		"translateZ" " -av"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl" 
-		"rotate" " -type \"double3\" 2.65914957209775293 13.36848216658901656 -5.84533711729443173"
+		"rotate" " -type \"double3\" 2.2339745821482242 -7.98615252013614008 -0.43991784759032621"
 		
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl" 
 		"rotateX" " -av"
@@ -1254,7 +1223,7 @@ createNode reference -n "DividedBaseEnemyMaleRN";
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Neck_Ctrl_Grp|DividedBaseEnemyMale:Neck_Ctrl|DividedBaseEnemyMale:Head_Ctrl_Grp|DividedBaseEnemyMale:Head_Ctrl" 
 		"translateZ" " -av"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Neck_Ctrl_Grp|DividedBaseEnemyMale:Neck_Ctrl|DividedBaseEnemyMale:Head_Ctrl_Grp|DividedBaseEnemyMale:Head_Ctrl" 
-		"rotate" " -type \"double3\" 0 -30.24687309816840752 0"
+		"rotate" " -type \"double3\" -3.51857297637204081 57.0818038220346935 0"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Neck_Ctrl_Grp|DividedBaseEnemyMale:Neck_Ctrl|DividedBaseEnemyMale:Head_Ctrl_Grp|DividedBaseEnemyMale:Head_Ctrl" 
 		"rotateX" " -av"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Neck_Ctrl_Grp|DividedBaseEnemyMale:Neck_Ctrl|DividedBaseEnemyMale:Head_Ctrl_Grp|DividedBaseEnemyMale:Head_Ctrl" 
@@ -2166,7 +2135,7 @@ createNode reference -n "DividedBaseEnemyMaleRN";
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl" 
 		"translateZ" " -av"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl" 
-		"rotate" " -type \"double3\" 9.77064398289873637 -13.60505488354451309 -41.51451999725225761"
+		"rotate" " -type \"double3\" -33.1632668637910939 4.51798054421737838 -38.37667687978157716"
 		
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl" 
 		"rotateX" " -av"
@@ -2193,7 +2162,7 @@ createNode reference -n "DividedBaseEnemyMaleRN";
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl" 
 		"translateZ" " -av"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl" 
-		"rotate" " -type \"double3\" -57.5121444351330382 29.41930061456181278 -20.17887031277902565"
+		"rotate" " -type \"double3\" -76.03491271884972491 -7.01783895450071693 -36.08171993506391573"
 		
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl" 
 		"rotateX" " -av"
@@ -2220,87 +2189,88 @@ createNode reference -n "DividedBaseEnemyMaleRN";
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl" 
 		"translateZ" " -av"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl" 
+		"rotate" " -type \"double3\" -28.52933162342291595 -38.76278703415665916 -8.22230847572020807"
+		
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl" 
+		"rotateX" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl" 
+		"rotateY" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl" 
+		"rotateZ" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl" 
+		"scaleX" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl" 
+		"scaleY" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl" 
+		"scaleZ" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
+		"visibility" " -av 1"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
+		"translateX" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
+		"translateY" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
+		"translateZ" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
+		"rotate" " -type \"double3\" -38.78415149655108962 24.48734332275004988 -2.54385782464482491"
+		
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
+		"rotateX" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
+		"rotateY" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
+		"rotateZ" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
+		"scaleX" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
+		"scaleY" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
+		"scaleZ" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
+		"visibility" " -av 1"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
+		"translateX" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
+		"translateY" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
+		"translateZ" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
+		"rotate" " -type \"double3\" -25.85044784504524884 -38.39217345111448765 -42.60060959809622005"
+		
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
+		"rotateX" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
+		"rotateY" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
+		"rotateZ" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
+		"scaleX" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
+		"scaleY" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
+		"scaleZ" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl" 
+		"visibility" " -av 1"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl" 
+		"translateX" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl" 
+		"translateY" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl" 
+		"translateZ" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl" 
 		"rotate" " -type \"double3\" 0 0 0"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl" 
-		"rotateX" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl" 
-		"rotateY" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl" 
-		"rotateZ" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl" 
-		"scale" " -type \"double3\" 1 1 1"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl" 
-		"scaleX" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl" 
-		"scaleY" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl" 
-		"scaleZ" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
-		"visibility" " -av 1"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
-		"translateX" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
-		"translateY" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
-		"translateZ" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
-		"rotate" " -type \"double3\" 14.64766064114375155 31.64799704584294204 50.94012787706680001"
-		
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
-		"rotateX" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
-		"rotateY" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
-		"rotateZ" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
-		"scale" " -type \"double3\" 1 1 1"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
-		"scaleX" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
-		"scaleY" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl" 
-		"scaleZ" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
-		"visibility" " -av 1"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
-		"translateX" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
-		"translateY" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
-		"translateZ" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
-		"rotate" " -type \"double3\" -42.07075689308408784 -22.71141835594340108 -13.68286987298373347"
-		
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
-		"rotateX" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
-		"rotateY" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
-		"rotateZ" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
-		"scale" " -type \"double3\" 1 1 1"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
-		"scaleX" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
-		"scaleY" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl" 
-		"scaleZ" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl" 
-		"visibility" " -av 1"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl" 
-		"translateX" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl" 
-		"translateY" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl" 
-		"translateZ" " -av"
-		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl" 
-		"rotate" " -type \"double3\" 0 0 0"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl" 
 		"rotateX" " -av"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl" 
@@ -2323,10 +2293,19 @@ createNode reference -n "DividedBaseEnemyMaleRN";
 		"rotateY" " -av"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Ik_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Arm_Ctrl" 
 		"rotateZ" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Ik_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Arm_Handle" 
+		"scale" " -type \"double3\" 0.99999999999999989 0.99999999999999989 0.99999999999999978"
+		
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Ik_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Arm_Handle" 
+		"scaleX" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Ik_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Arm_Handle" 
+		"scaleY" " -av"
+		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Ik_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Arm_Handle" 
+		"scaleZ" " -av"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:COG_Ctrl_Grp|DividedBaseEnemyMale:COG_Ctrl" 
 		"visibility" " -av 1"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:COG_Ctrl_Grp|DividedBaseEnemyMale:COG_Ctrl" 
-		"translate" " -type \"double3\" -1.0254125618312655 -0.91862496397663129 0.10532733139571127"
+		"translate" " -type \"double3\" -0.10717137150333782 -0.91862496397663129 0.44646820739963544"
 		
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:COG_Ctrl_Grp|DividedBaseEnemyMale:COG_Ctrl" 
 		"translateX" " -av"
@@ -2335,7 +2314,7 @@ createNode reference -n "DividedBaseEnemyMaleRN";
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:COG_Ctrl_Grp|DividedBaseEnemyMale:COG_Ctrl" 
 		"translateZ" " -av"
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:COG_Ctrl_Grp|DividedBaseEnemyMale:COG_Ctrl" 
-		"rotate" " -type \"double3\" 9.01228281103334439 2.19089003659056258 9.84882852669914932"
+		"rotate" " -type \"double3\" 1.36639006260666762 -38.21332454101390397 0.12019985007815882"
 		
 		2 "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:COG_Ctrl_Grp|DividedBaseEnemyMale:COG_Ctrl" 
 		"rotateX" " -av"
@@ -2406,6 +2385,7 @@ createNode reference -n "DividedBaseEnemyMaleRN";
 		"scaleY" " -av"
 		2 "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Sheild|DividedBaseEnemyMale:Sheild_Ctrl" 
 		"scaleZ" " -av"
+		2 "|DividedBaseEnemyMale:Scene" "visibility" " 0"
 		2 "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:directionalLight1" "translate" 
 		" -type \"double3\" -28.31951159515146799 8.11514012154582609 0"
 		2 "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:directionalLight1" "translateX" 
@@ -2416,1311 +2396,1247 @@ createNode reference -n "DividedBaseEnemyMaleRN";
 		" -type \"double3\" -20.98276695072329545 0 0"
 		2 "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:ambientLight1" "translateX" 
 		" -av"
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl.Lower_IKFK" 
-		"DividedBaseEnemyMaleRN.placeHolderList[1]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl.UpperIKFK" 
-		"DividedBaseEnemyMaleRN.placeHolderList[2]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[3]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[4]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[5]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[6]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[7]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[8]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[9]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[10]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[11]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[12]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Waist_Ctrl_Grp|DividedBaseEnemyMale:Waist_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[13]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[1]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Waist_Ctrl_Grp|DividedBaseEnemyMale:Waist_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[14]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[2]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Waist_Ctrl_Grp|DividedBaseEnemyMale:Waist_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[15]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[3]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Waist_Ctrl_Grp|DividedBaseEnemyMale:Waist_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[16]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[4]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Waist_Ctrl_Grp|DividedBaseEnemyMale:Waist_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[17]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[5]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Waist_Ctrl_Grp|DividedBaseEnemyMale:Waist_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[18]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[6]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Waist_Ctrl_Grp|DividedBaseEnemyMale:Waist_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[19]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[7]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Waist_Ctrl_Grp|DividedBaseEnemyMale:Waist_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[20]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[8]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Waist_Ctrl_Grp|DividedBaseEnemyMale:Waist_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[21]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[9]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Waist_Ctrl_Grp|DividedBaseEnemyMale:Waist_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[22]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[10]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[23]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[11]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[24]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[12]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[25]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[13]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[26]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[14]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[27]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[15]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[28]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[16]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[29]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[17]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[30]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[18]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[31]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[19]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[32]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[20]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[33]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[21]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[34]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[22]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[35]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[23]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[36]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[24]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[37]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[25]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[38]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[26]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[39]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[27]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[40]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[28]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[41]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[29]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[42]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[30]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[43]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[31]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[44]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[32]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[45]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[33]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[46]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[34]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[47]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[35]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[48]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[36]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[49]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[37]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[50]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[38]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[51]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[39]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[52]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[40]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[53]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[41]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[54]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[42]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[55]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[43]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[56]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[44]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[57]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[45]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[58]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[46]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[59]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[47]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[60]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[48]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[61]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[49]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[62]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[50]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[63]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[51]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[64]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[52]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[65]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[53]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[66]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[54]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[67]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[55]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[68]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[56]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[69]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[57]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[70]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[58]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[71]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[59]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[72]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[60]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[73]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[61]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[74]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[62]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[75]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[63]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[76]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[64]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[77]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[65]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[78]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[66]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[79]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[67]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[80]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[68]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[81]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[69]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[82]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[70]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl|DividedBaseEnemyMale:Ik_Ball_Ctrl_Grp|DividedBaseEnemyMale:Ik_Bal_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[83]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[71]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl|DividedBaseEnemyMale:Ik_Ball_Ctrl_Grp|DividedBaseEnemyMale:Ik_Bal_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[84]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[72]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl|DividedBaseEnemyMale:Ik_Ball_Ctrl_Grp|DividedBaseEnemyMale:Ik_Bal_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[85]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[73]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl|DividedBaseEnemyMale:Ik_Ball_Ctrl_Grp|DividedBaseEnemyMale:Ik_Bal_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[86]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[74]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl|DividedBaseEnemyMale:Ik_Ball_Ctrl_Grp|DividedBaseEnemyMale:Ik_Bal_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[87]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[75]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl|DividedBaseEnemyMale:Ik_Ball_Ctrl_Grp|DividedBaseEnemyMale:Ik_Bal_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[88]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[76]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl|DividedBaseEnemyMale:Ik_Ball_Ctrl_Grp|DividedBaseEnemyMale:Ik_Bal_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[89]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[77]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl|DividedBaseEnemyMale:Ik_Ball_Ctrl_Grp|DividedBaseEnemyMale:Ik_Bal_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[90]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[78]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl|DividedBaseEnemyMale:Ik_Ball_Ctrl_Grp|DividedBaseEnemyMale:Ik_Bal_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[91]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[79]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Foor_Ctrl|DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Right_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl|DividedBaseEnemyMale:Ik_Ball_Ctrl_Grp|DividedBaseEnemyMale:Ik_Bal_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[92]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[80]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[93]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[81]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[94]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[82]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[95]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[83]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[96]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[84]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[97]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[85]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[98]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[86]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[99]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[87]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[100]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[88]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[101]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[89]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[102]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[90]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[103]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[91]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[104]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[92]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[105]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[93]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[106]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[94]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[107]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[95]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[108]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[96]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[109]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[97]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[110]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[98]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[111]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[99]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[112]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[100]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[113]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[101]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[114]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[102]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[115]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[103]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[116]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[104]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[117]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[105]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[118]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[106]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[119]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[107]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[120]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[108]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[121]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[109]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[122]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[110]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[123]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[111]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[124]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[112]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[125]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[113]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[126]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[114]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[127]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[115]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[128]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[116]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[129]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[117]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[130]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[118]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[131]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[119]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[132]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[120]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl|DividedBaseEnemyMale:Ik_Ball_Ctrl_Grp|DividedBaseEnemyMale:Ik_Bal_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[133]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[121]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl|DividedBaseEnemyMale:Ik_Ball_Ctrl_Grp|DividedBaseEnemyMale:Ik_Bal_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[134]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[122]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl|DividedBaseEnemyMale:Ik_Ball_Ctrl_Grp|DividedBaseEnemyMale:Ik_Bal_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[135]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[123]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl|DividedBaseEnemyMale:Ik_Ball_Ctrl_Grp|DividedBaseEnemyMale:Ik_Bal_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[136]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[124]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl|DividedBaseEnemyMale:Ik_Ball_Ctrl_Grp|DividedBaseEnemyMale:Ik_Bal_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[137]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[125]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl|DividedBaseEnemyMale:Ik_Ball_Ctrl_Grp|DividedBaseEnemyMale:Ik_Bal_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[138]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[126]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl|DividedBaseEnemyMale:Ik_Ball_Ctrl_Grp|DividedBaseEnemyMale:Ik_Bal_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[139]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[127]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl|DividedBaseEnemyMale:Ik_Ball_Ctrl_Grp|DividedBaseEnemyMale:Ik_Bal_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[140]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[128]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl|DividedBaseEnemyMale:Ik_Ball_Ctrl_Grp|DividedBaseEnemyMale:Ik_Bal_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[141]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[129]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Foor_Ctrl|DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Heel_CTrl|DividedBaseEnemyMale:Ik_Toe_Crtl_Grp|DividedBaseEnemyMale:Ik_Toe_Ctrl|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl|DividedBaseEnemyMale:Ik_Ball_Ctrl_Grp|DividedBaseEnemyMale:Ik_Bal_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[142]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[130]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[143]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[131]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[144]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[132]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[145]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[133]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[146]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[134]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[147]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[135]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[148]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[136]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[149]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[137]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[150]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[138]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[151]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[139]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[152]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[140]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[153]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[141]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[154]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[142]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[155]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[143]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[156]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[144]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[157]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[145]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[158]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[146]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[159]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[147]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[160]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[148]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[161]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[149]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[162]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[150]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[163]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[151]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[164]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[152]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[165]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[153]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[166]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[154]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[167]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[155]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[168]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[156]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[169]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[157]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[170]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[158]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[171]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[159]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[172]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[160]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Neck_Ctrl_Grp|DividedBaseEnemyMale:Neck_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[173]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[161]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Neck_Ctrl_Grp|DividedBaseEnemyMale:Neck_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[174]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[162]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Neck_Ctrl_Grp|DividedBaseEnemyMale:Neck_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[175]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[163]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Neck_Ctrl_Grp|DividedBaseEnemyMale:Neck_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[176]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[164]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Neck_Ctrl_Grp|DividedBaseEnemyMale:Neck_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[177]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[165]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Neck_Ctrl_Grp|DividedBaseEnemyMale:Neck_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[178]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[166]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Neck_Ctrl_Grp|DividedBaseEnemyMale:Neck_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[179]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[167]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Neck_Ctrl_Grp|DividedBaseEnemyMale:Neck_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[180]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[168]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Neck_Ctrl_Grp|DividedBaseEnemyMale:Neck_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[181]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[169]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Neck_Ctrl_Grp|DividedBaseEnemyMale:Neck_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[182]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[170]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Neck_Ctrl_Grp|DividedBaseEnemyMale:Neck_Ctrl|DividedBaseEnemyMale:Head_Ctrl_Grp|DividedBaseEnemyMale:Head_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[183]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[171]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Neck_Ctrl_Grp|DividedBaseEnemyMale:Neck_Ctrl|DividedBaseEnemyMale:Head_Ctrl_Grp|DividedBaseEnemyMale:Head_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[184]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[172]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Neck_Ctrl_Grp|DividedBaseEnemyMale:Neck_Ctrl|DividedBaseEnemyMale:Head_Ctrl_Grp|DividedBaseEnemyMale:Head_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[185]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[173]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Neck_Ctrl_Grp|DividedBaseEnemyMale:Neck_Ctrl|DividedBaseEnemyMale:Head_Ctrl_Grp|DividedBaseEnemyMale:Head_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[186]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[174]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Neck_Ctrl_Grp|DividedBaseEnemyMale:Neck_Ctrl|DividedBaseEnemyMale:Head_Ctrl_Grp|DividedBaseEnemyMale:Head_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[187]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[175]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Neck_Ctrl_Grp|DividedBaseEnemyMale:Neck_Ctrl|DividedBaseEnemyMale:Head_Ctrl_Grp|DividedBaseEnemyMale:Head_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[188]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[176]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Neck_Ctrl_Grp|DividedBaseEnemyMale:Neck_Ctrl|DividedBaseEnemyMale:Head_Ctrl_Grp|DividedBaseEnemyMale:Head_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[189]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[177]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Neck_Ctrl_Grp|DividedBaseEnemyMale:Neck_Ctrl|DividedBaseEnemyMale:Head_Ctrl_Grp|DividedBaseEnemyMale:Head_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[190]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[178]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Neck_Ctrl_Grp|DividedBaseEnemyMale:Neck_Ctrl|DividedBaseEnemyMale:Head_Ctrl_Grp|DividedBaseEnemyMale:Head_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[191]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[179]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Neck_Ctrl_Grp|DividedBaseEnemyMale:Neck_Ctrl|DividedBaseEnemyMale:Head_Ctrl_Grp|DividedBaseEnemyMale:Head_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[192]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[180]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Clavical_Ctrl_Grp|DividedBaseEnemyMale:Left_Clavical_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[193]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[181]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Clavical_Ctrl_Grp|DividedBaseEnemyMale:Left_Clavical_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[194]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[182]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Clavical_Ctrl_Grp|DividedBaseEnemyMale:Left_Clavical_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[195]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[183]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Clavical_Ctrl_Grp|DividedBaseEnemyMale:Left_Clavical_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[196]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[184]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Clavical_Ctrl_Grp|DividedBaseEnemyMale:Left_Clavical_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[197]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[185]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Clavical_Ctrl_Grp|DividedBaseEnemyMale:Left_Clavical_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[198]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[186]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Clavical_Ctrl_Grp|DividedBaseEnemyMale:Left_Clavical_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[199]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[187]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Clavical_Ctrl_Grp|DividedBaseEnemyMale:Left_Clavical_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[200]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[188]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Clavical_Ctrl_Grp|DividedBaseEnemyMale:Left_Clavical_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[201]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[189]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Clavical_Ctrl_Grp|DividedBaseEnemyMale:Left_Clavical_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[202]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[190]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Clavical_Ctrl_Grp|DividedBaseEnemyMale:Right_Clavical_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[203]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[191]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Clavical_Ctrl_Grp|DividedBaseEnemyMale:Right_Clavical_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[204]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[192]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Clavical_Ctrl_Grp|DividedBaseEnemyMale:Right_Clavical_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[205]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[193]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Clavical_Ctrl_Grp|DividedBaseEnemyMale:Right_Clavical_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[206]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[194]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Clavical_Ctrl_Grp|DividedBaseEnemyMale:Right_Clavical_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[207]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[195]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Clavical_Ctrl_Grp|DividedBaseEnemyMale:Right_Clavical_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[208]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[196]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Clavical_Ctrl_Grp|DividedBaseEnemyMale:Right_Clavical_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[209]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[197]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Clavical_Ctrl_Grp|DividedBaseEnemyMale:Right_Clavical_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[210]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[198]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Clavical_Ctrl_Grp|DividedBaseEnemyMale:Right_Clavical_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[211]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[199]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Clavical_Ctrl_Grp|DividedBaseEnemyMale:Right_Clavical_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[212]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[200]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[213]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[201]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[214]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[202]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[215]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[203]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[216]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[204]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[217]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[205]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[218]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[206]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[219]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[207]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[220]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[208]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[221]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[209]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[222]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[210]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[223]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[211]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[224]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[212]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[225]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[213]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[226]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[214]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[227]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[215]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[228]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[216]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[229]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[217]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[230]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[218]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[231]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[219]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[232]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[220]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_1.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[233]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[221]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_1.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[234]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[222]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_1.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[235]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[223]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_1.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[236]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[224]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_1.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[237]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[225]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_1.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[238]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[226]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_1.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[239]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[227]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_1.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[240]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[228]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_1.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[241]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[229]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_1.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[242]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[230]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Thumb_Ctrl_2.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[243]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[231]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Thumb_Ctrl_2.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[244]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[232]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Thumb_Ctrl_2.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[245]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[233]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Thumb_Ctrl_2.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[246]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[234]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Thumb_Ctrl_2.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[247]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[235]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Thumb_Ctrl_2.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[248]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[236]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Thumb_Ctrl_2.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[249]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[237]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Thumb_Ctrl_2.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[250]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[238]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Thumb_Ctrl_2.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[251]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[239]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Right_Thumb_Ctrl|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_1|DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Thumb_Ctrl_2.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[252]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[240]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[253]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[241]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[254]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[242]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[255]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[243]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[256]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[244]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[257]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[245]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[258]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[246]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[259]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[247]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[260]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[248]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[261]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[249]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[262]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[250]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Index_Ctrl_1.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[263]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[251]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Index_Ctrl_1.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[264]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[252]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Index_Ctrl_1.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[265]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[253]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Index_Ctrl_1.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[266]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[254]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Index_Ctrl_1.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[267]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[255]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Index_Ctrl_1.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[268]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[256]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Index_Ctrl_1.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[269]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[257]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Index_Ctrl_1.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[270]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[258]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Index_Ctrl_1.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[271]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[259]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Index_Ctrl_1.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[272]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[260]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Index_Ctrl_1|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Index_Ctrl_2.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[273]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[261]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Index_Ctrl_1|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Index_Ctrl_2.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[274]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[262]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Index_Ctrl_1|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Index_Ctrl_2.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[275]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[263]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Index_Ctrl_1|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Index_Ctrl_2.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[276]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[264]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Index_Ctrl_1|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Index_Ctrl_2.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[277]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[265]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Index_Ctrl_1|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Index_Ctrl_2.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[278]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[266]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Index_Ctrl_1|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Index_Ctrl_2.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[279]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[267]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Index_Ctrl_1|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Index_Ctrl_2.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[280]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[268]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Index_Ctrl_1|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Index_Ctrl_2.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[281]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[269]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp|DividedBaseEnemyMale:Right_Index_Ctrl|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Index_Ctrl_1|DividedBaseEnemyMale:Right_Index_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Index_Ctrl_2.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[282]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[270]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[283]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[271]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[284]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[272]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[285]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[273]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[286]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[274]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[287]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[275]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[288]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[276]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[289]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[277]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[290]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[278]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[291]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[279]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[292]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[280]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Middle_Ctrl_1.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[293]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[281]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Middle_Ctrl_1.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[294]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[282]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Middle_Ctrl_1.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[295]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[283]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Middle_Ctrl_1.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[296]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[284]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Middle_Ctrl_1.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[297]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[285]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Middle_Ctrl_1.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[298]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[286]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Middle_Ctrl_1.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[299]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[287]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Middle_Ctrl_1.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[300]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[288]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Middle_Ctrl_1.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[301]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[289]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Middle_Ctrl_1.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[302]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[290]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Middle_Ctrl_1|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Middle_Ctrl_2.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[303]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[291]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Middle_Ctrl_1|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Middle_Ctrl_2.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[304]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[292]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Middle_Ctrl_1|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Middle_Ctrl_2.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[305]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[293]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Middle_Ctrl_1|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Middle_Ctrl_2.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[306]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[294]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Middle_Ctrl_1|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Middle_Ctrl_2.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[307]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[295]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Middle_Ctrl_1|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Middle_Ctrl_2.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[308]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[296]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Middle_Ctrl_1|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Middle_Ctrl_2.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[309]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[297]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Middle_Ctrl_1|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Middle_Ctrl_2.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[310]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[298]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Middle_Ctrl_1|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Middle_Ctrl_2.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[311]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[299]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp|DividedBaseEnemyMale:Right_Middle_Ctrl|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Middle_Ctrl_1|DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Middle_Ctrl_2.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[312]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[300]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[313]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[301]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[314]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[302]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[315]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[303]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[316]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[304]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[317]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[305]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[318]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[306]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[319]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[307]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[320]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[308]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[321]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[309]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[322]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[310]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Ring_Ctrl_1.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[323]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[311]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Ring_Ctrl_1.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[324]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[312]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Ring_Ctrl_1.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[325]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[313]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Ring_Ctrl_1.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[326]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[314]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Ring_Ctrl_1.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[327]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[315]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Ring_Ctrl_1.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[328]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[316]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Ring_Ctrl_1.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[329]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[317]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Ring_Ctrl_1.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[330]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[318]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Ring_Ctrl_1.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[331]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[319]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Ring_Ctrl_1.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[332]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[320]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Ring_Ctrl_1|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Ring_Ctrl_2.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[333]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[321]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Ring_Ctrl_1|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Ring_Ctrl_2.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[334]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[322]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Ring_Ctrl_1|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Ring_Ctrl_2.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[335]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[323]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Ring_Ctrl_1|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Ring_Ctrl_2.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[336]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[324]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Ring_Ctrl_1|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Ring_Ctrl_2.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[337]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[325]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Ring_Ctrl_1|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Ring_Ctrl_2.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[338]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[326]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Ring_Ctrl_1|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Ring_Ctrl_2.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[339]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[327]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Ring_Ctrl_1|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Ring_Ctrl_2.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[340]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[328]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Ring_Ctrl_1|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Ring_Ctrl_2.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[341]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[329]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp|DividedBaseEnemyMale:Right_Ring_Ctrl|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Ring_Ctrl_1|DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Ring_Ctrl_2.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[342]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[330]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[343]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[331]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[344]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[332]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[345]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[333]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[346]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[334]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[347]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[335]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[348]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[336]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[349]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[337]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[350]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[338]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[351]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[339]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[352]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[340]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_1.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[353]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[341]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_1.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[354]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[342]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_1.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[355]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[343]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_1.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[356]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[344]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_1.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[357]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[345]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_1.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[358]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[346]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_1.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[359]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[347]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_1.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[360]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[348]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_1.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[361]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[349]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_1.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[362]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[350]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Pinky_Ctrl_2.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[363]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[351]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Pinky_Ctrl_2.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[364]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[352]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Pinky_Ctrl_2.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[365]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[353]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Pinky_Ctrl_2.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[366]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[354]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Pinky_Ctrl_2.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[367]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[355]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Pinky_Ctrl_2.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[368]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[356]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Pinky_Ctrl_2.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[369]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[357]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Pinky_Ctrl_2.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[370]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[358]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Pinky_Ctrl_2.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[371]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[359]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Right_Hand_Ctrl_Grp|DividedBaseEnemyMale:Right_Hand_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Right_Pinky_Ctrl|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_1|DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_2|DividedBaseEnemyMale:Right_Pinky_Ctrl_2.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[372]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[360]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[373]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[361]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[374]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[362]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[375]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[363]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[376]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[364]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[377]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[365]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[378]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[366]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[379]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[367]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[380]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[368]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[381]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[369]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[382]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[370]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[383]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[371]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[384]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[372]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[385]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[373]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[386]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[374]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[387]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[375]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[388]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[376]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[389]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[377]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[390]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[378]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[391]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[379]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[392]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[380]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_1.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[393]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[381]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_1.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[394]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[382]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_1.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[395]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[383]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_1.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[396]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[384]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_1.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[397]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[385]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_1.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[398]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[386]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_1.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[399]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[387]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_1.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[400]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[388]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_1.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[401]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[389]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_1.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[402]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[390]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Thumb_Ctrl_2.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[403]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[391]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Thumb_Ctrl_2.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[404]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[392]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Thumb_Ctrl_2.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[405]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[393]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Thumb_Ctrl_2.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[406]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[394]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Thumb_Ctrl_2.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[407]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[395]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Thumb_Ctrl_2.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[408]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[396]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Thumb_Ctrl_2.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[409]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[397]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Thumb_Ctrl_2.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[410]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[398]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Thumb_Ctrl_2.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[411]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[399]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp|DividedBaseEnemyMale:Left_Thumb_Ctrl|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_1|DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Thumb_Ctrl_2.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[412]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[400]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[413]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[401]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[414]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[402]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[415]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[403]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[416]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[404]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[417]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[405]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[418]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[406]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[419]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[407]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[420]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[408]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[421]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[409]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[422]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[410]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Index_Ctrl_1.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[423]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[411]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Index_Ctrl_1.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[424]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[412]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Index_Ctrl_1.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[425]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[413]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Index_Ctrl_1.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[426]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[414]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Index_Ctrl_1.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[427]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[415]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Index_Ctrl_1.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[428]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[416]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Index_Ctrl_1.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[429]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[417]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Index_Ctrl_1.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[430]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[418]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Index_Ctrl_1.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[431]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[419]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Index_Ctrl_1.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[432]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[420]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Index_Ctrl_1|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Index_Ctrl_2.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[433]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[421]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Index_Ctrl_1|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Index_Ctrl_2.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[434]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[422]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Index_Ctrl_1|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Index_Ctrl_2.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[435]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[423]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Index_Ctrl_1|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Index_Ctrl_2.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[436]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[424]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Index_Ctrl_1|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Index_Ctrl_2.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[437]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[425]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Index_Ctrl_1|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Index_Ctrl_2.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[438]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[426]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Index_Ctrl_1|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Index_Ctrl_2.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[439]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[427]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Index_Ctrl_1|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Index_Ctrl_2.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[440]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[428]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Index_Ctrl_1|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Index_Ctrl_2.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[441]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[429]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp|DividedBaseEnemyMale:Left_Index_Ctrl|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Index_Ctrl_1|DividedBaseEnemyMale:Left_Index_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Index_Ctrl_2.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[442]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[430]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[443]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[431]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[444]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[432]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[445]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[433]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[446]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[434]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[447]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[435]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[448]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[436]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[449]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[437]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[450]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[438]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[451]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[439]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[452]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[440]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Middle_Ctrl_1.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[453]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[441]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Middle_Ctrl_1.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[454]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[442]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Middle_Ctrl_1.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[455]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[443]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Middle_Ctrl_1.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[456]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[444]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Middle_Ctrl_1.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[457]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[445]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Middle_Ctrl_1.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[458]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[446]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Middle_Ctrl_1.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[459]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[447]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Middle_Ctrl_1.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[460]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[448]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Middle_Ctrl_1.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[461]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[449]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Middle_Ctrl_1.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[462]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[450]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Middle_Ctrl_1|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Middle_Ctrl_2.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[463]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[451]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Middle_Ctrl_1|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Middle_Ctrl_2.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[464]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[452]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Middle_Ctrl_1|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Middle_Ctrl_2.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[465]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[453]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Middle_Ctrl_1|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Middle_Ctrl_2.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[466]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[454]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Middle_Ctrl_1|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Middle_Ctrl_2.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[467]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[455]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Middle_Ctrl_1|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Middle_Ctrl_2.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[468]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[456]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Middle_Ctrl_1|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Middle_Ctrl_2.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[469]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[457]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Middle_Ctrl_1|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Middle_Ctrl_2.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[470]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[458]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Middle_Ctrl_1|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Middle_Ctrl_2.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[471]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[459]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp|DividedBaseEnemyMale:Left_Middle_Ctrl|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Middle_Ctrl_1|DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Middle_Ctrl_2.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[472]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[460]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[473]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[461]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[474]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[462]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[475]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[463]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[476]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[464]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[477]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[465]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[478]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[466]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[479]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[467]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[480]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[468]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[481]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[469]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[482]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[470]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Ring_Ctrl_1.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[483]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[471]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Ring_Ctrl_1.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[484]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[472]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Ring_Ctrl_1.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[485]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[473]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Ring_Ctrl_1.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[486]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[474]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Ring_Ctrl_1.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[487]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[475]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Ring_Ctrl_1.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[488]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[476]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Ring_Ctrl_1.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[489]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[477]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Ring_Ctrl_1.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[490]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[478]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Ring_Ctrl_1.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[491]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[479]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Ring_Ctrl_1.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[492]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[480]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Ring_Ctrl_1|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Ring_Ctrl_2.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[493]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[481]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Ring_Ctrl_1|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Ring_Ctrl_2.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[494]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[482]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Ring_Ctrl_1|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Ring_Ctrl_2.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[495]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[483]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Ring_Ctrl_1|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Ring_Ctrl_2.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[496]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[484]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Ring_Ctrl_1|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Ring_Ctrl_2.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[497]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[485]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Ring_Ctrl_1|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Ring_Ctrl_2.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[498]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[486]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Ring_Ctrl_1|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Ring_Ctrl_2.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[499]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[487]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Ring_Ctrl_1|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Ring_Ctrl_2.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[500]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[488]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Ring_Ctrl_1|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Ring_Ctrl_2.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[501]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[489]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp|DividedBaseEnemyMale:Left_Ring_Ctrl|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Ring_Ctrl_1|DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Ring_Ctrl_2.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[502]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[490]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[503]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[491]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[504]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[492]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[505]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[493]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[506]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[494]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[507]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[495]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[508]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[496]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[509]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[497]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[510]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[498]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[511]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[499]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[512]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[500]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_1.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[513]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[501]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_1.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[514]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[502]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_1.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[515]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[503]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_1.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[516]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[504]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_1.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[517]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[505]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_1.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[518]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[506]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_1.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[519]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[507]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_1.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[520]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[508]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_1.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[521]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[509]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_1.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[522]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[510]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Pinky_Ctrl_2.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[523]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[511]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Pinky_Ctrl_2.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[524]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[512]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Pinky_Ctrl_2.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[525]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[513]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Pinky_Ctrl_2.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[526]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[514]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Pinky_Ctrl_2.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[527]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[515]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Pinky_Ctrl_2.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[528]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[516]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Pinky_Ctrl_2.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[529]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[517]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Pinky_Ctrl_2.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[530]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[518]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Pinky_Ctrl_2.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[531]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[519]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Left_Hand_Ctrl_Grp|DividedBaseEnemyMale:Left_Hand_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp|DividedBaseEnemyMale:Left_Pinky_Ctrl|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_1|DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_2|DividedBaseEnemyMale:Left_Pinky_Ctrl_2.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[532]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[520]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[533]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[521]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[534]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[522]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[535]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[523]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[536]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[524]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[537]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[525]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[538]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[526]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[539]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[527]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[540]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[528]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[541]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[529]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[542]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[530]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[543]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[531]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[544]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[532]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[545]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[533]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[546]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[534]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[547]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[535]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[548]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[536]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[549]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[537]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[550]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[538]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[551]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[539]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[552]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[540]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[553]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[541]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[554]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[542]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[555]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[543]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[556]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[544]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[557]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[545]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[558]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[546]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[559]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[547]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[560]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[548]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[561]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[549]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[562]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[550]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[563]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[551]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[564]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[552]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[565]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[553]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[566]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[554]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[567]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[555]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[568]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[556]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[569]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[557]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[570]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[558]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[571]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[559]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[572]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[560]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[573]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[561]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[574]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[562]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[575]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[563]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[576]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[564]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[577]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[565]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[578]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[566]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[579]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[567]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[580]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[568]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[581]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[569]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[582]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[570]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[583]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[571]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[584]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[572]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[585]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[573]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[586]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[574]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[587]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[575]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[588]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[576]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[589]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[577]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[590]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[578]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[591]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[579]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp|DividedBaseEnemyMale:Upper_Torso_Ctrl|DividedBaseEnemyMale:Fk_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[592]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[580]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:COG_Ctrl_Grp|DividedBaseEnemyMale:COG_Ctrl.IKFK" 
-		"DividedBaseEnemyMaleRN.placeHolderList[593]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[581]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:COG_Ctrl_Grp|DividedBaseEnemyMale:COG_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[594]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[582]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:COG_Ctrl_Grp|DividedBaseEnemyMale:COG_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[595]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[583]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:COG_Ctrl_Grp|DividedBaseEnemyMale:COG_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[596]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[584]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:COG_Ctrl_Grp|DividedBaseEnemyMale:COG_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[597]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[585]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:COG_Ctrl_Grp|DividedBaseEnemyMale:COG_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[598]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[586]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:COG_Ctrl_Grp|DividedBaseEnemyMale:COG_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[599]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[587]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:COG_Ctrl_Grp|DividedBaseEnemyMale:COG_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[600]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[588]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:COG_Ctrl_Grp|DividedBaseEnemyMale:COG_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[601]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[589]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:COG_Ctrl_Grp|DividedBaseEnemyMale:COG_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[602]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[590]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Ctrls|DividedBaseEnemyMale:Transform_Ctrl_Grp|DividedBaseEnemyMale:Transform_Ctrl|DividedBaseEnemyMale:COG_Ctrl_Grp|DividedBaseEnemyMale:COG_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[603]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Club|DividedBaseEnemyMale:Club_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[604]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Club|DividedBaseEnemyMale:Club_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[605]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Club|DividedBaseEnemyMale:Club_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[606]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Club|DividedBaseEnemyMale:Club_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[607]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Club|DividedBaseEnemyMale:Club_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[608]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Club|DividedBaseEnemyMale:Club_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[609]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Club|DividedBaseEnemyMale:Club_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[610]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Club|DividedBaseEnemyMale:Club_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[611]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Club|DividedBaseEnemyMale:Club_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[612]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Club|DividedBaseEnemyMale:Club_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[613]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Sheild|DividedBaseEnemyMale:Sheild_Ctrl.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[614]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Sheild|DividedBaseEnemyMale:Sheild_Ctrl.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[615]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Sheild|DividedBaseEnemyMale:Sheild_Ctrl.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[616]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Sheild|DividedBaseEnemyMale:Sheild_Ctrl.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[617]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Sheild|DividedBaseEnemyMale:Sheild_Ctrl.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[618]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Sheild|DividedBaseEnemyMale:Sheild_Ctrl.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[619]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Sheild|DividedBaseEnemyMale:Sheild_Ctrl.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[620]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Sheild|DividedBaseEnemyMale:Sheild_Ctrl.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[621]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Sheild|DividedBaseEnemyMale:Sheild_Ctrl.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[622]" ""
-		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Props|DividedBaseEnemyMale:Geometry|DividedBaseEnemyMale:Sheild|DividedBaseEnemyMale:Sheild_Ctrl.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[623]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[591]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:directionalLight1.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[624]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[592]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:directionalLight1.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[625]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[593]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:directionalLight1.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[626]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[594]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:directionalLight1.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[627]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[595]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:directionalLight1.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[628]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[596]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:directionalLight1.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[629]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[597]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:directionalLight1.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[630]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[598]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:directionalLight1.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[631]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[599]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:directionalLight1.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[632]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[600]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:directionalLight1.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[633]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[601]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:ambientLight1.translateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[634]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[602]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:ambientLight1.translateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[635]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[603]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:ambientLight1.translateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[636]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[604]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:ambientLight1.rotateX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[637]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[605]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:ambientLight1.rotateY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[638]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[606]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:ambientLight1.rotateZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[639]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[607]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:ambientLight1.visibility" 
-		"DividedBaseEnemyMaleRN.placeHolderList[640]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[608]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:ambientLight1.scaleX" 
-		"DividedBaseEnemyMaleRN.placeHolderList[641]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[609]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:ambientLight1.scaleY" 
-		"DividedBaseEnemyMaleRN.placeHolderList[642]" ""
+		"DividedBaseEnemyMaleRN.placeHolderList[610]" ""
 		5 4 "DividedBaseEnemyMaleRN" "|DividedBaseEnemyMale:Scene|DividedBaseEnemyMale:ambientLight1.scaleZ" 
-		"DividedBaseEnemyMaleRN.placeHolderList[643]" "";
+		"DividedBaseEnemyMaleRN.placeHolderList[611]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "53A9E55D-4147-E8E0-C906-96924B3B9B32";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n"
-		+ "            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n"
+		+ "            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n"
 		+ "            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n"
 		+ "            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
 		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
-		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
+		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
 		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n"
 		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
-		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
+		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
-		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1161\n            -height 485\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n"
+		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1319\n            -height 493\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n"
 		+ "            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n"
 		+ "            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n"
@@ -3741,18 +3657,18 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n"
-		+ "                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n"
+		+ "                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n"
 		+ "                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n"
 		+ "                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -highlightConnections 0\n                -copyConnectionsOnPaste 0\n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n"
 		+ "                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1161\\n    -height 485\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1161\\n    -height 485\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1319\\n    -height 493\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1319\\n    -height 493\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "BE40D00D-4DA7-C2C5-D9A8-9C844035B6A8";
-	setAttr ".b" -type "string" "playbackOptions -min 407 -max 420 -ast -5 -aet 431 ";
+	setAttr ".b" -type "string" "playbackOptions -min 0 -max 420 -ast 0 -aet 420 ";
 	setAttr ".st" 6;
 createNode animCurveTA -n "Right_Thumb_Ctrl_rotateX";
 	rename -uid "52FF15F0-47DB-3C2C-DFEC-459BE1E54C44";
@@ -4312,30 +4228,6 @@ createNode animCurveTA -n "Right_Pinky_Ctrl_2_rotateZ";
 		 380 40.961963419633356 383 40.961963419633356 389 40.961963419633356 392 40.961963419633356
 		 393 40.961963419633356 401 40.961963419633356 406 40.961963419633356 407 40.961963419633356
 		 410 40.961963419633356 411 40.961963419633356 414 40.961963419633356;
-createNode animCurveTA -n "Transform_Ctrl_rotateX";
-	rename -uid "A7F5C6AA-44E0-51E8-A4BE-869402EBCE40";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 48 ".ktv[0:47]"  0 0 30 0 33 0 36 0 39 0 42 0 45 0 66 0 86 0
-		 106 0 120 0 123 0 152 0 158 0 178 0 184 0 196 0 216 0 220 0 240 0 250 0 280 0 290 0
-		 313 0 330 0 335 0 338 0 340 0 343 0 346 0 352 0 360 0 365 0 366 0 368 0 370 0 375 0
-		 380 0 383 0 389 0 392 0 393 0 401 0 406 0 407 0 410 0 411 0 414 0;
-createNode animCurveTA -n "Transform_Ctrl_rotateY";
-	rename -uid "5E2DA173-4706-D96C-4434-129254738585";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 48 ".ktv[0:47]"  0 0 30 0 33 0 36 0 39 0 42 0 45 0 66 0 86 0
-		 106 0 120 0 123 0 152 0 158 0 178 0 184 0 196 0 216 0 220 0 240 0 250 0 280 0 290 0
-		 313 0 330 0 335 0 338 0 340 0 343 0 346 0 352 0 360 0 365 0 366 0 368 0 370 0 375 0
-		 380 0 383 0 389 0 392 0 393 0 401 0 406 0 407 0 410 0 411 0 414 0;
-createNode animCurveTA -n "Transform_Ctrl_rotateZ";
-	rename -uid "A28B2EAC-4805-1185-4F81-46A468CB6686";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 48 ".ktv[0:47]"  0 0 30 0 33 0 36 0 39 0 42 0 45 0 66 0 86 0
-		 106 0 120 0 123 0 152 0 158 0 178 0 184 0 196 0 216 0 220 0 240 0 250 0 280 0 290 0
-		 313 0 330 0 335 0 338 0 340 0 343 0 346 0 352 0 360 0 365 0 366 0 368 0 370 0 375 0
-		 380 0 383 0 389 0 392 0 393 0 401 0 406 0 407 0 410 0 411 0 414 0;
 createNode animCurveTA -n "COG_Ctrl_rotateX";
 	rename -uid "D3B30472-452D-751D-15D8-C499D6B6119D";
 	setAttr ".tan" 18;
@@ -5647,60 +5539,6 @@ createNode animCurveTA -n "Waist_Ctrl_rotateZ";
 		 106 0 120 0 123 0 152 0 158 0 178 0 184 0 196 0 216 0 220 0 240 0 250 0 280 0 290 0
 		 313 0 330 0 335 0 338 0 340 0 343 0 346 0 352 0 360 0 365 0 366 0 368 0 370 0 375 0
 		 380 0 383 0 389 0 392 0 393 0 401 0 406 0 407 0 410 0 411 0 414 0;
-createNode animCurveTA -n "Club_Ctrl_rotateX";
-	rename -uid "9C9FC313-471B-18CF-839C-D4949990808C";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 57 ".ktv[0:56]"  0 0 1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0
-		 26 0 30 0 33 0 36 0 39 0 42 0 45 0 66 0 86 0 106 0 120 0 123 0 152 0 158 0 178 0
-		 184 0 196 0 216 0 220 0 240 0 250 0 280 0 290 0 313 0 330 0 335 0 338 0 340 0 343 0
-		 346 0 352 0 360 0 365 0 366 0 368 0 370 0 375 0 380 0 383 0 389 0 392 0 393 0 401 0
-		 406 0 407 0 410 0 411 0 414 0;
-createNode animCurveTA -n "Club_Ctrl_rotateY";
-	rename -uid "1D6BDA24-473D-592C-7B39-6E8BBD61C97A";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 57 ".ktv[0:56]"  0 0 1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0
-		 26 0 30 0 33 0 36 0 39 0 42 0 45 0 66 0 86 0 106 0 120 0 123 0 152 0 158 0 178 0
-		 184 0 196 0 216 0 220 0 240 0 250 0 280 0 290 0 313 0 330 0 335 0 338 0 340 0 343 0
-		 346 0 352 0 360 0 365 0 366 0 368 0 370 0 375 0 380 0 383 0 389 0 392 0 393 0 401 0
-		 406 0 407 0 410 0 411 0 414 0;
-createNode animCurveTA -n "Club_Ctrl_rotateZ";
-	rename -uid "4A8767B5-4CE5-00F1-0E00-F3876B3AC0B6";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 57 ".ktv[0:56]"  0 0 1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0
-		 26 0 30 0 33 0 36 0 39 0 42 0 45 0 66 0 86 0 106 0 120 0 123 0 152 0 158 0 178 0
-		 184 0 196 0 216 0 220 0 240 0 250 0 280 0 290 0 313 0 330 0 335 0 338 0 340 0 343 0
-		 346 0 352 0 360 0 365 0 366 0 368 0 370 0 375 0 380 0 383 0 389 0 392 0 393 0 401 0
-		 406 0 407 0 410 0 411 0 414 0;
-createNode animCurveTA -n "Sheild_Ctrl_rotateX";
-	rename -uid "C461F400-4F37-0AC5-BBBC-108D2C062B06";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 57 ".ktv[0:56]"  0 0 1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0
-		 26 0 30 0 33 0 36 0 39 0 42 0 45 0 66 0 86 0 106 0 120 0 123 0 152 0 158 0 178 0
-		 184 0 196 0 216 0 220 0 240 0 250 0 280 0 290 0 313 0 330 0 335 0 338 0 340 0 343 0
-		 346 0 352 0 360 0 365 0 366 0 368 0 370 0 375 0 380 0 383 0 389 0 392 0 393 0 401 0
-		 406 0 407 0 410 0 411 0 414 0;
-createNode animCurveTA -n "Sheild_Ctrl_rotateY";
-	rename -uid "C46AD55B-4932-17DB-2AE2-11B3C9FB14F1";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 57 ".ktv[0:56]"  0 0 1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0
-		 26 0 30 0 33 0 36 0 39 0 42 0 45 0 66 0 86 0 106 0 120 0 123 0 152 0 158 0 178 0
-		 184 0 196 0 216 0 220 0 240 0 250 0 280 0 290 0 313 0 330 0 335 0 338 0 340 0 343 0
-		 346 0 352 0 360 0 365 0 366 0 368 0 370 0 375 0 380 0 383 0 389 0 392 0 393 0 401 0
-		 406 0 407 0 410 0 411 0 414 0;
-createNode animCurveTA -n "Sheild_Ctrl_rotateZ";
-	rename -uid "79C3308C-4DE2-FB56-923A-B3840E7F5038";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 57 ".ktv[0:56]"  0 0 1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0
-		 26 0 30 0 33 0 36 0 39 0 42 0 45 0 66 0 86 0 106 0 120 0 123 0 152 0 158 0 178 0
-		 184 0 196 0 216 0 220 0 240 0 250 0 280 0 290 0 313 0 330 0 335 0 338 0 340 0 343 0
-		 346 0 352 0 360 0 365 0 366 0 368 0 370 0 375 0 380 0 383 0 389 0 392 0 393 0 401 0
-		 406 0 407 0 410 0 411 0 414 0;
 createNode animCurveTU -n "Left_Pinky_Ctrl_2_visibility";
 	rename -uid "EF6FBA91-4D0E-6F0C-83D1-B0B16E902761";
 	setAttr ".tan" 18;
@@ -6840,170 +6678,6 @@ createNode animCurveTU -n "Right_Pinky_Ctrl_2_scaleZ";
 		 184 1 196 1 216 1 220 1 240 1 250 1 280 1 290 1 313 1 330 1 335 1 338 1 340 1 343 1
 		 346 1 352 1 360 1 365 1 366 1 368 1 370 1 375 1 380 1 383 1 389 1 392 1 393 1 401 1
 		 406 1 407 1 410 1 411 1 414 1;
-createNode animCurveTU -n "Sheild_Ctrl_visibility";
-	rename -uid "AD5AA276-4CAA-6C84-6ACF-9792F97BF2E6";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 57 ".ktv[0:56]"  0 1 1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1
-		 26 1 30 1 33 1 36 1 39 1 42 1 45 1 66 1 86 1 106 1 120 1 123 1 152 1 158 1 178 1
-		 184 1 196 1 216 1 220 1 240 1 250 1 280 1 290 1 313 1 330 1 335 1 338 1 340 1 343 1
-		 346 1 352 1 360 1 365 1 366 1 368 1 370 1 375 1 380 1 383 1 389 1 392 1 393 1 401 1
-		 406 1 407 1 410 1 411 1 414 1;
-	setAttr -s 57 ".kit[41:56]"  9 18 18 18 18 9 9 18 
-		18 18 18 9 18 18 18 9;
-	setAttr -s 57 ".kot[41:56]"  5 18 18 18 18 5 5 18 
-		18 18 18 5 18 18 18 5;
-createNode animCurveTL -n "Sheild_Ctrl_translateX";
-	rename -uid "7A76358E-428D-9F4D-C345-67B853148A73";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 57 ".ktv[0:56]"  0 0 1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0
-		 26 0 30 0 33 0 36 0 39 0 42 0 45 0 66 0 86 0 106 0 120 0 123 0 152 0 158 0 178 0
-		 184 0 196 0 216 0 220 0 240 0 250 0 280 0 290 0 313 0 330 0 335 0 338 0 340 0 343 0
-		 346 0 352 0 360 0 365 0 366 0 368 0 370 0 375 0 380 0 383 0 389 0 392 0 393 0 401 0
-		 406 0 407 0 410 0 411 0 414 0;
-createNode animCurveTL -n "Sheild_Ctrl_translateY";
-	rename -uid "DA8F7F72-4A51-3785-858C-D48D97352D61";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 57 ".ktv[0:56]"  0 0 1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0
-		 26 0 30 0 33 0 36 0 39 0 42 0 45 0 66 0 86 0 106 0 120 0 123 0 152 0 158 0 178 0
-		 184 0 196 0 216 0 220 0 240 0 250 0 280 0 290 0 313 0 330 0 335 0 338 0 340 0 343 0
-		 346 0 352 0 360 0 365 0 366 0 368 0 370 0 375 0 380 0 383 0 389 0 392 0 393 0 401 0
-		 406 0 407 0 410 0 411 0 414 0;
-createNode animCurveTL -n "Sheild_Ctrl_translateZ";
-	rename -uid "FBB39AA0-4537-01DC-0DBD-E78D788FCD85";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 57 ".ktv[0:56]"  0 0 1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0
-		 26 0 30 0 33 0 36 0 39 0 42 0 45 0 66 0 86 0 106 0 120 0 123 0 152 0 158 0 178 0
-		 184 0 196 0 216 0 220 0 240 0 250 0 280 0 290 0 313 0 330 0 335 0 338 0 340 0 343 0
-		 346 0 352 0 360 0 365 0 366 0 368 0 370 0 375 0 380 0 383 0 389 0 392 0 393 0 401 0
-		 406 0 407 0 410 0 411 0 414 0;
-createNode animCurveTU -n "Sheild_Ctrl_scaleX";
-	rename -uid "2DF61C13-4F35-1D51-77FF-A8B95B11A924";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 57 ".ktv[0:56]"  0 1 1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1
-		 26 1 30 1 33 1 36 1 39 1 42 1 45 1 66 1 86 1 106 1 120 1 123 1 152 1 158 1 178 1
-		 184 1 196 1 216 1 220 1 240 1 250 1 280 1 290 1 313 1 330 1 335 1 338 1 340 1 343 1
-		 346 1 352 1 360 1 365 1 366 1 368 1 370 1 375 1 380 1 383 1 389 1 392 1 393 1 401 1
-		 406 1 407 1 410 1 411 1 414 1;
-createNode animCurveTU -n "Sheild_Ctrl_scaleY";
-	rename -uid "E80A13F6-4ADC-0D3A-EB9E-0D890DA96B72";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 57 ".ktv[0:56]"  0 1 1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1
-		 26 1 30 1 33 1 36 1 39 1 42 1 45 1 66 1 86 1 106 1 120 1 123 1 152 1 158 1 178 1
-		 184 1 196 1 216 1 220 1 240 1 250 1 280 1 290 1 313 1 330 1 335 1 338 1 340 1 343 1
-		 346 1 352 1 360 1 365 1 366 1 368 1 370 1 375 1 380 1 383 1 389 1 392 1 393 1 401 1
-		 406 1 407 1 410 1 411 1 414 1;
-createNode animCurveTU -n "Sheild_Ctrl_scaleZ";
-	rename -uid "08005F4E-4E78-26E7-4A2E-BAA9394F8C72";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 57 ".ktv[0:56]"  0 1 1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1
-		 26 1 30 1 33 1 36 1 39 1 42 1 45 1 66 1 86 1 106 1 120 1 123 1 152 1 158 1 178 1
-		 184 1 196 1 216 1 220 1 240 1 250 1 280 1 290 1 313 1 330 1 335 1 338 1 340 1 343 1
-		 346 1 352 1 360 1 365 1 366 1 368 1 370 1 375 1 380 1 383 1 389 1 392 1 393 1 401 1
-		 406 1 407 1 410 1 411 1 414 1;
-createNode animCurveTU -n "Club_Ctrl_visibility";
-	rename -uid "EB173DFC-4816-850C-52B1-709C5CF321F4";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 57 ".ktv[0:56]"  0 1 1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1
-		 26 1 30 1 33 1 36 1 39 1 42 1 45 1 66 1 86 1 106 1 120 1 123 1 152 1 158 1 178 1
-		 184 1 196 1 216 1 220 1 240 1 250 1 280 1 290 1 313 1 330 1 335 1 338 1 340 1 343 1
-		 346 1 352 1 360 1 365 1 366 1 368 1 370 1 375 1 380 1 383 1 389 1 392 1 393 1 401 1
-		 406 1 407 1 410 1 411 1 414 1;
-	setAttr -s 57 ".kit[41:56]"  9 18 18 18 18 9 9 18 
-		18 18 18 9 18 18 18 9;
-	setAttr -s 57 ".kot[41:56]"  5 18 18 18 18 5 5 18 
-		18 18 18 5 18 18 18 5;
-createNode animCurveTL -n "Club_Ctrl_translateX";
-	rename -uid "634AFF36-4E33-AF6B-75B6-D2B880C8D33A";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 57 ".ktv[0:56]"  0 0 1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0
-		 26 0 30 0 33 0 36 0 39 0 42 0 45 0 66 0 86 0 106 0 120 0 123 0 152 0 158 0 178 0
-		 184 0 196 0 216 0 220 0 240 0 250 0 280 0 290 0 313 0 330 0 335 0 338 0 340 0 343 0
-		 346 0 352 0 360 0 365 0 366 0 368 0 370 0 375 0 380 0 383 0 389 0 392 0 393 0 401 0
-		 406 0 407 0 410 0 411 0 414 0;
-createNode animCurveTL -n "Club_Ctrl_translateY";
-	rename -uid "27CBF1F9-4E46-3D7C-D70C-66A4639C40A3";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 57 ".ktv[0:56]"  0 0 1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0
-		 26 0 30 0 33 0 36 0 39 0 42 0 45 0 66 0 86 0 106 0 120 0 123 0 152 0 158 0 178 0
-		 184 0 196 0 216 0 220 0 240 0 250 0 280 0 290 0 313 0 330 0 335 0 338 0 340 0 343 0
-		 346 0 352 0 360 0 365 0 366 0 368 0 370 0 375 0 380 0 383 0 389 0 392 0 393 0 401 0
-		 406 0 407 0 410 0 411 0 414 0;
-createNode animCurveTL -n "Club_Ctrl_translateZ";
-	rename -uid "574890CF-448A-CDCC-D9DA-42833770443A";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 57 ".ktv[0:56]"  0 0 1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0
-		 26 0 30 0 33 0 36 0 39 0 42 0 45 0 66 0 86 0 106 0 120 0 123 0 152 0 158 0 178 0
-		 184 0 196 0 216 0 220 0 240 0 250 0 280 0 290 0 313 0 330 0 335 0 338 0 340 0 343 0
-		 346 0 352 0 360 0 365 0 366 0 368 0 370 0 375 0 380 0 383 0 389 0 392 0 393 0 401 0
-		 406 0 407 0 410 0 411 0 414 0;
-createNode animCurveTU -n "Club_Ctrl_scaleX";
-	rename -uid "F27FC2A3-4F7D-1C3F-D513-63B105439BEB";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 57 ".ktv[0:56]"  0 0.99999999999999978 1 0.99999999999999978
-		 4 0.99999999999999978 7 0.99999999999999978 10 0.99999999999999978 13 0.99999999999999978
-		 16 0.99999999999999978 19 0.99999999999999978 22 0.99999999999999978 26 0.99999999999999978
-		 30 0.99999999999999978 33 0.99999999999999978 36 0.99999999999999978 39 0.99999999999999978
-		 42 0.99999999999999978 45 0.99999999999999978 66 0.99999999999999978 86 0.99999999999999978
-		 106 0.99999999999999978 120 0.99999999999999978 123 0.99999999999999978 152 0.99999999999999978
-		 158 0.99999999999999978 178 0.99999999999999978 184 0.99999999999999978 196 0.99999999999999978
-		 216 0.99999999999999978 220 0.99999999999999978 240 0.99999999999999978 250 0.99999999999999978
-		 280 0.99999999999999978 290 0.99999999999999978 313 0.99999999999999978 330 0.99999999999999978
-		 335 0.99999999999999978 338 0.99999999999999978 340 0.99999999999999978 343 0.99999999999999978
-		 346 0.99999999999999978 352 0.99999999999999978 360 0.99999999999999978 365 0.99999999999999978
-		 366 0.99999999999999978 368 0.99999999999999978 370 0.99999999999999978 375 0.99999999999999978
-		 380 0.99999999999999978 383 0.99999999999999978 389 0.99999999999999978 392 0.99999999999999978
-		 393 0.99999999999999978 401 0.99999999999999978 406 0.99999999999999978 407 0.99999999999999978
-		 410 0.99999999999999978 411 0.99999999999999978 414 0.99999999999999978;
-createNode animCurveTU -n "Club_Ctrl_scaleY";
-	rename -uid "5C4691D6-49B6-8E6F-9095-0EBC108CE922";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 57 ".ktv[0:56]"  0 0.99999999999999956 1 0.99999999999999956
-		 4 0.99999999999999956 7 0.99999999999999956 10 0.99999999999999956 13 0.99999999999999956
-		 16 0.99999999999999956 19 0.99999999999999956 22 0.99999999999999956 26 0.99999999999999956
-		 30 0.99999999999999956 33 0.99999999999999956 36 0.99999999999999956 39 0.99999999999999956
-		 42 0.99999999999999956 45 0.99999999999999956 66 0.99999999999999956 86 0.99999999999999956
-		 106 0.99999999999999956 120 0.99999999999999956 123 0.99999999999999956 152 0.99999999999999956
-		 158 0.99999999999999956 178 0.99999999999999956 184 0.99999999999999956 196 0.99999999999999956
-		 216 0.99999999999999956 220 0.99999999999999956 240 0.99999999999999956 250 0.99999999999999956
-		 280 0.99999999999999956 290 0.99999999999999956 313 0.99999999999999956 330 0.99999999999999956
-		 335 0.99999999999999956 338 0.99999999999999956 340 0.99999999999999956 343 0.99999999999999956
-		 346 0.99999999999999956 352 0.99999999999999956 360 0.99999999999999956 365 0.99999999999999956
-		 366 0.99999999999999956 368 0.99999999999999956 370 0.99999999999999956 375 0.99999999999999956
-		 380 0.99999999999999956 383 0.99999999999999956 389 0.99999999999999956 392 0.99999999999999956
-		 393 0.99999999999999956 401 0.99999999999999956 406 0.99999999999999956 407 0.99999999999999956
-		 410 0.99999999999999956 411 0.99999999999999956 414 0.99999999999999956;
-createNode animCurveTU -n "Club_Ctrl_scaleZ";
-	rename -uid "FB6E52E8-45CC-B8CD-89C7-9CAF18303A23";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 57 ".ktv[0:56]"  0 0.99999999999999978 1 0.99999999999999978
-		 4 0.99999999999999978 7 0.99999999999999978 10 0.99999999999999978 13 0.99999999999999978
-		 16 0.99999999999999978 19 0.99999999999999978 22 0.99999999999999978 26 0.99999999999999978
-		 30 0.99999999999999978 33 0.99999999999999978 36 0.99999999999999978 39 0.99999999999999978
-		 42 0.99999999999999978 45 0.99999999999999978 66 0.99999999999999978 86 0.99999999999999978
-		 106 0.99999999999999978 120 0.99999999999999978 123 0.99999999999999978 152 0.99999999999999978
-		 158 0.99999999999999978 178 0.99999999999999978 184 0.99999999999999978 196 0.99999999999999978
-		 216 0.99999999999999978 220 0.99999999999999978 240 0.99999999999999978 250 0.99999999999999978
-		 280 0.99999999999999978 290 0.99999999999999978 313 0.99999999999999978 330 0.99999999999999978
-		 335 0.99999999999999978 338 0.99999999999999978 340 0.99999999999999978 343 0.99999999999999978
-		 346 0.99999999999999978 352 0.99999999999999978 360 0.99999999999999978 365 0.99999999999999978
-		 366 0.99999999999999978 368 0.99999999999999978 370 0.99999999999999978 375 0.99999999999999978
-		 380 0.99999999999999978 383 0.99999999999999978 389 0.99999999999999978 392 0.99999999999999978
-		 393 0.99999999999999978 401 0.99999999999999978 406 0.99999999999999978 407 0.99999999999999978
-		 410 0.99999999999999978 411 0.99999999999999978 414 0.99999999999999978;
 createNode animCurveTU -n "COG_Ctrl_visibility";
 	rename -uid "F8098C5A-4038-53F3-412B-2798C429D118";
 	setAttr ".tan" 18;
@@ -8065,82 +7739,6 @@ createNode animCurveTU -n "Waist_Ctrl_scaleY";
 		 380 1 383 1 389 1 392 1 393 1 401 1 406 1 407 1 410 1 411 1 414 1;
 createNode animCurveTU -n "Waist_Ctrl_scaleZ";
 	rename -uid "CA544FC8-44C1-C8F7-40D4-F2B3E5713AA7";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 48 ".ktv[0:47]"  0 1 30 1 33 1 36 1 39 1 42 1 45 1 66 1 86 1
-		 106 1 120 1 123 1 152 1 158 1 178 1 184 1 196 1 216 1 220 1 240 1 250 1 280 1 290 1
-		 313 1 330 1 335 1 338 1 340 1 343 1 346 1 352 1 360 1 365 1 366 1 368 1 370 1 375 1
-		 380 1 383 1 389 1 392 1 393 1 401 1 406 1 407 1 410 1 411 1 414 1;
-createNode animCurveTU -n "Transform_Ctrl_visibility";
-	rename -uid "918836A2-4215-1D5C-F079-96B259498499";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 48 ".ktv[0:47]"  0 1 30 1 33 1 36 1 39 1 42 1 45 1 66 1 86 1
-		 106 1 120 1 123 1 152 1 158 1 178 1 184 1 196 1 216 1 220 1 240 1 250 1 280 1 290 1
-		 313 1 330 1 335 1 338 1 340 1 343 1 346 1 352 1 360 1 365 1 366 1 368 1 370 1 375 1
-		 380 1 383 1 389 1 392 1 393 1 401 1 406 1 407 1 410 1 411 1 414 1;
-	setAttr -s 48 ".kit[32:47]"  9 18 18 18 18 9 9 18 
-		18 18 18 9 18 18 18 9;
-	setAttr -s 48 ".kot[32:47]"  5 18 18 18 18 5 5 18 
-		18 18 18 5 18 18 18 5;
-createNode animCurveTL -n "Transform_Ctrl_translateX";
-	rename -uid "1DF728A5-48E1-14EE-5533-5DA338CE3787";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 48 ".ktv[0:47]"  0 0 30 0 33 0 36 0 39 0 42 0 45 0 66 0 86 0
-		 106 0 120 0 123 0 152 0 158 0 178 0 184 0 196 0 216 0 220 0 240 0 250 0 280 0 290 0
-		 313 0 330 0 335 0 338 0 340 0 343 0 346 0 352 0 360 0 365 0 366 0 368 0 370 0 375 0
-		 380 0 383 0 389 0 392 0 393 0 401 0 406 0 407 0 410 0 411 0 414 0;
-createNode animCurveTL -n "Transform_Ctrl_translateY";
-	rename -uid "A1E78713-4A88-D374-92E9-63861C9403A1";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 48 ".ktv[0:47]"  0 0 30 0 33 0 36 0 39 0 42 0 45 0 66 0 86 0
-		 106 0 120 0 123 0 152 0 158 0 178 0 184 0 196 0 216 0 220 0 240 0 250 0 280 0 290 0
-		 313 0 330 0 335 0 338 0 340 0 343 0 346 0 352 0 360 0 365 0 366 0 368 0 370 0 375 0
-		 380 0 383 0 389 0 392 0 393 0 401 0 406 0 407 0 410 0 411 0 414 0;
-createNode animCurveTL -n "Transform_Ctrl_translateZ";
-	rename -uid "2C388A9F-4790-50AA-C75A-ECA802D6F9F2";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 48 ".ktv[0:47]"  0 0 30 0 33 0 36 0 39 0 42 0 45 0 66 0 86 0
-		 106 0 120 0 123 0 152 0 158 0 178 0 184 0 196 0 216 0 220 0 240 0 250 0 280 0 290 0
-		 313 0 330 0 335 0 338 0 340 0 343 0 346 0 352 0 360 0 365 0 366 0 368 0 370 0 375 0
-		 380 0 383 0 389 0 392 0 393 0 401 0 406 0 407 0 410 0 411 0 414 0;
-createNode animCurveTU -n "Transform_Ctrl_scaleX";
-	rename -uid "D8E2A0E1-4B4E-9407-722B-FE8ABFAB7E3A";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 48 ".ktv[0:47]"  0 1 30 1 33 1 36 1 39 1 42 1 45 1 66 1 86 1
-		 106 1 120 1 123 1 152 1 158 1 178 1 184 1 196 1 216 1 220 1 240 1 250 1 280 1 290 1
-		 313 1 330 1 335 1 338 1 340 1 343 1 346 1 352 1 360 1 365 1 366 1 368 1 370 1 375 1
-		 380 1 383 1 389 1 392 1 393 1 401 1 406 1 407 1 410 1 411 1 414 1;
-createNode animCurveTU -n "Transform_Ctrl_scaleY";
-	rename -uid "1E39CE79-429C-6F1A-D15C-96B46616AC95";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 48 ".ktv[0:47]"  0 1 30 1 33 1 36 1 39 1 42 1 45 1 66 1 86 1
-		 106 1 120 1 123 1 152 1 158 1 178 1 184 1 196 1 216 1 220 1 240 1 250 1 280 1 290 1
-		 313 1 330 1 335 1 338 1 340 1 343 1 346 1 352 1 360 1 365 1 366 1 368 1 370 1 375 1
-		 380 1 383 1 389 1 392 1 393 1 401 1 406 1 407 1 410 1 411 1 414 1;
-createNode animCurveTU -n "Transform_Ctrl_scaleZ";
-	rename -uid "6C2DEF7D-4147-7178-E91A-CF870B9E874D";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 48 ".ktv[0:47]"  0 1 30 1 33 1 36 1 39 1 42 1 45 1 66 1 86 1
-		 106 1 120 1 123 1 152 1 158 1 178 1 184 1 196 1 216 1 220 1 240 1 250 1 280 1 290 1
-		 313 1 330 1 335 1 338 1 340 1 343 1 346 1 352 1 360 1 365 1 366 1 368 1 370 1 375 1
-		 380 1 383 1 389 1 392 1 393 1 401 1 406 1 407 1 410 1 411 1 414 1;
-createNode animCurveTU -n "Transform_Ctrl_Lower_IKFK";
-	rename -uid "DD534733-4B2F-B23E-2E3C-29BC80B16E92";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 48 ".ktv[0:47]"  0 0 30 0 33 0 36 0 39 0 42 0 45 0 66 0 86 0
-		 106 0 120 0 123 0 152 0 158 0 178 0 184 0 196 0 216 0 220 0 240 0 250 0 280 0 290 0
-		 313 0 330 0 335 0 338 0 340 0 343 0 346 0 352 0 360 0 365 0 366 0 368 0 370 0 375 0
-		 380 0 383 0 389 0 392 0 393 0 401 0 406 0 407 0 410 0 411 0 414 0;
-createNode animCurveTU -n "Transform_Ctrl_UpperIKFK";
-	rename -uid "E154074F-4098-AD24-077E-EE874B97FF69";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 48 ".ktv[0:47]"  0 1 30 1 33 1 36 1 39 1 42 1 45 1 66 1 86 1
@@ -10133,8 +9731,8 @@ createNode animCurveTU -n "Fk_Right_Shoulder_Ctrl_visibility";
 	setAttr -s 62 ".kot[44:61]"  5 18 18 18 18 5 5 5 
 		18 18 18 18 5 18 18 18 5 5;
 select -ne :time1;
-	setAttr ".o" 420;
-	setAttr ".unw" 420;
+	setAttr ".o" 339;
+	setAttr ".unw" 339;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -10166,704 +9764,672 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
-connectAttr "Transform_Ctrl_Lower_IKFK.o" "DividedBaseEnemyMaleRN.phl[1]";
-connectAttr "Transform_Ctrl_UpperIKFK.o" "DividedBaseEnemyMaleRN.phl[2]";
-connectAttr "Transform_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[3]";
-connectAttr "Transform_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[4]";
-connectAttr "Transform_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[5]";
-connectAttr "Transform_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[6]";
-connectAttr "Transform_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[7]";
-connectAttr "Transform_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[8]";
-connectAttr "Transform_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[9]";
-connectAttr "Transform_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[10]";
-connectAttr "Transform_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[11]";
-connectAttr "Transform_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[12]";
-connectAttr "Waist_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[13]";
-connectAttr "Waist_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[14]";
-connectAttr "Waist_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[15]";
-connectAttr "Waist_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[16]";
-connectAttr "Waist_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[17]";
-connectAttr "Waist_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[18]";
-connectAttr "Waist_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[19]";
-connectAttr "Waist_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[20]";
-connectAttr "Waist_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[21]";
-connectAttr "Waist_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[22]";
-connectAttr "Ik_Right_Leg_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[23]";
-connectAttr "Ik_Right_Leg_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[24]";
-connectAttr "Ik_Right_Leg_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[25]";
-connectAttr "Ik_Right_Leg_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[26]";
-connectAttr "Ik_Right_Leg_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[27]";
-connectAttr "Ik_Right_Leg_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[28]";
-connectAttr "Ik_Right_Leg_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[29]";
-connectAttr "Ik_Right_Leg_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[30]";
-connectAttr "Ik_Right_Leg_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[31]";
-connectAttr "Ik_Right_Leg_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[32]";
-connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[33]"
+connectAttr "Waist_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[1]";
+connectAttr "Waist_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[2]";
+connectAttr "Waist_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[3]";
+connectAttr "Waist_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[4]";
+connectAttr "Waist_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[5]";
+connectAttr "Waist_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[6]";
+connectAttr "Waist_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[7]";
+connectAttr "Waist_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[8]";
+connectAttr "Waist_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[9]";
+connectAttr "Waist_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[10]";
+connectAttr "Ik_Right_Leg_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[11]";
+connectAttr "Ik_Right_Leg_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[12]";
+connectAttr "Ik_Right_Leg_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[13]";
+connectAttr "Ik_Right_Leg_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[14]";
+connectAttr "Ik_Right_Leg_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[15]";
+connectAttr "Ik_Right_Leg_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[16]";
+connectAttr "Ik_Right_Leg_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[17]";
+connectAttr "Ik_Right_Leg_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[18]";
+connectAttr "Ik_Right_Leg_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[19]";
+connectAttr "Ik_Right_Leg_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[20]";
+connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[21]"
 		;
-connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[34]"
+connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[22]"
 		;
-connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[35]"
+connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[23]"
 		;
-connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[36]"
+connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[24]"
 		;
-connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[37]"
+connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[25]"
 		;
-connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[38]"
+connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[26]"
 		;
-connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[39]"
+connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[27]"
 		;
-connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[40]"
+connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[28]"
 		;
-connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[41]"
+connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[29]"
 		;
-connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[42]"
+connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[30]"
 		;
-connectAttr "Ik_Right_Foor_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[43]";
-connectAttr "Ik_Right_Foor_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[44]";
-connectAttr "Ik_Right_Foor_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[45]";
-connectAttr "Ik_Right_Foor_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[46]";
-connectAttr "Ik_Right_Foor_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[47]";
-connectAttr "Ik_Right_Foor_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[48]";
-connectAttr "Ik_Right_Foor_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[49]";
-connectAttr "Ik_Right_Foor_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[50]";
-connectAttr "Ik_Right_Foor_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[51]";
-connectAttr "Ik_Right_Foor_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[52]";
-connectAttr "Ik_Right_Heel_CTrl_visibility.o" "DividedBaseEnemyMaleRN.phl[53]";
-connectAttr "Ik_Right_Heel_CTrl_translateX.o" "DividedBaseEnemyMaleRN.phl[54]";
-connectAttr "Ik_Right_Heel_CTrl_translateY.o" "DividedBaseEnemyMaleRN.phl[55]";
-connectAttr "Ik_Right_Heel_CTrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[56]";
-connectAttr "Ik_Right_Heel_CTrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[57]";
-connectAttr "Ik_Right_Heel_CTrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[58]";
-connectAttr "Ik_Right_Heel_CTrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[59]";
-connectAttr "Ik_Right_Heel_CTrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[60]";
-connectAttr "Ik_Right_Heel_CTrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[61]";
-connectAttr "Ik_Right_Heel_CTrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[62]";
-connectAttr "Ik_Toe_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[63]";
-connectAttr "Ik_Toe_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[64]";
-connectAttr "Ik_Toe_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[65]";
-connectAttr "Ik_Toe_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[66]";
-connectAttr "Ik_Toe_Ctrl_rotateX1.o" "DividedBaseEnemyMaleRN.phl[67]";
-connectAttr "Ik_Toe_Ctrl_rotateY1.o" "DividedBaseEnemyMaleRN.phl[68]";
-connectAttr "Ik_Toe_Ctrl_rotateZ1.o" "DividedBaseEnemyMaleRN.phl[69]";
-connectAttr "Ik_Toe_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[70]";
-connectAttr "Ik_Toe_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[71]";
-connectAttr "Ik_Toe_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[72]";
-connectAttr "Ik_Toe_Lifter_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[73]";
-connectAttr "Ik_Toe_Lifter_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[74]";
-connectAttr "Ik_Toe_Lifter_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[75]";
-connectAttr "Ik_Toe_Lifter_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[76]";
-connectAttr "Ik_Toe_Lifter_Ctrl_rotateX1.o" "DividedBaseEnemyMaleRN.phl[77]";
-connectAttr "Ik_Toe_Lifter_Ctrl_rotateY1.o" "DividedBaseEnemyMaleRN.phl[78]";
-connectAttr "Ik_Toe_Lifter_Ctrl_rotateZ1.o" "DividedBaseEnemyMaleRN.phl[79]";
-connectAttr "Ik_Toe_Lifter_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[80]";
-connectAttr "Ik_Toe_Lifter_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[81]";
-connectAttr "Ik_Toe_Lifter_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[82]";
-connectAttr "Ik_Bal_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[83]";
-connectAttr "Ik_Bal_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[84]";
-connectAttr "Ik_Bal_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[85]";
-connectAttr "Ik_Bal_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[86]";
-connectAttr "Ik_Bal_Ctrl_rotateX1.o" "DividedBaseEnemyMaleRN.phl[87]";
-connectAttr "Ik_Bal_Ctrl_rotateY1.o" "DividedBaseEnemyMaleRN.phl[88]";
-connectAttr "Ik_Bal_Ctrl_rotateZ1.o" "DividedBaseEnemyMaleRN.phl[89]";
-connectAttr "Ik_Bal_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[90]";
-connectAttr "Ik_Bal_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[91]";
-connectAttr "Ik_Bal_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[92]";
-connectAttr "Ik_Left_Foor_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[93]";
-connectAttr "Ik_Left_Foor_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[94]";
-connectAttr "Ik_Left_Foor_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[95]";
-connectAttr "Ik_Left_Foor_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[96]";
-connectAttr "Ik_Left_Foor_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[97]";
-connectAttr "Ik_Left_Foor_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[98]";
-connectAttr "Ik_Left_Foor_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[99]";
-connectAttr "Ik_Left_Foor_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[100]";
-connectAttr "Ik_Left_Foor_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[101]";
-connectAttr "Ik_Left_Foor_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[102]";
-connectAttr "Ik_Left_Heel_CTrl_visibility.o" "DividedBaseEnemyMaleRN.phl[103]";
-connectAttr "Ik_Left_Heel_CTrl_translateX.o" "DividedBaseEnemyMaleRN.phl[104]";
-connectAttr "Ik_Left_Heel_CTrl_translateY.o" "DividedBaseEnemyMaleRN.phl[105]";
-connectAttr "Ik_Left_Heel_CTrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[106]";
-connectAttr "Ik_Left_Heel_CTrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[107]";
-connectAttr "Ik_Left_Heel_CTrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[108]";
-connectAttr "Ik_Left_Heel_CTrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[109]";
-connectAttr "Ik_Left_Heel_CTrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[110]";
-connectAttr "Ik_Left_Heel_CTrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[111]";
-connectAttr "Ik_Left_Heel_CTrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[112]";
-connectAttr "Ik_Toe_Ctrl_visibility1.o" "DividedBaseEnemyMaleRN.phl[113]";
-connectAttr "Ik_Toe_Ctrl_translateX1.o" "DividedBaseEnemyMaleRN.phl[114]";
-connectAttr "Ik_Toe_Ctrl_translateY1.o" "DividedBaseEnemyMaleRN.phl[115]";
-connectAttr "Ik_Toe_Ctrl_translateZ1.o" "DividedBaseEnemyMaleRN.phl[116]";
-connectAttr "Ik_Toe_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[117]";
-connectAttr "Ik_Toe_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[118]";
-connectAttr "Ik_Toe_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[119]";
-connectAttr "Ik_Toe_Ctrl_scaleX1.o" "DividedBaseEnemyMaleRN.phl[120]";
-connectAttr "Ik_Toe_Ctrl_scaleY1.o" "DividedBaseEnemyMaleRN.phl[121]";
-connectAttr "Ik_Toe_Ctrl_scaleZ1.o" "DividedBaseEnemyMaleRN.phl[122]";
-connectAttr "Ik_Toe_Lifter_Ctrl_visibility1.o" "DividedBaseEnemyMaleRN.phl[123]"
+connectAttr "Ik_Right_Foor_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[31]";
+connectAttr "Ik_Right_Foor_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[32]";
+connectAttr "Ik_Right_Foor_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[33]";
+connectAttr "Ik_Right_Foor_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[34]";
+connectAttr "Ik_Right_Foor_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[35]";
+connectAttr "Ik_Right_Foor_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[36]";
+connectAttr "Ik_Right_Foor_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[37]";
+connectAttr "Ik_Right_Foor_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[38]";
+connectAttr "Ik_Right_Foor_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[39]";
+connectAttr "Ik_Right_Foor_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[40]";
+connectAttr "Ik_Right_Heel_CTrl_visibility.o" "DividedBaseEnemyMaleRN.phl[41]";
+connectAttr "Ik_Right_Heel_CTrl_translateX.o" "DividedBaseEnemyMaleRN.phl[42]";
+connectAttr "Ik_Right_Heel_CTrl_translateY.o" "DividedBaseEnemyMaleRN.phl[43]";
+connectAttr "Ik_Right_Heel_CTrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[44]";
+connectAttr "Ik_Right_Heel_CTrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[45]";
+connectAttr "Ik_Right_Heel_CTrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[46]";
+connectAttr "Ik_Right_Heel_CTrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[47]";
+connectAttr "Ik_Right_Heel_CTrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[48]";
+connectAttr "Ik_Right_Heel_CTrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[49]";
+connectAttr "Ik_Right_Heel_CTrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[50]";
+connectAttr "Ik_Toe_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[51]";
+connectAttr "Ik_Toe_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[52]";
+connectAttr "Ik_Toe_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[53]";
+connectAttr "Ik_Toe_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[54]";
+connectAttr "Ik_Toe_Ctrl_rotateX1.o" "DividedBaseEnemyMaleRN.phl[55]";
+connectAttr "Ik_Toe_Ctrl_rotateY1.o" "DividedBaseEnemyMaleRN.phl[56]";
+connectAttr "Ik_Toe_Ctrl_rotateZ1.o" "DividedBaseEnemyMaleRN.phl[57]";
+connectAttr "Ik_Toe_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[58]";
+connectAttr "Ik_Toe_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[59]";
+connectAttr "Ik_Toe_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[60]";
+connectAttr "Ik_Toe_Lifter_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[61]";
+connectAttr "Ik_Toe_Lifter_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[62]";
+connectAttr "Ik_Toe_Lifter_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[63]";
+connectAttr "Ik_Toe_Lifter_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[64]";
+connectAttr "Ik_Toe_Lifter_Ctrl_rotateX1.o" "DividedBaseEnemyMaleRN.phl[65]";
+connectAttr "Ik_Toe_Lifter_Ctrl_rotateY1.o" "DividedBaseEnemyMaleRN.phl[66]";
+connectAttr "Ik_Toe_Lifter_Ctrl_rotateZ1.o" "DividedBaseEnemyMaleRN.phl[67]";
+connectAttr "Ik_Toe_Lifter_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[68]";
+connectAttr "Ik_Toe_Lifter_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[69]";
+connectAttr "Ik_Toe_Lifter_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[70]";
+connectAttr "Ik_Bal_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[71]";
+connectAttr "Ik_Bal_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[72]";
+connectAttr "Ik_Bal_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[73]";
+connectAttr "Ik_Bal_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[74]";
+connectAttr "Ik_Bal_Ctrl_rotateX1.o" "DividedBaseEnemyMaleRN.phl[75]";
+connectAttr "Ik_Bal_Ctrl_rotateY1.o" "DividedBaseEnemyMaleRN.phl[76]";
+connectAttr "Ik_Bal_Ctrl_rotateZ1.o" "DividedBaseEnemyMaleRN.phl[77]";
+connectAttr "Ik_Bal_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[78]";
+connectAttr "Ik_Bal_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[79]";
+connectAttr "Ik_Bal_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[80]";
+connectAttr "Ik_Left_Foor_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[81]";
+connectAttr "Ik_Left_Foor_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[82]";
+connectAttr "Ik_Left_Foor_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[83]";
+connectAttr "Ik_Left_Foor_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[84]";
+connectAttr "Ik_Left_Foor_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[85]";
+connectAttr "Ik_Left_Foor_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[86]";
+connectAttr "Ik_Left_Foor_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[87]";
+connectAttr "Ik_Left_Foor_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[88]";
+connectAttr "Ik_Left_Foor_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[89]";
+connectAttr "Ik_Left_Foor_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[90]";
+connectAttr "Ik_Left_Heel_CTrl_visibility.o" "DividedBaseEnemyMaleRN.phl[91]";
+connectAttr "Ik_Left_Heel_CTrl_translateX.o" "DividedBaseEnemyMaleRN.phl[92]";
+connectAttr "Ik_Left_Heel_CTrl_translateY.o" "DividedBaseEnemyMaleRN.phl[93]";
+connectAttr "Ik_Left_Heel_CTrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[94]";
+connectAttr "Ik_Left_Heel_CTrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[95]";
+connectAttr "Ik_Left_Heel_CTrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[96]";
+connectAttr "Ik_Left_Heel_CTrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[97]";
+connectAttr "Ik_Left_Heel_CTrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[98]";
+connectAttr "Ik_Left_Heel_CTrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[99]";
+connectAttr "Ik_Left_Heel_CTrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[100]";
+connectAttr "Ik_Toe_Ctrl_visibility1.o" "DividedBaseEnemyMaleRN.phl[101]";
+connectAttr "Ik_Toe_Ctrl_translateX1.o" "DividedBaseEnemyMaleRN.phl[102]";
+connectAttr "Ik_Toe_Ctrl_translateY1.o" "DividedBaseEnemyMaleRN.phl[103]";
+connectAttr "Ik_Toe_Ctrl_translateZ1.o" "DividedBaseEnemyMaleRN.phl[104]";
+connectAttr "Ik_Toe_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[105]";
+connectAttr "Ik_Toe_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[106]";
+connectAttr "Ik_Toe_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[107]";
+connectAttr "Ik_Toe_Ctrl_scaleX1.o" "DividedBaseEnemyMaleRN.phl[108]";
+connectAttr "Ik_Toe_Ctrl_scaleY1.o" "DividedBaseEnemyMaleRN.phl[109]";
+connectAttr "Ik_Toe_Ctrl_scaleZ1.o" "DividedBaseEnemyMaleRN.phl[110]";
+connectAttr "Ik_Toe_Lifter_Ctrl_visibility1.o" "DividedBaseEnemyMaleRN.phl[111]"
 		;
-connectAttr "Ik_Toe_Lifter_Ctrl_translateX1.o" "DividedBaseEnemyMaleRN.phl[124]"
+connectAttr "Ik_Toe_Lifter_Ctrl_translateX1.o" "DividedBaseEnemyMaleRN.phl[112]"
 		;
-connectAttr "Ik_Toe_Lifter_Ctrl_translateY1.o" "DividedBaseEnemyMaleRN.phl[125]"
+connectAttr "Ik_Toe_Lifter_Ctrl_translateY1.o" "DividedBaseEnemyMaleRN.phl[113]"
 		;
-connectAttr "Ik_Toe_Lifter_Ctrl_translateZ1.o" "DividedBaseEnemyMaleRN.phl[126]"
+connectAttr "Ik_Toe_Lifter_Ctrl_translateZ1.o" "DividedBaseEnemyMaleRN.phl[114]"
 		;
-connectAttr "Ik_Toe_Lifter_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[127]";
-connectAttr "Ik_Toe_Lifter_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[128]";
-connectAttr "Ik_Toe_Lifter_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[129]";
-connectAttr "Ik_Toe_Lifter_Ctrl_scaleX1.o" "DividedBaseEnemyMaleRN.phl[130]";
-connectAttr "Ik_Toe_Lifter_Ctrl_scaleY1.o" "DividedBaseEnemyMaleRN.phl[131]";
-connectAttr "Ik_Toe_Lifter_Ctrl_scaleZ1.o" "DividedBaseEnemyMaleRN.phl[132]";
-connectAttr "Ik_Bal_Ctrl_visibility1.o" "DividedBaseEnemyMaleRN.phl[133]";
-connectAttr "Ik_Bal_Ctrl_translateX1.o" "DividedBaseEnemyMaleRN.phl[134]";
-connectAttr "Ik_Bal_Ctrl_translateY1.o" "DividedBaseEnemyMaleRN.phl[135]";
-connectAttr "Ik_Bal_Ctrl_translateZ1.o" "DividedBaseEnemyMaleRN.phl[136]";
-connectAttr "Ik_Bal_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[137]";
-connectAttr "Ik_Bal_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[138]";
-connectAttr "Ik_Bal_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[139]";
-connectAttr "Ik_Bal_Ctrl_scaleX1.o" "DividedBaseEnemyMaleRN.phl[140]";
-connectAttr "Ik_Bal_Ctrl_scaleY1.o" "DividedBaseEnemyMaleRN.phl[141]";
-connectAttr "Ik_Bal_Ctrl_scaleZ1.o" "DividedBaseEnemyMaleRN.phl[142]";
-connectAttr "Ik_Left_Leg_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[143]";
-connectAttr "Ik_Left_Leg_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[144]";
-connectAttr "Ik_Left_Leg_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[145]";
-connectAttr "Ik_Left_Leg_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[146]";
-connectAttr "Ik_Left_Leg_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[147]";
-connectAttr "Ik_Left_Leg_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[148]";
-connectAttr "Ik_Left_Leg_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[149]";
-connectAttr "Ik_Left_Leg_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[150]";
-connectAttr "Ik_Left_Leg_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[151]";
-connectAttr "Ik_Left_Leg_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[152]";
-connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[153]"
+connectAttr "Ik_Toe_Lifter_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[115]";
+connectAttr "Ik_Toe_Lifter_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[116]";
+connectAttr "Ik_Toe_Lifter_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[117]";
+connectAttr "Ik_Toe_Lifter_Ctrl_scaleX1.o" "DividedBaseEnemyMaleRN.phl[118]";
+connectAttr "Ik_Toe_Lifter_Ctrl_scaleY1.o" "DividedBaseEnemyMaleRN.phl[119]";
+connectAttr "Ik_Toe_Lifter_Ctrl_scaleZ1.o" "DividedBaseEnemyMaleRN.phl[120]";
+connectAttr "Ik_Bal_Ctrl_visibility1.o" "DividedBaseEnemyMaleRN.phl[121]";
+connectAttr "Ik_Bal_Ctrl_translateX1.o" "DividedBaseEnemyMaleRN.phl[122]";
+connectAttr "Ik_Bal_Ctrl_translateY1.o" "DividedBaseEnemyMaleRN.phl[123]";
+connectAttr "Ik_Bal_Ctrl_translateZ1.o" "DividedBaseEnemyMaleRN.phl[124]";
+connectAttr "Ik_Bal_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[125]";
+connectAttr "Ik_Bal_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[126]";
+connectAttr "Ik_Bal_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[127]";
+connectAttr "Ik_Bal_Ctrl_scaleX1.o" "DividedBaseEnemyMaleRN.phl[128]";
+connectAttr "Ik_Bal_Ctrl_scaleY1.o" "DividedBaseEnemyMaleRN.phl[129]";
+connectAttr "Ik_Bal_Ctrl_scaleZ1.o" "DividedBaseEnemyMaleRN.phl[130]";
+connectAttr "Ik_Left_Leg_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[131]";
+connectAttr "Ik_Left_Leg_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[132]";
+connectAttr "Ik_Left_Leg_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[133]";
+connectAttr "Ik_Left_Leg_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[134]";
+connectAttr "Ik_Left_Leg_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[135]";
+connectAttr "Ik_Left_Leg_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[136]";
+connectAttr "Ik_Left_Leg_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[137]";
+connectAttr "Ik_Left_Leg_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[138]";
+connectAttr "Ik_Left_Leg_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[139]";
+connectAttr "Ik_Left_Leg_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[140]";
+connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[141]"
 		;
-connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[154]"
+connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[142]"
 		;
-connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[155]"
+connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[143]"
 		;
-connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[156]"
+connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[144]"
 		;
-connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[157]"
+connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[145]"
 		;
-connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[158]"
+connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[146]"
 		;
-connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[159]"
+connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[147]"
 		;
-connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[160]"
+connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[148]"
 		;
-connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[161]"
+connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[149]"
 		;
-connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[162]"
+connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[150]"
 		;
-connectAttr "Upper_Torso_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[163]";
-connectAttr "Upper_Torso_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[164]";
-connectAttr "Upper_Torso_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[165]";
-connectAttr "Upper_Torso_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[166]";
-connectAttr "Upper_Torso_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[167]";
-connectAttr "Upper_Torso_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[168]";
-connectAttr "Upper_Torso_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[169]";
-connectAttr "Upper_Torso_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[170]";
-connectAttr "Upper_Torso_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[171]";
-connectAttr "Upper_Torso_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[172]";
-connectAttr "Neck_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[173]";
-connectAttr "Neck_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[174]";
-connectAttr "Neck_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[175]";
-connectAttr "Neck_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[176]";
-connectAttr "Neck_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[177]";
-connectAttr "Neck_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[178]";
-connectAttr "Neck_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[179]";
-connectAttr "Neck_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[180]";
-connectAttr "Neck_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[181]";
-connectAttr "Neck_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[182]";
-connectAttr "Head_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[183]";
-connectAttr "Head_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[184]";
-connectAttr "Head_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[185]";
-connectAttr "Head_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[186]";
-connectAttr "Head_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[187]";
-connectAttr "Head_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[188]";
-connectAttr "Head_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[189]";
-connectAttr "Head_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[190]";
-connectAttr "Head_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[191]";
-connectAttr "Head_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[192]";
-connectAttr "Left_Clavical_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[193]";
-connectAttr "Left_Clavical_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[194]";
-connectAttr "Left_Clavical_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[195]";
-connectAttr "Left_Clavical_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[196]";
-connectAttr "Left_Clavical_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[197]";
-connectAttr "Left_Clavical_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[198]";
-connectAttr "Left_Clavical_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[199]";
-connectAttr "Left_Clavical_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[200]";
-connectAttr "Left_Clavical_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[201]";
-connectAttr "Left_Clavical_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[202]";
-connectAttr "Right_Clavical_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[203]"
+connectAttr "Upper_Torso_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[151]";
+connectAttr "Upper_Torso_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[152]";
+connectAttr "Upper_Torso_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[153]";
+connectAttr "Upper_Torso_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[154]";
+connectAttr "Upper_Torso_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[155]";
+connectAttr "Upper_Torso_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[156]";
+connectAttr "Upper_Torso_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[157]";
+connectAttr "Upper_Torso_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[158]";
+connectAttr "Upper_Torso_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[159]";
+connectAttr "Upper_Torso_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[160]";
+connectAttr "Neck_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[161]";
+connectAttr "Neck_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[162]";
+connectAttr "Neck_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[163]";
+connectAttr "Neck_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[164]";
+connectAttr "Neck_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[165]";
+connectAttr "Neck_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[166]";
+connectAttr "Neck_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[167]";
+connectAttr "Neck_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[168]";
+connectAttr "Neck_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[169]";
+connectAttr "Neck_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[170]";
+connectAttr "Head_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[171]";
+connectAttr "Head_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[172]";
+connectAttr "Head_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[173]";
+connectAttr "Head_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[174]";
+connectAttr "Head_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[175]";
+connectAttr "Head_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[176]";
+connectAttr "Head_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[177]";
+connectAttr "Head_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[178]";
+connectAttr "Head_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[179]";
+connectAttr "Head_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[180]";
+connectAttr "Left_Clavical_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[181]";
+connectAttr "Left_Clavical_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[182]";
+connectAttr "Left_Clavical_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[183]";
+connectAttr "Left_Clavical_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[184]";
+connectAttr "Left_Clavical_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[185]";
+connectAttr "Left_Clavical_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[186]";
+connectAttr "Left_Clavical_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[187]";
+connectAttr "Left_Clavical_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[188]";
+connectAttr "Left_Clavical_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[189]";
+connectAttr "Left_Clavical_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[190]";
+connectAttr "Right_Clavical_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[191]"
 		;
-connectAttr "Right_Clavical_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[204]"
+connectAttr "Right_Clavical_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[192]"
 		;
-connectAttr "Right_Clavical_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[205]"
+connectAttr "Right_Clavical_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[193]"
 		;
-connectAttr "Right_Clavical_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[206]";
-connectAttr "Right_Clavical_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[207]";
-connectAttr "Right_Clavical_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[208]";
-connectAttr "Right_Clavical_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[209]";
-connectAttr "Right_Clavical_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[210]";
-connectAttr "Right_Clavical_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[211]";
-connectAttr "Right_Clavical_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[212]"
+connectAttr "Right_Clavical_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[194]";
+connectAttr "Right_Clavical_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[195]";
+connectAttr "Right_Clavical_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[196]";
+connectAttr "Right_Clavical_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[197]";
+connectAttr "Right_Clavical_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[198]";
+connectAttr "Right_Clavical_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[199]";
+connectAttr "Right_Clavical_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[200]"
 		;
-connectAttr "Right_Hand_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[213]";
-connectAttr "Right_Hand_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[214]";
-connectAttr "Right_Hand_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[215]";
-connectAttr "Right_Hand_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[216]";
-connectAttr "Right_Hand_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[217]";
-connectAttr "Right_Hand_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[218]";
-connectAttr "Right_Hand_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[219]";
-connectAttr "Right_Hand_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[220]";
-connectAttr "Right_Hand_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[221]";
-connectAttr "Right_Hand_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[222]";
-connectAttr "Right_Thumb_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[223]";
-connectAttr "Right_Thumb_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[224]";
-connectAttr "Right_Thumb_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[225]";
-connectAttr "Right_Thumb_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[226]";
-connectAttr "Right_Thumb_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[227]";
-connectAttr "Right_Thumb_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[228]";
-connectAttr "Right_Thumb_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[229]";
-connectAttr "Right_Thumb_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[230]";
-connectAttr "Right_Thumb_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[231]";
-connectAttr "Right_Thumb_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[232]";
-connectAttr "Right_Thumb_Ctrl_1_translateX.o" "DividedBaseEnemyMaleRN.phl[233]";
-connectAttr "Right_Thumb_Ctrl_1_translateY.o" "DividedBaseEnemyMaleRN.phl[234]";
-connectAttr "Right_Thumb_Ctrl_1_translateZ.o" "DividedBaseEnemyMaleRN.phl[235]";
-connectAttr "Right_Thumb_Ctrl_1_rotateX.o" "DividedBaseEnemyMaleRN.phl[236]";
-connectAttr "Right_Thumb_Ctrl_1_rotateY.o" "DividedBaseEnemyMaleRN.phl[237]";
-connectAttr "Right_Thumb_Ctrl_1_rotateZ.o" "DividedBaseEnemyMaleRN.phl[238]";
-connectAttr "Right_Thumb_Ctrl_1_scaleX.o" "DividedBaseEnemyMaleRN.phl[239]";
-connectAttr "Right_Thumb_Ctrl_1_scaleY.o" "DividedBaseEnemyMaleRN.phl[240]";
-connectAttr "Right_Thumb_Ctrl_1_scaleZ.o" "DividedBaseEnemyMaleRN.phl[241]";
-connectAttr "Right_Thumb_Ctrl_1_visibility.o" "DividedBaseEnemyMaleRN.phl[242]";
-connectAttr "Right_Thumb_Ctrl_2_translateX.o" "DividedBaseEnemyMaleRN.phl[243]";
-connectAttr "Right_Thumb_Ctrl_2_translateY.o" "DividedBaseEnemyMaleRN.phl[244]";
-connectAttr "Right_Thumb_Ctrl_2_translateZ.o" "DividedBaseEnemyMaleRN.phl[245]";
-connectAttr "Right_Thumb_Ctrl_2_rotateX.o" "DividedBaseEnemyMaleRN.phl[246]";
-connectAttr "Right_Thumb_Ctrl_2_rotateY.o" "DividedBaseEnemyMaleRN.phl[247]";
-connectAttr "Right_Thumb_Ctrl_2_rotateZ.o" "DividedBaseEnemyMaleRN.phl[248]";
-connectAttr "Right_Thumb_Ctrl_2_scaleX.o" "DividedBaseEnemyMaleRN.phl[249]";
-connectAttr "Right_Thumb_Ctrl_2_scaleY.o" "DividedBaseEnemyMaleRN.phl[250]";
-connectAttr "Right_Thumb_Ctrl_2_scaleZ.o" "DividedBaseEnemyMaleRN.phl[251]";
-connectAttr "Right_Thumb_Ctrl_2_visibility.o" "DividedBaseEnemyMaleRN.phl[252]";
-connectAttr "Right_Index_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[253]";
-connectAttr "Right_Index_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[254]";
-connectAttr "Right_Index_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[255]";
-connectAttr "Right_Index_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[256]";
-connectAttr "Right_Index_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[257]";
-connectAttr "Right_Index_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[258]";
-connectAttr "Right_Index_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[259]";
-connectAttr "Right_Index_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[260]";
-connectAttr "Right_Index_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[261]";
-connectAttr "Right_Index_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[262]";
-connectAttr "Right_Index_Ctrl_1_translateX.o" "DividedBaseEnemyMaleRN.phl[263]";
-connectAttr "Right_Index_Ctrl_1_translateY.o" "DividedBaseEnemyMaleRN.phl[264]";
-connectAttr "Right_Index_Ctrl_1_translateZ.o" "DividedBaseEnemyMaleRN.phl[265]";
-connectAttr "Right_Index_Ctrl_1_rotateX.o" "DividedBaseEnemyMaleRN.phl[266]";
-connectAttr "Right_Index_Ctrl_1_rotateY.o" "DividedBaseEnemyMaleRN.phl[267]";
-connectAttr "Right_Index_Ctrl_1_rotateZ.o" "DividedBaseEnemyMaleRN.phl[268]";
-connectAttr "Right_Index_Ctrl_1_scaleX.o" "DividedBaseEnemyMaleRN.phl[269]";
-connectAttr "Right_Index_Ctrl_1_scaleY.o" "DividedBaseEnemyMaleRN.phl[270]";
-connectAttr "Right_Index_Ctrl_1_scaleZ.o" "DividedBaseEnemyMaleRN.phl[271]";
-connectAttr "Right_Index_Ctrl_1_visibility.o" "DividedBaseEnemyMaleRN.phl[272]";
-connectAttr "Right_Index_Ctrl_2_translateX.o" "DividedBaseEnemyMaleRN.phl[273]";
-connectAttr "Right_Index_Ctrl_2_translateY.o" "DividedBaseEnemyMaleRN.phl[274]";
-connectAttr "Right_Index_Ctrl_2_translateZ.o" "DividedBaseEnemyMaleRN.phl[275]";
-connectAttr "Right_Index_Ctrl_2_rotateX.o" "DividedBaseEnemyMaleRN.phl[276]";
-connectAttr "Right_Index_Ctrl_2_rotateY.o" "DividedBaseEnemyMaleRN.phl[277]";
-connectAttr "Right_Index_Ctrl_2_rotateZ.o" "DividedBaseEnemyMaleRN.phl[278]";
-connectAttr "Right_Index_Ctrl_2_scaleX.o" "DividedBaseEnemyMaleRN.phl[279]";
-connectAttr "Right_Index_Ctrl_2_scaleY.o" "DividedBaseEnemyMaleRN.phl[280]";
-connectAttr "Right_Index_Ctrl_2_scaleZ.o" "DividedBaseEnemyMaleRN.phl[281]";
-connectAttr "Right_Index_Ctrl_2_visibility.o" "DividedBaseEnemyMaleRN.phl[282]";
-connectAttr "Right_Middle_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[283]";
-connectAttr "Right_Middle_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[284]";
-connectAttr "Right_Middle_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[285]";
-connectAttr "Right_Middle_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[286]";
-connectAttr "Right_Middle_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[287]";
-connectAttr "Right_Middle_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[288]";
-connectAttr "Right_Middle_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[289]";
-connectAttr "Right_Middle_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[290]";
-connectAttr "Right_Middle_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[291]";
-connectAttr "Right_Middle_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[292]";
-connectAttr "Right_Middle_Ctrl_1_translateX.o" "DividedBaseEnemyMaleRN.phl[293]"
+connectAttr "Right_Hand_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[201]";
+connectAttr "Right_Hand_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[202]";
+connectAttr "Right_Hand_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[203]";
+connectAttr "Right_Hand_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[204]";
+connectAttr "Right_Hand_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[205]";
+connectAttr "Right_Hand_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[206]";
+connectAttr "Right_Hand_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[207]";
+connectAttr "Right_Hand_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[208]";
+connectAttr "Right_Hand_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[209]";
+connectAttr "Right_Hand_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[210]";
+connectAttr "Right_Thumb_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[211]";
+connectAttr "Right_Thumb_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[212]";
+connectAttr "Right_Thumb_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[213]";
+connectAttr "Right_Thumb_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[214]";
+connectAttr "Right_Thumb_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[215]";
+connectAttr "Right_Thumb_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[216]";
+connectAttr "Right_Thumb_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[217]";
+connectAttr "Right_Thumb_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[218]";
+connectAttr "Right_Thumb_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[219]";
+connectAttr "Right_Thumb_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[220]";
+connectAttr "Right_Thumb_Ctrl_1_translateX.o" "DividedBaseEnemyMaleRN.phl[221]";
+connectAttr "Right_Thumb_Ctrl_1_translateY.o" "DividedBaseEnemyMaleRN.phl[222]";
+connectAttr "Right_Thumb_Ctrl_1_translateZ.o" "DividedBaseEnemyMaleRN.phl[223]";
+connectAttr "Right_Thumb_Ctrl_1_rotateX.o" "DividedBaseEnemyMaleRN.phl[224]";
+connectAttr "Right_Thumb_Ctrl_1_rotateY.o" "DividedBaseEnemyMaleRN.phl[225]";
+connectAttr "Right_Thumb_Ctrl_1_rotateZ.o" "DividedBaseEnemyMaleRN.phl[226]";
+connectAttr "Right_Thumb_Ctrl_1_scaleX.o" "DividedBaseEnemyMaleRN.phl[227]";
+connectAttr "Right_Thumb_Ctrl_1_scaleY.o" "DividedBaseEnemyMaleRN.phl[228]";
+connectAttr "Right_Thumb_Ctrl_1_scaleZ.o" "DividedBaseEnemyMaleRN.phl[229]";
+connectAttr "Right_Thumb_Ctrl_1_visibility.o" "DividedBaseEnemyMaleRN.phl[230]";
+connectAttr "Right_Thumb_Ctrl_2_translateX.o" "DividedBaseEnemyMaleRN.phl[231]";
+connectAttr "Right_Thumb_Ctrl_2_translateY.o" "DividedBaseEnemyMaleRN.phl[232]";
+connectAttr "Right_Thumb_Ctrl_2_translateZ.o" "DividedBaseEnemyMaleRN.phl[233]";
+connectAttr "Right_Thumb_Ctrl_2_rotateX.o" "DividedBaseEnemyMaleRN.phl[234]";
+connectAttr "Right_Thumb_Ctrl_2_rotateY.o" "DividedBaseEnemyMaleRN.phl[235]";
+connectAttr "Right_Thumb_Ctrl_2_rotateZ.o" "DividedBaseEnemyMaleRN.phl[236]";
+connectAttr "Right_Thumb_Ctrl_2_scaleX.o" "DividedBaseEnemyMaleRN.phl[237]";
+connectAttr "Right_Thumb_Ctrl_2_scaleY.o" "DividedBaseEnemyMaleRN.phl[238]";
+connectAttr "Right_Thumb_Ctrl_2_scaleZ.o" "DividedBaseEnemyMaleRN.phl[239]";
+connectAttr "Right_Thumb_Ctrl_2_visibility.o" "DividedBaseEnemyMaleRN.phl[240]";
+connectAttr "Right_Index_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[241]";
+connectAttr "Right_Index_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[242]";
+connectAttr "Right_Index_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[243]";
+connectAttr "Right_Index_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[244]";
+connectAttr "Right_Index_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[245]";
+connectAttr "Right_Index_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[246]";
+connectAttr "Right_Index_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[247]";
+connectAttr "Right_Index_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[248]";
+connectAttr "Right_Index_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[249]";
+connectAttr "Right_Index_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[250]";
+connectAttr "Right_Index_Ctrl_1_translateX.o" "DividedBaseEnemyMaleRN.phl[251]";
+connectAttr "Right_Index_Ctrl_1_translateY.o" "DividedBaseEnemyMaleRN.phl[252]";
+connectAttr "Right_Index_Ctrl_1_translateZ.o" "DividedBaseEnemyMaleRN.phl[253]";
+connectAttr "Right_Index_Ctrl_1_rotateX.o" "DividedBaseEnemyMaleRN.phl[254]";
+connectAttr "Right_Index_Ctrl_1_rotateY.o" "DividedBaseEnemyMaleRN.phl[255]";
+connectAttr "Right_Index_Ctrl_1_rotateZ.o" "DividedBaseEnemyMaleRN.phl[256]";
+connectAttr "Right_Index_Ctrl_1_scaleX.o" "DividedBaseEnemyMaleRN.phl[257]";
+connectAttr "Right_Index_Ctrl_1_scaleY.o" "DividedBaseEnemyMaleRN.phl[258]";
+connectAttr "Right_Index_Ctrl_1_scaleZ.o" "DividedBaseEnemyMaleRN.phl[259]";
+connectAttr "Right_Index_Ctrl_1_visibility.o" "DividedBaseEnemyMaleRN.phl[260]";
+connectAttr "Right_Index_Ctrl_2_translateX.o" "DividedBaseEnemyMaleRN.phl[261]";
+connectAttr "Right_Index_Ctrl_2_translateY.o" "DividedBaseEnemyMaleRN.phl[262]";
+connectAttr "Right_Index_Ctrl_2_translateZ.o" "DividedBaseEnemyMaleRN.phl[263]";
+connectAttr "Right_Index_Ctrl_2_rotateX.o" "DividedBaseEnemyMaleRN.phl[264]";
+connectAttr "Right_Index_Ctrl_2_rotateY.o" "DividedBaseEnemyMaleRN.phl[265]";
+connectAttr "Right_Index_Ctrl_2_rotateZ.o" "DividedBaseEnemyMaleRN.phl[266]";
+connectAttr "Right_Index_Ctrl_2_scaleX.o" "DividedBaseEnemyMaleRN.phl[267]";
+connectAttr "Right_Index_Ctrl_2_scaleY.o" "DividedBaseEnemyMaleRN.phl[268]";
+connectAttr "Right_Index_Ctrl_2_scaleZ.o" "DividedBaseEnemyMaleRN.phl[269]";
+connectAttr "Right_Index_Ctrl_2_visibility.o" "DividedBaseEnemyMaleRN.phl[270]";
+connectAttr "Right_Middle_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[271]";
+connectAttr "Right_Middle_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[272]";
+connectAttr "Right_Middle_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[273]";
+connectAttr "Right_Middle_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[274]";
+connectAttr "Right_Middle_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[275]";
+connectAttr "Right_Middle_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[276]";
+connectAttr "Right_Middle_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[277]";
+connectAttr "Right_Middle_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[278]";
+connectAttr "Right_Middle_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[279]";
+connectAttr "Right_Middle_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[280]";
+connectAttr "Right_Middle_Ctrl_1_translateX.o" "DividedBaseEnemyMaleRN.phl[281]"
 		;
-connectAttr "Right_Middle_Ctrl_1_translateY.o" "DividedBaseEnemyMaleRN.phl[294]"
+connectAttr "Right_Middle_Ctrl_1_translateY.o" "DividedBaseEnemyMaleRN.phl[282]"
 		;
-connectAttr "Right_Middle_Ctrl_1_translateZ.o" "DividedBaseEnemyMaleRN.phl[295]"
+connectAttr "Right_Middle_Ctrl_1_translateZ.o" "DividedBaseEnemyMaleRN.phl[283]"
 		;
-connectAttr "Right_Middle_Ctrl_1_rotateX.o" "DividedBaseEnemyMaleRN.phl[296]";
-connectAttr "Right_Middle_Ctrl_1_rotateY.o" "DividedBaseEnemyMaleRN.phl[297]";
-connectAttr "Right_Middle_Ctrl_1_rotateZ.o" "DividedBaseEnemyMaleRN.phl[298]";
-connectAttr "Right_Middle_Ctrl_1_scaleX.o" "DividedBaseEnemyMaleRN.phl[299]";
-connectAttr "Right_Middle_Ctrl_1_scaleY.o" "DividedBaseEnemyMaleRN.phl[300]";
-connectAttr "Right_Middle_Ctrl_1_scaleZ.o" "DividedBaseEnemyMaleRN.phl[301]";
-connectAttr "Right_Middle_Ctrl_1_visibility.o" "DividedBaseEnemyMaleRN.phl[302]"
+connectAttr "Right_Middle_Ctrl_1_rotateX.o" "DividedBaseEnemyMaleRN.phl[284]";
+connectAttr "Right_Middle_Ctrl_1_rotateY.o" "DividedBaseEnemyMaleRN.phl[285]";
+connectAttr "Right_Middle_Ctrl_1_rotateZ.o" "DividedBaseEnemyMaleRN.phl[286]";
+connectAttr "Right_Middle_Ctrl_1_scaleX.o" "DividedBaseEnemyMaleRN.phl[287]";
+connectAttr "Right_Middle_Ctrl_1_scaleY.o" "DividedBaseEnemyMaleRN.phl[288]";
+connectAttr "Right_Middle_Ctrl_1_scaleZ.o" "DividedBaseEnemyMaleRN.phl[289]";
+connectAttr "Right_Middle_Ctrl_1_visibility.o" "DividedBaseEnemyMaleRN.phl[290]"
 		;
-connectAttr "Right_Middle_Ctrl_2_translateX.o" "DividedBaseEnemyMaleRN.phl[303]"
+connectAttr "Right_Middle_Ctrl_2_translateX.o" "DividedBaseEnemyMaleRN.phl[291]"
 		;
-connectAttr "Right_Middle_Ctrl_2_translateY.o" "DividedBaseEnemyMaleRN.phl[304]"
+connectAttr "Right_Middle_Ctrl_2_translateY.o" "DividedBaseEnemyMaleRN.phl[292]"
 		;
-connectAttr "Right_Middle_Ctrl_2_translateZ.o" "DividedBaseEnemyMaleRN.phl[305]"
+connectAttr "Right_Middle_Ctrl_2_translateZ.o" "DividedBaseEnemyMaleRN.phl[293]"
 		;
-connectAttr "Right_Middle_Ctrl_2_rotateX.o" "DividedBaseEnemyMaleRN.phl[306]";
-connectAttr "Right_Middle_Ctrl_2_rotateY.o" "DividedBaseEnemyMaleRN.phl[307]";
-connectAttr "Right_Middle_Ctrl_2_rotateZ.o" "DividedBaseEnemyMaleRN.phl[308]";
-connectAttr "Right_Middle_Ctrl_2_scaleX.o" "DividedBaseEnemyMaleRN.phl[309]";
-connectAttr "Right_Middle_Ctrl_2_scaleY.o" "DividedBaseEnemyMaleRN.phl[310]";
-connectAttr "Right_Middle_Ctrl_2_scaleZ.o" "DividedBaseEnemyMaleRN.phl[311]";
-connectAttr "Right_Middle_Ctrl_2_visibility.o" "DividedBaseEnemyMaleRN.phl[312]"
+connectAttr "Right_Middle_Ctrl_2_rotateX.o" "DividedBaseEnemyMaleRN.phl[294]";
+connectAttr "Right_Middle_Ctrl_2_rotateY.o" "DividedBaseEnemyMaleRN.phl[295]";
+connectAttr "Right_Middle_Ctrl_2_rotateZ.o" "DividedBaseEnemyMaleRN.phl[296]";
+connectAttr "Right_Middle_Ctrl_2_scaleX.o" "DividedBaseEnemyMaleRN.phl[297]";
+connectAttr "Right_Middle_Ctrl_2_scaleY.o" "DividedBaseEnemyMaleRN.phl[298]";
+connectAttr "Right_Middle_Ctrl_2_scaleZ.o" "DividedBaseEnemyMaleRN.phl[299]";
+connectAttr "Right_Middle_Ctrl_2_visibility.o" "DividedBaseEnemyMaleRN.phl[300]"
 		;
-connectAttr "Right_Ring_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[313]";
-connectAttr "Right_Ring_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[314]";
-connectAttr "Right_Ring_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[315]";
-connectAttr "Right_Ring_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[316]";
-connectAttr "Right_Ring_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[317]";
-connectAttr "Right_Ring_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[318]";
-connectAttr "Right_Ring_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[319]";
-connectAttr "Right_Ring_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[320]";
-connectAttr "Right_Ring_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[321]";
-connectAttr "Right_Ring_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[322]";
-connectAttr "Right_Ring_Ctrl_1_translateX.o" "DividedBaseEnemyMaleRN.phl[323]";
-connectAttr "Right_Ring_Ctrl_1_translateY.o" "DividedBaseEnemyMaleRN.phl[324]";
-connectAttr "Right_Ring_Ctrl_1_translateZ.o" "DividedBaseEnemyMaleRN.phl[325]";
-connectAttr "Right_Ring_Ctrl_1_rotateX.o" "DividedBaseEnemyMaleRN.phl[326]";
-connectAttr "Right_Ring_Ctrl_1_rotateY.o" "DividedBaseEnemyMaleRN.phl[327]";
-connectAttr "Right_Ring_Ctrl_1_rotateZ.o" "DividedBaseEnemyMaleRN.phl[328]";
-connectAttr "Right_Ring_Ctrl_1_scaleX.o" "DividedBaseEnemyMaleRN.phl[329]";
-connectAttr "Right_Ring_Ctrl_1_scaleY.o" "DividedBaseEnemyMaleRN.phl[330]";
-connectAttr "Right_Ring_Ctrl_1_scaleZ.o" "DividedBaseEnemyMaleRN.phl[331]";
-connectAttr "Right_Ring_Ctrl_1_visibility.o" "DividedBaseEnemyMaleRN.phl[332]";
-connectAttr "Right_Ring_Ctrl_2_translateX.o" "DividedBaseEnemyMaleRN.phl[333]";
-connectAttr "Right_Ring_Ctrl_2_translateY.o" "DividedBaseEnemyMaleRN.phl[334]";
-connectAttr "Right_Ring_Ctrl_2_translateZ.o" "DividedBaseEnemyMaleRN.phl[335]";
-connectAttr "Right_Ring_Ctrl_2_rotateX.o" "DividedBaseEnemyMaleRN.phl[336]";
-connectAttr "Right_Ring_Ctrl_2_rotateY.o" "DividedBaseEnemyMaleRN.phl[337]";
-connectAttr "Right_Ring_Ctrl_2_rotateZ.o" "DividedBaseEnemyMaleRN.phl[338]";
-connectAttr "Right_Ring_Ctrl_2_scaleX.o" "DividedBaseEnemyMaleRN.phl[339]";
-connectAttr "Right_Ring_Ctrl_2_scaleY.o" "DividedBaseEnemyMaleRN.phl[340]";
-connectAttr "Right_Ring_Ctrl_2_scaleZ.o" "DividedBaseEnemyMaleRN.phl[341]";
-connectAttr "Right_Ring_Ctrl_2_visibility.o" "DividedBaseEnemyMaleRN.phl[342]";
-connectAttr "Right_Pinky_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[343]";
-connectAttr "Right_Pinky_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[344]";
-connectAttr "Right_Pinky_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[345]";
-connectAttr "Right_Pinky_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[346]";
-connectAttr "Right_Pinky_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[347]";
-connectAttr "Right_Pinky_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[348]";
-connectAttr "Right_Pinky_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[349]";
-connectAttr "Right_Pinky_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[350]";
-connectAttr "Right_Pinky_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[351]";
-connectAttr "Right_Pinky_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[352]";
-connectAttr "Right_Pinky_Ctrl_1_translateX.o" "DividedBaseEnemyMaleRN.phl[353]";
-connectAttr "Right_Pinky_Ctrl_1_translateY.o" "DividedBaseEnemyMaleRN.phl[354]";
-connectAttr "Right_Pinky_Ctrl_1_translateZ.o" "DividedBaseEnemyMaleRN.phl[355]";
-connectAttr "Right_Pinky_Ctrl_1_rotateX.o" "DividedBaseEnemyMaleRN.phl[356]";
-connectAttr "Right_Pinky_Ctrl_1_rotateY.o" "DividedBaseEnemyMaleRN.phl[357]";
-connectAttr "Right_Pinky_Ctrl_1_rotateZ.o" "DividedBaseEnemyMaleRN.phl[358]";
-connectAttr "Right_Pinky_Ctrl_1_scaleX.o" "DividedBaseEnemyMaleRN.phl[359]";
-connectAttr "Right_Pinky_Ctrl_1_scaleY.o" "DividedBaseEnemyMaleRN.phl[360]";
-connectAttr "Right_Pinky_Ctrl_1_scaleZ.o" "DividedBaseEnemyMaleRN.phl[361]";
-connectAttr "Right_Pinky_Ctrl_1_visibility.o" "DividedBaseEnemyMaleRN.phl[362]";
-connectAttr "Right_Pinky_Ctrl_2_translateX.o" "DividedBaseEnemyMaleRN.phl[363]";
-connectAttr "Right_Pinky_Ctrl_2_translateY.o" "DividedBaseEnemyMaleRN.phl[364]";
-connectAttr "Right_Pinky_Ctrl_2_translateZ.o" "DividedBaseEnemyMaleRN.phl[365]";
-connectAttr "Right_Pinky_Ctrl_2_rotateX.o" "DividedBaseEnemyMaleRN.phl[366]";
-connectAttr "Right_Pinky_Ctrl_2_rotateY.o" "DividedBaseEnemyMaleRN.phl[367]";
-connectAttr "Right_Pinky_Ctrl_2_rotateZ.o" "DividedBaseEnemyMaleRN.phl[368]";
-connectAttr "Right_Pinky_Ctrl_2_scaleX.o" "DividedBaseEnemyMaleRN.phl[369]";
-connectAttr "Right_Pinky_Ctrl_2_scaleY.o" "DividedBaseEnemyMaleRN.phl[370]";
-connectAttr "Right_Pinky_Ctrl_2_scaleZ.o" "DividedBaseEnemyMaleRN.phl[371]";
-connectAttr "Right_Pinky_Ctrl_2_visibility.o" "DividedBaseEnemyMaleRN.phl[372]";
-connectAttr "Left_Hand_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[373]";
-connectAttr "Left_Hand_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[374]";
-connectAttr "Left_Hand_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[375]";
-connectAttr "Left_Hand_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[376]";
-connectAttr "Left_Hand_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[377]";
-connectAttr "Left_Hand_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[378]";
-connectAttr "Left_Hand_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[379]";
-connectAttr "Left_Hand_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[380]";
-connectAttr "Left_Hand_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[381]";
-connectAttr "Left_Hand_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[382]";
-connectAttr "Left_Thumb_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[383]";
-connectAttr "Left_Thumb_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[384]";
-connectAttr "Left_Thumb_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[385]";
-connectAttr "Left_Thumb_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[386]";
-connectAttr "Left_Thumb_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[387]";
-connectAttr "Left_Thumb_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[388]";
-connectAttr "Left_Thumb_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[389]";
-connectAttr "Left_Thumb_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[390]";
-connectAttr "Left_Thumb_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[391]";
-connectAttr "Left_Thumb_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[392]";
-connectAttr "Left_Thumb_Ctrl_1_translateX.o" "DividedBaseEnemyMaleRN.phl[393]";
-connectAttr "Left_Thumb_Ctrl_1_translateY.o" "DividedBaseEnemyMaleRN.phl[394]";
-connectAttr "Left_Thumb_Ctrl_1_translateZ.o" "DividedBaseEnemyMaleRN.phl[395]";
-connectAttr "Left_Thumb_Ctrl_1_rotateX.o" "DividedBaseEnemyMaleRN.phl[396]";
-connectAttr "Left_Thumb_Ctrl_1_rotateY.o" "DividedBaseEnemyMaleRN.phl[397]";
-connectAttr "Left_Thumb_Ctrl_1_rotateZ.o" "DividedBaseEnemyMaleRN.phl[398]";
-connectAttr "Left_Thumb_Ctrl_1_scaleX.o" "DividedBaseEnemyMaleRN.phl[399]";
-connectAttr "Left_Thumb_Ctrl_1_scaleY.o" "DividedBaseEnemyMaleRN.phl[400]";
-connectAttr "Left_Thumb_Ctrl_1_scaleZ.o" "DividedBaseEnemyMaleRN.phl[401]";
-connectAttr "Left_Thumb_Ctrl_1_visibility.o" "DividedBaseEnemyMaleRN.phl[402]";
-connectAttr "Left_Thumb_Ctrl_2_translateX.o" "DividedBaseEnemyMaleRN.phl[403]";
-connectAttr "Left_Thumb_Ctrl_2_translateY.o" "DividedBaseEnemyMaleRN.phl[404]";
-connectAttr "Left_Thumb_Ctrl_2_translateZ.o" "DividedBaseEnemyMaleRN.phl[405]";
-connectAttr "Left_Thumb_Ctrl_2_rotateX.o" "DividedBaseEnemyMaleRN.phl[406]";
-connectAttr "Left_Thumb_Ctrl_2_rotateY.o" "DividedBaseEnemyMaleRN.phl[407]";
-connectAttr "Left_Thumb_Ctrl_2_rotateZ.o" "DividedBaseEnemyMaleRN.phl[408]";
-connectAttr "Left_Thumb_Ctrl_2_scaleX.o" "DividedBaseEnemyMaleRN.phl[409]";
-connectAttr "Left_Thumb_Ctrl_2_scaleY.o" "DividedBaseEnemyMaleRN.phl[410]";
-connectAttr "Left_Thumb_Ctrl_2_scaleZ.o" "DividedBaseEnemyMaleRN.phl[411]";
-connectAttr "Left_Thumb_Ctrl_2_visibility.o" "DividedBaseEnemyMaleRN.phl[412]";
-connectAttr "Left_Index_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[413]";
-connectAttr "Left_Index_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[414]";
-connectAttr "Left_Index_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[415]";
-connectAttr "Left_Index_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[416]";
-connectAttr "Left_Index_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[417]";
-connectAttr "Left_Index_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[418]";
-connectAttr "Left_Index_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[419]";
-connectAttr "Left_Index_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[420]";
-connectAttr "Left_Index_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[421]";
-connectAttr "Left_Index_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[422]";
-connectAttr "Left_Index_Ctrl_1_translateX.o" "DividedBaseEnemyMaleRN.phl[423]";
-connectAttr "Left_Index_Ctrl_1_translateY.o" "DividedBaseEnemyMaleRN.phl[424]";
-connectAttr "Left_Index_Ctrl_1_translateZ.o" "DividedBaseEnemyMaleRN.phl[425]";
-connectAttr "Left_Index_Ctrl_1_rotateX.o" "DividedBaseEnemyMaleRN.phl[426]";
-connectAttr "Left_Index_Ctrl_1_rotateY.o" "DividedBaseEnemyMaleRN.phl[427]";
-connectAttr "Left_Index_Ctrl_1_rotateZ.o" "DividedBaseEnemyMaleRN.phl[428]";
-connectAttr "Left_Index_Ctrl_1_scaleX.o" "DividedBaseEnemyMaleRN.phl[429]";
-connectAttr "Left_Index_Ctrl_1_scaleY.o" "DividedBaseEnemyMaleRN.phl[430]";
-connectAttr "Left_Index_Ctrl_1_scaleZ.o" "DividedBaseEnemyMaleRN.phl[431]";
-connectAttr "Left_Index_Ctrl_1_visibility.o" "DividedBaseEnemyMaleRN.phl[432]";
-connectAttr "Left_Index_Ctrl_2_translateX.o" "DividedBaseEnemyMaleRN.phl[433]";
-connectAttr "Left_Index_Ctrl_2_translateY.o" "DividedBaseEnemyMaleRN.phl[434]";
-connectAttr "Left_Index_Ctrl_2_translateZ.o" "DividedBaseEnemyMaleRN.phl[435]";
-connectAttr "Left_Index_Ctrl_2_rotateX.o" "DividedBaseEnemyMaleRN.phl[436]";
-connectAttr "Left_Index_Ctrl_2_rotateY.o" "DividedBaseEnemyMaleRN.phl[437]";
-connectAttr "Left_Index_Ctrl_2_rotateZ.o" "DividedBaseEnemyMaleRN.phl[438]";
-connectAttr "Left_Index_Ctrl_2_scaleX.o" "DividedBaseEnemyMaleRN.phl[439]";
-connectAttr "Left_Index_Ctrl_2_scaleY.o" "DividedBaseEnemyMaleRN.phl[440]";
-connectAttr "Left_Index_Ctrl_2_scaleZ.o" "DividedBaseEnemyMaleRN.phl[441]";
-connectAttr "Left_Index_Ctrl_2_visibility.o" "DividedBaseEnemyMaleRN.phl[442]";
-connectAttr "Left_Middle_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[443]";
-connectAttr "Left_Middle_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[444]";
-connectAttr "Left_Middle_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[445]";
-connectAttr "Left_Middle_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[446]";
-connectAttr "Left_Middle_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[447]";
-connectAttr "Left_Middle_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[448]";
-connectAttr "Left_Middle_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[449]";
-connectAttr "Left_Middle_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[450]";
-connectAttr "Left_Middle_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[451]";
-connectAttr "Left_Middle_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[452]";
-connectAttr "Left_Middle_Ctrl_1_translateX.o" "DividedBaseEnemyMaleRN.phl[453]";
-connectAttr "Left_Middle_Ctrl_1_translateY.o" "DividedBaseEnemyMaleRN.phl[454]";
-connectAttr "Left_Middle_Ctrl_1_translateZ.o" "DividedBaseEnemyMaleRN.phl[455]";
-connectAttr "Left_Middle_Ctrl_1_rotateX.o" "DividedBaseEnemyMaleRN.phl[456]";
-connectAttr "Left_Middle_Ctrl_1_rotateY.o" "DividedBaseEnemyMaleRN.phl[457]";
-connectAttr "Left_Middle_Ctrl_1_rotateZ.o" "DividedBaseEnemyMaleRN.phl[458]";
-connectAttr "Left_Middle_Ctrl_1_scaleX.o" "DividedBaseEnemyMaleRN.phl[459]";
-connectAttr "Left_Middle_Ctrl_1_scaleY.o" "DividedBaseEnemyMaleRN.phl[460]";
-connectAttr "Left_Middle_Ctrl_1_scaleZ.o" "DividedBaseEnemyMaleRN.phl[461]";
-connectAttr "Left_Middle_Ctrl_1_visibility.o" "DividedBaseEnemyMaleRN.phl[462]";
-connectAttr "Left_Middle_Ctrl_2_translateX.o" "DividedBaseEnemyMaleRN.phl[463]";
-connectAttr "Left_Middle_Ctrl_2_translateY.o" "DividedBaseEnemyMaleRN.phl[464]";
-connectAttr "Left_Middle_Ctrl_2_translateZ.o" "DividedBaseEnemyMaleRN.phl[465]";
-connectAttr "Left_Middle_Ctrl_2_rotateX.o" "DividedBaseEnemyMaleRN.phl[466]";
-connectAttr "Left_Middle_Ctrl_2_rotateY.o" "DividedBaseEnemyMaleRN.phl[467]";
-connectAttr "Left_Middle_Ctrl_2_rotateZ.o" "DividedBaseEnemyMaleRN.phl[468]";
-connectAttr "Left_Middle_Ctrl_2_scaleX.o" "DividedBaseEnemyMaleRN.phl[469]";
-connectAttr "Left_Middle_Ctrl_2_scaleY.o" "DividedBaseEnemyMaleRN.phl[470]";
-connectAttr "Left_Middle_Ctrl_2_scaleZ.o" "DividedBaseEnemyMaleRN.phl[471]";
-connectAttr "Left_Middle_Ctrl_2_visibility.o" "DividedBaseEnemyMaleRN.phl[472]";
-connectAttr "Left_Ring_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[473]";
-connectAttr "Left_Ring_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[474]";
-connectAttr "Left_Ring_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[475]";
-connectAttr "Left_Ring_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[476]";
-connectAttr "Left_Ring_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[477]";
-connectAttr "Left_Ring_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[478]";
-connectAttr "Left_Ring_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[479]";
-connectAttr "Left_Ring_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[480]";
-connectAttr "Left_Ring_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[481]";
-connectAttr "Left_Ring_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[482]";
-connectAttr "Left_Ring_Ctrl_1_translateX.o" "DividedBaseEnemyMaleRN.phl[483]";
-connectAttr "Left_Ring_Ctrl_1_translateY.o" "DividedBaseEnemyMaleRN.phl[484]";
-connectAttr "Left_Ring_Ctrl_1_translateZ.o" "DividedBaseEnemyMaleRN.phl[485]";
-connectAttr "Left_Ring_Ctrl_1_rotateX.o" "DividedBaseEnemyMaleRN.phl[486]";
-connectAttr "Left_Ring_Ctrl_1_rotateY.o" "DividedBaseEnemyMaleRN.phl[487]";
-connectAttr "Left_Ring_Ctrl_1_rotateZ.o" "DividedBaseEnemyMaleRN.phl[488]";
-connectAttr "Left_Ring_Ctrl_1_scaleX.o" "DividedBaseEnemyMaleRN.phl[489]";
-connectAttr "Left_Ring_Ctrl_1_scaleY.o" "DividedBaseEnemyMaleRN.phl[490]";
-connectAttr "Left_Ring_Ctrl_1_scaleZ.o" "DividedBaseEnemyMaleRN.phl[491]";
-connectAttr "Left_Ring_Ctrl_1_visibility.o" "DividedBaseEnemyMaleRN.phl[492]";
-connectAttr "Left_Ring_Ctrl_2_translateX.o" "DividedBaseEnemyMaleRN.phl[493]";
-connectAttr "Left_Ring_Ctrl_2_translateY.o" "DividedBaseEnemyMaleRN.phl[494]";
-connectAttr "Left_Ring_Ctrl_2_translateZ.o" "DividedBaseEnemyMaleRN.phl[495]";
-connectAttr "Left_Ring_Ctrl_2_rotateX.o" "DividedBaseEnemyMaleRN.phl[496]";
-connectAttr "Left_Ring_Ctrl_2_rotateY.o" "DividedBaseEnemyMaleRN.phl[497]";
-connectAttr "Left_Ring_Ctrl_2_rotateZ.o" "DividedBaseEnemyMaleRN.phl[498]";
-connectAttr "Left_Ring_Ctrl_2_scaleX.o" "DividedBaseEnemyMaleRN.phl[499]";
-connectAttr "Left_Ring_Ctrl_2_scaleY.o" "DividedBaseEnemyMaleRN.phl[500]";
-connectAttr "Left_Ring_Ctrl_2_scaleZ.o" "DividedBaseEnemyMaleRN.phl[501]";
-connectAttr "Left_Ring_Ctrl_2_visibility.o" "DividedBaseEnemyMaleRN.phl[502]";
-connectAttr "Left_Pinky_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[503]";
-connectAttr "Left_Pinky_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[504]";
-connectAttr "Left_Pinky_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[505]";
-connectAttr "Left_Pinky_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[506]";
-connectAttr "Left_Pinky_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[507]";
-connectAttr "Left_Pinky_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[508]";
-connectAttr "Left_Pinky_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[509]";
-connectAttr "Left_Pinky_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[510]";
-connectAttr "Left_Pinky_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[511]";
-connectAttr "Left_Pinky_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[512]";
-connectAttr "Left_Pinky_Ctrl_1_translateX.o" "DividedBaseEnemyMaleRN.phl[513]";
-connectAttr "Left_Pinky_Ctrl_1_translateY.o" "DividedBaseEnemyMaleRN.phl[514]";
-connectAttr "Left_Pinky_Ctrl_1_translateZ.o" "DividedBaseEnemyMaleRN.phl[515]";
-connectAttr "Left_Pinky_Ctrl_1_rotateX.o" "DividedBaseEnemyMaleRN.phl[516]";
-connectAttr "Left_Pinky_Ctrl_1_rotateY.o" "DividedBaseEnemyMaleRN.phl[517]";
-connectAttr "Left_Pinky_Ctrl_1_rotateZ.o" "DividedBaseEnemyMaleRN.phl[518]";
-connectAttr "Left_Pinky_Ctrl_1_scaleX.o" "DividedBaseEnemyMaleRN.phl[519]";
-connectAttr "Left_Pinky_Ctrl_1_scaleY.o" "DividedBaseEnemyMaleRN.phl[520]";
-connectAttr "Left_Pinky_Ctrl_1_scaleZ.o" "DividedBaseEnemyMaleRN.phl[521]";
-connectAttr "Left_Pinky_Ctrl_1_visibility.o" "DividedBaseEnemyMaleRN.phl[522]";
-connectAttr "Left_Pinky_Ctrl_2_translateX.o" "DividedBaseEnemyMaleRN.phl[523]";
-connectAttr "Left_Pinky_Ctrl_2_translateY.o" "DividedBaseEnemyMaleRN.phl[524]";
-connectAttr "Left_Pinky_Ctrl_2_translateZ.o" "DividedBaseEnemyMaleRN.phl[525]";
-connectAttr "Left_Pinky_Ctrl_2_rotateX.o" "DividedBaseEnemyMaleRN.phl[526]";
-connectAttr "Left_Pinky_Ctrl_2_rotateY.o" "DividedBaseEnemyMaleRN.phl[527]";
-connectAttr "Left_Pinky_Ctrl_2_rotateZ.o" "DividedBaseEnemyMaleRN.phl[528]";
-connectAttr "Left_Pinky_Ctrl_2_scaleX.o" "DividedBaseEnemyMaleRN.phl[529]";
-connectAttr "Left_Pinky_Ctrl_2_scaleY.o" "DividedBaseEnemyMaleRN.phl[530]";
-connectAttr "Left_Pinky_Ctrl_2_scaleZ.o" "DividedBaseEnemyMaleRN.phl[531]";
-connectAttr "Left_Pinky_Ctrl_2_visibility.o" "DividedBaseEnemyMaleRN.phl[532]";
-connectAttr "Fk_Right_Shoulder_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[533]"
+connectAttr "Right_Ring_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[301]";
+connectAttr "Right_Ring_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[302]";
+connectAttr "Right_Ring_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[303]";
+connectAttr "Right_Ring_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[304]";
+connectAttr "Right_Ring_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[305]";
+connectAttr "Right_Ring_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[306]";
+connectAttr "Right_Ring_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[307]";
+connectAttr "Right_Ring_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[308]";
+connectAttr "Right_Ring_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[309]";
+connectAttr "Right_Ring_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[310]";
+connectAttr "Right_Ring_Ctrl_1_translateX.o" "DividedBaseEnemyMaleRN.phl[311]";
+connectAttr "Right_Ring_Ctrl_1_translateY.o" "DividedBaseEnemyMaleRN.phl[312]";
+connectAttr "Right_Ring_Ctrl_1_translateZ.o" "DividedBaseEnemyMaleRN.phl[313]";
+connectAttr "Right_Ring_Ctrl_1_rotateX.o" "DividedBaseEnemyMaleRN.phl[314]";
+connectAttr "Right_Ring_Ctrl_1_rotateY.o" "DividedBaseEnemyMaleRN.phl[315]";
+connectAttr "Right_Ring_Ctrl_1_rotateZ.o" "DividedBaseEnemyMaleRN.phl[316]";
+connectAttr "Right_Ring_Ctrl_1_scaleX.o" "DividedBaseEnemyMaleRN.phl[317]";
+connectAttr "Right_Ring_Ctrl_1_scaleY.o" "DividedBaseEnemyMaleRN.phl[318]";
+connectAttr "Right_Ring_Ctrl_1_scaleZ.o" "DividedBaseEnemyMaleRN.phl[319]";
+connectAttr "Right_Ring_Ctrl_1_visibility.o" "DividedBaseEnemyMaleRN.phl[320]";
+connectAttr "Right_Ring_Ctrl_2_translateX.o" "DividedBaseEnemyMaleRN.phl[321]";
+connectAttr "Right_Ring_Ctrl_2_translateY.o" "DividedBaseEnemyMaleRN.phl[322]";
+connectAttr "Right_Ring_Ctrl_2_translateZ.o" "DividedBaseEnemyMaleRN.phl[323]";
+connectAttr "Right_Ring_Ctrl_2_rotateX.o" "DividedBaseEnemyMaleRN.phl[324]";
+connectAttr "Right_Ring_Ctrl_2_rotateY.o" "DividedBaseEnemyMaleRN.phl[325]";
+connectAttr "Right_Ring_Ctrl_2_rotateZ.o" "DividedBaseEnemyMaleRN.phl[326]";
+connectAttr "Right_Ring_Ctrl_2_scaleX.o" "DividedBaseEnemyMaleRN.phl[327]";
+connectAttr "Right_Ring_Ctrl_2_scaleY.o" "DividedBaseEnemyMaleRN.phl[328]";
+connectAttr "Right_Ring_Ctrl_2_scaleZ.o" "DividedBaseEnemyMaleRN.phl[329]";
+connectAttr "Right_Ring_Ctrl_2_visibility.o" "DividedBaseEnemyMaleRN.phl[330]";
+connectAttr "Right_Pinky_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[331]";
+connectAttr "Right_Pinky_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[332]";
+connectAttr "Right_Pinky_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[333]";
+connectAttr "Right_Pinky_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[334]";
+connectAttr "Right_Pinky_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[335]";
+connectAttr "Right_Pinky_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[336]";
+connectAttr "Right_Pinky_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[337]";
+connectAttr "Right_Pinky_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[338]";
+connectAttr "Right_Pinky_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[339]";
+connectAttr "Right_Pinky_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[340]";
+connectAttr "Right_Pinky_Ctrl_1_translateX.o" "DividedBaseEnemyMaleRN.phl[341]";
+connectAttr "Right_Pinky_Ctrl_1_translateY.o" "DividedBaseEnemyMaleRN.phl[342]";
+connectAttr "Right_Pinky_Ctrl_1_translateZ.o" "DividedBaseEnemyMaleRN.phl[343]";
+connectAttr "Right_Pinky_Ctrl_1_rotateX.o" "DividedBaseEnemyMaleRN.phl[344]";
+connectAttr "Right_Pinky_Ctrl_1_rotateY.o" "DividedBaseEnemyMaleRN.phl[345]";
+connectAttr "Right_Pinky_Ctrl_1_rotateZ.o" "DividedBaseEnemyMaleRN.phl[346]";
+connectAttr "Right_Pinky_Ctrl_1_scaleX.o" "DividedBaseEnemyMaleRN.phl[347]";
+connectAttr "Right_Pinky_Ctrl_1_scaleY.o" "DividedBaseEnemyMaleRN.phl[348]";
+connectAttr "Right_Pinky_Ctrl_1_scaleZ.o" "DividedBaseEnemyMaleRN.phl[349]";
+connectAttr "Right_Pinky_Ctrl_1_visibility.o" "DividedBaseEnemyMaleRN.phl[350]";
+connectAttr "Right_Pinky_Ctrl_2_translateX.o" "DividedBaseEnemyMaleRN.phl[351]";
+connectAttr "Right_Pinky_Ctrl_2_translateY.o" "DividedBaseEnemyMaleRN.phl[352]";
+connectAttr "Right_Pinky_Ctrl_2_translateZ.o" "DividedBaseEnemyMaleRN.phl[353]";
+connectAttr "Right_Pinky_Ctrl_2_rotateX.o" "DividedBaseEnemyMaleRN.phl[354]";
+connectAttr "Right_Pinky_Ctrl_2_rotateY.o" "DividedBaseEnemyMaleRN.phl[355]";
+connectAttr "Right_Pinky_Ctrl_2_rotateZ.o" "DividedBaseEnemyMaleRN.phl[356]";
+connectAttr "Right_Pinky_Ctrl_2_scaleX.o" "DividedBaseEnemyMaleRN.phl[357]";
+connectAttr "Right_Pinky_Ctrl_2_scaleY.o" "DividedBaseEnemyMaleRN.phl[358]";
+connectAttr "Right_Pinky_Ctrl_2_scaleZ.o" "DividedBaseEnemyMaleRN.phl[359]";
+connectAttr "Right_Pinky_Ctrl_2_visibility.o" "DividedBaseEnemyMaleRN.phl[360]";
+connectAttr "Left_Hand_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[361]";
+connectAttr "Left_Hand_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[362]";
+connectAttr "Left_Hand_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[363]";
+connectAttr "Left_Hand_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[364]";
+connectAttr "Left_Hand_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[365]";
+connectAttr "Left_Hand_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[366]";
+connectAttr "Left_Hand_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[367]";
+connectAttr "Left_Hand_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[368]";
+connectAttr "Left_Hand_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[369]";
+connectAttr "Left_Hand_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[370]";
+connectAttr "Left_Thumb_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[371]";
+connectAttr "Left_Thumb_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[372]";
+connectAttr "Left_Thumb_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[373]";
+connectAttr "Left_Thumb_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[374]";
+connectAttr "Left_Thumb_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[375]";
+connectAttr "Left_Thumb_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[376]";
+connectAttr "Left_Thumb_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[377]";
+connectAttr "Left_Thumb_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[378]";
+connectAttr "Left_Thumb_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[379]";
+connectAttr "Left_Thumb_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[380]";
+connectAttr "Left_Thumb_Ctrl_1_translateX.o" "DividedBaseEnemyMaleRN.phl[381]";
+connectAttr "Left_Thumb_Ctrl_1_translateY.o" "DividedBaseEnemyMaleRN.phl[382]";
+connectAttr "Left_Thumb_Ctrl_1_translateZ.o" "DividedBaseEnemyMaleRN.phl[383]";
+connectAttr "Left_Thumb_Ctrl_1_rotateX.o" "DividedBaseEnemyMaleRN.phl[384]";
+connectAttr "Left_Thumb_Ctrl_1_rotateY.o" "DividedBaseEnemyMaleRN.phl[385]";
+connectAttr "Left_Thumb_Ctrl_1_rotateZ.o" "DividedBaseEnemyMaleRN.phl[386]";
+connectAttr "Left_Thumb_Ctrl_1_scaleX.o" "DividedBaseEnemyMaleRN.phl[387]";
+connectAttr "Left_Thumb_Ctrl_1_scaleY.o" "DividedBaseEnemyMaleRN.phl[388]";
+connectAttr "Left_Thumb_Ctrl_1_scaleZ.o" "DividedBaseEnemyMaleRN.phl[389]";
+connectAttr "Left_Thumb_Ctrl_1_visibility.o" "DividedBaseEnemyMaleRN.phl[390]";
+connectAttr "Left_Thumb_Ctrl_2_translateX.o" "DividedBaseEnemyMaleRN.phl[391]";
+connectAttr "Left_Thumb_Ctrl_2_translateY.o" "DividedBaseEnemyMaleRN.phl[392]";
+connectAttr "Left_Thumb_Ctrl_2_translateZ.o" "DividedBaseEnemyMaleRN.phl[393]";
+connectAttr "Left_Thumb_Ctrl_2_rotateX.o" "DividedBaseEnemyMaleRN.phl[394]";
+connectAttr "Left_Thumb_Ctrl_2_rotateY.o" "DividedBaseEnemyMaleRN.phl[395]";
+connectAttr "Left_Thumb_Ctrl_2_rotateZ.o" "DividedBaseEnemyMaleRN.phl[396]";
+connectAttr "Left_Thumb_Ctrl_2_scaleX.o" "DividedBaseEnemyMaleRN.phl[397]";
+connectAttr "Left_Thumb_Ctrl_2_scaleY.o" "DividedBaseEnemyMaleRN.phl[398]";
+connectAttr "Left_Thumb_Ctrl_2_scaleZ.o" "DividedBaseEnemyMaleRN.phl[399]";
+connectAttr "Left_Thumb_Ctrl_2_visibility.o" "DividedBaseEnemyMaleRN.phl[400]";
+connectAttr "Left_Index_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[401]";
+connectAttr "Left_Index_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[402]";
+connectAttr "Left_Index_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[403]";
+connectAttr "Left_Index_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[404]";
+connectAttr "Left_Index_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[405]";
+connectAttr "Left_Index_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[406]";
+connectAttr "Left_Index_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[407]";
+connectAttr "Left_Index_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[408]";
+connectAttr "Left_Index_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[409]";
+connectAttr "Left_Index_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[410]";
+connectAttr "Left_Index_Ctrl_1_translateX.o" "DividedBaseEnemyMaleRN.phl[411]";
+connectAttr "Left_Index_Ctrl_1_translateY.o" "DividedBaseEnemyMaleRN.phl[412]";
+connectAttr "Left_Index_Ctrl_1_translateZ.o" "DividedBaseEnemyMaleRN.phl[413]";
+connectAttr "Left_Index_Ctrl_1_rotateX.o" "DividedBaseEnemyMaleRN.phl[414]";
+connectAttr "Left_Index_Ctrl_1_rotateY.o" "DividedBaseEnemyMaleRN.phl[415]";
+connectAttr "Left_Index_Ctrl_1_rotateZ.o" "DividedBaseEnemyMaleRN.phl[416]";
+connectAttr "Left_Index_Ctrl_1_scaleX.o" "DividedBaseEnemyMaleRN.phl[417]";
+connectAttr "Left_Index_Ctrl_1_scaleY.o" "DividedBaseEnemyMaleRN.phl[418]";
+connectAttr "Left_Index_Ctrl_1_scaleZ.o" "DividedBaseEnemyMaleRN.phl[419]";
+connectAttr "Left_Index_Ctrl_1_visibility.o" "DividedBaseEnemyMaleRN.phl[420]";
+connectAttr "Left_Index_Ctrl_2_translateX.o" "DividedBaseEnemyMaleRN.phl[421]";
+connectAttr "Left_Index_Ctrl_2_translateY.o" "DividedBaseEnemyMaleRN.phl[422]";
+connectAttr "Left_Index_Ctrl_2_translateZ.o" "DividedBaseEnemyMaleRN.phl[423]";
+connectAttr "Left_Index_Ctrl_2_rotateX.o" "DividedBaseEnemyMaleRN.phl[424]";
+connectAttr "Left_Index_Ctrl_2_rotateY.o" "DividedBaseEnemyMaleRN.phl[425]";
+connectAttr "Left_Index_Ctrl_2_rotateZ.o" "DividedBaseEnemyMaleRN.phl[426]";
+connectAttr "Left_Index_Ctrl_2_scaleX.o" "DividedBaseEnemyMaleRN.phl[427]";
+connectAttr "Left_Index_Ctrl_2_scaleY.o" "DividedBaseEnemyMaleRN.phl[428]";
+connectAttr "Left_Index_Ctrl_2_scaleZ.o" "DividedBaseEnemyMaleRN.phl[429]";
+connectAttr "Left_Index_Ctrl_2_visibility.o" "DividedBaseEnemyMaleRN.phl[430]";
+connectAttr "Left_Middle_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[431]";
+connectAttr "Left_Middle_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[432]";
+connectAttr "Left_Middle_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[433]";
+connectAttr "Left_Middle_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[434]";
+connectAttr "Left_Middle_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[435]";
+connectAttr "Left_Middle_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[436]";
+connectAttr "Left_Middle_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[437]";
+connectAttr "Left_Middle_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[438]";
+connectAttr "Left_Middle_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[439]";
+connectAttr "Left_Middle_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[440]";
+connectAttr "Left_Middle_Ctrl_1_translateX.o" "DividedBaseEnemyMaleRN.phl[441]";
+connectAttr "Left_Middle_Ctrl_1_translateY.o" "DividedBaseEnemyMaleRN.phl[442]";
+connectAttr "Left_Middle_Ctrl_1_translateZ.o" "DividedBaseEnemyMaleRN.phl[443]";
+connectAttr "Left_Middle_Ctrl_1_rotateX.o" "DividedBaseEnemyMaleRN.phl[444]";
+connectAttr "Left_Middle_Ctrl_1_rotateY.o" "DividedBaseEnemyMaleRN.phl[445]";
+connectAttr "Left_Middle_Ctrl_1_rotateZ.o" "DividedBaseEnemyMaleRN.phl[446]";
+connectAttr "Left_Middle_Ctrl_1_scaleX.o" "DividedBaseEnemyMaleRN.phl[447]";
+connectAttr "Left_Middle_Ctrl_1_scaleY.o" "DividedBaseEnemyMaleRN.phl[448]";
+connectAttr "Left_Middle_Ctrl_1_scaleZ.o" "DividedBaseEnemyMaleRN.phl[449]";
+connectAttr "Left_Middle_Ctrl_1_visibility.o" "DividedBaseEnemyMaleRN.phl[450]";
+connectAttr "Left_Middle_Ctrl_2_translateX.o" "DividedBaseEnemyMaleRN.phl[451]";
+connectAttr "Left_Middle_Ctrl_2_translateY.o" "DividedBaseEnemyMaleRN.phl[452]";
+connectAttr "Left_Middle_Ctrl_2_translateZ.o" "DividedBaseEnemyMaleRN.phl[453]";
+connectAttr "Left_Middle_Ctrl_2_rotateX.o" "DividedBaseEnemyMaleRN.phl[454]";
+connectAttr "Left_Middle_Ctrl_2_rotateY.o" "DividedBaseEnemyMaleRN.phl[455]";
+connectAttr "Left_Middle_Ctrl_2_rotateZ.o" "DividedBaseEnemyMaleRN.phl[456]";
+connectAttr "Left_Middle_Ctrl_2_scaleX.o" "DividedBaseEnemyMaleRN.phl[457]";
+connectAttr "Left_Middle_Ctrl_2_scaleY.o" "DividedBaseEnemyMaleRN.phl[458]";
+connectAttr "Left_Middle_Ctrl_2_scaleZ.o" "DividedBaseEnemyMaleRN.phl[459]";
+connectAttr "Left_Middle_Ctrl_2_visibility.o" "DividedBaseEnemyMaleRN.phl[460]";
+connectAttr "Left_Ring_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[461]";
+connectAttr "Left_Ring_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[462]";
+connectAttr "Left_Ring_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[463]";
+connectAttr "Left_Ring_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[464]";
+connectAttr "Left_Ring_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[465]";
+connectAttr "Left_Ring_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[466]";
+connectAttr "Left_Ring_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[467]";
+connectAttr "Left_Ring_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[468]";
+connectAttr "Left_Ring_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[469]";
+connectAttr "Left_Ring_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[470]";
+connectAttr "Left_Ring_Ctrl_1_translateX.o" "DividedBaseEnemyMaleRN.phl[471]";
+connectAttr "Left_Ring_Ctrl_1_translateY.o" "DividedBaseEnemyMaleRN.phl[472]";
+connectAttr "Left_Ring_Ctrl_1_translateZ.o" "DividedBaseEnemyMaleRN.phl[473]";
+connectAttr "Left_Ring_Ctrl_1_rotateX.o" "DividedBaseEnemyMaleRN.phl[474]";
+connectAttr "Left_Ring_Ctrl_1_rotateY.o" "DividedBaseEnemyMaleRN.phl[475]";
+connectAttr "Left_Ring_Ctrl_1_rotateZ.o" "DividedBaseEnemyMaleRN.phl[476]";
+connectAttr "Left_Ring_Ctrl_1_scaleX.o" "DividedBaseEnemyMaleRN.phl[477]";
+connectAttr "Left_Ring_Ctrl_1_scaleY.o" "DividedBaseEnemyMaleRN.phl[478]";
+connectAttr "Left_Ring_Ctrl_1_scaleZ.o" "DividedBaseEnemyMaleRN.phl[479]";
+connectAttr "Left_Ring_Ctrl_1_visibility.o" "DividedBaseEnemyMaleRN.phl[480]";
+connectAttr "Left_Ring_Ctrl_2_translateX.o" "DividedBaseEnemyMaleRN.phl[481]";
+connectAttr "Left_Ring_Ctrl_2_translateY.o" "DividedBaseEnemyMaleRN.phl[482]";
+connectAttr "Left_Ring_Ctrl_2_translateZ.o" "DividedBaseEnemyMaleRN.phl[483]";
+connectAttr "Left_Ring_Ctrl_2_rotateX.o" "DividedBaseEnemyMaleRN.phl[484]";
+connectAttr "Left_Ring_Ctrl_2_rotateY.o" "DividedBaseEnemyMaleRN.phl[485]";
+connectAttr "Left_Ring_Ctrl_2_rotateZ.o" "DividedBaseEnemyMaleRN.phl[486]";
+connectAttr "Left_Ring_Ctrl_2_scaleX.o" "DividedBaseEnemyMaleRN.phl[487]";
+connectAttr "Left_Ring_Ctrl_2_scaleY.o" "DividedBaseEnemyMaleRN.phl[488]";
+connectAttr "Left_Ring_Ctrl_2_scaleZ.o" "DividedBaseEnemyMaleRN.phl[489]";
+connectAttr "Left_Ring_Ctrl_2_visibility.o" "DividedBaseEnemyMaleRN.phl[490]";
+connectAttr "Left_Pinky_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[491]";
+connectAttr "Left_Pinky_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[492]";
+connectAttr "Left_Pinky_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[493]";
+connectAttr "Left_Pinky_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[494]";
+connectAttr "Left_Pinky_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[495]";
+connectAttr "Left_Pinky_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[496]";
+connectAttr "Left_Pinky_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[497]";
+connectAttr "Left_Pinky_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[498]";
+connectAttr "Left_Pinky_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[499]";
+connectAttr "Left_Pinky_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[500]";
+connectAttr "Left_Pinky_Ctrl_1_translateX.o" "DividedBaseEnemyMaleRN.phl[501]";
+connectAttr "Left_Pinky_Ctrl_1_translateY.o" "DividedBaseEnemyMaleRN.phl[502]";
+connectAttr "Left_Pinky_Ctrl_1_translateZ.o" "DividedBaseEnemyMaleRN.phl[503]";
+connectAttr "Left_Pinky_Ctrl_1_rotateX.o" "DividedBaseEnemyMaleRN.phl[504]";
+connectAttr "Left_Pinky_Ctrl_1_rotateY.o" "DividedBaseEnemyMaleRN.phl[505]";
+connectAttr "Left_Pinky_Ctrl_1_rotateZ.o" "DividedBaseEnemyMaleRN.phl[506]";
+connectAttr "Left_Pinky_Ctrl_1_scaleX.o" "DividedBaseEnemyMaleRN.phl[507]";
+connectAttr "Left_Pinky_Ctrl_1_scaleY.o" "DividedBaseEnemyMaleRN.phl[508]";
+connectAttr "Left_Pinky_Ctrl_1_scaleZ.o" "DividedBaseEnemyMaleRN.phl[509]";
+connectAttr "Left_Pinky_Ctrl_1_visibility.o" "DividedBaseEnemyMaleRN.phl[510]";
+connectAttr "Left_Pinky_Ctrl_2_translateX.o" "DividedBaseEnemyMaleRN.phl[511]";
+connectAttr "Left_Pinky_Ctrl_2_translateY.o" "DividedBaseEnemyMaleRN.phl[512]";
+connectAttr "Left_Pinky_Ctrl_2_translateZ.o" "DividedBaseEnemyMaleRN.phl[513]";
+connectAttr "Left_Pinky_Ctrl_2_rotateX.o" "DividedBaseEnemyMaleRN.phl[514]";
+connectAttr "Left_Pinky_Ctrl_2_rotateY.o" "DividedBaseEnemyMaleRN.phl[515]";
+connectAttr "Left_Pinky_Ctrl_2_rotateZ.o" "DividedBaseEnemyMaleRN.phl[516]";
+connectAttr "Left_Pinky_Ctrl_2_scaleX.o" "DividedBaseEnemyMaleRN.phl[517]";
+connectAttr "Left_Pinky_Ctrl_2_scaleY.o" "DividedBaseEnemyMaleRN.phl[518]";
+connectAttr "Left_Pinky_Ctrl_2_scaleZ.o" "DividedBaseEnemyMaleRN.phl[519]";
+connectAttr "Left_Pinky_Ctrl_2_visibility.o" "DividedBaseEnemyMaleRN.phl[520]";
+connectAttr "Fk_Right_Shoulder_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[521]"
 		;
-connectAttr "Fk_Right_Shoulder_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[534]"
+connectAttr "Fk_Right_Shoulder_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[522]"
 		;
-connectAttr "Fk_Right_Shoulder_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[535]"
+connectAttr "Fk_Right_Shoulder_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[523]"
 		;
-connectAttr "Fk_Right_Shoulder_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[536]"
+connectAttr "Fk_Right_Shoulder_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[524]"
 		;
-connectAttr "Fk_Right_Shoulder_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[537]"
+connectAttr "Fk_Right_Shoulder_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[525]"
 		;
-connectAttr "Fk_Right_Shoulder_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[538]"
+connectAttr "Fk_Right_Shoulder_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[526]"
 		;
-connectAttr "Fk_Right_Shoulder_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[539]";
-connectAttr "Fk_Right_Shoulder_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[540]";
-connectAttr "Fk_Right_Shoulder_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[541]";
-connectAttr "Fk_Right_Shoulder_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[542]"
+connectAttr "Fk_Right_Shoulder_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[527]";
+connectAttr "Fk_Right_Shoulder_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[528]";
+connectAttr "Fk_Right_Shoulder_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[529]";
+connectAttr "Fk_Right_Shoulder_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[530]"
 		;
-connectAttr "Fk_Right_Elbow_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[543]"
+connectAttr "Fk_Right_Elbow_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[531]"
 		;
-connectAttr "Fk_Right_Elbow_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[544]"
+connectAttr "Fk_Right_Elbow_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[532]"
 		;
-connectAttr "Fk_Right_Elbow_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[545]"
+connectAttr "Fk_Right_Elbow_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[533]"
 		;
-connectAttr "Fk_Right_Elbow_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[546]";
-connectAttr "Fk_Right_Elbow_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[547]";
-connectAttr "Fk_Right_Elbow_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[548]";
-connectAttr "Fk_Right_Elbow_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[549]";
-connectAttr "Fk_Right_Elbow_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[550]";
-connectAttr "Fk_Right_Elbow_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[551]";
-connectAttr "Fk_Right_Elbow_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[552]"
+connectAttr "Fk_Right_Elbow_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[534]";
+connectAttr "Fk_Right_Elbow_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[535]";
+connectAttr "Fk_Right_Elbow_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[536]";
+connectAttr "Fk_Right_Elbow_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[537]";
+connectAttr "Fk_Right_Elbow_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[538]";
+connectAttr "Fk_Right_Elbow_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[539]";
+connectAttr "Fk_Right_Elbow_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[540]"
 		;
-connectAttr "Fk_Right_Wrist_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[553]"
+connectAttr "Fk_Right_Wrist_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[541]"
 		;
-connectAttr "Fk_Right_Wrist_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[554]"
+connectAttr "Fk_Right_Wrist_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[542]"
 		;
-connectAttr "Fk_Right_Wrist_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[555]"
+connectAttr "Fk_Right_Wrist_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[543]"
 		;
-connectAttr "Fk_Right_Wrist_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[556]";
-connectAttr "Fk_Right_Wrist_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[557]";
-connectAttr "Fk_Right_Wrist_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[558]";
-connectAttr "Fk_Right_Wrist_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[559]";
-connectAttr "Fk_Right_Wrist_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[560]";
-connectAttr "Fk_Right_Wrist_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[561]";
-connectAttr "Fk_Right_Wrist_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[562]"
+connectAttr "Fk_Right_Wrist_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[544]";
+connectAttr "Fk_Right_Wrist_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[545]";
+connectAttr "Fk_Right_Wrist_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[546]";
+connectAttr "Fk_Right_Wrist_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[547]";
+connectAttr "Fk_Right_Wrist_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[548]";
+connectAttr "Fk_Right_Wrist_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[549]";
+connectAttr "Fk_Right_Wrist_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[550]"
 		;
-connectAttr "Fk_Left_Shoulder_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[563]"
+connectAttr "Fk_Left_Shoulder_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[551]"
 		;
-connectAttr "Fk_Left_Shoulder_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[564]"
+connectAttr "Fk_Left_Shoulder_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[552]"
 		;
-connectAttr "Fk_Left_Shoulder_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[565]"
+connectAttr "Fk_Left_Shoulder_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[553]"
 		;
-connectAttr "Fk_Left_Shoulder_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[566]";
-connectAttr "Fk_Left_Shoulder_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[567]";
-connectAttr "Fk_Left_Shoulder_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[568]";
-connectAttr "Fk_Left_Shoulder_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[569]";
-connectAttr "Fk_Left_Shoulder_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[570]";
-connectAttr "Fk_Left_Shoulder_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[571]";
-connectAttr "Fk_Left_Shoulder_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[572]"
+connectAttr "Fk_Left_Shoulder_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[554]";
+connectAttr "Fk_Left_Shoulder_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[555]";
+connectAttr "Fk_Left_Shoulder_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[556]";
+connectAttr "Fk_Left_Shoulder_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[557]";
+connectAttr "Fk_Left_Shoulder_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[558]";
+connectAttr "Fk_Left_Shoulder_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[559]";
+connectAttr "Fk_Left_Shoulder_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[560]"
 		;
-connectAttr "Fk_Left_Elbow_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[573]";
-connectAttr "Fk_Left_Elbow_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[574]";
-connectAttr "Fk_Left_Elbow_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[575]";
-connectAttr "Fk_Left_Elbow_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[576]";
-connectAttr "Fk_Left_Elbow_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[577]";
-connectAttr "Fk_Left_Elbow_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[578]";
-connectAttr "Fk_Left_Elbow_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[579]";
-connectAttr "Fk_Left_Elbow_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[580]";
-connectAttr "Fk_Left_Elbow_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[581]";
-connectAttr "Fk_Left_Elbow_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[582]";
-connectAttr "Fk_Left_Wrist_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[583]";
-connectAttr "Fk_Left_Wrist_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[584]";
-connectAttr "Fk_Left_Wrist_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[585]";
-connectAttr "Fk_Left_Wrist_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[586]";
-connectAttr "Fk_Left_Wrist_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[587]";
-connectAttr "Fk_Left_Wrist_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[588]";
-connectAttr "Fk_Left_Wrist_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[589]";
-connectAttr "Fk_Left_Wrist_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[590]";
-connectAttr "Fk_Left_Wrist_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[591]";
-connectAttr "Fk_Left_Wrist_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[592]";
-connectAttr "COG_Ctrl_IKFK.o" "DividedBaseEnemyMaleRN.phl[593]";
-connectAttr "COG_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[594]";
-connectAttr "COG_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[595]";
-connectAttr "COG_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[596]";
-connectAttr "COG_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[597]";
-connectAttr "COG_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[598]";
-connectAttr "COG_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[599]";
-connectAttr "COG_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[600]";
-connectAttr "COG_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[601]";
-connectAttr "COG_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[602]";
-connectAttr "COG_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[603]";
-connectAttr "Club_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[604]";
-connectAttr "Club_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[605]";
-connectAttr "Club_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[606]";
-connectAttr "Club_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[607]";
-connectAttr "Club_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[608]";
-connectAttr "Club_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[609]";
-connectAttr "Club_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[610]";
-connectAttr "Club_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[611]";
-connectAttr "Club_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[612]";
-connectAttr "Club_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[613]";
-connectAttr "Sheild_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[614]";
-connectAttr "Sheild_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[615]";
-connectAttr "Sheild_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[616]";
-connectAttr "Sheild_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[617]";
-connectAttr "Sheild_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[618]";
-connectAttr "Sheild_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[619]";
-connectAttr "Sheild_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[620]";
-connectAttr "Sheild_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[621]";
-connectAttr "Sheild_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[622]";
-connectAttr "Sheild_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[623]";
-connectAttr "directionalLight1_translateX.o" "DividedBaseEnemyMaleRN.phl[624]";
-connectAttr "directionalLight1_translateY.o" "DividedBaseEnemyMaleRN.phl[625]";
-connectAttr "directionalLight1_translateZ.o" "DividedBaseEnemyMaleRN.phl[626]";
-connectAttr "directionalLight1_rotateX.o" "DividedBaseEnemyMaleRN.phl[627]";
-connectAttr "directionalLight1_rotateY.o" "DividedBaseEnemyMaleRN.phl[628]";
-connectAttr "directionalLight1_rotateZ.o" "DividedBaseEnemyMaleRN.phl[629]";
-connectAttr "directionalLight1_visibility.o" "DividedBaseEnemyMaleRN.phl[630]";
-connectAttr "directionalLight1_scaleX.o" "DividedBaseEnemyMaleRN.phl[631]";
-connectAttr "directionalLight1_scaleY.o" "DividedBaseEnemyMaleRN.phl[632]";
-connectAttr "directionalLight1_scaleZ.o" "DividedBaseEnemyMaleRN.phl[633]";
-connectAttr "ambientLight1_translateX.o" "DividedBaseEnemyMaleRN.phl[634]";
-connectAttr "ambientLight1_translateY.o" "DividedBaseEnemyMaleRN.phl[635]";
-connectAttr "ambientLight1_translateZ.o" "DividedBaseEnemyMaleRN.phl[636]";
-connectAttr "ambientLight1_rotateX.o" "DividedBaseEnemyMaleRN.phl[637]";
-connectAttr "ambientLight1_rotateY.o" "DividedBaseEnemyMaleRN.phl[638]";
-connectAttr "ambientLight1_rotateZ.o" "DividedBaseEnemyMaleRN.phl[639]";
-connectAttr "ambientLight1_visibility.o" "DividedBaseEnemyMaleRN.phl[640]";
-connectAttr "ambientLight1_scaleX.o" "DividedBaseEnemyMaleRN.phl[641]";
-connectAttr "ambientLight1_scaleY.o" "DividedBaseEnemyMaleRN.phl[642]";
-connectAttr "ambientLight1_scaleZ.o" "DividedBaseEnemyMaleRN.phl[643]";
+connectAttr "Fk_Left_Elbow_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[561]";
+connectAttr "Fk_Left_Elbow_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[562]";
+connectAttr "Fk_Left_Elbow_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[563]";
+connectAttr "Fk_Left_Elbow_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[564]";
+connectAttr "Fk_Left_Elbow_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[565]";
+connectAttr "Fk_Left_Elbow_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[566]";
+connectAttr "Fk_Left_Elbow_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[567]";
+connectAttr "Fk_Left_Elbow_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[568]";
+connectAttr "Fk_Left_Elbow_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[569]";
+connectAttr "Fk_Left_Elbow_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[570]";
+connectAttr "Fk_Left_Wrist_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[571]";
+connectAttr "Fk_Left_Wrist_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[572]";
+connectAttr "Fk_Left_Wrist_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[573]";
+connectAttr "Fk_Left_Wrist_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[574]";
+connectAttr "Fk_Left_Wrist_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[575]";
+connectAttr "Fk_Left_Wrist_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[576]";
+connectAttr "Fk_Left_Wrist_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[577]";
+connectAttr "Fk_Left_Wrist_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[578]";
+connectAttr "Fk_Left_Wrist_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[579]";
+connectAttr "Fk_Left_Wrist_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[580]";
+connectAttr "COG_Ctrl_IKFK.o" "DividedBaseEnemyMaleRN.phl[581]";
+connectAttr "COG_Ctrl_translateX.o" "DividedBaseEnemyMaleRN.phl[582]";
+connectAttr "COG_Ctrl_translateY.o" "DividedBaseEnemyMaleRN.phl[583]";
+connectAttr "COG_Ctrl_translateZ.o" "DividedBaseEnemyMaleRN.phl[584]";
+connectAttr "COG_Ctrl_rotateX.o" "DividedBaseEnemyMaleRN.phl[585]";
+connectAttr "COG_Ctrl_rotateY.o" "DividedBaseEnemyMaleRN.phl[586]";
+connectAttr "COG_Ctrl_rotateZ.o" "DividedBaseEnemyMaleRN.phl[587]";
+connectAttr "COG_Ctrl_scaleX.o" "DividedBaseEnemyMaleRN.phl[588]";
+connectAttr "COG_Ctrl_scaleY.o" "DividedBaseEnemyMaleRN.phl[589]";
+connectAttr "COG_Ctrl_scaleZ.o" "DividedBaseEnemyMaleRN.phl[590]";
+connectAttr "COG_Ctrl_visibility.o" "DividedBaseEnemyMaleRN.phl[591]";
+connectAttr "directionalLight1_translateX.o" "DividedBaseEnemyMaleRN.phl[592]";
+connectAttr "directionalLight1_translateY.o" "DividedBaseEnemyMaleRN.phl[593]";
+connectAttr "directionalLight1_translateZ.o" "DividedBaseEnemyMaleRN.phl[594]";
+connectAttr "directionalLight1_rotateX.o" "DividedBaseEnemyMaleRN.phl[595]";
+connectAttr "directionalLight1_rotateY.o" "DividedBaseEnemyMaleRN.phl[596]";
+connectAttr "directionalLight1_rotateZ.o" "DividedBaseEnemyMaleRN.phl[597]";
+connectAttr "directionalLight1_visibility.o" "DividedBaseEnemyMaleRN.phl[598]";
+connectAttr "directionalLight1_scaleX.o" "DividedBaseEnemyMaleRN.phl[599]";
+connectAttr "directionalLight1_scaleY.o" "DividedBaseEnemyMaleRN.phl[600]";
+connectAttr "directionalLight1_scaleZ.o" "DividedBaseEnemyMaleRN.phl[601]";
+connectAttr "ambientLight1_translateX.o" "DividedBaseEnemyMaleRN.phl[602]";
+connectAttr "ambientLight1_translateY.o" "DividedBaseEnemyMaleRN.phl[603]";
+connectAttr "ambientLight1_translateZ.o" "DividedBaseEnemyMaleRN.phl[604]";
+connectAttr "ambientLight1_rotateX.o" "DividedBaseEnemyMaleRN.phl[605]";
+connectAttr "ambientLight1_rotateY.o" "DividedBaseEnemyMaleRN.phl[606]";
+connectAttr "ambientLight1_rotateZ.o" "DividedBaseEnemyMaleRN.phl[607]";
+connectAttr "ambientLight1_visibility.o" "DividedBaseEnemyMaleRN.phl[608]";
+connectAttr "ambientLight1_scaleX.o" "DividedBaseEnemyMaleRN.phl[609]";
+connectAttr "ambientLight1_scaleY.o" "DividedBaseEnemyMaleRN.phl[610]";
+connectAttr "ambientLight1_scaleZ.o" "DividedBaseEnemyMaleRN.phl[611]";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";

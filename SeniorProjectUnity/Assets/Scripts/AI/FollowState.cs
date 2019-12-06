@@ -49,7 +49,8 @@ public class FollowState : BaseState
         //if ai is too far from player, follow
         else if (Vector3.Distance(squad.transform.position, player.transform.position) > squad.followDistance)
         {
-            ai.anim.SetBool(StaticVars.walk, true);
+            squad.anim.SetBool(StaticVars.walk, true);
+            squad.SetSpeed(squad.walkSpeed);
             squad.SetStoppingDist(squad.followDistance);
             squad.SetDestination(player.transform.position);
             return typeof(FollowState);
