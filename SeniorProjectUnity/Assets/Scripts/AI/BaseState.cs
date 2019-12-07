@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+[Serializable]
+
 public abstract class BaseState
 {
     protected GameObject gameObject;
@@ -44,6 +46,7 @@ public abstract class BaseState
         }
     }
 
+    //checks if the hit is a valid enemy
     private void EnemyFound(RaycastHit _hit)
     {
         if (!ai.IsEnemy(_hit.collider.tag) || ai.currentTarget != null) return;

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CounterControll : MonoBehaviour
 {
@@ -19,6 +17,7 @@ public class CounterControll : MonoBehaviour
         StaticVars.PairCounterAction -= PairCounterActionHandler;
     }
 
+    //makes the player and enemy animate at the same time
     private void PairCounterActionHandler(PlayerController _player, Enemy _enemy)
     {
         player = _player;
@@ -26,7 +25,8 @@ public class CounterControll : MonoBehaviour
 
         var playerPos = player.transform.position;
         var enemyPos = enemy.transform.position;
-        
+
+        //moves the enemy to the correct spot by the player for the animation to play     
         Vector3 direction = playerPos - enemyPos;
         direction.Normalize();
         Vector3 pos = playerPos - (direction * directionOffset);
@@ -34,6 +34,7 @@ public class CounterControll : MonoBehaviour
         enemyPos = pos;
         enemy.transform.position = enemyPos;
 
+        //make the two characters face each other
         player.transform.LookAt(new Vector3(enemyPos.x, playerPos.y, enemyPos.z));
 		enemy.transform.LookAt(new Vector3(playerPos.x, enemyPos.y, playerPos.z));
 

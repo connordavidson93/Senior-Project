@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -13,6 +14,7 @@ public static class StaticVars
 
     //delegate Actions
     public static UnityAction<PlayerController, Enemy> PairCounterAction;
+    public static UnityAction<GameObject> DeathAction;
     
     //cashed properties for access to animator parameters
     public static readonly int grounded = Animator.StringToHash("Grounded");
@@ -27,4 +29,7 @@ public static class StaticVars
     public static readonly int walk = Animator.StringToHash("Walk");
     public static readonly int run = Animator.StringToHash("Run");
     public static readonly int inCombat = Animator.StringToHash("InCombat");
+    public static readonly int damaged = Animator.StringToHash("Damaged");
+    public static readonly int dead = Animator.StringToHash("Dead");
+    public static readonly int heal = Animator.StringToHash("Heal");
 }

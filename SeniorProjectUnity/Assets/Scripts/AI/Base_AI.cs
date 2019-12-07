@@ -7,8 +7,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(NavMeshAgent)), RequireComponent(typeof(FSM))]
 public abstract class Base_AI : MonoBehaviour
 {
-    public static UnityAction<GameObject> DeathAction;
-
+    [Header("Base  AI Variables")]
     public Base_Stats stats;
     public Animator anim => GetComponent<Animator>();
     protected FSM fsm => GetComponent<FSM>();
@@ -17,7 +16,7 @@ public abstract class Base_AI : MonoBehaviour
     public List<string> enemyTags;
     public GameObject currentTarget;
     public bool damaged;
-    public float occupiedSpaceRadius;
+    public float occupiedSpaceRadius, wanderRange = 5, walkSpeed = 3.5f, runSpeed = 10f;
     public LayerMask mask;
     public EnemyManager enemyManager;
 
@@ -34,12 +33,12 @@ public abstract class Base_AI : MonoBehaviour
 
     private void OnEnable()
     {
-        DeathAction += TargetDied;
+        StaticVars.DeathAction += TargetDied;
     }
 
     private void OnDisable()
     {
-        DeathAction -= TargetDied;
+        StaticVars.DeathAction -= TargetDied;
     }
 
     private void OnDrawGizmos()

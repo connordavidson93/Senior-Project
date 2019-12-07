@@ -1,0 +1,80 @@
+newmtl Material_0
+Ka 1.0000 1.0000 1.0000
+Kd 1.0000 1.0000 1.0000
+Ks 0.0000 0.0000 0.0000
+d 1
+Ns 0.0000
+illum 1
+map_Kd Standup_Rock-101.jpg
+newmtl Material_1
+Ka 1.0000 1.0000 1.0000
+Kd 1.0000 1.0000 1.0000
+Ks 0.0000 0.0000 0.0000
+d 1
+Ns 0.0000
+illum 1
+map_Kd Standup_Rock-102.jpg
+newmtl Material_2
+Ka 1.0000 1.0000 1.0000
+Kd 1.0000 1.0000 1.0000
+Ks 0.0000 0.0000 0.0000
+d 1
+Ns 0.0000
+illum 1
+map_Kd Standup_Rock-103.jpg
+newmtl Material_3
+Ka 1.0000 1.0000 1.0000
+Kd 1.0000 1.0000 1.0000
+Ks 0.0000 0.0000 0.0000
+d 1
+Ns 0.0000
+illum 1
+map_Kd Standup_Rock-104.jpg
+newmtl Material_4
+Ka 1.0000 1.0000 1.0000
+Kd 1.0000 1.0000 1.0000
+Ks 0.0000 0.0000 0.0000
+d 1
+Ns 0.0000
+illum 1
+map_Kd Standup_Rock-105.jpg
+newmtl Material_5
+Ka 1.0000 1.0000 1.0000
+Kd 1.0000 1.0000 1.0000
+Ks 0.0000 0.0000 0.0000
+d 1
+Ns 0.0000
+illum 1
+map_Kd Standup_Rock-106.jpg
+newmtl Material_6
+Ka 1.0000 1.0000 1.0000
+Kd 1.0000 1.0000 1.0000
+Ks 0.0000 0.0000 0.0000
+d 1
+Ns 0.0000
+illum 1
+map_Kd Standup_Rock-107.jpg
+newmtl Material_7
+Ka 1.0000 1.0000 1.0000
+Kd 1.0000 1.0000 1.0000
+Ks 0.0000 0.0000 0.0000
+d 1
+Ns 0.0000
+illum 1
+map_Kd Standup_Rock-108.jpg
+newmtl Material_8
+Ka 1.0000 1.0000 1.0000
+Kd 1.0000 1.0000 1.0000
+Ks 0.0000 0.0000 0.0000
+d 1
+Ns 0.0000
+illum 1
+map_Kd Standup_Rock-109.jpg
+newmtl Material_9
+Ka 1.0000 1.0000 1.0000
+Kd 1.0000 1.0000 1.0000
+Ks 0.0000 0.0000 0.0000
+d 1
+Ns 0.0000
+illum 1
+map_Kd Standup_Rock-110.jpg
