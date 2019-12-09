@@ -4909,7 +4909,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5301,12 +5301,34 @@ MonoBehaviour:
   healthSlider: {fileID: 0}
   playerDeathEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   playerReviveEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: StartFade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!208 &18624402
@@ -5452,6 +5474,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.010800151
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818149155384424988, guid: edd7e272fb44eb24faa1415a79241732,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4646066564472242973, guid: edd7e272fb44eb24faa1415a79241732,
         type: 3}
@@ -5798,11 +5825,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.006825718
       objectReference: {fileID: 0}
-    - target: {fileID: 7818149155384424988, guid: edd7e272fb44eb24faa1415a79241732,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: -1591215330451606282, guid: edd7e272fb44eb24faa1415a79241732,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -5978,6 +6000,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.016044402
       objectReference: {fileID: 0}
+    - target: {fileID: 4166786016011193787, guid: edd7e272fb44eb24faa1415a79241732,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 3561486864361486514, guid: edd7e272fb44eb24faa1415a79241732,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -6123,6 +6150,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.5557862
       objectReference: {fileID: 0}
+    - target: {fileID: 7050865413061845113, guid: edd7e272fb44eb24faa1415a79241732,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 2831741855316949561, guid: edd7e272fb44eb24faa1415a79241732,
         type: 3}
       propertyPath: m_LocalRotation.y
@@ -6463,6 +6495,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.90476805
       objectReference: {fileID: 0}
+    - target: {fileID: 4830612571979655962, guid: edd7e272fb44eb24faa1415a79241732,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: -4753832508906894830, guid: edd7e272fb44eb24faa1415a79241732,
         type: 3}
       propertyPath: m_LocalRotation.x
