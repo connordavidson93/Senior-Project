@@ -9,6 +9,7 @@ public class Teleport : MonoBehaviour
 
     public void Move()
     {
+        print("moving squad");
         objToMove.position = spawnPoint.position;
     }
 }
