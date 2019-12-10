@@ -1,13 +1,12 @@
 //Maya ASCII 2018 scene
 //Name: Male_Animations.ma
-//Last modified: Mon, Dec 09, 2019 03:05:58 AM
+//Last modified: Tue, Dec 10, 2019 12:21:15 AM
 //Codeset: 1252
 file -rdi 1 -ns "DividedBaseBrotherMale" -rfn "DividedBaseBrotherMaleRN" -op
 		 "v=0;" -typ "mayaAscii" "C:/Users/cdog1/Documents/Senior Project/Senior-Project/MayaModels/scenes/Characters/Animated Models/Character models/Brother Character/Weight PaintedDividedBaseBrotherMale.ma";
 file -r -ns "DividedBaseBrotherMale" -dr 1 -rfn "DividedBaseBrotherMaleRN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/cdog1/Documents/Senior Project/Senior-Project/MayaModels/scenes/Characters/Animated Models/Character models/Brother Character/Weight PaintedDividedBaseBrotherMale.ma";
 requires maya "2018";
-requires "stereoCamera" "10.0";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
@@ -19,13 +18,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "0C0809CA-491A-7F64-1806-E7B78AC56DE1";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.68379448030727041 12.672192383366388 23.422246213072366 ;
-	setAttr ".r" -type "double3" -17.738352678393465 715.39999999983297 -9.9713523173455785e-17 ;
+	setAttr ".t" -type "double3" 14.905348739198832 11.173170761650416 13.702278226634018 ;
+	setAttr ".r" -type "double3" -9.9383526786694603 -316.60000000031954 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "306F9908-47C2-BDC3-B699-1AA3CB51A7DF";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 24.492551334272306;
+	setAttr ".coi" 19.628190626151298;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -79,19 +78,19 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "753B67F7-461B-AB91-3EAA-EBB51781B09A";
+	rename -uid "5D4AC45D-422D-96CD-8886-4D9411D44480";
 	setAttr -s 16 ".lnk";
 	setAttr -s 16 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "9090CE36-4F65-11CE-D975-299C97DFF7BA";
+	rename -uid "6C56877B-4DDA-6A87-3355-14A785604982";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "CEE71E17-417B-B254-23D8-D5874371827A";
+	rename -uid "9CD723ED-4AEE-8DDD-51F2-398A03355450";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "EC0238BF-4621-232C-3F7F-459BA2B83414";
+	rename -uid "763CE601-49C7-E2EB-517F-5DB58A5A1A9E";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "812323DE-434E-7B40-8234-398569696455";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "F9298AD1-49DB-A656-5C65-0FA9CDAB0DCC";
+	rename -uid "5208FD09-40E8-003A-F2E5-8A833F4DD530";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "4D632566-4EBD-11D3-D882-EB80549E3E09";
 	setAttr ".g" yes;
@@ -100,7 +99,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 	setAttr -s 2 ".fn";
 	setAttr ".fn[0]" -type "string" "C:/Users/cdog1/Documents/Senior Project/Senior-Project/MayaModels/scenes/Characters/Animated Models/Character models/Brother Character/Weight PaintedDividedBaseBrotherMale.ma";
 	setAttr ".fn[1]" -type "string" "C:/Users/cdog1/Documents/Senior Project/Senior-Project/MayaModels/scenes/Characters/Rigged Models/DividedBaseBrotherMale.ma";
-	setAttr -s 641 ".phl";
+	setAttr -s 642 ".phl";
 	setAttr ".phl[463]" 0;
 	setAttr ".phl[464]" 0;
 	setAttr ".phl[465]" 0;
@@ -724,6 +723,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 	setAttr ".phl[1719]" 0;
 	setAttr ".phl[1720]" 0;
 	setAttr ".phl[1721]" 0;
+	setAttr ".phl[1722]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"DividedBaseBrotherMaleRN"
 		"DividedBaseBrotherMaleRN" 131
@@ -1126,7 +1126,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 		"DividedBaseBrotherMaleRN.placeHolderList[1109]" ""
 		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl|DividedBaseBrotherMale:Ik_Ball_Ctrl_Grp|DividedBaseBrotherMale:Ik_Bal_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1110]" ""
-		"DividedBaseBrotherMaleRN" 1563
+		"DividedBaseBrotherMaleRN" 1564
 		1 |DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Arm_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Arm_Ctrl 
 		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
 		1 |DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Arm_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Arm_Ctrl 
@@ -1134,7 +1134,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 		2 "|DividedBaseBrotherMale:Mannequin|DividedBaseBrotherMale:Skeleton" "visibility" 
 		" 0"
 		2 "|DividedBaseBrotherMale:Mannequin|DividedBaseBrotherMale:Skeleton|DividedBaseBrotherMale:FK|DividedBaseBrotherMale:R_Arm_01_Jnt" 
-		"rotate" " -type \"double3\" -2.00019154780605479 -32.65148622265901679 -12.54067625697882526"
+		"rotate" " -type \"double3\" 0.016793517016599608 5.7036724126181883e-05 -0.38919196944428497"
 		
 		2 "|DividedBaseBrotherMale:Mannequin|DividedBaseBrotherMale:Skeleton|DividedBaseBrotherMale:FK|DividedBaseBrotherMale:R_Arm_01_Jnt" 
 		"rotateX" " -av"
@@ -1211,8 +1211,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:COG_Ctrl_Grp|DividedBaseBrotherMale:COG_Ctrl" 
 		"visibility" " -av 1"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:COG_Ctrl_Grp|DividedBaseBrotherMale:COG_Ctrl" 
-		"translate" " -type \"double3\" 0.030751075970064434 -1.04318907129499205 -0.021472526694657601"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:COG_Ctrl_Grp|DividedBaseBrotherMale:COG_Ctrl" 
 		"translateX" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:COG_Ctrl_Grp|DividedBaseBrotherMale:COG_Ctrl" 
@@ -1220,7 +1219,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:COG_Ctrl_Grp|DividedBaseBrotherMale:COG_Ctrl" 
 		"translateZ" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:COG_Ctrl_Grp|DividedBaseBrotherMale:COG_Ctrl" 
-		"rotate" " -type \"double3\" 0 17.61983650978850591 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:COG_Ctrl_Grp|DividedBaseBrotherMale:COG_Ctrl" 
 		"rotateX" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:COG_Ctrl_Grp|DividedBaseBrotherMale:COG_Ctrl" 
@@ -1350,7 +1349,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Arm_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Arm_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Arm_Pole_Vector_Ctrl" 
 		"visibility" " -av 1"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Arm_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Arm_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Arm_Pole_Vector_Ctrl" 
-		"translate" " -type \"double3\" 1.34533855882029618 -0.34488759473879999 0.13853124011402407"
+		"translate" " -type \"double3\" 1.39967713546929673 -0.54984544086562714 -0.09963846423098649"
 		
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Arm_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Arm_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Arm_Pole_Vector_Ctrl" 
 		"translateX" " -av"
@@ -1377,8 +1376,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Arm_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Arm_Point_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Arm_Point_Ctrl" 
 		"visibility" " -av 1"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Arm_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Arm_Point_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Arm_Point_Ctrl" 
-		"translate" " -type \"double3\" 0.9030246689361725 -3.99074722477698884 1.79876906084254462"
-		
+		"translate" " -type \"double3\" 0.9 -5.05962536933531748 1.79876906084254462"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Arm_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Arm_Point_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Arm_Point_Ctrl" 
 		"translateX" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Arm_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Arm_Point_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Arm_Point_Ctrl" 
@@ -1405,7 +1403,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl" 
 		"visibility" " -av 1"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl" 
-		"translate" " -type \"double3\" 0 -0.010714957125658842 0"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl" 
 		"translateX" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl" 
@@ -1413,7 +1411,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl" 
 		"translateZ" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl" 
-		"rotate" " -type \"double3\" 8.58610191746129914 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl" 
 		"rotateX" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl" 
@@ -1439,7 +1437,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Neck_Ctrl_Grp|DividedBaseBrotherMale:Neck_Ctrl" 
 		"translateZ" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Neck_Ctrl_Grp|DividedBaseBrotherMale:Neck_Ctrl" 
-		"rotate" " -type \"double3\" 0 -20.54664266853817267 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Neck_Ctrl_Grp|DividedBaseBrotherMale:Neck_Ctrl" 
 		"rotateX" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Neck_Ctrl_Grp|DividedBaseBrotherMale:Neck_Ctrl" 
@@ -1465,7 +1463,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Neck_Ctrl_Grp|DividedBaseBrotherMale:Neck_Ctrl|DividedBaseBrotherMale:Head_Ctrl_Grp|DividedBaseBrotherMale:Head_Ctrl" 
 		"translateZ" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Neck_Ctrl_Grp|DividedBaseBrotherMale:Neck_Ctrl|DividedBaseBrotherMale:Head_Ctrl_Grp|DividedBaseBrotherMale:Head_Ctrl" 
-		"rotate" " -type \"double3\" 0 0.92505374354606962 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Neck_Ctrl_Grp|DividedBaseBrotherMale:Neck_Ctrl|DividedBaseBrotherMale:Head_Ctrl_Grp|DividedBaseBrotherMale:Head_Ctrl" 
 		"rotateX" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Neck_Ctrl_Grp|DividedBaseBrotherMale:Neck_Ctrl|DividedBaseBrotherMale:Head_Ctrl_Grp|DividedBaseBrotherMale:Head_Ctrl" 
@@ -2376,8 +2374,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl" 
 		"translateZ" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl" 
-		"rotate" " -type \"double3\" -25.01098936074922463 -12.33281265486593803 -13.25590958692085053"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl" 
 		"rotateX" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl" 
@@ -2403,8 +2400,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl" 
 		"translateZ" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl" 
-		"rotate" " -type \"double3\" -38.18983267807149673 38.69692806933202434 38.23525602336653861"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl" 
 		"rotateX" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl" 
@@ -2430,8 +2426,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl" 
 		"translateZ" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl" 
-		"rotate" " -type \"double3\" -16.73540168094340075 -22.36291052245820765 -12.10922916117543124"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl" 
 		"rotateX" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl" 
@@ -2457,8 +2452,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl" 
 		"translateZ" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl" 
-		"rotate" " -type \"double3\" -84.62663284812542486 3.68487608541878098 35.88608244108334588"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl" 
 		"rotateX" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl" 
@@ -2484,7 +2478,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl" 
 		"translateZ" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl" 
-		"rotate" " -type \"double3\" -8.79614247281537764 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl" 
 		"rotateX" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl" 
@@ -2510,8 +2504,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl" 
 		"translateZ" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl" 
-		"rotate" " -type \"double3\" 53.58123471100126523 47.82705143909171142 -21.07830511314669053"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl" 
 		"rotateX" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl" 
@@ -2555,7 +2548,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl" 
 		"visibility" " -av 1"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl" 
-		"translate" " -type \"double3\" 0.092321549464270153 0 -2.85626200744202041"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl" 
 		"translateX" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl" 
@@ -2563,7 +2556,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl" 
 		"translateZ" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl" 
-		"rotate" " -type \"double3\" 0 78.99656414876191945 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl" 
 		"rotateX" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl" 
@@ -2685,7 +2678,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl" 
 		"visibility" " -av 1"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl" 
-		"translate" " -type \"double3\" 2.09317819880299627 0 -2.79691230841038241"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl" 
 		"translateX" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl" 
@@ -2737,7 +2730,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl" 
 		"visibility" " -av 1"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl" 
-		"translate" " -type \"double3\" -0.72701206782588312 0 0.28022832689280169"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl" 
 		"translateX" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl" 
@@ -2763,7 +2756,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl" 
 		"visibility" " -av 1"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl" 
-		"translate" " -type \"double3\" 0.04123723399573806 0 1.74345987444439854"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl" 
 		"translateX" " -av"
 		2 "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl" 
@@ -2894,8 +2887,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 		2 "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear" 
 		"visibility" " 1"
 		2 "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear" 
-		"translate" " -type \"double3\" -1.51745488680827956 1.95439968215124704 3.09539751270436359"
-		
+		"translate" " -type \"double3\" 0.048576616368665171 0.03424460799447715 0"
 		2 "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear" 
 		"translateX" " -av"
 		2 "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear" 
@@ -2903,8 +2895,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 		2 "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear" 
 		"translateZ" " -av"
 		2 "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear" 
-		"rotate" " -type \"double3\" -9.63447533351394014 -6.6074032521934738 -14.36068738920160115"
-		
+		"rotate" " -type \"double3\" 0 0 0.77896936086416058"
 		2 "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear" 
 		"rotateX" " -av"
 		2 "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear" 
@@ -2912,8 +2903,7 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 		2 "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear" 
 		"rotateZ" " -av"
 		2 "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear" 
-		"scale" " -type \"double3\" 0.99999999999999745 0.99999999999999944 0.99999999999999811"
-		
+		"scale" " -type \"double3\" 1 0.99999999999999989 1"
 		2 "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear" 
 		"scaleX" " -av"
 		2 "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear" 
@@ -3295,983 +3285,985 @@ createNode reference -n "DividedBaseBrotherMaleRN";
 		"DividedBaseBrotherMaleRN.placeHolderList[1231]" ""
 		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Clavical_Ctrl_Grp|DividedBaseBrotherMale:Left_Clavical_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1232]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Clavical_Ctrl_Grp|DividedBaseBrotherMale:Right_Clavical_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Clavical_Ctrl_Grp|DividedBaseBrotherMale:Left_Clavical_Ctrl.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1233]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Clavical_Ctrl_Grp|DividedBaseBrotherMale:Right_Clavical_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Clavical_Ctrl_Grp|DividedBaseBrotherMale:Right_Clavical_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1234]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Clavical_Ctrl_Grp|DividedBaseBrotherMale:Right_Clavical_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Clavical_Ctrl_Grp|DividedBaseBrotherMale:Right_Clavical_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1235]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Clavical_Ctrl_Grp|DividedBaseBrotherMale:Right_Clavical_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Clavical_Ctrl_Grp|DividedBaseBrotherMale:Right_Clavical_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1236]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Clavical_Ctrl_Grp|DividedBaseBrotherMale:Right_Clavical_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Clavical_Ctrl_Grp|DividedBaseBrotherMale:Right_Clavical_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1237]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Clavical_Ctrl_Grp|DividedBaseBrotherMale:Right_Clavical_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Clavical_Ctrl_Grp|DividedBaseBrotherMale:Right_Clavical_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1238]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Clavical_Ctrl_Grp|DividedBaseBrotherMale:Right_Clavical_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Clavical_Ctrl_Grp|DividedBaseBrotherMale:Right_Clavical_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1239]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Clavical_Ctrl_Grp|DividedBaseBrotherMale:Right_Clavical_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Clavical_Ctrl_Grp|DividedBaseBrotherMale:Right_Clavical_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1240]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Clavical_Ctrl_Grp|DividedBaseBrotherMale:Right_Clavical_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Clavical_Ctrl_Grp|DividedBaseBrotherMale:Right_Clavical_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1241]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Clavical_Ctrl_Grp|DividedBaseBrotherMale:Right_Clavical_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1242]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1243]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1244]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1245]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1246]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1247]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1248]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1249]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1250]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Right_Thumb_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1251]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Right_Thumb_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Right_Thumb_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1252]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Right_Thumb_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Right_Thumb_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1253]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Right_Thumb_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Right_Thumb_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1254]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Right_Thumb_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Right_Thumb_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1255]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Right_Thumb_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Right_Thumb_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1256]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Right_Thumb_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Right_Thumb_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1257]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Right_Thumb_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Right_Thumb_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1258]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Right_Thumb_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Right_Thumb_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1259]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Right_Thumb_Ctrl.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Right_Thumb_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1260]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Right_Thumb_Ctrl.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1261]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1262]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1263]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1264]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1265]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1266]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1267]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1268]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1269]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1270]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1271]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1272]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1273]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1274]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1275]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1276]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1277]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1278]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1279]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1280]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Index_Ctrl_2.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1281]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Index_Ctrl_2.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Index_Ctrl_2.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1282]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Index_Ctrl_2.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Index_Ctrl_2.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1283]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Index_Ctrl_2.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Index_Ctrl_2.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1284]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Index_Ctrl_2.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Index_Ctrl_2.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1285]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Index_Ctrl_2.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Index_Ctrl_2.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1286]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Index_Ctrl_2.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Index_Ctrl_2.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1287]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Index_Ctrl_2.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Index_Ctrl_2.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1288]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Index_Ctrl_2.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Index_Ctrl_2.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1289]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Index_Ctrl_2.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Index_Ctrl_2.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1290]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp|DividedBaseBrotherMale:Right_Index_Ctrl|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Index_Ctrl_1|DividedBaseBrotherMale:Right_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Index_Ctrl_2.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1291]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1292]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1293]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1294]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1295]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1296]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1297]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1298]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1299]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1300]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1301]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1302]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1303]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1304]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1305]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1306]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1307]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1308]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1309]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1310]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Middle_Ctrl_2.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1311]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Middle_Ctrl_2.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Middle_Ctrl_2.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1312]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Middle_Ctrl_2.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Middle_Ctrl_2.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1313]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Middle_Ctrl_2.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Middle_Ctrl_2.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1314]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Middle_Ctrl_2.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Middle_Ctrl_2.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1315]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Middle_Ctrl_2.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Middle_Ctrl_2.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1316]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Middle_Ctrl_2.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Middle_Ctrl_2.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1317]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Middle_Ctrl_2.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Middle_Ctrl_2.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1318]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Middle_Ctrl_2.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Middle_Ctrl_2.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1319]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Middle_Ctrl_2.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Middle_Ctrl_2.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1320]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp|DividedBaseBrotherMale:Right_Middle_Ctrl|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Middle_Ctrl_1|DividedBaseBrotherMale:Right_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Middle_Ctrl_2.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1321]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1322]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1323]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1324]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1325]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1326]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1327]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1328]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1329]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1330]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1331]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1332]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1333]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1334]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1335]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1336]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1337]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1338]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1339]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1340]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Ring_Ctrl_2.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1341]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Ring_Ctrl_2.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Ring_Ctrl_2.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1342]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Ring_Ctrl_2.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Ring_Ctrl_2.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1343]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Ring_Ctrl_2.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Ring_Ctrl_2.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1344]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Ring_Ctrl_2.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Ring_Ctrl_2.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1345]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Ring_Ctrl_2.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Ring_Ctrl_2.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1346]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Ring_Ctrl_2.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Ring_Ctrl_2.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1347]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Ring_Ctrl_2.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Ring_Ctrl_2.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1348]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Ring_Ctrl_2.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Ring_Ctrl_2.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1349]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Ring_Ctrl_2.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Ring_Ctrl_2.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1350]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp|DividedBaseBrotherMale:Right_Ring_Ctrl|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Ring_Ctrl_1|DividedBaseBrotherMale:Right_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Ring_Ctrl_2.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1351]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1352]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1353]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1354]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1355]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1356]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1357]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1358]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1359]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1360]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1361]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1362]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1363]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1364]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1365]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1366]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1367]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1368]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1369]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1370]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Pinky_Ctrl_2.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1371]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Pinky_Ctrl_2.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Pinky_Ctrl_2.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1372]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Pinky_Ctrl_2.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Pinky_Ctrl_2.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1373]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Pinky_Ctrl_2.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Pinky_Ctrl_2.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1374]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Pinky_Ctrl_2.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Pinky_Ctrl_2.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1375]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Pinky_Ctrl_2.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Pinky_Ctrl_2.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1376]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Pinky_Ctrl_2.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Pinky_Ctrl_2.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1377]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Pinky_Ctrl_2.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Pinky_Ctrl_2.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1378]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Pinky_Ctrl_2.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Pinky_Ctrl_2.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1379]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Pinky_Ctrl_2.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Pinky_Ctrl_2.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1380]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Right_Hand_Ctrl_Grp|DividedBaseBrotherMale:Right_Hand_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Right_Pinky_Ctrl|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_1|DividedBaseBrotherMale:Right_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Right_Pinky_Ctrl_2.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1381]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1382]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1383]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1384]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1385]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1386]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1387]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1388]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1389]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Left_Thumb_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1390]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Left_Thumb_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Left_Thumb_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1391]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Left_Thumb_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Left_Thumb_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1392]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Left_Thumb_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Left_Thumb_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1393]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Left_Thumb_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Left_Thumb_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1394]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Left_Thumb_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Left_Thumb_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1395]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Left_Thumb_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Left_Thumb_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1396]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Left_Thumb_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Left_Thumb_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1397]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Left_Thumb_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Left_Thumb_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1398]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Left_Thumb_Ctrl.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Left_Thumb_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1399]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Thumb_Ctrl_Grp|DividedBaseBrotherMale:Left_Thumb_Ctrl.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1400]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1401]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1402]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1403]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1404]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1405]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1406]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1407]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1408]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1409]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1410]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1411]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1412]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1413]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1414]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1415]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1416]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1417]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1418]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1419]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Index_Ctrl_2.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1420]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Index_Ctrl_2.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Index_Ctrl_2.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1421]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Index_Ctrl_2.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Index_Ctrl_2.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1422]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Index_Ctrl_2.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Index_Ctrl_2.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1423]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Index_Ctrl_2.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Index_Ctrl_2.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1424]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Index_Ctrl_2.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Index_Ctrl_2.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1425]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Index_Ctrl_2.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Index_Ctrl_2.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1426]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Index_Ctrl_2.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Index_Ctrl_2.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1427]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Index_Ctrl_2.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Index_Ctrl_2.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1428]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Index_Ctrl_2.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Index_Ctrl_2.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1429]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp|DividedBaseBrotherMale:Left_Index_Ctrl|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Index_Ctrl_1|DividedBaseBrotherMale:Left_Index_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Index_Ctrl_2.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1430]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1431]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1432]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1433]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1434]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1435]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1436]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1437]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1438]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1439]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1440]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1441]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1442]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1443]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1444]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1445]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1446]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1447]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1448]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1449]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Middle_Ctrl_2.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1450]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Middle_Ctrl_2.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Middle_Ctrl_2.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1451]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Middle_Ctrl_2.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Middle_Ctrl_2.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1452]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Middle_Ctrl_2.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Middle_Ctrl_2.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1453]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Middle_Ctrl_2.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Middle_Ctrl_2.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1454]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Middle_Ctrl_2.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Middle_Ctrl_2.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1455]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Middle_Ctrl_2.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Middle_Ctrl_2.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1456]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Middle_Ctrl_2.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Middle_Ctrl_2.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1457]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Middle_Ctrl_2.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Middle_Ctrl_2.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1458]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Middle_Ctrl_2.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Middle_Ctrl_2.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1459]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp|DividedBaseBrotherMale:Left_Middle_Ctrl|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Middle_Ctrl_1|DividedBaseBrotherMale:Left_Middle_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Middle_Ctrl_2.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1460]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1461]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1462]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1463]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1464]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1465]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1466]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1467]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1468]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1469]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1470]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1471]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1472]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1473]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1474]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1475]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1476]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1477]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1478]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1479]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Ring_Ctrl_2.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1480]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Ring_Ctrl_2.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Ring_Ctrl_2.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1481]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Ring_Ctrl_2.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Ring_Ctrl_2.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1482]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Ring_Ctrl_2.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Ring_Ctrl_2.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1483]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Ring_Ctrl_2.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Ring_Ctrl_2.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1484]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Ring_Ctrl_2.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Ring_Ctrl_2.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1485]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Ring_Ctrl_2.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Ring_Ctrl_2.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1486]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Ring_Ctrl_2.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Ring_Ctrl_2.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1487]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Ring_Ctrl_2.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Ring_Ctrl_2.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1488]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Ring_Ctrl_2.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Ring_Ctrl_2.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1489]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp|DividedBaseBrotherMale:Left_Ring_Ctrl|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Ring_Ctrl_1|DividedBaseBrotherMale:Left_Ring_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Ring_Ctrl_2.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1490]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1491]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1492]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1493]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1494]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1495]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1496]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1497]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1498]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1499]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1500]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1501]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1502]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1503]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1504]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1505]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1506]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1507]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1508]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1509]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Pinky_Ctrl_2.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1510]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Pinky_Ctrl_2.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Pinky_Ctrl_2.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1511]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Pinky_Ctrl_2.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Pinky_Ctrl_2.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1512]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Pinky_Ctrl_2.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Pinky_Ctrl_2.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1513]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Pinky_Ctrl_2.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Pinky_Ctrl_2.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1514]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Pinky_Ctrl_2.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Pinky_Ctrl_2.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1515]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Pinky_Ctrl_2.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Pinky_Ctrl_2.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1516]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Pinky_Ctrl_2.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Pinky_Ctrl_2.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1517]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Pinky_Ctrl_2.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Pinky_Ctrl_2.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1518]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Pinky_Ctrl_2.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Pinky_Ctrl_2.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1519]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Left_Hand_Ctrl_Grp|DividedBaseBrotherMale:Left_Hand_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp|DividedBaseBrotherMale:Left_Pinky_Ctrl|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_1|DividedBaseBrotherMale:Left_Pinky_Ctrl_Grp_2|DividedBaseBrotherMale:Left_Pinky_Ctrl_2.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1520]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1521]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1522]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1523]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1524]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1525]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1526]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1527]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1528]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1529]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Shoulder_Ctrl.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1530]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1531]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1532]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1533]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1534]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1535]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1536]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1537]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1538]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1539]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Elbow_Ctrl.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1540]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1541]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1542]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1543]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1544]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1545]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1546]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1547]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1548]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1549]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Right_Wrist_Ctrl.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1550]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1551]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1552]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1553]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1554]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1555]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1556]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1557]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1558]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1559]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Shoulder_Ctrl.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1560]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1561]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1562]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1563]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1564]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1565]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1566]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1567]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1568]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1569]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Elbow_Ctrl.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1570]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1571]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1572]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1573]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1574]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1575]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1576]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1577]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1578]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1579]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Waist_Ctrl_Grp|DividedBaseBrotherMale:Waist_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Upper_Torso_Ctrl_Grp|DividedBaseBrotherMale:Upper_Torso_Ctrl|DividedBaseBrotherMale:Fk_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Arm_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl_Grp|DividedBaseBrotherMale:Fk_Left_Wrist_Ctrl.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1580]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Waist_Ctrl_Grp|DividedBaseBrotherMale:Waist_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Waist_Ctrl_Grp|DividedBaseBrotherMale:Waist_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1581]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Waist_Ctrl_Grp|DividedBaseBrotherMale:Waist_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Waist_Ctrl_Grp|DividedBaseBrotherMale:Waist_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1582]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Waist_Ctrl_Grp|DividedBaseBrotherMale:Waist_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Waist_Ctrl_Grp|DividedBaseBrotherMale:Waist_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1583]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Waist_Ctrl_Grp|DividedBaseBrotherMale:Waist_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Waist_Ctrl_Grp|DividedBaseBrotherMale:Waist_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1584]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Waist_Ctrl_Grp|DividedBaseBrotherMale:Waist_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Waist_Ctrl_Grp|DividedBaseBrotherMale:Waist_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1585]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Waist_Ctrl_Grp|DividedBaseBrotherMale:Waist_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Waist_Ctrl_Grp|DividedBaseBrotherMale:Waist_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1586]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Waist_Ctrl_Grp|DividedBaseBrotherMale:Waist_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Waist_Ctrl_Grp|DividedBaseBrotherMale:Waist_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1587]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Waist_Ctrl_Grp|DividedBaseBrotherMale:Waist_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Waist_Ctrl_Grp|DividedBaseBrotherMale:Waist_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1588]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Waist_Ctrl_Grp|DividedBaseBrotherMale:Waist_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1589]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1590]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1591]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1592]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1593]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1594]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1595]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1596]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1597]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1598]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1599]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1600]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1601]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1602]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1603]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1604]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1605]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1606]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1607]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1608]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1609]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1610]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1611]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1612]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1613]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1614]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1615]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1616]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1617]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1618]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1619]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1620]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1621]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1622]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1623]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1624]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Foor_Ctrl|DividedBaseBrotherMale:Ik_Left_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1625]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1626]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1627]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1628]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1629]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1630]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1631]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1632]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1633]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1634]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1635]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1636]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1637]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1638]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1639]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1640]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1641]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1642]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1643]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Left_Leg_Pole_Vector_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1644]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1645]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1646]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1647]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1648]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1649]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1650]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1651]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1652]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1653]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1654]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1655]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1656]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1657]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1658]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1659]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1660]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1661]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1662]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Pole_Vector_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1663]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1664]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1665]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1666]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1667]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1668]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1669]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1670]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1671]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1672]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1673]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1674]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1675]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1676]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1677]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1678]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1679]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1680]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1681]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1682]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1683]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1684]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1685]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1686]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1687]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1688]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1689]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1690]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1691]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1692]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1693]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1694]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1695]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1696]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1697]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1698]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear|DividedBaseBrotherMale:Spear_Ctrl.HipHandGrip" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Ctrls|DividedBaseBrotherMale:Transform_Ctrl_Grp|DividedBaseBrotherMale:Transform_Ctrl|DividedBaseBrotherMale:Ik_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Leg_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foot_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Foor_Ctrl|DividedBaseBrotherMale:Ik_Right_Heel_Ctrl_Grp|DividedBaseBrotherMale:Ik_Right_Heel_CTrl|DividedBaseBrotherMale:Ik_Toe_Crtl_Grp|DividedBaseBrotherMale:Ik_Toe_Ctrl|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl_Grp|DividedBaseBrotherMale:Ik_Toe_Lifter_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1699]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear|DividedBaseBrotherMale:Spear_Ctrl.visibility" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear|DividedBaseBrotherMale:Spear_Ctrl.HipHandGrip" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1700]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear|DividedBaseBrotherMale:Spear_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear|DividedBaseBrotherMale:Spear_Ctrl.visibility" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1701]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear|DividedBaseBrotherMale:Spear_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear|DividedBaseBrotherMale:Spear_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1702]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear|DividedBaseBrotherMale:Spear_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear|DividedBaseBrotherMale:Spear_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1703]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear|DividedBaseBrotherMale:Spear_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear|DividedBaseBrotherMale:Spear_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1704]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear|DividedBaseBrotherMale:Spear_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear|DividedBaseBrotherMale:Spear_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1705]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear|DividedBaseBrotherMale:Spear_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear|DividedBaseBrotherMale:Spear_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1706]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear|DividedBaseBrotherMale:Spear_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear|DividedBaseBrotherMale:Spear_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1707]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear|DividedBaseBrotherMale:Spear_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear|DividedBaseBrotherMale:Spear_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1708]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear|DividedBaseBrotherMale:Spear_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear|DividedBaseBrotherMale:Spear_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1709]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Revieve_container_grp|DividedBaseBrotherMale:Revive_Ctrl.Hip_HandGrip" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Spear|DividedBaseBrotherMale:Spear_Ctrl.scaleZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1710]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Revieve_container_grp|DividedBaseBrotherMale:Revive_Ctrl.translateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Revieve_container_grp|DividedBaseBrotherMale:Revive_Ctrl.Hip_HandGrip" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1711]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Revieve_container_grp|DividedBaseBrotherMale:Revive_Ctrl.translateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Revieve_container_grp|DividedBaseBrotherMale:Revive_Ctrl.translateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1712]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Revieve_container_grp|DividedBaseBrotherMale:Revive_Ctrl.translateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Revieve_container_grp|DividedBaseBrotherMale:Revive_Ctrl.translateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1713]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Revieve_container_grp|DividedBaseBrotherMale:Revive_Ctrl.rotateX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Revieve_container_grp|DividedBaseBrotherMale:Revive_Ctrl.translateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1714]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Revieve_container_grp|DividedBaseBrotherMale:Revive_Ctrl.rotateY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Revieve_container_grp|DividedBaseBrotherMale:Revive_Ctrl.rotateX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1715]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Revieve_container_grp|DividedBaseBrotherMale:Revive_Ctrl.rotateZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Revieve_container_grp|DividedBaseBrotherMale:Revive_Ctrl.rotateY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1716]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Revieve_container_grp|DividedBaseBrotherMale:Revive_Ctrl.scaleX" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Revieve_container_grp|DividedBaseBrotherMale:Revive_Ctrl.rotateZ" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1717]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Revieve_container_grp|DividedBaseBrotherMale:Revive_Ctrl.scaleY" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Revieve_container_grp|DividedBaseBrotherMale:Revive_Ctrl.scaleX" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1718]" ""
-		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Revieve_container_grp|DividedBaseBrotherMale:Revive_Ctrl.scaleZ" 
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Revieve_container_grp|DividedBaseBrotherMale:Revive_Ctrl.scaleY" 
 		"DividedBaseBrotherMaleRN.placeHolderList[1719]" ""
+		5 4 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Props|DividedBaseBrotherMale:Geometry|DividedBaseBrotherMale:Revieve_container_grp|DividedBaseBrotherMale:Revive_Ctrl.scaleZ" 
+		"DividedBaseBrotherMaleRN.placeHolderList[1720]" ""
 		5 0 "DividedBaseBrotherMaleRN" "|DividedBaseBrotherMale:Mannequin|DividedBaseBrotherMale:Skeleton|DividedBaseBrotherMale:RK|DividedBaseBrotherMale:COG_Jnt|DividedBaseBrotherMale:Spine_01_Jnt.message" 
-		"DividedBaseBrotherMale:skinCluster6.paintTrans" "DividedBaseBrotherMaleRN.placeHolderList[1720]" 
-		"DividedBaseBrotherMaleRN.placeHolderList[1721]" "";
+		"DividedBaseBrotherMale:skinCluster6.paintTrans" "DividedBaseBrotherMaleRN.placeHolderList[1721]" 
+		"DividedBaseBrotherMaleRN.placeHolderList[1722]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode script -n "uiConfigurationScriptNode";
@@ -4322,7 +4314,7 @@ createNode script -n "uiConfigurationScriptNode";
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "1D35F5C9-4459-D400-025C-74A13316F278";
-	setAttr ".b" -type "string" "playbackOptions -min 760 -max 1012 -ast -1 -aet 1243 ";
+	setAttr ".b" -type "string" "playbackOptions -min -1 -max 1243 -ast -1 -aet 1243 ";
 	setAttr ".st" 6;
 createNode animCurveTL -n "COG_Ctrl_translateX";
 	rename -uid "430ED884-4417-9800-5142-C09FDF71237F";
@@ -4499,117 +4491,161 @@ createNode animCurveTL -n "Fk_Left_Elbow_Ctrl_translateX";
 	rename -uid "87EBE5D7-43FF-10EB-2F23-F5ABF14A01FC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 118 ".ktv[0:117]"  0 0 1 0 15 0 34 0 48 0 58 0 78 0 88 0 138 0
+	setAttr -s 119 ".ktv[0:118]"  0 0 1 0 15 0 34 0 48 0 58 0 78 0 88 0 138 0
 		 188 0 218 0 238 0 278 0 298 0 328 0 359 0 388 0 403 0 406 0 410 0 456 0 478 0 483 0
 		 500 0 511 0 600 0 609 0 610 0 617 0 620 0 624 0 631 0 634 0 638 0 640 0 647 0 652 0
 		 655 0 658 0 668 0 669 0 671 0 672 0 674 0 675 0 677 0 678 0 680 0 681 0 683 0 684 0
 		 686 0 689 0 692 0 695 0 698 0 705 0 710 0 711 0 720 0 734 0 758 0 800 0 900 0 952 0
 		 958 0 966 0 976 0 977 0 982 0 983 0 984 0 986 0 989 0 992 0 997 0 999 0 1003 0 1008 0
-		 1010 0 1011 0 1015 0 1020 0 1025 0 1031 0 1037 0 1043 0 1049 0 1050 0 1059 0 1061 0
-		 1065 0 1070 0 1075 0 1085 0 1087 0 1089 0 1091 0 1093 0 1095 0 1099 0 1104 0 1105 0
-		 1107 0 1121 0 1125 0 1131 0 1134 0 1136 0 1138 0 1147 0 1149 0 1151 0 1156 0 1158 0
-		 1161 0 1164 0 1178 0;
-	setAttr -s 118 ".kit[15:117]"  1 18 1 1 1 18 18 18 
+		 1009 0 1010 0 1011 0 1015 0 1020 0 1025 0 1031 0 1037 0 1043 0 1049 0 1050 0 1059 0
+		 1061 0 1065 0 1070 0 1075 0 1085 0 1087 0 1089 0 1091 0 1093 0 1095 0 1099 0 1104 0
+		 1105 0 1107 0 1121 0 1125 0 1131 0 1134 0 1136 0 1138 0 1147 0 1149 0 1151 0 1156 0
+		 1158 0 1161 0 1164 0 1178 0;
+	setAttr -s 119 ".kit[15:118]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 1 
+		18 18 18 18 18 1 1 1 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 118 ".kot[15:117]"  1 18 1 1 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 119 ".kot[15:118]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 1 
+		18 18 18 18 18 1 1 1 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 118 ".kix[15:117]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		18 18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 119 ".kix[15:118]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1;
-	setAttr -s 118 ".kiy[15:117]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1 1;
+	setAttr -s 119 ".kiy[15:118]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0;
-	setAttr -s 118 ".kox[15:117]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		0 0;
+	setAttr -s 119 ".kox[15:118]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1;
-	setAttr -s 118 ".koy[15:117]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1 1;
+	setAttr -s 119 ".koy[15:118]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0;
+		0 0;
 createNode animCurveTL -n "Fk_Left_Elbow_Ctrl_translateY";
 	rename -uid "BA5958B7-419E-9FAB-AD1B-F3B7DDA3029E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 118 ".ktv[0:117]"  0 0 1 0 15 0 34 0 48 0 58 0 78 0 88 0 138 0
+	setAttr -s 119 ".ktv[0:118]"  0 0 1 0 15 0 34 0 48 0 58 0 78 0 88 0 138 0
 		 188 0 218 0 238 0 278 0 298 0 328 0 359 0 388 0 403 0 406 0 410 0 456 0 478 0 483 0
 		 500 0 511 0 600 0 609 0 610 0 617 0 620 0 624 0 631 0 634 0 638 0 640 0 647 0 652 0
 		 655 0 658 0 668 0 669 0 671 0 672 0 674 0 675 0 677 0 678 0 680 0 681 0 683 0 684 0
 		 686 0 689 0 692 0 695 0 698 0 705 0 710 0 711 0 720 0 734 0 758 0 800 0 900 0 952 0
 		 958 0 966 0 976 0 977 0 982 0 983 0 984 0 986 0 989 0 992 0 997 0 999 0 1003 0 1008 0
-		 1010 0 1011 0 1015 0 1020 0 1025 0 1031 0 1037 0 1043 0 1049 0 1050 0 1059 0 1061 0
-		 1065 0 1070 0 1075 0 1085 0 1087 0 1089 0 1091 0 1093 0 1095 0 1099 0 1104 0 1105 0
-		 1107 0 1121 0 1125 0 1131 0 1134 0 1136 0 1138 0 1147 0 1149 0 1151 0 1156 0 1158 0
-		 1161 0 1164 0 1178 0;
-	setAttr -s 118 ".kit[15:117]"  1 18 1 1 1 18 18 18 
+		 1009 0 1010 0 1011 0 1015 0 1020 0 1025 0 1031 0 1037 0 1043 0 1049 0 1050 0 1059 0
+		 1061 0 1065 0 1070 0 1075 0 1085 0 1087 0 1089 0 1091 0 1093 0 1095 0 1099 0 1104 0
+		 1105 0 1107 0 1121 0 1125 0 1131 0 1134 0 1136 0 1138 0 1147 0 1149 0 1151 0 1156 0
+		 1158 0 1161 0 1164 0 1178 0;
+	setAttr -s 119 ".kit[15:118]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 1 
+		18 18 18 18 18 1 1 1 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 118 ".kot[15:117]"  1 18 1 1 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 119 ".kot[15:118]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 1 
+		18 18 18 18 18 1 1 1 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 118 ".kix[15:117]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		18 18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 119 ".kix[15:118]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1;
-	setAttr -s 118 ".kiy[15:117]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1 1;
+	setAttr -s 119 ".kiy[15:118]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0;
-	setAttr -s 118 ".kox[15:117]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		0 0;
+	setAttr -s 119 ".kox[15:118]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1;
-	setAttr -s 118 ".koy[15:117]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1 1;
+	setAttr -s 119 ".koy[15:118]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0;
+		0 0;
 createNode animCurveTL -n "Fk_Left_Elbow_Ctrl_translateZ";
 	rename -uid "19360034-4FE0-C4FF-3839-5FB744CD8A14";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 118 ".ktv[0:117]"  0 0 1 0 15 0 34 0 48 0 58 0 78 0 88 0 138 0
+	setAttr -s 119 ".ktv[0:118]"  0 0 1 0 15 0 34 0 48 0 58 0 78 0 88 0 138 0
 		 188 0 218 0 238 0 278 0 298 0 328 0 359 0 388 0 403 0 406 0 410 0 456 0 478 0 483 0
 		 500 0 511 0 600 0 609 0 610 0 617 0 620 0 624 0 631 0 634 0 638 0 640 0 647 0 652 0
 		 655 0 658 0 668 0 669 0 671 0 672 0 674 0 675 0 677 0 678 0 680 0 681 0 683 0 684 0
 		 686 0 689 0 692 0 695 0 698 0 705 0 710 0 711 0 720 0 734 0 758 0 800 0 900 0 952 0
 		 958 0 966 0 976 0 977 0 982 0 983 0 984 0 986 0 989 0 992 0 997 0 999 0 1003 0 1008 0
-		 1010 0 1011 0 1015 0 1020 0 1025 0 1031 0 1037 0 1043 0 1049 0 1050 0 1059 0 1061 0
-		 1065 0 1070 0 1075 0 1085 0 1087 0 1089 0 1091 0 1093 0 1095 0 1099 0 1104 0 1105 0
-		 1107 0 1121 0 1125 0 1131 0 1134 0 1136 0 1138 0 1147 0 1149 0 1151 0 1156 0 1158 0
-		 1161 0 1164 0 1178 0;
-	setAttr -s 118 ".kit[15:117]"  1 18 1 1 1 18 18 18 
+		 1009 0 1010 0 1011 0 1015 0 1020 0 1025 0 1031 0 1037 0 1043 0 1049 0 1050 0 1059 0
+		 1061 0 1065 0 1070 0 1075 0 1085 0 1087 0 1089 0 1091 0 1093 0 1095 0 1099 0 1104 0
+		 1105 0 1107 0 1121 0 1125 0 1131 0 1134 0 1136 0 1138 0 1147 0 1149 0 1151 0 1156 0
+		 1158 0 1161 0 1164 0 1178 0;
+	setAttr -s 119 ".kit[15:118]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 1 
+		18 18 18 18 18 1 1 1 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 119 ".kot[15:118]"  1 18 1 1 1 18 18 18 
+		18 1 1 18 18 18 18 18 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 1 
+		18 18 18 18 18 1 1 1 18 18 18 18 18 18 1 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 119 ".kix[15:118]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1;
+	setAttr -s 119 ".kiy[15:118]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0;
+	setAttr -s 119 ".kox[15:118]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1;
+	setAttr -s 119 ".koy[15:118]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0;
+createNode animCurveTL -n "Fk_Left_Shoulder_Ctrl_translateX";
+	rename -uid "05E3B82D-4344-092C-9099-5092468C3E49";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 118 ".ktv[0:117]"  0 0 1 0 15 0 28 0 36 0 52 0 58 0 88 0 108 0
+		 138 0 158 0 188 0 218 0 238 0 278 0 298 0 328 0 359 0 388 0 403 0 406 0 410 0 456 0
+		 474 0 483 0 500 0 511 0 600 0 609 0 610 0 617 0 624 0 631 0 638 0 640 0 641 0 647 0
+		 652 0 655 0 658 0 668 0 669 0 671 0 672 0 674 0 675 0 677 0 678 0 680 0 681 0 683 0
+		 684 0 686 0 689 0 692 0 695 0 698 0 705 0 710 0 711 0 720 0 734 0 758 0 800 0 900 0
+		 952 0 958 0 969 0 976 0 977 0 982 0 983 0 985 0 986 0 987 0 989 0 990 0 992 0 997 0
+		 999 0 1003 0 1008 0 1009 0 1010 0 1011 0 1015 0 1020 0 1025 0 1031 0 1037 0 1043 0
+		 1049 0 1050 0 1060 0 1065 0 1070 0 1072 0 1075 0 1085 0 1087 0 1089 0 1091 0 1093 0
+		 1104 0 1105 0 1107 0 1121 0 1131 0 1134 0 1136 0 1138 0 1147 0 1149 0 1151 0 1156 0
+		 1159 0 1164 0 1178 0;
+	setAttr -s 118 ".kit[15:117]"  1 1 1 18 1 1 1 18 
+		18 18 18 18 1 18 18 18 18 18 18 18 18 18 18 1 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 
+		18 18 18 18 18 18 18 18 1 1 1 18 18 18 18 18 18 
+		1 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 118 ".kot[15:117]"  1 18 1 1 1 18 18 18 
-		18 1 1 18 18 18 18 18 18 18 18 18 18 18 1 18 18 
+	setAttr -s 118 ".kot[15:117]"  1 1 1 18 1 1 1 18 
+		18 18 18 18 1 18 18 18 18 18 18 18 18 18 18 1 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 1 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 
+		18 18 18 18 18 18 18 18 1 1 1 18 18 18 18 18 18 
+		1 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18;
 	setAttr -s 118 ".kix[15:117]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
@@ -4627,243 +4663,212 @@ createNode animCurveTL -n "Fk_Left_Elbow_Ctrl_translateZ";
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0;
-createNode animCurveTL -n "Fk_Left_Shoulder_Ctrl_translateX";
-	rename -uid "05E3B82D-4344-092C-9099-5092468C3E49";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 117 ".ktv[0:116]"  0 0 1 0 15 0 28 0 36 0 52 0 58 0 88 0 108 0
-		 138 0 158 0 188 0 218 0 238 0 278 0 298 0 328 0 359 0 388 0 403 0 406 0 410 0 456 0
-		 474 0 483 0 500 0 510 0 600 0 609 0 610 0 617 0 624 0 631 0 638 0 640 0 641 0 647 0
-		 652 0 655 0 658 0 668 0 669 0 671 0 672 0 674 0 675 0 677 0 678 0 680 0 681 0 683 0
-		 684 0 686 0 689 0 692 0 695 0 698 0 705 0 710 0 711 0 720 0 734 0 758 0 800 0 900 0
-		 952 0 958 0 969 0 976 0 977 0 982 0 983 0 985 0 986 0 987 0 989 0 990 0 992 0 997 0
-		 999 0 1003 0 1008 0 1010 0 1011 0 1015 0 1020 0 1025 0 1031 0 1037 0 1043 0 1049 0
-		 1050 0 1060 0 1065 0 1070 0 1072 0 1075 0 1085 0 1087 0 1089 0 1091 0 1093 0 1104 0
-		 1105 0 1107 0 1121 0 1131 0 1134 0 1136 0 1138 0 1147 0 1149 0 1151 0 1156 0 1159 0
-		 1164 0 1178 0;
-	setAttr -s 117 ".kit[15:116]"  1 1 1 18 1 1 1 18 
-		18 18 18 18 1 18 18 18 18 18 18 18 18 18 18 1 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18;
-	setAttr -s 117 ".kot[15:116]"  1 1 1 18 1 1 1 18 
-		18 18 18 18 1 18 18 18 18 18 18 18 18 18 18 1 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18;
-	setAttr -s 117 ".kix[15:116]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 117 ".kiy[15:116]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 117 ".kox[15:116]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 117 ".koy[15:116]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "Fk_Left_Shoulder_Ctrl_translateY";
 	rename -uid "3C75F173-4100-3A86-623A-0C8D7797C29B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 117 ".ktv[0:116]"  0 0 1 0 15 0 28 0 36 -0.15353543165593564
+	setAttr -s 118 ".ktv[0:117]"  0 0 1 0 15 0 28 0 36 -0.15353543165593564
 		 52 0.12419365210983813 58 0 88 0 108 0.061940681373773288 138 0 158 0.061940681373773288
 		 188 0 218 0 238 0 278 0 298 0 328 0 359 0 388 0 403 0 406 0 410 0 456 0 474 0 483 0
-		 500 0 510 0 600 0 609 0 610 0 617 0 624 0 631 0 638 0 640 0 641 0 647 0 652 0 655 0
+		 500 0 511 0 600 0 609 0 610 0 617 0 624 0 631 0 638 0 640 0 641 0 647 0 652 0 655 0
 		 658 0 668 0 669 0 671 0 672 0 674 0 675 0 677 0 678 0 680 0 681 0 683 0 684 0 686 0
 		 689 0 692 0 695 0 698 0 705 0 710 0 711 0 720 0 734 0 758 0 800 0 900 0 952 0 958 0
 		 969 0 976 0 977 0 982 0 983 0 985 0 986 0 987 0 989 0 990 0 992 0 997 0 999 0 1003 0
-		 1008 0 1010 0 1011 0 1015 0 1020 0 1025 0 1031 0 1037 0 1043 0 1049 0 1050 0 1060 0
-		 1065 0 1070 0 1072 0 1075 0 1085 0 1087 0 1089 0 1091 0 1093 0 1104 0 1105 0 1107 0
-		 1121 0 1131 0 1134 0 1136 0 1138 0 1147 0 1149 0 1151 0 1156 0 1159 0 1164 0 1178 0;
-	setAttr -s 117 ".kit[15:116]"  1 1 1 18 1 1 1 18 
+		 1008 0 1009 0 1010 0 1011 0 1015 0 1020 0 1025 0 1031 0 1037 0 1043 0 1049 0 1050 0
+		 1060 0 1065 0 1070 0 1072 0 1075 0 1085 0 1087 0 1089 0 1091 0 1093 0 1104 0 1105 0
+		 1107 0 1121 0 1131 0 1134 0 1136 0 1138 0 1147 0 1149 0 1151 0 1156 0 1159 0 1164 0
+		 1178 0;
+	setAttr -s 118 ".kit[15:117]"  1 1 1 18 1 1 1 18 
 		18 18 18 18 1 18 18 18 18 18 18 18 18 18 18 1 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18;
-	setAttr -s 117 ".kot[15:116]"  1 1 1 18 1 1 1 18 
+		18 18 18 18 18 18 18 18 1 1 1 18 18 18 18 18 18 
+		1 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 118 ".kot[15:117]"  1 1 1 18 1 1 1 18 
 		18 18 18 18 1 18 18 18 18 18 18 18 18 18 18 1 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18;
-	setAttr -s 117 ".kix[15:116]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		18 18 18 18 18 18 18 18 1 1 1 18 18 18 18 18 18 
+		1 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 118 ".kix[15:117]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 117 ".kiy[15:116]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 117 ".kox[15:116]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 117 ".koy[15:116]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1;
+	setAttr -s 118 ".kiy[15:117]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
+	setAttr -s 118 ".kox[15:117]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1;
+	setAttr -s 118 ".koy[15:117]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
 createNode animCurveTL -n "Fk_Left_Shoulder_Ctrl_translateZ";
 	rename -uid "4B319664-47F5-8D05-31F3-8AA8D800E8CB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 117 ".ktv[0:116]"  0 0 1 0 15 0 28 0 36 0 52 0 58 0 88 0 108 0
+	setAttr -s 118 ".ktv[0:117]"  0 0 1 0 15 0 28 0 36 0 52 0 58 0 88 0 108 0
 		 138 0 158 0 188 0 218 0 238 0 278 0 298 0 328 0 359 0 388 0 403 0 406 0 410 0 456 0
-		 474 0 483 0 500 0 510 0 600 0 609 0 610 0 617 0 624 0 631 0 638 0 640 0 641 0 647 0
+		 474 0 483 0 500 0 511 0 600 0 609 0 610 0 617 0 624 0 631 0 638 0 640 0 641 0 647 0
 		 652 0 655 0 658 0 668 0 669 0 671 0 672 0 674 0 675 0 677 0 678 0 680 0 681 0 683 0
 		 684 0 686 0 689 0 692 0 695 0 698 0 705 0 710 0 711 0 720 0 734 0 758 0 800 0 900 0
 		 952 0 958 0 969 0 976 0 977 0 982 0 983 0 985 0 986 0 987 0 989 0 990 0 992 0 997 0
-		 999 0 1003 0 1008 0 1010 0 1011 0 1015 0 1020 0 1025 0 1031 0 1037 0 1043 0 1049 0
-		 1050 0 1060 0 1065 0 1070 0 1072 0 1075 0 1085 0 1087 0 1089 0 1091 0 1093 0 1104 0
-		 1105 0 1107 0 1121 0 1131 0 1134 0 1136 0 1138 0 1147 0 1149 0 1151 0 1156 0 1159 0
-		 1164 0 1178 0;
-	setAttr -s 117 ".kit[15:116]"  1 1 1 18 1 1 1 18 
+		 999 0 1003 0 1008 0 1009 0 1010 0 1011 0 1015 0 1020 0 1025 0 1031 0 1037 0 1043 0
+		 1049 0 1050 0 1060 0 1065 0 1070 0 1072 0 1075 0 1085 0 1087 0 1089 0 1091 0 1093 0
+		 1104 0 1105 0 1107 0 1121 0 1131 0 1134 0 1136 0 1138 0 1147 0 1149 0 1151 0 1156 0
+		 1159 0 1164 0 1178 0;
+	setAttr -s 118 ".kit[15:117]"  1 1 1 18 1 1 1 18 
 		18 18 18 18 1 18 18 18 18 18 18 18 18 18 18 1 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18;
-	setAttr -s 117 ".kot[15:116]"  1 1 1 18 1 1 1 18 
+		18 18 18 18 18 18 18 18 1 1 1 18 18 18 18 18 18 
+		1 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 118 ".kot[15:117]"  1 1 1 18 1 1 1 18 
 		18 18 18 18 1 18 18 18 18 18 18 18 18 18 18 1 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18;
-	setAttr -s 117 ".kix[15:116]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		18 18 18 18 18 18 18 18 1 1 1 18 18 18 18 18 18 
+		1 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 118 ".kix[15:117]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 117 ".kiy[15:116]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 117 ".kox[15:116]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 117 ".koy[15:116]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1;
+	setAttr -s 118 ".kiy[15:117]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
+	setAttr -s 118 ".kox[15:117]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1;
+	setAttr -s 118 ".koy[15:117]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
 createNode animCurveTL -n "Fk_Left_Wrist_Ctrl_translateX";
 	rename -uid "EEC9CC21-49F0-02CA-2CA5-D2AA06F5C592";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 113 ".ktv[0:112]"  0 0 1 0 19 0 58 0 78 0 88 0 138 0 188 0
+	setAttr -s 114 ".ktv[0:113]"  0 0 1 0 19 0 58 0 78 0 88 0 138 0 188 0
 		 218 0 238 0 278 0 298 0 328 0 359 0 388 0 403 0 406 0 410 0 456 0 478 0 483 0 500 0
 		 511 0 600 0 609 0 610 0 617 0 624 0 631 0 638 0 640 0 641 0 647 0 652 0 655 0 658 0
 		 668 0 669 0 671 0 672 0 674 0 675 0 677 0 678 0 680 0 681 0 683 0 684 0 686 0 689 0
 		 692 0 695 0 698 0 705 0 710 0 711 0 720 0 734 0 758 0 783 0 794 0 800 0 900 0 910 0
 		 952 0 958 0 966 0 976 0 977 0 982 0 983 0 984 0 986 0 989 0 992 0 997 0 999 0 1003 0
-		 1008 0 1010 0 1011 0 1015 0 1020 0 1025 0 1043 0 1049 0 1050 0 1060 0 1062 0 1070 0
-		 1072 0 1075 0 1085 0 1087 0 1089 0 1091 0 1093 0 1104 0 1105 0 1107 0 1121 0 1131 0
-		 1134 0 1136 0 1138 0 1147 0 1149 0 1151 0 1156 0 1159 0 1161 0 1164 0 1178 0;
-	setAttr -s 113 ".kit[13:112]"  1 18 1 1 1 18 18 18 
+		 1008 0 1009 0 1010 0 1011 0 1015 0 1020 0 1025 0 1043 0 1049 0 1050 0 1060 0 1062 0
+		 1070 0 1072 0 1075 0 1085 0 1087 0 1089 0 1091 0 1093 0 1104 0 1105 0 1107 0 1121 0
+		 1131 0 1134 0 1136 0 1138 0 1147 0 1149 0 1151 0 1156 0 1159 0 1161 0 1164 0 1178 0;
+	setAttr -s 114 ".kit[13:113]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 1 18 
+		18 18 18 18 18 18 18 1 1 1 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18;
-	setAttr -s 113 ".kot[13:112]"  1 18 1 1 1 18 18 18 
+		18 18 18 18 18 18 18 18;
+	setAttr -s 114 ".kot[13:113]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 1 18 
+		18 18 18 18 18 18 18 1 1 1 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18;
-	setAttr -s 113 ".kix[13:112]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		18 18 18 18 18 18 18 18;
+	setAttr -s 114 ".kix[13:113]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 113 ".kiy[13:112]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 114 ".kiy[13:113]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 113 ".kox[13:112]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 114 ".kox[13:113]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 113 ".koy[13:112]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 114 ".koy[13:113]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "Fk_Left_Wrist_Ctrl_translateY";
 	rename -uid "DB3C083C-4102-B948-E182-4687CD0ADDAD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 113 ".ktv[0:112]"  0 0 1 0 19 0 58 0 78 0 88 0 138 0 188 0
+	setAttr -s 114 ".ktv[0:113]"  0 0 1 0 19 0 58 0 78 0 88 0 138 0 188 0
 		 218 0 238 0 278 0 298 0 328 0 359 0 388 0 403 0 406 0 410 0 456 0 478 0 483 0 500 0
 		 511 0 600 0 609 0 610 0 617 0 624 0 631 0 638 0 640 0 641 0 647 0 652 0 655 0 658 0
 		 668 0 669 0 671 0 672 0 674 0 675 0 677 0 678 0 680 0 681 0 683 0 684 0 686 0 689 0
 		 692 0 695 0 698 0 705 0 710 0 711 0 720 0 734 0 758 0 783 0 794 0 800 0 900 0 910 0
 		 952 0 958 0 966 0 976 0 977 0 982 0 983 0 984 0 986 0 989 0 992 0 997 0 999 0 1003 0
-		 1008 0 1010 0 1011 0 1015 0 1020 0 1025 0 1043 0 1049 0 1050 0 1060 0 1062 0 1070 0
-		 1072 0 1075 0 1085 0 1087 0 1089 0 1091 0 1093 0 1104 0 1105 0 1107 0 1121 0 1131 0
-		 1134 0 1136 0 1138 0 1147 0 1149 0 1151 0 1156 0 1159 0 1161 0 1164 0 1178 0;
-	setAttr -s 113 ".kit[13:112]"  1 18 1 1 1 18 18 18 
+		 1008 0 1009 0 1010 0 1011 0 1015 0 1020 0 1025 0 1043 0 1049 0 1050 0 1060 0 1062 0
+		 1070 0 1072 0 1075 0 1085 0 1087 0 1089 0 1091 0 1093 0 1104 0 1105 0 1107 0 1121 0
+		 1131 0 1134 0 1136 0 1138 0 1147 0 1149 0 1151 0 1156 0 1159 0 1161 0 1164 0 1178 0;
+	setAttr -s 114 ".kit[13:113]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 1 18 
+		18 18 18 18 18 18 18 1 1 1 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18;
-	setAttr -s 113 ".kot[13:112]"  1 18 1 1 1 18 18 18 
+		18 18 18 18 18 18 18 18;
+	setAttr -s 114 ".kot[13:113]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 1 18 
+		18 18 18 18 18 18 18 1 1 1 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18;
-	setAttr -s 113 ".kix[13:112]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		18 18 18 18 18 18 18 18;
+	setAttr -s 114 ".kix[13:113]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 113 ".kiy[13:112]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 114 ".kiy[13:113]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 113 ".kox[13:112]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 114 ".kox[13:113]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 113 ".koy[13:112]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 114 ".koy[13:113]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "Fk_Left_Wrist_Ctrl_translateZ";
 	rename -uid "E2D0F665-40E5-612A-A1E9-B4BA4F54E1C1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 113 ".ktv[0:112]"  0 0 1 0 19 0 58 0 78 0 88 0 138 0 188 0
+	setAttr -s 114 ".ktv[0:113]"  0 0 1 0 19 0 58 0 78 0 88 0 138 0 188 0
 		 218 0 238 0 278 0 298 0 328 0 359 0 388 0 403 0 406 0 410 0 456 0 478 0 483 0 500 0
 		 511 0 600 0 609 0 610 0 617 0 624 0 631 0 638 0 640 0 641 0 647 0 652 0 655 0 658 0
 		 668 0 669 0 671 0 672 0 674 0 675 0 677 0 678 0 680 0 681 0 683 0 684 0 686 0 689 0
 		 692 0 695 0 698 0 705 0 710 0 711 0 720 0 734 0 758 0 783 0 794 0 800 0 900 0 910 0
 		 952 0 958 0 966 0 976 0 977 0 982 0 983 0 984 0 986 0 989 0 992 0 997 0 999 0 1003 0
-		 1008 0 1010 0 1011 0 1015 0 1020 0 1025 0 1043 0 1049 0 1050 0 1060 0 1062 0 1070 0
-		 1072 0 1075 0 1085 0 1087 0 1089 0 1091 0 1093 0 1104 0 1105 0 1107 0 1121 0 1131 0
-		 1134 0 1136 0 1138 0 1147 0 1149 0 1151 0 1156 0 1159 0 1161 0 1164 0 1178 0;
-	setAttr -s 113 ".kit[13:112]"  1 18 1 1 1 18 18 18 
+		 1008 0 1009 0 1010 0 1011 0 1015 0 1020 0 1025 0 1043 0 1049 0 1050 0 1060 0 1062 0
+		 1070 0 1072 0 1075 0 1085 0 1087 0 1089 0 1091 0 1093 0 1104 0 1105 0 1107 0 1121 0
+		 1131 0 1134 0 1136 0 1138 0 1147 0 1149 0 1151 0 1156 0 1159 0 1161 0 1164 0 1178 0;
+	setAttr -s 114 ".kit[13:113]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 1 18 
+		18 18 18 18 18 18 18 1 1 1 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18;
-	setAttr -s 113 ".kot[13:112]"  1 18 1 1 1 18 18 18 
+		18 18 18 18 18 18 18 18;
+	setAttr -s 114 ".kot[13:113]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 1 18 
+		18 18 18 18 18 18 18 1 1 1 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18;
-	setAttr -s 113 ".kix[13:112]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		18 18 18 18 18 18 18 18;
+	setAttr -s 114 ".kix[13:113]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 113 ".kiy[13:112]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 114 ".kiy[13:113]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 113 ".kox[13:112]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 114 ".kox[13:113]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 113 ".koy[13:112]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 114 ".koy[13:113]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "Fk_Right_Elbow_Ctrl_translateX";
 	rename -uid "92F2890D-409E-B3F3-5782-689633335021";
 	setAttr ".tan" 18;
@@ -4879,13 +4884,13 @@ createNode animCurveTL -n "Fk_Right_Elbow_Ctrl_translateX";
 	setAttr -s 93 ".kit[22:92]"  1 18 18 18 18 18 18 18 
 		18 18 1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 18 18 18 18 18 18 18 18 1 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 18 1 18 18 18 18 18 18 18 18;
 	setAttr -s 93 ".kot[22:92]"  1 18 18 18 18 18 18 18 
 		18 18 1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 18 18 18 18 18 18 18 18 1 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 18 1 18 18 18 18 18 18 18 18;
 	setAttr -s 93 ".kix[22:92]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1;
@@ -4913,13 +4918,13 @@ createNode animCurveTL -n "Fk_Right_Elbow_Ctrl_translateY";
 	setAttr -s 93 ".kit[22:92]"  1 18 18 18 18 18 18 18 
 		18 18 1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 18 18 18 18 18 18 18 18 1 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 18 1 18 18 18 18 18 18 18 18;
 	setAttr -s 93 ".kot[22:92]"  1 18 18 18 18 18 18 18 
 		18 18 1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 18 18 18 18 18 18 18 18 1 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 18 1 18 18 18 18 18 18 18 18;
 	setAttr -s 93 ".kix[22:92]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1;
@@ -4947,13 +4952,13 @@ createNode animCurveTL -n "Fk_Right_Elbow_Ctrl_translateZ";
 	setAttr -s 93 ".kit[22:92]"  1 18 18 18 18 18 18 18 
 		18 18 1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 18 18 18 18 18 18 18 18 1 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 18 1 18 18 18 18 18 18 18 18;
 	setAttr -s 93 ".kot[22:92]"  1 18 18 18 18 18 18 18 
 		18 18 1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 18 18 18 18 18 18 18 18 1 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 18 1 18 18 18 18 18 18 18 18;
 	setAttr -s 93 ".kix[22:92]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1;
@@ -4981,13 +4986,13 @@ createNode animCurveTL -n "Fk_Right_Shoulder_Ctrl_translateX";
 	setAttr -s 98 ".kit[26:97]"  1 18 18 18 18 18 18 18 
 		1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 18 18 18 18 18 18 18 1 1 1 18 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 1 18 18 18 18 18 18 18 18 18 18;
 	setAttr -s 98 ".kot[26:97]"  1 18 18 18 18 18 18 18 
 		1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 18 18 18 18 18 18 18 1 1 1 18 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 1 18 18 18 18 18 18 18 18 18 18;
 	setAttr -s 98 ".kix[26:97]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1;
@@ -5016,13 +5021,13 @@ createNode animCurveTL -n "Fk_Right_Shoulder_Ctrl_translateY";
 	setAttr -s 98 ".kit[26:97]"  1 18 18 18 18 18 18 18 
 		1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 18 18 18 18 18 18 18 1 1 1 18 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 1 18 18 18 18 18 18 18 18 18 18;
 	setAttr -s 98 ".kot[26:97]"  1 18 18 18 18 18 18 18 
 		1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 18 18 18 18 18 18 18 1 1 1 18 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 1 18 18 18 18 18 18 18 18 18 18;
 	setAttr -s 98 ".kix[26:97]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1;
@@ -5050,13 +5055,13 @@ createNode animCurveTL -n "Fk_Right_Shoulder_Ctrl_translateZ";
 	setAttr -s 98 ".kit[26:97]"  1 18 18 18 18 18 18 18 
 		1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 18 18 18 18 18 18 18 1 1 1 18 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 1 18 18 18 18 18 18 18 18 18 18;
 	setAttr -s 98 ".kot[26:97]"  1 18 18 18 18 18 18 18 
 		1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 18 18 18 18 18 18 18 1 1 1 18 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 1 18 18 18 18 18 18 18 18 18 18;
 	setAttr -s 98 ".kix[26:97]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1;
@@ -7532,14 +7537,14 @@ createNode animCurveTA -n "Fk_Left_Wrist_Ctrl_rotateX";
 	rename -uid "C8FFF5D3-4606-3632-DF3F-1FAA3BBF3611";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 113 ".ktv[0:112]"  0 0 1 23.632129728999583 19 23.632129728999583
+	setAttr -s 114 ".ktv[0:113]"  0 0 1 23.632129728999583 19 23.632129728999583
 		 58 30.640323623141082 78 -35.322097165635597 88 -51.884821889679721 138 -51.884821889679721
 		 188 -51.884821889679721 218 -51.884821889679721 238 -51.884821889679721 278 0 298 5.0012292356479822e-17
 		 328 1.0152590744928336e-16 359 -17.090234323517524 388 1.2876039055374986 403 0.023185872833464658
 		 406 3.1126559888943439 410 -45.82642695747267 456 23.632129728999583 478 23.632129728999583
-		 483 23.632129728999583 500 23.632129728999583 511 -8.5456032599640821 600 -8.5456032599640821
+		 483 23.632129728999583 500 23.632129728999583 511 -15.947546659065399 600 -15.947546659065399
 		 609 0 610 0 617 0 624 0 631 0 638 0 640 40.103126439343981 641 47.897571601161637
-		 647 -16.752840061864397 652 40.103126439343981 655 -8.5456032599640821 658 27.305811497747971
+		 647 -16.752840061864397 652 40.103126439343981 655 -15.947546659065399 658 27.305811497747971
 		 668 -17.50365462890969 669 -18.572188051930052 671 -18.572188051930052 672 -18.572188051930052
 		 674 -18.572188051930052 675 -18.572188051930052 677 -18.572188051930052 678 -18.572188051930052
 		 680 -18.572188051930052 681 -18.572188051930052 683 -18.572188051930052 684 -18.572188051930052
@@ -7547,68 +7552,68 @@ createNode animCurveTA -n "Fk_Left_Wrist_Ctrl_rotateX";
 		 698 66.702604186047537 705 85.059040858227632 710 26.191856072111172 711 0 720 -6.4704269096298788
 		 734 -6.4704269096298788 758 -6.4704269096298788 783 -6.4704269096298788 794 -6.6618570261789509
 		 800 -6.6618570261789509 900 -6.6618570261789509 910 -6.6618570261789509 952 -6.4704269096298788
-		 958 -6.4704269096298788 966 -23.20357989802778 976 -6.4704269096298788 977 -8.5456032599640821
-		 982 53.581234711001265 983 44.093455570138211 984 0.44494312836467248 986 -26.667370020858996
-		 989 -60.325204966012919 992 59.381875625643531 997 -39.318279688551776 999 -39.318279688551776
-		 1003 -22.045367158769519 1008 27.305811497747971 1010 27.305811497747971 1011 27.305811497747971
-		 1015 18.037054332872994 1020 18.037054332872994 1025 18.037054332872994 1043 18.037054332872994
-		 1049 27.305811497747971 1050 23.632129728999583 1060 -5.0765579456559884 1062 7.1005288486501934
-		 1070 -63.78101676547282 1072 -63.78101676547282 1075 -63.78101676547282 1085 -71.249380335991646
-		 1087 -71.249380335991646 1089 -71.249380335991646 1091 -71.249380335991646 1093 -71.249380335991646
-		 1104 0 1105 0 1107 0 1121 0 1131 -71.249380335991646 1134 -71.249380335991646 1136 -71.249380335991646
-		 1138 -71.249380335991646 1147 -63.78101676547282 1149 -63.78101676547282 1151 -63.78101676547282
-		 1156 10.045247002752207 1159 10.045247002752207 1161 -5.0765579456559884 1164 -5.0765579456559884
-		 1178 23.632129728999583;
-	setAttr -s 113 ".kit[13:112]"  1 18 1 1 1 18 18 18 
+		 958 -6.4704269096298788 966 -23.20357989802778 976 -6.4704269096298788 977 -16.164296258414957
+		 982 53.581234711001265 983 53.581234711001265 984 42.308188716436796 986 42.572886039929948
+		 989 0.85298600777885059 992 59.381875625643531 997 -39.318279688551776 999 -39.318279688551776
+		 1003 -13.794672427716206 1008 24.881297674567175 1009 24.881297674567175 1010 24.881297674567175
+		 1011 24.881297674567175 1015 18.037054332872994 1020 18.037054332872994 1025 18.037054332872994
+		 1043 18.037054332872994 1049 24.881297674567175 1050 23.632129728999583 1060 -5.0765579456559884
+		 1062 7.1005288486501934 1070 -63.78101676547282 1072 -63.78101676547282 1075 -63.78101676547282
+		 1085 -71.249380335991646 1087 -71.249380335991646 1089 -71.249380335991646 1091 -71.249380335991646
+		 1093 -71.249380335991646 1104 0 1105 0 1107 0 1121 0 1131 -71.249380335991646 1134 -71.249380335991646
+		 1136 -71.249380335991646 1138 -71.249380335991646 1147 -63.78101676547282 1149 -63.78101676547282
+		 1151 -63.78101676547282 1156 10.045247002752207 1159 10.045247002752207 1161 -5.0765579456559884
+		 1164 -5.0765579456559884 1178 23.632129728999583;
+	setAttr -s 114 ".kit[13:113]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 1 18 
+		18 18 18 18 18 18 18 1 1 1 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18;
-	setAttr -s 113 ".kot[13:112]"  1 18 1 1 1 18 18 18 
+		18 18 18 18 18 18 18 18;
+	setAttr -s 114 ".kot[13:113]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 1 18 
+		18 18 18 18 18 18 18 1 1 1 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18;
-	setAttr -s 113 ".kix[13:112]"  0.93887778191762561 1 1 0.49144417435180138 
+		18 18 18 18 18 18 18 18;
+	setAttr -s 114 ".kix[13:113]"  0.93887778191762561 1 1 0.49144417435180138 
 		0.75340863048963203 1 1 1 1 1 1 1 1 1 1 1 1 0.14788277510535414 1 1 1 1 1 0.59729431225995422 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.16565324591799496 0.33611769466650271 1 0.16606185087454686 
-		0.74202283032973781 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.089496054978260353 0.10069932601430284 
-		0.19273951052052571 1 1 1 1 0.30692870476065059 1 1 1 1 1 1 1 1 0.62986838605998952 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 113 ".kiy[13:112]"  -0.34425065086567314 0 0 -0.87090907877669765 
+		0.74202283032973781 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.31737159634458489 
+		1 0.54876783866218304 0.54876783866218304 0.54876783866218304 1 1 1 1 0.54876783866218304 
+		0.65917881422101932 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 114 ".kiy[13:113]"  -0.34425065086567314 0 0 -0.87090907877669765 
 		0.6575526104455347 0 0 0 0 0 0 0 0 0 0 0 0 0.98900489626044774 0 0 0 0 0 -0.80202213469573791 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.98618406097281464 0.94181999093886071 0 -0.98611533893562364 
-		-0.67037461114621955 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.99598717669623038 -0.99491690393734145 
-		-0.98124995851429631 0 0 0 0 0.95173250979145874 0 0 0 0 0 0 0 0 -0.77670188376376681 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 113 ".kox[13:112]"  0.9388777819176255 1 1 0.49144417435180149 
+		-0.67037461114621955 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.94830125478862981 
+		0 0.83597479582224021 0.83597479582224021 0.83597479582224021 0 0 0 0 0.83597479582224021 
+		-0.7519862305136783 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 114 ".kox[13:113]"  0.9388777819176255 1 1 0.49144417435180149 
 		0.75340863048963214 1 1 1 1 1 1 1 1 1 1 1 1 0.14788277510535414 1 1 1 1 1 0.59729431225995422 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.16565324591799496 0.33611769466650271 1 0.16606185087454683 
-		0.74202283032973793 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.089496054978260339 0.10069932601430286 
-		0.19273951052052568 1 1 1 1 0.30692870476065059 1 1 1 1 1 1 1 1 0.62986838605998952 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 113 ".koy[13:112]"  -0.34425065086567308 0 0 -0.87090907877669776 
+		0.74202283032973793 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.31737159634458489 
+		1 0.54876783866218293 0.54876783866218293 0.54876783866218293 1 1 1 1 0.54876783866218293 
+		0.65917881422101932 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 114 ".koy[13:113]"  -0.34425065086567308 0 0 -0.87090907877669776 
 		0.6575526104455347 0 0 0 0 0 0 0 0 0 0 0 0 0.98900489626044785 0 0 0 0 0 -0.8020221346957378 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.98618406097281464 0.94181999093886082 0 -0.98611533893562353 
-		-0.67037461114621955 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.99598717669623049 -0.99491690393734145 
-		-0.98124995851429619 0 0 0 0 0.95173250979145885 0 0 0 0 0 0 0 0 -0.77670188376376681 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+		-0.67037461114621955 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.94830125478862981 
+		0 0.83597479582224021 0.83597479582224021 0.83597479582224021 0 0 0 0 0.83597479582224021 
+		-0.7519862305136783 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "Fk_Left_Wrist_Ctrl_rotateY";
 	rename -uid "38760EF7-4109-61C1-151F-C78AA7E4DC04";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 113 ".ktv[0:112]"  0 0 1 14.759173917870157 19 14.759173917870157
+	setAttr -s 114 ".ktv[0:113]"  0 0 1 14.759173917870157 19 14.759173917870157
 		 58 -4.9559388675449831 78 10.560447679405167 88 7.6700173983819067 138 7.6700173983819067
 		 188 7.6700173983819067 218 7.6700173983819067 238 7.6700173983819067 278 20.28800397743542
 		 298 6.4455208020089501 328 11.767020718580765 359 20.288003977435395 388 39.583519489310632
 		 403 44.934459576894234 406 28.706333588565581 410 49.459612139486879 456 14.759173917870157
-		 478 14.759173917870157 483 14.759173917870157 500 14.759173917870157 511 48.808283499358126
-		 600 48.808283499358126 609 0 610 0 617 0 624 0 631 0 638 0 640 38.768119602532138
-		 641 36.898265191971475 647 6.5224647755759104 652 38.768119602532138 655 48.808283499358126
+		 478 14.759173917870157 483 14.759173917870157 500 14.759173917870157 511 36.950460037692082
+		 600 36.950460037692082 609 0 610 0 617 0 624 0 631 0 638 0 640 38.768119602532138
+		 641 36.898265191971475 647 6.5224647755759104 652 38.768119602532138 655 36.950460037692082
 		 658 42.866562593489249 668 42.866562593489341 669 42.866562593489341 671 42.866562593489341
 		 672 42.866562593489341 674 42.866562593489341 675 42.866562593489341 677 42.866562593489341
 		 678 42.866562593489341 680 42.866562593489341 681 42.866562593489341 683 42.866562593489341
@@ -7617,68 +7622,72 @@ createNode animCurveTA -n "Fk_Left_Wrist_Ctrl_rotateY";
 		 711 0 720 1.6677008166118086 734 1.6677008166118086 758 1.6677008166118086 783 1.6677008166118086
 		 794 -0.5065915087346069 800 -0.5065915087346069 900 -0.5065915087346069 910 -0.5065915087346069
 		 952 1.6677008166118086 958 1.6677008166118086 966 11.825944268276631 976 1.6677008166118086
-		 977 48.808283499358126 982 47.827051439091711 983 43.782675629545807 984 36.029534568719605
-		 986 24.062507508177152 989 61.857328662181132 992 23.229843061161993 997 58.038825867108606
-		 999 58.038825867108606 1003 54.105276129503402 1008 42.866562593489249 1010 42.866562593489249
-		 1011 42.866562593489249 1015 19.074992428681131 1020 19.074992428681131 1025 19.074992428681131
-		 1043 19.074992428681131 1049 42.866562593489249 1050 14.759173917870157 1060 -3.5913754697231344
-		 1062 4.9247728625223193 1070 -7.0368776075655415 1072 -7.0368776075655415 1075 -7.0368776075655415
-		 1085 -7.0368776075655344 1087 -7.0368776075655344 1089 -7.0368776075655344 1091 -7.0368776075655344
-		 1093 -7.0368776075655344 1104 -26.618237347120601 1105 -26.618237347120601 1107 -26.618237347120601
-		 1121 -26.618237347120601 1131 -7.0368776075655344 1134 -7.0368776075655344 1136 -7.0368776075655344
-		 1138 -7.0368776075655344 1147 -7.0368776075655415 1149 -7.0368776075655415 1151 -7.0368776075655415
-		 1156 4.9247728625223184 1159 4.9247728625223184 1161 -3.5913754697231344 1164 -3.5913754697231344
-		 1178 14.759173917870157;
-	setAttr -s 113 ".kit[13:112]"  1 18 1 1 1 18 18 18 
+		 977 46.728904577121561 982 47.827051439091711 983 47.827051439091711 984 36.029534568719612
+		 986 24.062507508177223 989 17.587370604660357 992 23.229843061161993 997 58.038825867108606
+		 999 58.038825867108606 1003 22.644846569495122 1008 36.952227641428522 1009 36.952227641428522
+		 1010 36.952227641428522 1011 36.952227641428522 1015 19.074992428681131 1020 19.074992428681131
+		 1025 19.074992428681131 1043 19.074992428681131 1049 36.952227641428522 1050 14.759173917870157
+		 1060 -3.5913754697231344 1062 4.9247728625223193 1070 -7.0368776075655415 1072 -7.0368776075655415
+		 1075 -7.0368776075655415 1085 -7.0368776075655344 1087 -7.0368776075655344 1089 -7.0368776075655344
+		 1091 -7.0368776075655344 1093 -7.0368776075655344 1104 -26.618237347120601 1105 -26.618237347120601
+		 1107 -26.618237347120601 1121 -26.618237347120601 1131 -7.0368776075655344 1134 -7.0368776075655344
+		 1136 -7.0368776075655344 1138 -7.0368776075655344 1147 -7.0368776075655415 1149 -7.0368776075655415
+		 1151 -7.0368776075655415 1156 4.9247728625223184 1159 4.9247728625223184 1161 -3.5913754697231344
+		 1164 -3.5913754697231344 1178 14.759173917870157;
+	setAttr -s 114 ".kit[13:113]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 1 18 
+		18 18 18 18 18 18 18 1 1 1 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18;
-	setAttr -s 113 ".kot[13:112]"  1 18 1 1 1 18 18 18 
+		18 18 18 18 18 18 18 18;
+	setAttr -s 114 ".kot[13:113]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 1 18 
+		18 18 18 18 18 18 18 1 1 1 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18;
-	setAttr -s 113 ".kix[13:112]"  1 0.97356032347847488 0.25003453942871789 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.46012836279941272 1 0.41161843983345514 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 0.58072872287810706 0.6131158890426156 0.29022719606886549 
-		1 0.97394420810104287 1 1 1 1 1 1 1 1 1 1 1 1 1 0.97091188330150335 0.37515649628933306 
-		0.34136425632176665 1 1 1 1 1 0.81686515486752975 1 1 1 1 1 1 1 1 0.49208183997655491 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 113 ".kiy[13:112]"  0 0.22843006927391835 -0.96823691785258259 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.88785240313214908 0 0.91135627500394845 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 -0.81409713819934448 -0.78999297883176356 -0.95695777057402298 
-		0 0.22678774108499025 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.23943707913338719 -0.92696148964879421 
-		-0.93993108497691846 0 0 0 0 0 -0.5768286736659739 0 0 0 0 0 0 0 0 -0.87054894334855659 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 113 ".kox[13:112]"  1 0.97356032347847499 0.25003453942871789 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.46012836279941266 1 0.41161843983345509 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 0.58072872287810706 0.61311588904261549 0.29022719606886549 
-		1 0.97394420810104276 1 1 1 1 1 1 1 1 1 1 1 1 1 0.97091188330150324 0.37515649628933301 
-		0.34136425632176665 1 1 1 1 1 0.81686515486752986 1 1 1 1 1 1 1 1 0.4920818399765548 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 113 ".koy[13:112]"  0 0.2284300692739184 -0.9682369178525827 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.88785240313214897 0 0.91135627500394834 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 -0.81409713819934448 -0.78999297883176356 -0.95695777057402298 
-		0 0.22678774108499025 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.23943707913338719 -0.92696148964879421 
-		-0.93993108497691846 0 0 0 0 0 -0.5768286736659739 0 0 0 0 0 0 0 0 -0.87054894334855648 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+		18 18 18 18 18 18 18 18;
+	setAttr -s 114 ".kix[13:113]"  1 0.97356032347847488 0.25003453942871789 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.46012836279941272 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 0.58072872287810706 0.6131158890426156 0.29022719606886549 1 0.97394420810104287 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.97091188330150335 0.28855299197096423 0.54336215830063617 
+		1 0.42694264121345055 1 1 1 1 0.63702583655223866 0.63702583655223866 0.63702583655223866 
+		1 1 1 1 0.63702583655223866 0.54363746728691886 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1;
+	setAttr -s 114 ".kiy[13:113]"  0 0.22843006927391835 -0.96823691785258259 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.88785240313214908 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 -0.81409713819934448 -0.78999297883176356 -0.95695777057402298 0 0.22678774108499025 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.23943707913338719 -0.95746392664403002 -0.83949840078875337 
+		0 0.90427870765250395 0 0 0 0 0.77084245054675116 0.77084245054675116 0.77084245054675116 
+		0 0 0 0 0.77084245054675116 -0.83932014402244892 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 114 ".kox[13:113]"  1 0.97356032347847499 0.25003453942871789 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.46012836279941266 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 0.58072872287810706 0.61311588904261549 0.29022719606886549 1 0.97394420810104276 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.97091188330150324 0.28855299197096429 0.54336215830063617 
+		1 0.42694264121345055 1 1 1 1 0.63702583655223866 0.63702583655223866 0.63702583655223866 
+		1 1 1 1 0.63702583655223866 0.54363746728691886 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1;
+	setAttr -s 114 ".koy[13:113]"  0 0.2284300692739184 -0.9682369178525827 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.88785240313214897 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 -0.81409713819934448 -0.78999297883176356 -0.95695777057402298 0 0.22678774108499025 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.23943707913338719 -0.95746392664403002 -0.83949840078875337 
+		0 0.90427870765250395 0 0 0 0 0.77084245054675116 0.77084245054675116 0.77084245054675116 
+		0 0 0 0 0.77084245054675116 -0.83932014402244881 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "Fk_Left_Wrist_Ctrl_rotateZ";
 	rename -uid "1E6A884B-4C47-8081-EC63-648DFFD7FC0A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 113 ".ktv[0:112]"  0 0 1 3.2770404753790419 19 3.2770404753790419
+	setAttr -s 114 ".ktv[0:113]"  0 0 1 3.2770404753790419 19 3.2770404753790419
 		 58 7.8616581008811499 78 -0.1663334718200678 88 5.0026706745097664 138 5.0026706745097664
 		 188 5.0026706745097664 218 5.0026706745097664 238 5.0026706745097664 278 4.360122121179745
 		 298 4.3601221211797503 328 4.3601221211797503 359 4.3601221211797503 388 -27.760712361547593
 		 403 -4.8025444953688368 406 -3.7862432757963731 410 -48.346799240605833 456 3.2770404753790419
-		 478 3.2770404753790419 483 3.2770404753790419 500 3.2770404753790419 511 -54.956301333338608
-		 600 -54.956301333338608 609 0 610 0 617 0 624 0 631 0 638 0 640 5.7201018213579369
-		 641 9.7921264975038973 647 8.226233161411411 652 5.7201018213579369 655 -54.956301333338608
+		 478 3.2770404753790419 483 3.2770404753790419 500 3.2770404753790419 511 -64.547796545534055
+		 600 -64.547796545534055 609 0 610 0 617 0 624 0 631 0 638 0 640 5.7201018213579369
+		 641 9.7921264975038973 647 8.226233161411411 652 5.7201018213579369 655 -64.547796545534055
 		 658 -6.4692807865935338 668 -6.4692807865935231 669 -6.4692807865935231 671 -6.4692807865935231
 		 672 -6.4692807865935231 674 -6.4692807865935231 675 -6.4692807865935231 677 -6.4692807865935231
 		 678 -6.4692807865935231 680 -6.4692807865935231 681 -6.4692807865935231 683 -6.4692807865935231
@@ -7687,172 +7696,172 @@ createNode animCurveTA -n "Fk_Left_Wrist_Ctrl_rotateZ";
 		 711 0 720 1.8484594321495063 734 1.8484594321495063 758 1.8484594321495063 783 1.8484594321495063
 		 794 -16.872639601135006 800 -16.872639601135006 900 -16.872639601135006 910 -16.872639601135006
 		 952 1.8484594321495063 958 1.8484594321495063 966 12.793268836339866 976 1.8484594321495063
-		 977 -54.956301333338608 982 -21.078305113146691 983 -16.575913132874202 984 0 986 -10.175369266243733
-		 989 -55.731772914135028 992 -5.1042700392032714 997 8.81961841756622 999 8.81961841756622
-		 1003 4.8558297350060906 1008 -6.4692807865935338 1010 -6.4692807865935338 1011 -6.4692807865935338
-		 1015 0.9973780134749336 1020 0.9973780134749336 1025 0.9973780134749336 1043 0.9973780134749336
-		 1049 -6.4692807865935338 1050 3.2770404753790419 1060 3.7024641388589044 1062 0 1070 28.167563945194381
-		 1072 28.167563945194381 1075 28.167563945194381 1085 28.167563945194384 1087 28.167563945194384
-		 1089 28.167563945194384 1091 28.167563945194384 1093 28.167563945194384 1104 18.655927612829682
-		 1105 18.655927612829682 1107 18.655927612829682 1121 18.655927612829682 1131 28.167563945194384
-		 1134 28.167563945194384 1136 28.167563945194384 1138 28.167563945194384 1147 28.167563945194381
-		 1149 28.167563945194381 1151 28.167563945194381 1156 0 1159 0 1161 3.7024641388589044
-		 1164 3.7024641388589044 1178 3.2770404753790419;
-	setAttr -s 113 ".kit[13:112]"  1 18 1 1 1 18 18 18 
+		 977 -74.663021002563625 982 -21.078305113146691 983 -21.078305113146691 984 -1.9664276137851782e-15
+		 986 -10.17536926624375 989 -6.7896371951303509 992 -5.1042700392032714 997 8.81961841756622
+		 999 8.81961841756622 1003 17.617505871738103 1008 -10.242448124319273 1009 -10.242448124319273
+		 1010 -10.242448124319273 1011 -10.242448124319273 1015 0.9973780134749336 1020 0.9973780134749336
+		 1025 0.9973780134749336 1043 0.9973780134749336 1049 -10.242448124319273 1050 3.2770404753790419
+		 1060 3.7024641388589044 1062 0 1070 28.167563945194381 1072 28.167563945194381 1075 28.167563945194381
+		 1085 28.167563945194384 1087 28.167563945194384 1089 28.167563945194384 1091 28.167563945194384
+		 1093 28.167563945194384 1104 18.655927612829682 1105 18.655927612829682 1107 18.655927612829682
+		 1121 18.655927612829682 1131 28.167563945194384 1134 28.167563945194384 1136 28.167563945194384
+		 1138 28.167563945194384 1147 28.167563945194381 1149 28.167563945194381 1151 28.167563945194381
+		 1156 0 1159 0 1161 3.7024641388589044 1164 3.7024641388589044 1178 3.2770404753790419;
+	setAttr -s 114 ".kit[13:113]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 1 18 
+		18 18 18 18 18 18 18 1 1 1 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18;
-	setAttr -s 113 ".kot[13:112]"  1 18 1 1 1 18 18 18 
+		18 18 18 18 18 18 18 18;
+	setAttr -s 114 ".kot[13:113]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 1 18 
+		18 18 18 18 18 18 18 1 1 1 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18;
-	setAttr -s 113 ".kix[13:112]"  1 1 0.84282165983111346 1 1 1 1 1 1 1 1 
+		18 18 18 18 18 18 18 18;
+	setAttr -s 114 ".kix[13:113]"  1 1 0.84282165983111346 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 0.59034902485216778 1 0.98819037993516368 0.8461451282710748 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 0.30092177699406897 0.83669054616825267 1 0.31890456933482247 
-		1 1 1 1 1 1 1 1 1 1 1 1 0.5880695039086955 1 0.34965275404386464 0.22092256296212087 
-		1 0.20943008161707249 1 0.28370941897160684 1 1 0.81477574628248295 1 1 1 1 1 1 1 
-		1 0.99857405319660508 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 113 ".kiy[13:112]"  0 0 0.53819294841118714 0 0 0 0 0 0 0 0 
+		1 1 1 1 1 1 1 1 1 1 1 1 0.58806950390869539 1 1 0.34965275404386464 1 1 0.9426679050351372 
+		0.81693607423345593 1 1 1 1 1 1 1 1 1 1 1 1 0.99857405319660508 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 114 ".kiy[13:113]"  0 0 0.53819294841118714 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0.80714808359810564 0 -0.15323110977734508 -0.53295255126805263 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.95364882641920756 0.5476759351593522 0 -0.94778683028272304 
-		0 0 0 0 0 0 0 0 0 0 0 0 -0.80881039717141434 0 0.93687936875007605 0.97529135194271444 
-		0 -0.97782362464499006 0 0.95891030111621656 0 0 -0.57977623551661972 0 0 0 0 0 0 
-		0 0 0.05338408266987342 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 113 ".kox[13:112]"  1 1 0.84282165983111357 1 1 1 1 1 1 1 1 
+		0 0 0 0 0 0 0 0 0 0 0 0 -0.80881039717141434 0 0 0.93687936875007605 0 0 0.33373225917891941 
+		0.57672822942528945 0 0 0 0 0 0 0 0 0 0 0 0 0.05338408266987342 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 114 ".kox[13:113]"  1 1 0.84282165983111357 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 0.59034902485216789 1 0.9881903799351639 0.84614512827107491 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 0.30092177699406897 0.83669054616825267 1 0.31890456933482253 
-		1 1 1 1 1 1 1 1 1 1 1 1 0.58806950390869539 1 0.34965275404386459 0.22092256296212087 
-		1 0.20943008161707252 1 0.28370941897160684 1 1 0.81477574628248295 1 1 1 1 1 1 1 
-		1 0.99857405319660508 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 113 ".koy[13:112]"  0 0 0.53819294841118726 0 0 0 0 0 0 0 0 
+		1 1 1 1 1 1 1 1 1 1 1 1 0.58806950390869528 1 1 0.34965275404386459 1 1 0.9426679050351372 
+		0.81693607423345582 1 1 1 1 1 1 1 1 1 1 1 1 0.99857405319660508 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 114 ".koy[13:113]"  0 0 0.53819294841118726 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0.80714808359810575 0 -0.15323110977734511 -0.53295255126805274 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.95364882641920756 0.54767593515935209 0 -0.94778683028272326 
-		0 0 0 0 0 0 0 0 0 0 0 0 -0.80881039717141423 0 0.93687936875007594 0.97529135194271455 
-		0 -0.97782362464499006 0 0.95891030111621667 0 0 -0.57977623551661972 0 0 0 0 0 0 
-		0 0 0.053384082669873427 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+		0 0 0 0 0 0 0 0 0 0 0 0 -0.80881039717141423 0 0 0.93687936875007594 0 0 0.33373225917891941 
+		0.57672822942528956 0 0 0 0 0 0 0 0 0 0 0 0 0.053384082669873427 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "Fk_Left_Wrist_Ctrl_scaleX";
 	rename -uid "4DBC1292-43D9-8993-6642-70BD0E91DA6E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 113 ".ktv[0:112]"  0 1 1 1 19 1 58 1 78 1 88 1 138 1 188 1
+	setAttr -s 114 ".ktv[0:113]"  0 1 1 1 19 1 58 1 78 1 88 1 138 1 188 1
 		 218 1 238 1 278 1 298 1 328 1 359 1 388 1 403 1 406 1 410 1 456 1 478 1 483 1 500 1
 		 511 1 600 1 609 1 610 1 617 1 624 1 631 1 638 1 640 1 641 1 647 1 652 1 655 1 658 1
 		 668 1 669 1 671 1 672 1 674 1 675 1 677 1 678 1 680 1 681 1 683 1 684 1 686 1 689 1
 		 692 1 695 1 698 1 705 1 710 1 711 1 720 1 734 1 758 1 783 1 794 1 800 1 900 1 910 1
 		 952 1 958 1 966 1 976 1 977 1 982 1 983 1 984 1 986 1 989 1 992 1 997 1 999 1 1003 1
-		 1008 1 1010 1 1011 1 1015 1 1020 1 1025 1 1043 1 1049 1 1050 1 1060 1 1062 1 1070 1
-		 1072 1 1075 1 1085 1 1087 1 1089 1 1091 1 1093 1 1104 1 1105 1 1107 1 1121 1 1131 1
-		 1134 1 1136 1 1138 1 1147 1 1149 1 1151 1 1156 1 1159 1 1161 1 1164 1 1178 1;
-	setAttr -s 113 ".kit[13:112]"  1 18 1 1 1 18 18 18 
+		 1008 1 1009 1 1010 1 1011 1 1015 1 1020 1 1025 1 1043 1 1049 1 1050 1 1060 1 1062 1
+		 1070 1 1072 1 1075 1 1085 1 1087 1 1089 1 1091 1 1093 1 1104 1 1105 1 1107 1 1121 1
+		 1131 1 1134 1 1136 1 1138 1 1147 1 1149 1 1151 1 1156 1 1159 1 1161 1 1164 1 1178 1;
+	setAttr -s 114 ".kit[13:113]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 1 18 
+		18 18 18 18 18 18 18 1 1 1 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18;
-	setAttr -s 113 ".kot[13:112]"  1 18 1 1 1 18 18 18 
+		18 18 18 18 18 18 18 18;
+	setAttr -s 114 ".kot[13:113]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 1 18 
+		18 18 18 18 18 18 18 1 1 1 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18;
-	setAttr -s 113 ".kix[13:112]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		18 18 18 18 18 18 18 18;
+	setAttr -s 114 ".kix[13:113]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 113 ".kiy[13:112]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 114 ".kiy[13:113]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 113 ".kox[13:112]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 114 ".kox[13:113]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 113 ".koy[13:112]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 114 ".koy[13:113]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "Fk_Left_Wrist_Ctrl_scaleY";
 	rename -uid "A8768DF0-456D-42E1-B783-CCA21B45E78C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 113 ".ktv[0:112]"  0 1 1 1 19 1 58 1 78 1 88 1 138 1 188 1
+	setAttr -s 114 ".ktv[0:113]"  0 1 1 1 19 1 58 1 78 1 88 1 138 1 188 1
 		 218 1 238 1 278 1 298 1 328 1 359 1 388 1 403 1 406 1 410 1 456 1 478 1 483 1 500 1
 		 511 1 600 1 609 1 610 1 617 1 624 1 631 1 638 1 640 1 641 1 647 1 652 1 655 1 658 1
 		 668 1 669 1 671 1 672 1 674 1 675 1 677 1 678 1 680 1 681 1 683 1 684 1 686 1 689 1
 		 692 1 695 1 698 1 705 1 710 1 711 1 720 1 734 1 758 1 783 1 794 1 800 1 900 1 910 1
 		 952 1 958 1 966 1 976 1 977 1 982 1 983 1 984 1 986 1 989 1 992 1 997 1 999 1 1003 1
-		 1008 1 1010 1 1011 1 1015 1 1020 1 1025 1 1043 1 1049 1 1050 1 1060 1 1062 1 1070 1
-		 1072 1 1075 1 1085 1 1087 1 1089 1 1091 1 1093 1 1104 1 1105 1 1107 1 1121 1 1131 1
-		 1134 1 1136 1 1138 1 1147 1 1149 1 1151 1 1156 1 1159 1 1161 1 1164 1 1178 1;
-	setAttr -s 113 ".kit[13:112]"  1 18 1 1 1 18 18 18 
+		 1008 1 1009 1 1010 1 1011 1 1015 1 1020 1 1025 1 1043 1 1049 1 1050 1 1060 1 1062 1
+		 1070 1 1072 1 1075 1 1085 1 1087 1 1089 1 1091 1 1093 1 1104 1 1105 1 1107 1 1121 1
+		 1131 1 1134 1 1136 1 1138 1 1147 1 1149 1 1151 1 1156 1 1159 1 1161 1 1164 1 1178 1;
+	setAttr -s 114 ".kit[13:113]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 1 18 
+		18 18 18 18 18 18 18 1 1 1 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18;
-	setAttr -s 113 ".kot[13:112]"  1 18 1 1 1 18 18 18 
+		18 18 18 18 18 18 18 18;
+	setAttr -s 114 ".kot[13:113]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 1 18 
+		18 18 18 18 18 18 18 1 1 1 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18;
-	setAttr -s 113 ".kix[13:112]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		18 18 18 18 18 18 18 18;
+	setAttr -s 114 ".kix[13:113]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 113 ".kiy[13:112]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 114 ".kiy[13:113]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 113 ".kox[13:112]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 114 ".kox[13:113]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 113 ".koy[13:112]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 114 ".koy[13:113]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "Fk_Left_Wrist_Ctrl_scaleZ";
 	rename -uid "376B9E57-423A-096A-2504-E885A12A204B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 113 ".ktv[0:112]"  0 1 1 1 19 1 58 1 78 1 88 1 138 1 188 1
+	setAttr -s 114 ".ktv[0:113]"  0 1 1 1 19 1 58 1 78 1 88 1 138 1 188 1
 		 218 1 238 1 278 1 298 1 328 1 359 1 388 1 403 1 406 1 410 1 456 1 478 1 483 1 500 1
 		 511 1 600 1 609 1 610 1 617 1 624 1 631 1 638 1 640 1 641 1 647 1 652 1 655 1 658 1
 		 668 1 669 1 671 1 672 1 674 1 675 1 677 1 678 1 680 1 681 1 683 1 684 1 686 1 689 1
 		 692 1 695 1 698 1 705 1 710 1 711 1 720 1 734 1 758 1 783 1 794 1 800 1 900 1 910 1
 		 952 1 958 1 966 1 976 1 977 1 982 1 983 1 984 1 986 1 989 1 992 1 997 1 999 1 1003 1
-		 1008 1 1010 1 1011 1 1015 1 1020 1 1025 1 1043 1 1049 1 1050 1 1060 1 1062 1 1070 1
-		 1072 1 1075 1 1085 1 1087 1 1089 1 1091 1 1093 1 1104 1 1105 1 1107 1 1121 1 1131 1
-		 1134 1 1136 1 1138 1 1147 1 1149 1 1151 1 1156 1 1159 1 1161 1 1164 1 1178 1;
-	setAttr -s 113 ".kit[13:112]"  1 18 1 1 1 18 18 18 
+		 1008 1 1009 1 1010 1 1011 1 1015 1 1020 1 1025 1 1043 1 1049 1 1050 1 1060 1 1062 1
+		 1070 1 1072 1 1075 1 1085 1 1087 1 1089 1 1091 1 1093 1 1104 1 1105 1 1107 1 1121 1
+		 1131 1 1134 1 1136 1 1138 1 1147 1 1149 1 1151 1 1156 1 1159 1 1161 1 1164 1 1178 1;
+	setAttr -s 114 ".kit[13:113]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 1 18 
+		18 18 18 18 18 18 18 1 1 1 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18;
-	setAttr -s 113 ".kot[13:112]"  1 18 1 1 1 18 18 18 
+		18 18 18 18 18 18 18 18;
+	setAttr -s 114 ".kot[13:113]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 1 18 1 18 
+		18 18 18 18 18 18 18 1 1 1 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18;
-	setAttr -s 113 ".kix[13:112]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		18 18 18 18 18 18 18 18;
+	setAttr -s 114 ".kix[13:113]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 113 ".kiy[13:112]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 114 ".kiy[13:113]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 113 ".kox[13:112]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 114 ".kox[13:113]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 113 ".koy[13:112]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 114 ".koy[13:113]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "Fk_Left_Elbow_Ctrl_visibility";
 	rename -uid "86C510A6-400A-3EFC-8BE7-9DB870AEE099";
 	setAttr ".tan" 18;
@@ -7891,13 +7900,13 @@ createNode animCurveTA -n "Fk_Left_Elbow_Ctrl_rotateX";
 	rename -uid "033EE478-4571-7250-6567-05A9BE82D061";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 118 ".ktv[0:117]"  0 0 1 0 15 0 34 0 48 0 58 0 78 -32.813039540089747
+	setAttr -s 119 ".ktv[0:118]"  0 0 1 0 15 0 34 0 48 0 58 0 78 -32.813039540089747
 		 88 -21.066287007472134 138 -21.066287007472134 188 -21.066287007472134 218 -21.066287007472134
 		 238 -21.066287007472134 278 -70.789854849810368 298 -70.789854849810368 328 -70.789854849810368
 		 359 -70.789854849810368 388 -93.524379616649227 403 -54.309925163142282 406 -71.951569995806892
-		 410 -83.285451550015665 456 0 478 0 483 0 500 0 511 -74.228174873763535 600 -74.228174873763535
+		 410 -83.285451550015665 456 0 478 0 483 0 500 0 511 -75.432614203643965 600 -82.017406554538269
 		 609 0 610 0 617 0 620 6.4927075183471255 624 0 631 0 634 -6.8716925088627105 638 0
-		 640 -48.045156152734549 647 -48.045156152734549 652 -48.045156152734549 655 -74.228174873763535
+		 640 -48.045156152734549 647 -48.045156152734549 652 -48.045156152734549 655 -82.017406554538269
 		 658 -115.82552255912691 668 -86.616241863438745 669 -70.379942744520832 671 -70.379942744520832
 		 672 -70.379942744520832 674 -70.379942744520832 675 -70.379942744520832 677 -70.379942744520832
 		 678 -70.379942744520832 680 -70.379942744520832 681 -70.379942744520832 683 -70.379942744520832
@@ -7905,83 +7914,87 @@ createNode animCurveTA -n "Fk_Left_Elbow_Ctrl_rotateX";
 		 695 -70.379942744520832 698 -70.379942744520832 705 -33.560906608059327 710 -39.236923732978767
 		 711 -53.37698929616468 720 -127.70931619750259 734 -127.70931619750259 758 -127.70931619750259
 		 800 -104.91437961521042 900 -106.48664536746158 952 -127.70931619750259 958 -74.453305053413118
-		 966 -3.9642710936839878 976 0 977 -74.228174873763535 982 -8.7961424728153776 983 -11.019400938949914
+		 966 -3.9642710936839878 976 0 977 -92.842409963194044 982 -8.7961424728153776 983 -11.019400938949914
 		 984 -15.71294658967723 986 -23.024996656074226 989 18.49745351503077 992 5.9282437340766938
-		 997 0.29403489389102055 999 0.29403489389102055 1003 -27.628855122813974 1008 -107.40854088482301
-		 1010 -107.40854088482301 1011 -107.40854088482301 1015 -34.014940779912486 1020 -34.014940779912486
-		 1025 -34.014940779912486 1031 0 1037 0 1043 -54.904804558115686 1049 -107.40854088482301
-		 1050 0 1059 -82.685291176270937 1061 -79.028178044621001 1065 -81.133779301913677
-		 1070 -48.11789018641425 1075 -48.11789018641425 1085 -40.184173661414192 1087 -40.184173661414192
-		 1089 -40.184173661414192 1091 -49.894735571502274 1093 -49.894735571502274 1095 -49.894735571502274
-		 1099 -24.080657597495648 1104 -22.385351019353127 1105 -22.385351019353127 1107 -19.529427632301548
-		 1121 -19.529427632301548 1125 -43.8603331369399 1131 -54.870306510392936 1134 -40.184173661414192
-		 1136 -40.184173661414192 1138 -40.184173661414192 1147 -48.11789018641425 1149 -48.11789018641425
-		 1151 -48.11789018641425 1156 -82.685291176270937 1158 -82.685291176270937 1161 -84.897020740792613
-		 1164 -84.897020740792613 1178 0;
-	setAttr -s 118 ".kit[15:117]"  1 18 1 1 1 18 18 18 
+		 997 0.29403489389102055 999 0.29403489389102055 1003 -57.044973786172477 1008 -84.586427920527228
+		 1009 -84.586427920527228 1010 -84.586427920527228 1011 -84.586427920527228 1015 -34.014940779912486
+		 1020 -34.014940779912486 1025 -34.014940779912486 1031 0 1037 0 1043 -54.904804558115686
+		 1049 -84.586427920527228 1050 0 1059 -82.685291176270937 1061 -79.028178044621001
+		 1065 -81.133779301913677 1070 -48.11789018641425 1075 -48.11789018641425 1085 -40.184173661414192
+		 1087 -40.184173661414192 1089 -40.184173661414192 1091 -49.894735571502274 1093 -49.894735571502274
+		 1095 -49.894735571502274 1099 -24.080657597495648 1104 -22.385351019353127 1105 -22.385351019353127
+		 1107 -19.529427632301548 1121 -19.529427632301548 1125 -43.8603331369399 1131 -54.870306510392936
+		 1134 -40.184173661414192 1136 -40.184173661414192 1138 -40.184173661414192 1147 -48.11789018641425
+		 1149 -48.11789018641425 1151 -48.11789018641425 1156 -82.685291176270937 1158 -82.685291176270937
+		 1161 -84.897020740792613 1164 -84.897020740792613 1178 0;
+	setAttr -s 119 ".kit[15:118]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 1 
+		18 18 18 18 18 1 1 1 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 118 ".kot[15:117]"  1 18 1 1 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 119 ".kot[15:118]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 1 
+		18 18 18 18 18 1 1 1 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 118 ".kix[15:117]"  1 1 1 0.54606153293210191 1 1 1 1 1 0.89970093939135254 
+		18 18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 119 ".kix[15:118]"  1 1 1 0.54606153293210191 1 1 1 1 1 0.89970093939135254 
 		0.89970093939135254 1 1 1 1 1 1 1 1 1 1 1 0.89970093939135254 1 0.50032215569597827 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.5858219031402051 0.26052035577477267 1 1 1 1 
 		0.9998048742820802 1 0.26074857084027492 0.89508321769972576 1 0.89970093939135254 
-		1 0.56809078622829046 0.51231733861276785 1 1 0.72386753672020565 1 1 0.19563809671142532 
-		1 1 1 1 1 1 1 1 0.25770978442764469 1 1 1 1 1 1 1 1 1 1 1 1 1 0.91997385945574706 
-		1 1 1 1 0.5597651539975812 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 118 ".kiy[15:117]"  0 0 0 -0.83774506996570441 0 0 0 0 0 -0.43650683804302298 
+		1 0.56809078622829046 0.51231733861276785 1 1 0.72386753672020565 1 1 0.24539173414800072 
+		1 0.3149285021582014 0.3149285021582014 0.3149285021582014 1 1 1 1 1 0.32078340805585626 
+		0.3149285021582014 1 1 1 1 1 1 1 1 1 1 1 1 0.91997385945574706 1 1 1 1 0.5597651539975812 
+		1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 119 ".kiy[15:118]"  0 0 0 -0.83774506996570441 0 0 0 0 0 -0.43650683804302298 
 		-0.43650683804302298 0 0 0 0 0 0 0 0 0 0 0 -0.43650683804302298 0 0.86583932719629308 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.81043981750725214 -0.96546835485529303 0 0 0 
 		0 -0.01975381891669992 0 0.96540674474790888 0.44589912916746699 0 -0.43650683804302298 
-		0 -0.82296589151830757 -0.85879621829438124 0 0 -0.68993897504244661 0 0 -0.98067616220398213 
-		0 0 0 0 0 0 0 0 -0.96622236933857875 0 0 0 0 0 0 0 0 0 0 0 0 0 0.39197971620748073 
-		0 0 0 0 -0.82865129721135666 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 118 ".kox[15:117]"  1 1 1 0.54606153293210191 1 1 1 1 1 0.89970093939135243 
+		0 -0.82296589151830757 -0.85879621829438124 0 0 -0.68993897504244661 0 0 -0.96942400259733452 
+		0 -0.9491153978986917 -0.9491153978986917 -0.9491153978986917 0 0 0 0 0 -0.94715257752701598 
+		-0.9491153978986917 0 0 0 0 0 0 0 0 0 0 0 0 0.39197971620748073 0 0 0 0 -0.82865129721135666 
+		0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 119 ".kox[15:118]"  1 1 1 0.54606153293210191 1 1 1 1 1 0.89970093939135243 
 		0.89970093939135243 1 1 1 1 1 1 1 1 1 1 1 0.89970093939135243 1 0.50032215569597815 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.5858219031402051 0.26052035577477273 1 1 1 1 
 		0.99980487428208031 1 0.26074857084027492 0.89508321769972576 1 0.89970093939135243 
-		1 0.56809078622829046 0.51231733861276785 1 1 0.72386753672020565 1 1 0.19563809671142532 
-		1 1 1 1 1 1 1 1 0.25770978442764469 1 1 1 1 1 1 1 1 1 1 1 1 1 0.91997385945574728 
-		1 1 1 1 0.55976515399758131 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 118 ".koy[15:117]"  0 0 0 -0.8377450699657043 0 0 0 0 0 -0.43650683804302293 
+		1 0.56809078622829046 0.51231733861276785 1 1 0.72386753672020565 1 1 0.24539173414800075 
+		1 0.3149285021582014 0.3149285021582014 0.3149285021582014 1 1 1 1 1 0.32078340805585626 
+		0.3149285021582014 1 1 1 1 1 1 1 1 1 1 1 1 0.91997385945574728 1 1 1 1 0.55976515399758131 
+		1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 119 ".koy[15:118]"  0 0 0 -0.8377450699657043 0 0 0 0 0 -0.43650683804302293 
 		-0.43650683804302293 0 0 0 0 0 0 0 0 0 0 0 -0.43650683804302293 0 0.86583932719629297 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.81043981750725214 -0.96546835485529303 0 0 0 
 		0 -0.019753818916699924 0 0.96540674474790877 0.44589912916746699 0 -0.43650683804302293 
-		0 -0.82296589151830757 -0.85879621829438124 0 0 -0.68993897504244661 0 0 -0.98067616220398202 
-		0 0 0 0 0 0 0 0 -0.96622236933857875 0 0 0 0 0 0 0 0 0 0 0 0 0 0.39197971620748084 
-		0 0 0 0 -0.82865129721135666 0 0 0 0 0 0 0 0 0 0 0 0;
+		0 -0.82296589151830757 -0.85879621829438124 0 0 -0.68993897504244661 0 0 -0.96942400259733452 
+		0 -0.9491153978986917 -0.9491153978986917 -0.9491153978986917 0 0 0 0 0 -0.94715257752701598 
+		-0.9491153978986917 0 0 0 0 0 0 0 0 0 0 0 0 0.39197971620748084 0 0 0 0 -0.82865129721135666 
+		0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "Fk_Left_Elbow_Ctrl_rotateY";
 	rename -uid "AF156F4B-4B1B-BC84-D829-F59E1C3ACB69";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 118 ".ktv[0:117]"  0 0 1 0 15 0 34 0 48 0 58 0 78 -1.2791903299590615
+	setAttr -s 119 ".ktv[0:118]"  0 0 1 0 15 0 34 0 48 0 58 0 78 -1.2791903299590615
 		 88 0 138 -1.5313666652334548 188 -1.5313666652334548 218 -1.5313666652334548 238 -1.5313666652334548
 		 278 -9.5781897311656063 298 -9.5781897311656063 328 -9.5781897311656063 359 -9.5781897311656063
 		 388 4.7268916015286004 403 12.169600369256658 406 2.4949840042026112 410 14.2993648408755
-		 456 0 478 0 483 0 500 0 511 -23.027335209926065 600 -23.027335209926065 609 0 610 0
+		 456 0 478 0 483 0 500 0 511 -5.9817047050102694 600 -5.9817047050102712 609 0 610 0
 		 617 0 620 3.0030879869853089 624 0 631 0 634 -3.5809224652155942 638 0 640 -14.968028293928006
-		 647 -14.968028293928006 652 -14.968028293928006 655 -23.027335209926065 658 -47.890036858023578
+		 647 -14.968028293928006 652 -14.968028293928006 655 -5.9817047050102712 658 -47.890036858023578
 		 668 -55.889276722541283 669 -59.24754693325729 671 -59.24754693325729 672 -59.24754693325729
 		 674 -59.24754693325729 675 -59.24754693325729 677 -59.24754693325729 678 -59.24754693325729
 		 680 -59.24754693325729 681 -59.24754693325729 683 -59.24754693325729 684 -59.24754693325729
 		 686 -59.24754693325729 689 -59.24754693325729 692 -59.24754693325729 695 -59.24754693325729
 		 698 -59.24754693325729 705 0 710 -18.774522140838325 711 -8.7026764401790313 720 -31.826991587593223
 		 734 -31.826991587593223 758 -31.826991587593223 800 39.414667176923011 900 -20.847460776547948
-		 952 -31.826991587593223 958 -18.554830486593982 966 -5.7231163776681564 976 0 977 -23.027335209926065
-		 982 0 983 -9.5834588033730235 984 0 986 0 989 -61.334136341577931 992 0 997 -67.525718768741527
-		 999 -67.525718768741527 1003 -59.368929059044298 1008 -36.063815602768017 1010 -36.063815602768017
-		 1011 -36.063815602768017 1015 -19.296240749066477 1020 -19.296240749066477 1025 -19.296240749066477
-		 1031 0 1037 0 1043 -25.331978735809528 1049 -36.063815602768017 1050 0 1059 29.0160708192603
+		 952 -31.826991587593223 958 -18.554830486593982 966 -5.7231163776681564 976 0 977 -12.778760714632103
+		 982 0 983 -9.5834588033730235 984 0 986 0 989 0 992 0 997 -67.525718768741527 999 -67.525718768741527
+		 1003 -18.039837862828584 1008 -4.4709592519545955 1009 -4.4709592519545955 1010 -4.4709592519545955
+		 1011 -4.4709592519545955 1015 -19.296240749066477 1020 -19.296240749066477 1025 -19.296240749066477
+		 1031 0 1037 0 1043 -25.331978735809528 1049 -4.4709592519545955 1050 0 1059 29.0160708192603
 		 1061 30.240899441383728 1065 30.201229495668557 1070 37.751810589434953 1075 37.751810589434953
 		 1085 -23.864702905517866 1087 -23.864702905517866 1089 -23.864702905517866 1091 -26.806985715679467
 		 1093 -26.806985715679467 1095 -26.806985715679467 1099 -17.987195016719095 1104 -17.669886610419823
@@ -7989,69 +8002,69 @@ createNode animCurveTA -n "Fk_Left_Elbow_Ctrl_rotateY";
 		 1131 -24.73444074748155 1134 -23.864702905517866 1136 -23.864702905517866 1138 -23.864702905517866
 		 1147 37.751810589434953 1149 37.751810589434953 1151 37.751810589434953 1156 29.0160708192603
 		 1158 29.0160708192603 1161 28.962183474693784 1164 28.962183474693784 1178 0;
-	setAttr -s 118 ".kit[15:117]"  1 18 1 1 1 18 18 18 
+	setAttr -s 119 ".kit[15:118]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 1 
+		18 18 18 18 18 1 1 1 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 118 ".kot[15:117]"  1 18 1 1 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 119 ".kot[15:118]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 1 
+		18 18 18 18 18 1 1 1 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 118 ".kix[15:117]"  1 0.97923283659901073 1 0.53085527467430371 
+		18 18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 119 ".kix[15:118]"  1 0.97923283659901073 1 0.53085527467430371 
 		1 1 1 1 1 0.98046713262187235 0.98046713262187235 1 1 1 1 1 1 1 1 1 1 1 0.98046713262187235 
 		0.70526571789403769 0.91783679174523225 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 0.98126774898346281 1 0.78810996568834824 0.91807159867576849 1 0.98046713262187235 
-		1 1 1 1 0.8813067273223758 1 1 1 0.56395698412246709 1 1 1 1 1 1 1 1 0.62200167114909199 
-		1 0.34438964581744069 0.79248925356477062 1 1 1 1 1 1 1 1 1 1 0.99683519193592574 
-		1 1 1 1 0.94127973345801441 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 118 ".kiy[15:117]"  0 0.20273887571517929 0 0.84746249318212874 
+		1 1 1 1 0.8813067273223758 1 1 1 0.32253912283211361 1 1 1 1 1 1 1 1 1 1 1 0.58049624874539918 
+		0.79248925356477062 1 1 1 1 1 1 1 1 1 1 0.99683519193592574 1 1 1 1 0.94127973345801441 
+		1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 119 ".kiy[15:118]"  0 0.20273887571517929 0 0.84746249318212874 
 		0 0 0 0 0 -0.19668299837109374 -0.19668299837109374 0 0 0 0 0 0 0 0 0 0 0 -0.19668299837109374 
 		-0.70894306341440971 -0.3969579621557166 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 -0.19264891591941966 0 0.61553446855778138 0.39641460581683752 0 -0.19668299837109374 
-		0 0 0 0 -0.4725446564890175 0 0 0 0.82580416568305792 0 0 0 0 0 0 0 0 -0.78301591368741463 
-		0 0.93882680610096425 0.60988587701663732 0 0 0 0 0 0 0 0 0 0 0.07949591258716493 
-		0 0 0 0 -0.33762769936900799 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 118 ".kox[15:117]"  1 0.97923283659901095 1 0.53085527467430371 
+		0 0 0 0 -0.4725446564890175 0 0 0 0.94655613369873148 0 0 0 0 0 0 0 0 0 0 0 0.81426292141575474 
+		0.60988587701663732 0 0 0 0 0 0 0 0 0 0 0.07949591258716493 0 0 0 0 -0.33762769936900799 
+		0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 119 ".kox[15:118]"  1 0.97923283659901095 1 0.53085527467430371 
 		1 1 1 1 1 0.98046713262187235 0.98046713262187235 1 1 1 1 1 1 1 1 1 1 1 0.98046713262187235 
 		0.70526571789403758 0.91783679174523225 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 0.98126774898346292 1 0.78810996568834835 0.91807159867576849 1 0.98046713262187235 
-		1 1 1 1 0.8813067273223758 1 1 1 0.56395698412246709 1 1 1 1 1 1 1 1 0.62200167114909199 
-		1 0.34438964581744075 0.79248925356477051 1 1 1 1 1 1 1 1 1 1 0.99683519193592562 
-		1 1 1 1 0.94127973345801452 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 118 ".koy[15:117]"  0 0.20273887571517929 0 0.84746249318212874 
+		1 1 1 1 0.8813067273223758 1 1 1 0.32253912283211361 1 1 1 1 1 1 1 1 1 1 1 0.58049624874539918 
+		0.79248925356477051 1 1 1 1 1 1 1 1 1 1 0.99683519193592562 1 1 1 1 0.94127973345801452 
+		1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 119 ".koy[15:118]"  0 0.20273887571517929 0 0.84746249318212874 
 		0 0 0 0 0 -0.19668299837109374 -0.19668299837109374 0 0 0 0 0 0 0 0 0 0 0 -0.19668299837109374 
 		-0.7089430634144096 -0.3969579621557166 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 -0.19264891591941968 0 0.61553446855778149 0.39641460581683757 0 -0.19668299837109374 
-		0 0 0 0 -0.4725446564890175 0 0 0 0.82580416568305803 0 0 0 0 0 0 0 0 -0.78301591368741463 
-		0 0.93882680610096447 0.60988587701663721 0 0 0 0 0 0 0 0 0 0 0.079495912587164916 
-		0 0 0 0 -0.33762769936900799 0 0 0 0 0 0 0 0 0 0 0 0;
+		0 0 0 0 -0.4725446564890175 0 0 0 0.94655613369873148 0 0 0 0 0 0 0 0 0 0 0 0.81426292141575474 
+		0.60988587701663721 0 0 0 0 0 0 0 0 0 0 0.079495912587164916 0 0 0 0 -0.33762769936900799 
+		0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "Fk_Left_Elbow_Ctrl_rotateZ";
 	rename -uid "0BFEBA38-4D96-C8C9-82AF-4294A0FB07B7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 118 ".ktv[0:117]"  0 0 1 0 15 4.4604332675020713 34 1.8429785210196659
+	setAttr -s 119 ".ktv[0:118]"  0 0 1 0 15 4.4604332675020713 34 1.8429785210196659
 		 48 -8.9016005374492071 58 0 78 0 88 0 138 0 188 0 218 0 238 0 278 0 298 0 328 0 359 0
 		 388 36.684726165061718 403 52.969119080489129 406 37.943827263324202 410 43.873557071635261
-		 456 0 478 0 483 0 500 0 511 26.926172174508704 600 26.926172174508704 609 0 610 0
+		 456 0 478 0 483 0 500 0 511 31.679491756415249 600 31.679491756415231 609 0 610 0
 		 617 0 620 0.084004504807321106 624 0 631 0 634 0.39942855500661506 638 0 640 16.029572379237017
-		 647 16.029572379237017 652 16.029572379237017 655 26.926172174508704 658 51.976057384456588
+		 647 16.029572379237017 652 16.029572379237017 655 31.679491756415231 658 51.976057384456588
 		 668 47.884471073220496 669 28.961905693359419 671 28.961905693359419 672 28.961905693359419
 		 674 28.961905693359419 675 28.961905693359419 677 28.961905693359419 678 28.961905693359419
 		 680 28.961905693359419 681 28.961905693359419 683 28.961905693359419 684 28.961905693359419
 		 686 28.961905693359419 689 28.961905693359419 692 28.961905693359419 695 28.961905693359419
 		 698 28.961905693359419 705 0 710 -32.786436590814937 711 11.506156096134573 720 43.704862660217493
 		 734 43.704862660217493 758 43.704862660217493 800 -8.471108022916443 900 -9.8723527793482049
-		 952 43.704862660217493 958 25.479515268302176 966 0.76834201945434177 976 0 977 26.926172174508704
-		 982 0 983 -13.502151278107954 984 0 986 0 989 -54.030928078627731 992 0 997 11.226885618752044
-		 999 11.226885618752044 1003 18.748851357370398 1008 40.240182039135725 1010 40.240182039135725
-		 1011 40.240182039135725 1015 1.7889907610996783 1020 1.7889907610996783 1025 1.7889907610996783
-		 1031 -20.786327181812801 1037 0 1043 13.446440643061251 1049 40.240182039135725 1050 0
+		 952 43.704862660217493 958 25.479515268302176 966 0.76834201945434177 976 0 977 50.636343859681723
+		 982 0 983 -13.502151278107954 984 0 986 0 989 0 992 0 997 11.226885618752044 999 11.226885618752044
+		 1003 -11.351903845076748 1008 5.2014333762250766 1009 5.2014333762250766 1010 5.2014333762250766
+		 1011 5.2014333762250766 1015 1.7889907610996783 1020 1.7889907610996783 1025 1.7889907610996783
+		 1031 -20.786327181812801 1037 0 1043 13.446440643061251 1049 5.2014333762250766 1050 0
 		 1059 -2.8307729566008315 1061 -6.6203411850702736 1065 -5.7657206337166986 1070 -22.411454773971197
 		 1075 -22.411454773971197 1085 13.459556573742042 1087 13.459556573742042 1089 13.459556573742042
 		 1091 17.736177526742789 1093 17.736177526742789 1095 17.736177526742789 1099 6.031898894926452
@@ -8060,185 +8073,185 @@ createNode animCurveTA -n "Fk_Left_Elbow_Ctrl_rotateZ";
 		 1138 13.459556573742042 1147 -22.411454773971197 1149 -22.411454773971197 1151 -22.411454773971197
 		 1156 -2.8307729566008315 1158 -2.8307729566008315 1161 -1.5430472481157873 1164 -1.5430472481157873
 		 1178 0;
-	setAttr -s 118 ".kit[15:117]"  1 18 1 1 1 18 18 18 
+	setAttr -s 119 ".kit[15:118]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 1 
+		18 18 18 18 18 1 1 1 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 118 ".kot[15:117]"  1 18 1 1 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 119 ".kot[15:118]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 1 
+		18 18 18 18 18 1 1 1 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 118 ".kix[15:117]"  1 0.89289877663243833 0.52562524509699404 
+		18 18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 119 ".kix[15:118]"  1 0.89289877663243833 0.52562524509699404 
 		1 0.92712866975659947 1 1 1 1 0.97711029651647008 0.97711029651647008 1 1 1 1 1 1 
 		1 1 1 1 1 0.97711029651647008 1 0.88933185891698874 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 0.42085769386270194 1 0.29793059983074893 1 1 1 0.99984500533344256 1 1 0.61425508847554045 
-		0.99537112672280692 1 0.97711029651647008 0.33396274419892175 1 1 1 0.39419908425377609 
-		0.33404742477069316 1 1 0.59513072758897267 1 1 1 1 1 1 1 0.64177725228828364 0.57996268508143767 
-		1 0.92999199554189582 0.96966101993928833 1 1 1 1 1 1 1 1 1 1 0.74156582431460405 
-		1 1 1 1 0.71284199438164486 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 118 ".kiy[15:117]"  0 0.45025745378427118 -0.85071622866660113 
+		0.99537112672280692 1 0.97711029651647008 0.21795907842758389 1 1 1 0.39419908425377609 
+		1 1 1 1 1 0.30814930464084545 0.30814930464084545 0.30814930464084545 1 1 1 1 0.64177725228828364 
+		1 0.30814930464084545 0.94779273523084329 0.96966101993928833 1 1 1 1 1 1 1 1 1 1 
+		0.74156582431460405 1 1 1 1 0.71284199438164486 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 119 ".kiy[15:118]"  0 0.45025745378427118 -0.85071622866660113 
 		0 -0.37474315165905064 0 0 0 0 0.21273332705877532 0.21273332705877532 0 0 0 0 0 
 		0 0 0 0 0 0 0.21273332705877532 0 -0.45726233686501389 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 -0.90712667335745811 0 0.95458753275144448 0 0 0 -0.017605831697718968 0 0 
-		-0.78910752517125693 -0.096105775510995681 0 0.21273332705877532 -0.9425862748242867 
-		0 0 0 -0.91902507146077594 0.94255626781856805 0 0 0.80362890507958962 0 0 0 0 0 
-		0 0 0.76689109946934486 0.81464304079340732 0 -0.36757977124428731 -0.24445348516701296 
+		-0.78910752517125693 -0.096105775510995681 0 0.21273332705877532 -0.97595790899556645 
+		0 0 0 -0.91902507146077594 0 0 0 0 0 0.95133800830691273 0.95133800830691273 0.95133800830691273 
+		0 0 0 0 0.76689109946934486 0 0.95133800830691273 -0.31888701924605956 -0.24445348516701296 
 		0 0 0 0 0 0 0 0 0 0 -0.67088011463196751 0 0 0 0 0.70132466878472122 0 0 0 0 0 0 
 		0 0 0 0 0 0;
-	setAttr -s 118 ".kox[15:117]"  1 0.89289877663243822 0.52562524509699415 
+	setAttr -s 119 ".kox[15:118]"  1 0.89289877663243822 0.52562524509699415 
 		1 0.92712866975659936 1 1 1 1 0.97711029651647008 0.97711029651647008 1 1 1 1 1 1 
 		1 1 1 1 1 0.97711029651647008 1 0.88933185891698863 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 0.42085769386270194 1 0.29793059983074888 1 1 1 0.99984500533344256 1 1 0.61425508847554045 
-		0.99537112672280692 1 0.97711029651647008 0.33396274419892175 1 1 1 0.39419908425377603 
-		0.33404742477069321 1 1 0.59513072758897267 1 1 1 1 1 1 1 0.64177725228828364 0.57996268508143767 
-		1 0.92999199554189571 0.96966101993928844 1 1 1 1 1 1 1 1 1 1 0.74156582431460405 
-		1 1 1 1 0.71284199438164486 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 118 ".koy[15:117]"  0 0.45025745378427118 -0.85071622866660113 
+		0.99537112672280692 1 0.97711029651647008 0.21795907842758389 1 1 1 0.39419908425377603 
+		1 1 1 1 1 0.30814930464084545 0.30814930464084545 0.30814930464084545 1 1 1 1 0.64177725228828364 
+		1 0.30814930464084545 0.94779273523084318 0.96966101993928844 1 1 1 1 1 1 1 1 1 1 
+		0.74156582431460405 1 1 1 1 0.71284199438164486 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 119 ".koy[15:118]"  0 0.45025745378427118 -0.85071622866660113 
 		0 -0.37474315165905064 0 0 0 0 0.21273332705877535 0.21273332705877535 0 0 0 0 0 
 		0 0 0 0 0 0 0.21273332705877535 0 -0.45726233686501383 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 -0.907126673357458 0 0.95458753275144448 0 0 0 -0.017605831697718968 0 0 -0.78910752517125693 
-		-0.096105775510995695 0 0.21273332705877535 -0.94258627482428659 0 0 0 -0.91902507146077594 
-		0.94255626781856805 0 0 0.80362890507958951 0 0 0 0 0 0 0 0.76689109946934486 0.81464304079340732 
-		0 -0.3675797712442872 -0.24445348516701296 0 0 0 0 0 0 0 0 0 0 -0.67088011463196751 
-		0 0 0 0 0.70132466878472133 0 0 0 0 0 0 0 0 0 0 0 0;
+		-0.096105775510995695 0 0.21273332705877535 -0.97595790899556634 0 0 0 -0.91902507146077594 
+		0 0 0 0 0 0.95133800830691262 0.95133800830691262 0.95133800830691262 0 0 0 0 0.76689109946934486 
+		0 0.95133800830691262 -0.3188870192460595 -0.24445348516701296 0 0 0 0 0 0 0 0 0 
+		0 -0.67088011463196751 0 0 0 0 0.70132466878472133 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "Fk_Left_Elbow_Ctrl_scaleX";
 	rename -uid "58ADD4D7-41F3-7660-3FEE-1E934D386806";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 118 ".ktv[0:117]"  0 1 1 1 15 1 34 1 48 1 58 1 78 1 88 1 138 1
+	setAttr -s 119 ".ktv[0:118]"  0 1 1 1 15 1 34 1 48 1 58 1 78 1 88 1 138 1
 		 188 1 218 1 238 1 278 1 298 1 328 1 359 1 388 1 403 1 406 1 410 1 456 1 478 1 483 1
 		 500 1 511 1 600 1 609 1 610 1 617 1 620 1 624 1 631 1 634 1 638 1 640 1 647 1 652 1
 		 655 1 658 1 668 1 669 1 671 1 672 1 674 1 675 1 677 1 678 1 680 1 681 1 683 1 684 1
 		 686 1 689 1 692 1 695 1 698 1 705 1 710 1 711 1 720 1 734 1 758 1 800 1 900 1 952 1
 		 958 1 966 1 976 1 977 1 982 1 983 1 984 1 986 1 989 1 992 1 997 1 999 1 1003 1 1008 1
-		 1010 1 1011 1 1015 1 1020 1 1025 1 1031 1 1037 1 1043 1 1049 1 1050 1 1059 1 1061 1
-		 1065 1 1070 1 1075 1 1085 1 1087 1 1089 1 1091 1 1093 1 1095 1 1099 1 1104 1 1105 1
-		 1107 1 1121 1 1125 1 1131 1 1134 1 1136 1 1138 1 1147 1 1149 1 1151 1 1156 1 1158 1
-		 1161 1 1164 1 1178 1;
-	setAttr -s 118 ".kit[15:117]"  1 18 1 1 1 18 18 18 
+		 1009 1 1010 1 1011 1 1015 1 1020 1 1025 1 1031 1 1037 1 1043 1 1049 1 1050 1 1059 1
+		 1061 1 1065 1 1070 1 1075 1 1085 1 1087 1 1089 1 1091 1 1093 1 1095 1 1099 1 1104 1
+		 1105 1 1107 1 1121 1 1125 1 1131 1 1134 1 1136 1 1138 1 1147 1 1149 1 1151 1 1156 1
+		 1158 1 1161 1 1164 1 1178 1;
+	setAttr -s 119 ".kit[15:118]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 1 
+		18 18 18 18 18 1 1 1 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 118 ".kot[15:117]"  1 18 1 1 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 119 ".kot[15:118]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 1 
+		18 18 18 18 18 1 1 1 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 118 ".kix[15:117]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		18 18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 119 ".kix[15:118]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1;
-	setAttr -s 118 ".kiy[15:117]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1 1;
+	setAttr -s 119 ".kiy[15:118]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0;
-	setAttr -s 118 ".kox[15:117]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		0 0;
+	setAttr -s 119 ".kox[15:118]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1;
-	setAttr -s 118 ".koy[15:117]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1 1;
+	setAttr -s 119 ".koy[15:118]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0;
+		0 0;
 createNode animCurveTU -n "Fk_Left_Elbow_Ctrl_scaleY";
 	rename -uid "3A61F7BB-4BC8-324E-4B3E-ABABA621C8CB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 118 ".ktv[0:117]"  0 1 1 1 15 1 34 1 48 1 58 1 78 1 88 1 138 1
+	setAttr -s 119 ".ktv[0:118]"  0 1 1 1 15 1 34 1 48 1 58 1 78 1 88 1 138 1
 		 188 1 218 1 238 1 278 1 298 1 328 1 359 1 388 1 403 1 406 1 410 1 456 1 478 1 483 1
 		 500 1 511 1 600 1 609 1 610 1 617 1 620 1 624 1 631 1 634 1 638 1 640 1 647 1 652 1
 		 655 1 658 1 668 1 669 1 671 1 672 1 674 1 675 1 677 1 678 1 680 1 681 1 683 1 684 1
 		 686 1 689 1 692 1 695 1 698 1 705 1 710 1 711 1 720 1 734 1 758 1 800 1 900 1 952 1
 		 958 1 966 1 976 1 977 1 982 1 983 1 984 1 986 1 989 1 992 1 997 1 999 1 1003 1 1008 1
-		 1010 1 1011 1 1015 1 1020 1 1025 1 1031 1 1037 1 1043 1 1049 1 1050 1 1059 1 1061 1
-		 1065 1 1070 1 1075 1 1085 1 1087 1 1089 1 1091 1 1093 1 1095 1 1099 1 1104 1 1105 1
-		 1107 1 1121 1 1125 1 1131 1 1134 1 1136 1 1138 1 1147 1 1149 1 1151 1 1156 1 1158 1
-		 1161 1 1164 1 1178 1;
-	setAttr -s 118 ".kit[15:117]"  1 18 1 1 1 18 18 18 
+		 1009 1 1010 1 1011 1 1015 1 1020 1 1025 1 1031 1 1037 1 1043 1 1049 1 1050 1 1059 1
+		 1061 1 1065 1 1070 1 1075 1 1085 1 1087 1 1089 1 1091 1 1093 1 1095 1 1099 1 1104 1
+		 1105 1 1107 1 1121 1 1125 1 1131 1 1134 1 1136 1 1138 1 1147 1 1149 1 1151 1 1156 1
+		 1158 1 1161 1 1164 1 1178 1;
+	setAttr -s 119 ".kit[15:118]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 1 
+		18 18 18 18 18 1 1 1 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 118 ".kot[15:117]"  1 18 1 1 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 119 ".kot[15:118]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 1 
+		18 18 18 18 18 1 1 1 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 118 ".kix[15:117]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		18 18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 119 ".kix[15:118]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1;
-	setAttr -s 118 ".kiy[15:117]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1 1;
+	setAttr -s 119 ".kiy[15:118]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0;
-	setAttr -s 118 ".kox[15:117]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		0 0;
+	setAttr -s 119 ".kox[15:118]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1;
-	setAttr -s 118 ".koy[15:117]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1 1;
+	setAttr -s 119 ".koy[15:118]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0;
+		0 0;
 createNode animCurveTU -n "Fk_Left_Elbow_Ctrl_scaleZ";
 	rename -uid "4233E616-423B-91A6-75A8-F7A79C02F1B9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 118 ".ktv[0:117]"  0 1 1 1 15 1 34 1 48 1 58 1 78 1 88 1 138 1
+	setAttr -s 119 ".ktv[0:118]"  0 1 1 1 15 1 34 1 48 1 58 1 78 1 88 1 138 1
 		 188 1 218 1 238 1 278 1 298 1 328 1 359 1 388 1 403 1 406 1 410 1 456 1 478 1 483 1
 		 500 1 511 1 600 1 609 1 610 1 617 1 620 1 624 1 631 1 634 1 638 1 640 1 647 1 652 1
 		 655 1 658 1 668 1 669 1 671 1 672 1 674 1 675 1 677 1 678 1 680 1 681 1 683 1 684 1
 		 686 1 689 1 692 1 695 1 698 1 705 1 710 1 711 1 720 1 734 1 758 1 800 1 900 1 952 1
 		 958 1 966 1 976 1 977 1 982 1 983 1 984 1 986 1 989 1 992 1 997 1 999 1 1003 1 1008 1
-		 1010 1 1011 1 1015 1 1020 1 1025 1 1031 1 1037 1 1043 1 1049 1 1050 1 1059 1 1061 1
-		 1065 1 1070 1 1075 1 1085 1 1087 1 1089 1 1091 1 1093 1 1095 1 1099 1 1104 1 1105 1
-		 1107 1 1121 1 1125 1 1131 1 1134 1 1136 1 1138 1 1147 1 1149 1 1151 1 1156 1 1158 1
-		 1161 1 1164 1 1178 1;
-	setAttr -s 118 ".kit[15:117]"  1 18 1 1 1 18 18 18 
+		 1009 1 1010 1 1011 1 1015 1 1020 1 1025 1 1031 1 1037 1 1043 1 1049 1 1050 1 1059 1
+		 1061 1 1065 1 1070 1 1075 1 1085 1 1087 1 1089 1 1091 1 1093 1 1095 1 1099 1 1104 1
+		 1105 1 1107 1 1121 1 1125 1 1131 1 1134 1 1136 1 1138 1 1147 1 1149 1 1151 1 1156 1
+		 1158 1 1161 1 1164 1 1178 1;
+	setAttr -s 119 ".kit[15:118]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 1 
+		18 18 18 18 18 1 1 1 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 118 ".kot[15:117]"  1 18 1 1 1 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 119 ".kot[15:118]"  1 18 1 1 1 18 18 18 
 		18 1 1 18 18 18 18 18 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 1 
+		18 18 18 18 18 1 1 1 18 18 18 18 18 18 1 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 118 ".kix[15:117]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		18 18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 119 ".kix[15:118]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1;
-	setAttr -s 118 ".kiy[15:117]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1 1;
+	setAttr -s 119 ".kiy[15:118]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0;
-	setAttr -s 118 ".kox[15:117]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		0 0;
+	setAttr -s 119 ".kox[15:118]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1;
-	setAttr -s 118 ".koy[15:117]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1 1;
+	setAttr -s 119 ".koy[15:118]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0;
+		0 0;
 createNode animCurveTU -n "Fk_Left_Shoulder_Ctrl_visibility";
 	rename -uid "9A233C1D-4D72-D877-F511-329D76E5F803";
 	setAttr ".tan" 18;
@@ -8268,151 +8281,149 @@ createNode animCurveTA -n "Fk_Left_Shoulder_Ctrl_rotateX";
 	rename -uid "BAC6BA4F-4A05-4BB0-AAA6-D5ADDB55AF7D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 112 ".ktv[0:111]"  0 0 1 0 15 0 28 0 36 0 52 0 58 0 88 0 108 0
+	setAttr -s 113 ".ktv[0:112]"  0 0 1 0 15 0 28 0 36 0 52 0 58 0 88 0 108 0
 		 138 0 158 0 188 0 218 0 238 0 278 44.692874812354368 298 8.8813406835461564 328 8.8813406835461564
 		 359 20.112942798103632 388 25.134269508158582 403 17.927715445647888 406 43.812451911637694
-		 410 25.732090827993467 456 0 474 0 483 0 500 0 510 -0.10981563160061332 600 -0.10981563160061332
+		 410 25.732090827993467 456 0 474 0 483 0 500 0 511 -0.12939505085253908 600 -0.12939505085253908
 		 609 -6.7783880125076283 610 -6.7783880125076283 617 14.177373851079265 624 -1.6514879408628174
 		 631 -15.374464281775081 638 -6.7783880125076283 640 -29.504975922381576 641 -38.766226056527216
-		 647 36.241227421021989 652 -29.504975922381576 655 -19.154700569758919 658 -14.929378553952727
+		 647 36.241227421021989 652 -29.504975922381576 655 -0.12939505085253908 658 -14.929378553952727
 		 668 29.602538126585802 669 30.664453062814097 671 30.664453062814097 672 41.093851263609587
 		 674 41.093851263609587 675 44.876501778278516 681 7.1549377757657897 686 41.093851263609587
 		 689 24.036361692548034 692 7 695 7 698 7 705 -24.89765833977685 710 -96.092076385974266
 		 711 0 720 -48.257829576686071 734 -48.257829576686071 758 -48.257829576686071 800 -48.257829576686071
 		 900 -62.81081914445474 952 -48.257829576686071 958 -28.133851262128147 969 -48.121268067968124
-		 976 0 977 -19.154700569758919 982 -84.626632848125425 983 -84.031895707241276 985 -80.22477521779777
+		 976 0 977 -20.964091072629017 982 -84.626632848125439 983 -84.031895707241276 985 -80.22477521779777
 		 986 -77.600482146611384 987 -72.954742744511933 989 -65.844273682297853 990 -71.043948921418135
 		 992 -85.900163890335193 997 10.952998700259206 999 10.952998700259206 1003 8.1133323705622367
-		 1008 0 1010 0 1011 0 1015 -38.33187254443196 1020 -86.662231108035144 1025 -22.773536493741677
+		 1008 0 1009 0 1010 0 1011 0 1015 -38.33187254443196 1020 -86.662231108035144 1025 -22.773536493741677
 		 1031 -0.83299316664435974 1037 -12.313230642064989 1043 -29.936584781748884 1049 0
 		 1050 0 1060 0 1065 0 1070 0 1072 0 1075 0 1085 36.551140642471879 1087 36.206485792428943
 		 1089 36.206485792428943 1091 36.206485792428943 1093 36.206485792428943 1104 -71.079574908375193
 		 1105 -71.079574908375193 1107 -71.079574908375193 1121 -71.079574908375193 1131 36.206485792428943
 		 1134 36.206485792428943 1136 36.206485792428943 1138 36.551140642471879 1147 0 1149 0
 		 1151 0 1156 0 1159 0 1164 0 1178 0;
-	setAttr -s 112 ".kit[15:111]"  1 1 1 18 1 1 1 18 
+	setAttr -s 113 ".kit[15:112]"  1 1 1 18 1 1 1 18 
 		18 18 18 18 1 18 18 18 18 18 18 18 18 18 18 1 18 
 		18 18 18 18 18 18 18 10 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 1 18 18 18 18 18 18 18 18 18 
+		18 18 18 1 1 1 18 18 18 18 18 18 1 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18;
-	setAttr -s 112 ".kot[15:111]"  1 1 1 18 1 1 1 18 
+		18 18 18 18 18;
+	setAttr -s 113 ".kot[15:112]"  1 1 1 18 1 1 1 18 
 		18 18 18 18 1 18 18 18 18 18 18 18 18 18 18 1 18 
 		18 18 18 18 18 18 18 10 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 1 18 18 18 18 18 18 18 18 18 
+		18 18 18 1 1 1 18 18 18 18 18 18 1 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18;
-	setAttr -s 112 ".kix[15:111]"  1 1 0.97365246592178922 1 1 0.42642326787747742 
-		0.97204494194380442 1 1 1 1 1 0.99990479581568792 1 1 1 0.74915508854204538 1 1 0.21848733955073324 
-		1 1 1 1 0.53697253300230763 0.5996809225320231 1 1 1 1 1 1 0.74925905213477684 0.38733654927719346 
+		18 18 18 18 18;
+	setAttr -s 113 ".kix[15:112]"  1 1 0.97365246592178922 1 1 0.42642326787747742 
+		0.97204494194380442 1 1 1 1 1 1 1 1 1 0.74915508854204538 1 1 0.21848733955073324 
+		1 1 1 1 1 0.5996809225320231 1 1 1 1 1 1 0.74925905213477684 0.38733654927719346 
 		1 1 1 0.26774105486885036 1 1 1 1 1 1 1 0.97004224789055604 1 1 1 1 1 0.85195074256200198 
 		0.74403556096376888 0.54895290476577019 0.52026596744608089 1 0.33630118650469781 
-		1 1 1 0.89091631784581371 1 1 1 0.24064154695334994 1 0.29257480490125853 1 0.70150534738632286 
+		1 1 1 0.89091631784581371 1 1 1 1 0.24064154695334994 1 0.29257480490125853 1 0.70150534738632286 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 112 ".kiy[15:111]"  0 0 0.22803700490143972 0 0 -0.90452374021508863 
-		-0.23479486970857313 0 0 0 0 0 -0.013798525456992027 0 0 0 -0.66239463563012058 0 
-		0 -0.97583978318986486 0 0 0 0 0.84359972664829952 0.80023920870646015 0 0 0 0 0 
-		0 0.66227703628775758 -0.92193839143081369 0 0 0 -0.96349090682668892 0 0 0 0 0 0 
-		0 0.24293628240227383 0 0 0 0 0 0.52362193637017673 0.66814001827560798 0.8358532815926627 
-		0.85400428752869484 0 -0.94175448602888667 0 0 0 -0.45416749619062036 0 0 0 -0.97061405609021489 
-		0 0.95624263842237789 0 -0.71266418991583569 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 112 ".kox[15:111]"  1 1 0.97365246592178911 1 1 0.42642326787747736 
-		0.97204494194380442 1 1 1 1 1 0.99990479581568803 1 1 1 0.74915508854204538 1 1 0.21848733955073321 
-		1 1 1 1 0.53697253300230763 0.59968092253202321 1 1 1 1 1 1 0.74925905213477684 0.38733654927719346 
+	setAttr -s 113 ".kiy[15:112]"  0 0 0.22803700490143972 0 0 -0.90452374021508863 
+		-0.23479486970857313 0 0 0 0 0 0 0 0 0 -0.66239463563012058 0 0 -0.97583978318986486 
+		0 0 0 0 0 0.80023920870646015 0 0 0 0 0 0 0.66227703628775758 -0.92193839143081369 
+		0 0 0 -0.96349090682668892 0 0 0 0 0 0 0 0.24293628240227383 0 0 0 0 0 0.52362193637017673 
+		0.66814001827560798 0.8358532815926627 0.85400428752869484 0 -0.94175448602888667 
+		0 0 0 -0.45416749619062036 0 0 0 0 -0.97061405609021489 0 0.95624263842237789 0 -0.71266418991583569 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 113 ".kox[15:112]"  1 1 0.97365246592178911 1 1 0.42642326787747736 
+		0.97204494194380442 1 1 1 1 1 1 1 1 1 0.74915508854204538 1 1 0.21848733955073321 
+		1 1 1 1 1 0.59968092253202321 1 1 1 1 1 1 0.74925905213477684 0.38733654927719346 
 		1 1 1 0.26774105486885041 1 1 1 1 1 1 1 0.97004224789055593 1 1 1 1 1 0.85195074256200198 
 		0.74403556096376888 0.5489529047657703 0.52026596744608089 1 0.33630118650469776 
-		1 1 1 0.89091631784581371 1 1 1 0.24064154695334991 1 0.29257480490125853 1 0.70150534738632286 
+		1 1 1 0.89091631784581371 1 1 1 1 0.24064154695334991 1 0.29257480490125853 1 0.70150534738632286 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 112 ".koy[15:111]"  0 0 0.22803700490143969 0 0 -0.90452374021508863 
-		-0.23479486970857319 0 0 0 0 0 -0.013798525456992027 0 0 0 -0.66239463563012058 0 
-		0 -0.97583978318986486 0 0 0 0 0.84359972664829941 0.80023920870646015 0 0 0 0 0 
-		0 0.66227703628775758 -0.92193839143081369 0 0 0 -0.96349090682668881 0 0 0 0 0 0 
-		0 0.24293628240227377 0 0 0 0 0 0.52362193637017673 0.66814001827560798 0.8358532815926627 
-		0.85400428752869484 0 -0.94175448602888667 0 0 0 -0.45416749619062036 0 0 0 -0.97061405609021489 
-		0 0.95624263842237789 0 -0.71266418991583569 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 113 ".koy[15:112]"  0 0 0.22803700490143969 0 0 -0.90452374021508863 
+		-0.23479486970857319 0 0 0 0 0 0 0 0 0 -0.66239463563012058 0 0 -0.97583978318986486 
+		0 0 0 0 0 0.80023920870646015 0 0 0 0 0 0 0.66227703628775758 -0.92193839143081369 
+		0 0 0 -0.96349090682668881 0 0 0 0 0 0 0 0.24293628240227377 0 0 0 0 0 0.52362193637017673 
+		0.66814001827560798 0.8358532815926627 0.85400428752869484 0 -0.94175448602888667 
+		0 0 0 -0.45416749619062036 0 0 0 0 -0.97061405609021489 0 0.95624263842237789 0 -0.71266418991583569 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "Fk_Left_Shoulder_Ctrl_rotateY";
 	rename -uid "A415FA52-46EE-E48D-782E-8D8B590EFBA5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 117 ".ktv[0:116]"  0 0 1 0 15 0 28 0 36 0 52 0 58 0 88 0 108 0
+	setAttr -s 118 ".ktv[0:117]"  0 0 1 0 15 0 28 0 36 0 52 0 58 0 88 0 108 0
 		 138 0 158 0 188 0 218 0 238 0 278 18.893594587427884 298 18.893594587427909 328 18.893594587427909
 		 359 22.642818216706768 388 26.354517740230239 403 -3.60281105935004 406 27.333810199338455
-		 410 20.595068981091288 456 0 474 0 483 0 500 0 510 0.12119629961400183 600 0.12119629961400183
+		 410 20.595068981091288 456 0 474 0 483 0 500 0 511 0.10025880009645681 600 0.10025880009645681
 		 609 -1.2844438284969393 610 -1.2844438284969393 617 13.02880124934414 624 3.8540089163897262
 		 631 -14.451505477136951 638 -1.2844438284969393 640 -18.522259860860899 641 -18.024949397469786
-		 647 -1.6949660288221609 652 -18.522259860860899 655 13.048937706260197 658 17.750688504244625
+		 647 -1.6949660288221609 652 -18.522259860860899 655 0.10025880009645681 658 17.750688504244625
 		 668 14.693388285234098 669 14.620483433857688 671 14.620483433857688 672 14.620483433857688
 		 674 14.620483433857688 675 14.620483433857695 677 14.620483433857711 678 14.620483433857716
 		 680 14.620483433857732 681 14.62048343385772 683 14.620483433857688 684 14.620483433857688
 		 686 14.620483433857688 689 14.620483433857688 692 14.620483433857688 695 14.620483433857688
 		 698 14.620483433857688 705 16.286077117561881 710 -48.422817817896195 711 0 720 2.770747847099809
 		 734 2.770747847099809 758 2.770747847099809 800 2.770747847099809 900 33.085484579490917
-		 952 2.770747847099809 958 1.6153193895986411 969 -20.534585968876119 976 0 977 13.048937706260197
+		 952 2.770747847099809 958 1.6153193895986411 969 -20.534585968876119 976 0 977 9.7766777732061172
 		 982 3.684876085418781 983 9.1271466924664768 985 0 986 0 987 0 989 0 990 0 992 0
-		 997 -13.331846721210354 999 -13.331846721210354 1003 -9.8754420157112044 1008 0 1010 0
-		 1011 0 1015 -16.483454040629901 1020 -16.483454040629901 1025 -23.323744380721639
+		 997 -13.331846721210354 999 -13.331846721210354 1003 -9.8754420157112044 1008 0 1009 0
+		 1010 0 1011 0 1015 -16.483454040629901 1020 -16.483454040629901 1025 -23.323744380721639
 		 1031 -9.0375580766758645 1037 -15.754803914993392 1043 2.972442687908345 1049 0 1050 0
 		 1060 0 1065 0 1070 0 1072 0 1075 0 1085 6.1899427976345578 1087 8.200898559137487
 		 1089 8.200898559137487 1091 8.200898559137487 1093 8.200898559137487 1104 -19.218578972902566
 		 1105 -19.218578972902566 1107 -19.218578972902566 1121 -19.218578972902566 1131 8.200898559137487
 		 1134 8.200898559137487 1136 8.200898559137487 1138 6.1899427976345578 1147 0 1149 0
 		 1151 0 1156 0 1159 0 1164 0 1178 0;
-	setAttr -s 117 ".kit[15:116]"  1 1 1 18 1 1 1 18 
+	setAttr -s 118 ".kit[15:117]"  1 1 1 18 1 1 1 18 
 		18 18 18 18 1 18 18 18 18 18 18 18 18 18 18 1 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18;
-	setAttr -s 117 ".kot[15:116]"  1 1 1 18 1 1 1 18 
+		18 18 18 18 18 18 18 18 1 1 1 18 18 18 18 18 18 
+		1 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 118 ".kot[15:117]"  1 1 1 18 1 1 1 18 
 		18 18 18 18 1 18 18 18 18 18 18 18 18 18 18 1 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18;
-	setAttr -s 117 ".kix[15:116]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.77243055140247185 
-		1 1 1 0.84802164404008795 1 1 0.99785205621382256 1 0.99582958590671777 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 0.93263947558835958 1 1 1 1 1 0.97513149766439722 0.97194613558838894 
-		1 0.49434290188419383 0.99785205621382256 1 1 1 1 1 1 1 1 1 1 0.84971528848727729 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.96138387656424318 1 1 1 1 1 1 1 1 1 1 1 0.95453716834094371 
-		1 1 1 1 1 1 1;
-	setAttr -s 117 ".kiy[15:116]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.63509923890686049 
-		0 0 0 0.52996159411748522 0 0 0.065507815639404984 0 -0.091232865968656068 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.36080965698588169 0 0 0 0 0 -0.2216270792633197 -0.23520354911182165 
-		0 0.86926698738460928 0.065507815639404984 0 0 0 0 0 0 0 0 0 0 0.52724181218012578 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.27521090436664758 0 0 0 0 0 0 0 0 0 0 0 -0.29809192249313454 
-		0 0 0 0 0 0 0;
-	setAttr -s 117 ".kox[15:116]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.77243055140247185 
-		1 1 1 0.84802164404008795 1 1 0.99785205621382256 1 0.99582958590671788 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 0.93263947558835958 1 1 1 1 1 0.97513149766439711 0.97194613558838905 
-		1 0.49434290188419377 0.99785205621382256 1 1 1 1 1 1 1 1 1 1 0.8497152884872774 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.96138387656424318 1 1 1 1 1 1 1 1 1 1 1 0.95453716834094382 
-		1 1 1 1 1 1 1;
-	setAttr -s 117 ".koy[15:116]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.63509923890686049 
-		0 0 0 0.52996159411748522 0 0 0.065507815639404984 0 -0.091232865968656082 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.36080965698588169 0 0 0 0 0 -0.22162707926331968 
-		-0.23520354911182165 0 0.86926698738460917 0.065507815639404984 0 0 0 0 0 0 0 0 0 
-		0 0.52724181218012578 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.27521090436664758 0 0 0 0 
-		0 0 0 0 0 0 0 -0.29809192249313454 0 0 0 0 0 0 0;
+		18 18 18 18 18 18 18 18 1 1 1 18 18 18 18 18 18 
+		1 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 118 ".kix[15:117]"  1 1 1 1 1 1 1 1 1 1 1 1 0.99999995630222549 
+		1 1 1 0.77243055140247185 1 1 1 0.84802164404008795 1 1 0.99999995630222549 1 0.99582958590671777 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.93263947558835958 1 1 1 1 1 0.97513149766439722 
+		0.97194613558838894 1 0.53308754994494179 0.99785205621382256 1 1 1 1 1 1 1 1 1 1 
+		0.84971528848727729 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.96138387656424318 1 1 1 1 
+		1 1 1 1 1 1 1 0.95453716834094371 1 1 1 1 1 1 1;
+	setAttr -s 118 ".kiy[15:117]"  0 0 0 0 0 0 0 0 0 0 0 0 0.00029562737885189497 
+		0 0 0 -0.63509923890686049 0 0 0 0.52996159411748522 0 0 0.00029562737885189497 0 
+		-0.091232865968656068 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.36080965698588169 0 0 
+		0 0 0 -0.2216270792633197 -0.23520354911182165 0 0.84606008302820856 0.065507815639404984 
+		0 0 0 0 0 0 0 0 0 0 0.52724181218012578 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.27521090436664758 
+		0 0 0 0 0 0 0 0 0 0 0 -0.29809192249313454 0 0 0 0 0 0 0;
+	setAttr -s 118 ".kox[15:117]"  1 1 1 1 1 1 1 1 1 1 1 1 0.9999999563022256 
+		1 1 1 0.77243055140247185 1 1 1 0.84802164404008795 1 1 0.9999999563022256 1 0.99582958590671788 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.93263947558835958 1 1 1 1 1 0.97513149766439711 
+		0.97194613558838905 1 0.53308754994494179 0.99785205621382256 1 1 1 1 1 1 1 1 1 1 
+		0.8497152884872774 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.96138387656424318 1 1 1 1 
+		1 1 1 1 1 1 1 0.95453716834094382 1 1 1 1 1 1 1;
+	setAttr -s 118 ".koy[15:117]"  0 0 0 0 0 0 0 0 0 0 0 0 0.00029562737885189503 
+		0 0 0 -0.63509923890686049 0 0 0 0.52996159411748522 0 0 0.00029562737885189503 0 
+		-0.091232865968656082 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.36080965698588169 0 0 
+		0 0 0 -0.22162707926331968 -0.23520354911182165 0 0.84606008302820856 0.065507815639404984 
+		0 0 0 0 0 0 0 0 0 0 0.52724181218012578 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.27521090436664758 
+		0 0 0 0 0 0 0 0 0 0 0 -0.29809192249313454 0 0 0 0 0 0 0;
 createNode animCurveTA -n "Fk_Left_Shoulder_Ctrl_rotateZ";
 	rename -uid "0CBFE832-4FEF-0FD8-2C20-E5AC9466EB4A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 119 ".ktv[0:118]"  0 0 1 -20.418672186116076 15 -15.366668995683197
+	setAttr -s 122 ".ktv[0:121]"  0 0 1 -20.418672186116076 15 -15.366668995683197
 		 28 -20.418672186116076 36 -25.465274012799416 52 -21.340027741250601 58 -20.418672186116076
 		 88 -20.418672186116076 108 -20.418672186116076 138 -20.418672186116076 158 -20.418672186116076
 		 188 -20.418672186116076 218 -20.418672186116076 238 -20.418672186116076 278 -17.484335877360497
 		 298 -17.484335877360472 328 -17.484335877360472 359 -13.373706857268695 388 -4.5650445956065147
 		 403 -22.831364032681698 406 -12.646062672921175 410 -7.6470173174615645 456 -22.941034845210819
-		 474 -20.418672186116076 483 -20.418672186116076 500 -20.418672186116076 510 38.055832473875874
-		 600 38.055832473875874 610 -23.664323964283859 611 -23.664323964283859 618 -19.922169859172421
+		 474 -20.418672186116076 483 -20.418672186116076 500 -20.418672186116076 511 28.068513606102812
+		 600 28.068513606102812 610 -23.664323964283859 611 -23.664323964283859 618 -19.922169859172421
 		 625 -26.09798303107911 632 -20.854473713899846 639 -23.664323964283859 641 6.5075162843013752
-		 642 13.896574908905896 648 -18.342852337293372 653 6.5075162843013752 655 43.186859905277785
+		 642 13.896574908905896 648 -18.342852337293372 653 6.5075162843013752 655 28.068513606102812
 		 656 61.278636429672623 659 61.278636429672623 669 38.588280634272067 670 38.047202919150941
 		 672 38.047202919150941 673 38.047202919150948 675 38.047202919150948 676 38.047202919150948
 		 678 38.047202919150955 679 38.047202919150962 681 38.047202919150969 682 38.047202919150962
@@ -8420,178 +8431,193 @@ createNode animCurveTA -n "Fk_Left_Shoulder_Ctrl_rotateZ";
 		 693 38.047202919150948 696 38.047202919150948 699 38.047202919150948 706 25.114391129392889
 		 711 47.332204630907981 712 -14.348454171590111 721 2.5381107007228487 735 2.5381107007228487
 		 759 2.5381107007228487 801 2.5381107007228487 900 -41.101465641989506 953 2.5381107007228487
-		 959 -7.556659942113952 970 -0.7582309096028661 977 43.186859905277785 978 62.892878079617589
+		 959 -7.556659942113952 970 -0.7582309096028661 977 34.065102795394047 978 62.892878079617589
 		 982 35.886082441083346 983 33.663323740681903 985 0 986 0 987 0 989 0 990 0 992 0
 		 993 31.99517408420342 998 30.942320171596922 1000 30.942320171596922 1004 39.22579814775083
-		 1009 62.892878079617589 1011 62.892878079617589 1012 62.892878079617589 1016 70.274494347186931
-		 1021 70.274494347187016 1026 5.8409908733540199 1032 -1.9814071637986697 1038 1.0131500324810805
-		 1044 35.319634534247029 1050 62.892878079617589 1051 -20.418672186116076 1061 11.027475169187904
-		 1066 11.027475169187904 1071 -13.125143441107081 1073 -13.125143441107081 1076 -13.125143441107081
-		 1086 -25.878734800813902 1088 -28.629439740891243 1090 -28.629439740891243 1092 -28.629439740891243
-		 1094 -28.629439740891243 1105 0.60768643307392478 1106 0.60768643307392478 1108 0.60768643307392478
-		 1122 0.60768643307392478 1132 -28.629439740891243 1135 -28.629439740891243 1137 -28.629439740891243
-		 1139 -25.878734800813902 1148 -13.125143441107081 1150 -13.125143441107081 1152 -13.125143441107081
-		 1157 11.027475169187904 1160 11.027475169187904 1165 11.027475169187904 1179 -20.418672186116076;
-	setAttr -s 119 ".kit[15:118]"  1 1 1 18 1 1 1 1 
+		 1008 62.892878079617589 1009 62.892878079617589 1010 62.892878079617589 1011 62.892878079617589
+		 1012 62.892878079617589 1016 70.274494347186931 1021 70.274494347187016 1026 5.8409908733540199
+		 1032 -1.9814071637986697 1038 1.0131500324810805 1044 35.319634534247029 1049 62.892878079617589
+		 1050 62.892878079617589 1051 -20.418672186116076 1061 11.027475169187904 1066 11.027475169187904
+		 1071 -13.125143441107081 1073 -13.125143441107081 1076 -13.125143441107081 1086 -25.878734800813902
+		 1088 -28.629439740891243 1090 -28.629439740891243 1092 -28.629439740891243 1094 -28.629439740891243
+		 1105 0.60768643307392478 1106 0.60768643307392478 1108 0.60768643307392478 1122 0.60768643307392478
+		 1132 -28.629439740891243 1135 -28.629439740891243 1137 -28.629439740891243 1139 -25.878734800813902
+		 1148 -13.125143441107081 1150 -13.125143441107081 1152 -13.125143441107081 1157 11.027475169187904
+		 1160 11.027475169187904 1165 11.027475169187904 1179 -20.418672186116076;
+	setAttr -s 122 ".kit[15:121]"  1 1 1 18 1 1 1 1 
 		1 1 1 18 1 18 18 18 18 18 18 18 18 18 18 1 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 119 ".kot[15:118]"  1 1 1 18 1 1 1 1 
+		18 18 18 18 18 18 18 18 18 1 1 1 1 18 18 18 18 
+		18 18 18 1 18 18 18 18 18 18 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 122 ".kot[15:121]"  1 1 1 18 1 1 1 1 
 		1 1 1 18 1 18 18 18 18 18 18 18 18 18 18 1 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 119 ".kix[15:118]"  1 1 1 1 0.52107160562151755 1 0.97509369602497387 
-		1 1 1 1 1 1 1 1 1 1 1 1 0.18730177068685239 1 1 0.262101778489431 0.28048569868865553 
-		1 1 0.82695022256936412 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.78978339528685548 
-		0.28048569868865553 1 0.37806505809284269 0.33706217449969483 1 1 1 1 1 1 1 1 1 0.55803195556425966 
-		1 1 1 1 1 0.52099660520507907 1 0.84716776725066689 0.42012196811303154 1 1 1 1 1 
-		1 1 0.87946303837902617 1 1 1 1 1 1 1 1 1 1 1 0.86111763339770031 1 1 1 1 1 1 1;
-	setAttr -s 119 ".kiy[15:118]"  0 0 0 0 0.85351296522959375 0 -0.22179333617662175 
-		0 0 0 0 0 0 0 0 0 0 0 0 0.98230242120111355 0 0 0.96504023631798763 0.95985820454436743 
-		0 0 -0.56227513673688156 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.61338583985055162 
-		0.95985820454436743 0 -0.9257790297091717 -0.94148238991578448 0 0 0 0 0 0 0 0 0 
-		0.82981946022561326 0 0 0 0 0 -0.85355874863115488 0 0.53132548793702716 0.90746764785794587 
-		0 0 0 0 0 0 0 -0.47596718807616512 0 0 0 0 0 0 0 0 0 0 0 0.50840576457347897 0 0 
-		0 0 0 0 0;
-	setAttr -s 119 ".kox[15:118]"  1 1 1 1 0.52107160562151755 1 0.97509369602497376 
-		1 1 1 1 1 1 1 1 1 1 1 1 0.18730177068685241 1 1 0.262101778489431 0.28048569868865553 
-		1 1 0.82695022256936423 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.78978339528685559 
-		0.28048569868865553 1 0.37806505809284269 0.33706217449969478 1 1 1 1 1 1 1 1 1 0.55803195556425966 
-		1 1 1 1 1 0.52099660520507907 1 0.84716776725066689 0.42012196811303154 1 1 1 1 1 
-		1 1 0.87946303837902617 1 1 1 1 1 1 1 1 1 1 1 0.86111763339770042 1 1 1 1 1 1 1;
-	setAttr -s 119 ".koy[15:118]"  0 0 0 0 0.85351296522959375 0 -0.22179333617662175 
-		0 0 0 0 0 0 0 0 0 0 0 0 0.98230242120111355 0 0 0.96504023631798763 0.95985820454436754 
-		0 0 -0.56227513673688156 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.61338583985055162 
-		0.95985820454436754 0 -0.9257790297091717 -0.94148238991578448 0 0 0 0 0 0 0 0 0 
-		0.82981946022561315 0 0 0 0 0 -0.85355874863115477 0 0.53132548793702716 0.90746764785794587 
-		0 0 0 0 0 0 0 -0.47596718807616506 0 0 0 0 0 0 0 0 0 0 0 0.50840576457347897 0 0 
-		0 0 0 0 0;
+		18 18 18 18 18 18 18 18 18 1 1 1 1 18 18 18 18 
+		18 18 18 1 18 18 18 18 18 18 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 122 ".kix[15:121]"  1 1 1 1 0.52107160562151755 1 0.97509369602497387 
+		1 1 1 1 1 0.99020309919059335 1 1 1 1 1 1 0.18730177068685239 1 1 0.33877648871566274 
+		0.99020309919059335 1 1 0.82695022256936412 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 0.78978339528685548 0.28048569868865553 1 0.37806505809284269 0.33706217449969483 
+		1 1 1 1 1 1 1 1 1 0.51307790898249528 1 1 1 1 1 1 1 0.52099660520507907 1 0.84716776725066689 
+		0.39065775855435891 1 1 1 1 1 1 1 1 0.87946303837902617 1 1 1 1 1 1 1 1 1 1 1 0.86111763339770031 
+		1 1 1 1 1 1 1;
+	setAttr -s 122 ".kiy[15:121]"  0 0 0 0 0.85351296522959375 0 -0.22179333617662175 
+		0 0 0 0 0 0.13963460299418587 0 0 0 0 0 0 0.98230242120111355 0 0 0.9408668825575095 
+		0.13963460299418587 0 0 -0.56227513673688156 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0.61338583985055162 0.95985820454436743 0 -0.9257790297091717 -0.94148238991578448 
+		0 0 0 0 0 0 0 0 0 0.85834204098025524 0 0 0 0 0 0 0 -0.85355874863115488 0 0.53132548793702716 
+		0.92053599369132999 0 0 0 0 0 0 0 0 -0.47596718807616512 0 0 0 0 0 0 0 0 0 0 0 0.50840576457347897 
+		0 0 0 0 0 0 0;
+	setAttr -s 122 ".kox[15:121]"  1 1 1 1 0.52107160562151755 1 0.97509369602497376 
+		1 1 1 1 1 0.99020309919059335 1 1 1 1 1 1 0.18730177068685241 1 1 0.33877648871566268 
+		0.99020309919059335 1 1 0.82695022256936423 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 0.78978339528685559 0.28048569868865553 1 0.37806505809284269 0.33706217449969478 
+		1 1 1 1 1 1 1 1 1 0.51307790898249528 1 1 1 1 1 1 1 0.52099660520507907 1 0.84716776725066689 
+		0.39065775855435886 1 1 1 1 1 1 1 1 0.87946303837902617 1 1 1 1 1 1 1 1 1 1 1 0.86111763339770042 
+		1 1 1 1 1 1 1;
+	setAttr -s 122 ".koy[15:121]"  0 0 0 0 0.85351296522959375 0 -0.22179333617662175 
+		0 0 0 0 0 0.13963460299418587 0 0 0 0 0 0 0.98230242120111355 0 0 0.9408668825575095 
+		0.13963460299418587 0 0 -0.56227513673688156 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0.61338583985055162 0.95985820454436754 0 -0.9257790297091717 -0.94148238991578448 
+		0 0 0 0 0 0 0 0 0 0.85834204098025535 0 0 0 0 0 0 0 -0.85355874863115477 0 0.53132548793702716 
+		0.92053599369132999 0 0 0 0 0 0 0 0 -0.47596718807616506 0 0 0 0 0 0 0 0 0 0 0 0.50840576457347897 
+		0 0 0 0 0 0 0;
 createNode animCurveTU -n "Fk_Left_Shoulder_Ctrl_scaleX";
 	rename -uid "6C2A4CD4-455A-C7D7-6A8B-51BB0955934A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 117 ".ktv[0:116]"  0 1 1 1 15 1 28 1 36 1 52 1 58 1 88 1 108 1
+	setAttr -s 118 ".ktv[0:117]"  0 1 1 1 15 1 28 1 36 1 52 1 58 1 88 1 108 1
 		 138 1 158 1 188 1 218 1 238 1 278 1 298 1 328 1 359 1 388 1 403 1 406 1 410 1 456 1
-		 474 1 483 1 500 1 510 1 600 1 609 1 610 1 617 1 624 1 631 1 638 1 640 1 641 1 647 1
+		 474 1 483 1 500 1 511 1 600 1 609 1 610 1 617 1 624 1 631 1 638 1 640 1 641 1 647 1
 		 652 1 655 1 658 1 668 1 669 1 671 1 672 1 674 1 675 1 677 1 678 1 680 1 681 1 683 1
 		 684 1 686 1 689 1 692 1 695 1 698 1 705 1 710 1 711 1 720 1 734 1 758 1 800 1 900 1
 		 952 1 958 1 969 1 976 1 977 1 982 1 983 1 985 1 986 1 987 1 989 1 990 1 992 1 997 1
-		 999 1 1003 1 1008 1 1010 1 1011 1 1015 1 1020 1 1025 1 1031 1 1037 1 1043 1 1049 1
-		 1050 1 1060 1 1065 1 1070 1 1072 1 1075 1 1085 1 1087 1 1089 1 1091 1 1093 1 1104 1
-		 1105 1 1107 1 1121 1 1131 1 1134 1 1136 1 1138 1 1147 1 1149 1 1151 1 1156 1 1159 1
-		 1164 1 1178 1;
-	setAttr -s 117 ".kit[15:116]"  1 1 1 18 1 1 1 18 
+		 999 1 1003 1 1008 1 1009 1 1010 1 1011 1 1015 1 1020 1 1025 1 1031 1 1037 1 1043 1
+		 1049 1 1050 1 1060 1 1065 1 1070 1 1072 1 1075 1 1085 1 1087 1 1089 1 1091 1 1093 1
+		 1104 1 1105 1 1107 1 1121 1 1131 1 1134 1 1136 1 1138 1 1147 1 1149 1 1151 1 1156 1
+		 1159 1 1164 1 1178 1;
+	setAttr -s 118 ".kit[15:117]"  1 1 1 18 1 1 1 18 
 		18 18 18 18 1 18 18 18 18 18 18 18 18 18 18 1 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18;
-	setAttr -s 117 ".kot[15:116]"  1 1 1 18 1 1 1 18 
+		18 18 18 18 18 18 18 18 1 1 1 18 18 18 18 18 18 
+		1 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 118 ".kot[15:117]"  1 1 1 18 1 1 1 18 
 		18 18 18 18 1 18 18 18 18 18 18 18 18 18 18 1 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18;
-	setAttr -s 117 ".kix[15:116]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		18 18 18 18 18 18 18 18 1 1 1 18 18 18 18 18 18 
+		1 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 118 ".kix[15:117]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 117 ".kiy[15:116]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 117 ".kox[15:116]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 117 ".koy[15:116]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1;
+	setAttr -s 118 ".kiy[15:117]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
+	setAttr -s 118 ".kox[15:117]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1;
+	setAttr -s 118 ".koy[15:117]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
 createNode animCurveTU -n "Fk_Left_Shoulder_Ctrl_scaleY";
 	rename -uid "D9C3A80E-4DF7-9485-CC1E-84B241BA0ED6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 117 ".ktv[0:116]"  0 1 1 1 15 1 28 1 36 1 52 1 58 1 88 1 108 1
+	setAttr -s 118 ".ktv[0:117]"  0 1 1 1 15 1 28 1 36 1 52 1 58 1 88 1 108 1
 		 138 1 158 1 188 1 218 1 238 1 278 1 298 1 328 1 359 1 388 1 403 1 406 1 410 1 456 1
-		 474 1 483 1 500 1 510 1 600 1 609 1 610 1 617 1 624 1 631 1 638 1 640 1 641 1 647 1
+		 474 1 483 1 500 1 511 1 600 1 609 1 610 1 617 1 624 1 631 1 638 1 640 1 641 1 647 1
 		 652 1 655 1 658 1 668 1 669 1 671 1 672 1 674 1 675 1 677 1 678 1 680 1 681 1 683 1
 		 684 1 686 1 689 1 692 1 695 1 698 1 705 1 710 1 711 1 720 1 734 1 758 1 800 1 900 1
 		 952 1 958 1 969 1 976 1 977 1 982 1 983 1 985 1 986 1 987 1 989 1 990 1 992 1 997 1
-		 999 1 1003 1 1008 1 1010 1 1011 1 1015 1 1020 1 1025 1 1031 1 1037 1 1043 1 1049 1
-		 1050 1 1060 1 1065 1 1070 1 1072 1 1075 1 1085 1 1087 1 1089 1 1091 1 1093 1 1104 1
-		 1105 1 1107 1 1121 1 1131 1 1134 1 1136 1 1138 1 1147 1 1149 1 1151 1 1156 1 1159 1
-		 1164 1 1178 1;
-	setAttr -s 117 ".kit[15:116]"  1 1 1 18 1 1 1 18 
+		 999 1 1003 1 1008 1 1009 1 1010 1 1011 1 1015 1 1020 1 1025 1 1031 1 1037 1 1043 1
+		 1049 1 1050 1 1060 1 1065 1 1070 1 1072 1 1075 1 1085 1 1087 1 1089 1 1091 1 1093 1
+		 1104 1 1105 1 1107 1 1121 1 1131 1 1134 1 1136 1 1138 1 1147 1 1149 1 1151 1 1156 1
+		 1159 1 1164 1 1178 1;
+	setAttr -s 118 ".kit[15:117]"  1 1 1 18 1 1 1 18 
 		18 18 18 18 1 18 18 18 18 18 18 18 18 18 18 1 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18;
-	setAttr -s 117 ".kot[15:116]"  1 1 1 18 1 1 1 18 
+		18 18 18 18 18 18 18 18 1 1 1 18 18 18 18 18 18 
+		1 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 118 ".kot[15:117]"  1 1 1 18 1 1 1 18 
 		18 18 18 18 1 18 18 18 18 18 18 18 18 18 18 1 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18;
-	setAttr -s 117 ".kix[15:116]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		18 18 18 18 18 18 18 18 1 1 1 18 18 18 18 18 18 
+		1 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 118 ".kix[15:117]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 117 ".kiy[15:116]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 117 ".kox[15:116]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 117 ".koy[15:116]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1;
+	setAttr -s 118 ".kiy[15:117]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
+	setAttr -s 118 ".kox[15:117]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1;
+	setAttr -s 118 ".koy[15:117]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
 createNode animCurveTU -n "Fk_Left_Shoulder_Ctrl_scaleZ";
 	rename -uid "CAA63592-4E4B-1E6D-B647-2F95E8E6AD32";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 117 ".ktv[0:116]"  0 1 1 1 15 1 28 1 36 1 52 1 58 1 88 1 108 1
+	setAttr -s 118 ".ktv[0:117]"  0 1 1 1 15 1 28 1 36 1 52 1 58 1 88 1 108 1
 		 138 1 158 1 188 1 218 1 238 1 278 1 298 1 328 1 359 1 388 1 403 1 406 1 410 1 456 1
-		 474 1 483 1 500 1 510 1 600 1 609 1 610 1 617 1 624 1 631 1 638 1 640 1 641 1 647 1
+		 474 1 483 1 500 1 511 1 600 1 609 1 610 1 617 1 624 1 631 1 638 1 640 1 641 1 647 1
 		 652 1 655 1 658 1 668 1 669 1 671 1 672 1 674 1 675 1 677 1 678 1 680 1 681 1 683 1
 		 684 1 686 1 689 1 692 1 695 1 698 1 705 1 710 1 711 1 720 1 734 1 758 1 800 1 900 1
 		 952 1 958 1 969 1 976 1 977 1 982 1 983 1 985 1 986 1 987 1 989 1 990 1 992 1 997 1
-		 999 1 1003 1 1008 1 1010 1 1011 1 1015 1 1020 1 1025 1 1031 1 1037 1 1043 1 1049 1
-		 1050 1 1060 1 1065 1 1070 1 1072 1 1075 1 1085 1 1087 1 1089 1 1091 1 1093 1 1104 1
-		 1105 1 1107 1 1121 1 1131 1 1134 1 1136 1 1138 1 1147 1 1149 1 1151 1 1156 1 1159 1
-		 1164 1 1178 1;
-	setAttr -s 117 ".kit[15:116]"  1 1 1 18 1 1 1 18 
+		 999 1 1003 1 1008 1 1009 1 1010 1 1011 1 1015 1 1020 1 1025 1 1031 1 1037 1 1043 1
+		 1049 1 1050 1 1060 1 1065 1 1070 1 1072 1 1075 1 1085 1 1087 1 1089 1 1091 1 1093 1
+		 1104 1 1105 1 1107 1 1121 1 1131 1 1134 1 1136 1 1138 1 1147 1 1149 1 1151 1 1156 1
+		 1159 1 1164 1 1178 1;
+	setAttr -s 118 ".kit[15:117]"  1 1 1 18 1 1 1 18 
 		18 18 18 18 1 18 18 18 18 18 18 18 18 18 18 1 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18;
-	setAttr -s 117 ".kot[15:116]"  1 1 1 18 1 1 1 18 
+		18 18 18 18 18 18 18 18 1 1 1 18 18 18 18 18 18 
+		1 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 118 ".kot[15:117]"  1 1 1 18 1 1 1 18 
 		18 18 18 18 1 18 18 18 18 18 18 18 18 18 18 1 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18;
-	setAttr -s 117 ".kix[15:116]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		18 18 18 18 18 18 18 18 1 1 1 18 18 18 18 18 18 
+		1 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 118 ".kix[15:117]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 117 ".kiy[15:116]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 117 ".kox[15:116]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 117 ".koy[15:116]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		1;
+	setAttr -s 118 ".kiy[15:117]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
+	setAttr -s 118 ".kox[15:117]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1;
+	setAttr -s 118 ".koy[15:117]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
 createNode animCurveTU -n "Fk_Right_Wrist_Ctrl_visibility";
 	rename -uid "45E03F45-4C98-B929-CD36-CABE437F0966";
 	setAttr ".tan" 18;
@@ -8621,18 +8647,17 @@ createNode animCurveTA -n "Fk_Right_Wrist_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 109 ".ktv[0:108]"  0 0 1 0 19 0 58 0 88 0 138 0 188 0 218 0
 		 238 0 268 0 298 0 328 0 358 0 388 0 406 0 456 0 478 0 483 0 500 0 510 -5.0670812713079885
-		 600 -5.0670812713079885 609 0 610 0 617 0 624 0 631 0 638 0 640 0 641 0 643 0 644 0
-		 646 0 647 0 649 0 650 0 652 0 655 -5.0670812713079885 658 0 668 17.922619210489078
-		 669 17.922619210489078 671 17.922619210489078 672 17.922619210489078 674 17.922619210489078
-		 675 17.922619210489078 677 17.922619210489078 678 17.922619210489078 680 17.922619210489078
-		 681 17.922619210489078 683 17.922619210489078 684 17.922619210489078 686 17.922619210489078
-		 689 17.922619210489078 692 17.922619210489078 695 17.922619210489078 698 0 705 0
-		 710 0 711 0 720 0 734 0 758 0 800 0 900 0 910 0 952 0 958 0 966 7.0378020843855937
-		 976 0 977 0 978 -5.0670812713079885 982 -16.735401680943401 984 -16.735401680943401
-		 986 -16.735401680943401 989 -16.735401680943401 992 0 997 0 999 0 1003 0 1008 0 1010 0
-		 1011 0 1015 0 1020 0 1025 0 1043 0 1049 0 1050 0 1060 0 1070 0 1072 0 1075 0 1085 0
-		 1087 0 1089 0 1091 0 1093 0 1104 0 1105 0 1107 0 1121 0 1131 0 1134 0 1136 0 1138 0
-		 1147 0 1149 0 1151 0 1164 0 1178 0;
+		 600 0 609 0 610 0 617 0 624 0 631 0 638 0 640 0 641 0 643 0 644 0 646 0 647 0 649 0
+		 650 0 652 0 655 0 658 0 668 17.922619210489078 669 17.922619210489078 671 17.922619210489078
+		 672 17.922619210489078 674 17.922619210489078 675 17.922619210489078 677 17.922619210489078
+		 678 17.922619210489078 680 17.922619210489078 681 17.922619210489078 683 17.922619210489078
+		 684 17.922619210489078 686 17.922619210489078 689 17.922619210489078 692 17.922619210489078
+		 695 17.922619210489078 698 0 705 0 710 0 711 0 720 0 734 0 758 0 800 0 900 0 910 0
+		 952 0 958 0 966 7.0378020843855937 976 0 977 0 978 -5.0670812713079885 982 -16.735401680943401
+		 984 -16.735401680943401 986 -16.735401680943401 989 -16.735401680943401 992 0 997 0
+		 999 0 1003 0 1008 0 1010 0 1011 0 1015 0 1020 0 1025 0 1043 0 1049 0 1050 0 1060 0
+		 1070 0 1072 0 1075 0 1085 0 1087 0 1089 0 1091 0 1093 0 1104 0 1105 0 1107 0 1121 0
+		 1131 0 1134 0 1136 0 1138 0 1147 0 1149 0 1151 0 1164 0 1178 0;
 	setAttr -s 109 ".kit[20:108]"  1 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 1 18 18 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 18 18 18 18 18 18 18 18 
@@ -8645,36 +8670,35 @@ createNode animCurveTA -n "Fk_Right_Wrist_Ctrl_rotateX";
 		18 18 18 18 18 18 18 1 18 1 1 1 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 109 ".kix[20:108]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.80354910477095609 
+	setAttr -s 109 ".kix[20:108]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 109 ".kiy[20:108]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.59523847004523722 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 109 ".kiy[20:108]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 109 ".kox[20:108]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.8035491047709562 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 109 ".kox[20:108]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 109 ".koy[20:108]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.59523847004523722 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 109 ".koy[20:108]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "Fk_Right_Wrist_Ctrl_rotateY";
 	rename -uid "DA617A2A-4CF0-3235-BEE3-B2B69312682A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 109 ".ktv[0:108]"  0 0 1 0 19 0 58 0 88 0 138 0 188 0 218 0
 		 238 0 268 0 298 0 328 0 358 0 388 0 406 0 456 0 478 0 483 0 500 0 510 -2.2107899363081041
-		 600 -2.2107899363081041 609 0 610 0 617 0 624 0 631 0 638 0 640 0 641 0 643 0 644 0
-		 646 0 647 0 649 0 650 0 652 0 655 -2.2107899363081041 658 0 668 -9.6191509989266901
-		 669 -9.6191509989266901 671 -9.6191509989266901 672 -9.6191509989266901 674 -9.6191509989266901
-		 675 -9.6191509989266901 677 -9.6191509989266901 678 -9.6191509989266901 680 -9.6191509989266901
-		 681 -9.6191509989266901 683 -9.6191509989266901 684 -9.6191509989266901 686 -9.6191509989266901
-		 689 -9.6191509989266901 692 -9.6191509989266901 695 -9.6191509989266901 698 0 705 0
-		 710 0 711 0 720 0 734 0 758 0 800 0 900 0 910 0 952 0 958 0 966 -40.108138100557106
-		 976 0 977 0 978 -2.2107899363081041 982 -22.362910522458208 984 -22.362910522458208
-		 986 -22.362910522458208 989 -22.362910522458208 992 0 997 0 999 0 1003 0 1008 0 1010 0
-		 1011 0 1015 0 1020 0 1025 0 1043 0 1049 0 1050 0 1060 0 1070 0 1072 0 1075 0 1085 0
-		 1087 0 1089 0 1091 0 1093 0 1104 0 1105 0 1107 0 1121 0 1131 0 1134 0 1136 0 1138 0
-		 1147 0 1149 0 1151 0 1164 0 1178 0;
+		 600 0 609 0 610 0 617 0 624 0 631 0 638 0 640 0 641 0 643 0 644 0 646 0 647 0 649 0
+		 650 0 652 0 655 0 658 0 668 -9.6191509989266901 669 -9.6191509989266901 671 -9.6191509989266901
+		 672 -9.6191509989266901 674 -9.6191509989266901 675 -9.6191509989266901 677 -9.6191509989266901
+		 678 -9.6191509989266901 680 -9.6191509989266901 681 -9.6191509989266901 683 -9.6191509989266901
+		 684 -9.6191509989266901 686 -9.6191509989266901 689 -9.6191509989266901 692 -9.6191509989266901
+		 695 -9.6191509989266901 698 0 705 0 710 0 711 0 720 0 734 0 758 0 800 0 900 0 910 0
+		 952 0 958 0 966 -40.108138100557106 976 0 977 0 978 -2.2107899363081041 982 -22.362910522458208
+		 984 -22.362910522458208 986 -22.362910522458208 989 -22.362910522458208 992 0 997 0
+		 999 0 1003 0 1008 0 1010 0 1011 0 1015 0 1020 0 1025 0 1043 0 1049 0 1050 0 1060 0
+		 1070 0 1072 0 1075 0 1085 0 1087 0 1089 0 1091 0 1093 0 1104 0 1105 0 1107 0 1121 0
+		 1131 0 1134 0 1136 0 1138 0 1147 0 1149 0 1151 0 1164 0 1178 0;
 	setAttr -s 109 ".kit[20:108]"  1 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 1 18 18 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 18 18 18 18 18 18 18 18 
@@ -8705,18 +8729,17 @@ createNode animCurveTA -n "Fk_Right_Wrist_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 109 ".ktv[0:108]"  0 0 1 0 19 0 58 0 88 0 138 0 188 0 218 0
 		 238 0 268 0 298 0 328 0 358 0 388 0 406 -14.553331062693522 456 0 478 0 483 0 500 0
-		 510 -23.511852913979016 600 -23.511852913979016 609 0 610 0 617 0 624 0 631 0 638 0
-		 640 0 641 0 643 0 644 0 646 0 647 0 649 0 650 0 652 0 655 -23.511852913979016 658 0
-		 668 -3.924011428383877 669 -3.924011428383877 671 -3.924011428383877 672 -3.924011428383877
-		 674 -3.924011428383877 675 -3.924011428383877 677 -3.924011428383877 678 -3.924011428383877
-		 680 -3.924011428383877 681 -3.924011428383877 683 -3.924011428383877 684 -3.924011428383877
-		 686 -3.924011428383877 689 -3.924011428383877 692 -3.924011428383877 695 -3.924011428383877
-		 698 0 705 0 710 0 711 0 720 0 734 0 758 0 800 0 900 0 910 0 952 0 958 0 966 -17.915427752700911
-		 976 0 977 0 978 -23.511852913979016 982 -12.109229161175431 984 -12.109229161175431
-		 986 -12.109229161175431 989 -12.109229161175431 992 0 997 0 999 0 1003 0 1008 0 1010 0
-		 1011 0 1015 0 1020 0 1025 0 1043 0 1049 0 1050 0 1060 0 1070 0 1072 0 1075 0 1085 0
-		 1087 0 1089 0 1091 0 1093 0 1104 0 1105 0 1107 0 1121 0 1131 0 1134 0 1136 0 1138 0
-		 1147 0 1149 0 1151 0 1164 0 1178 0;
+		 510 -23.511852913979016 600 0 609 0 610 0 617 0 624 0 631 0 638 0 640 0 641 0 643 0
+		 644 0 646 0 647 0 649 0 650 0 652 0 655 0 658 0 668 -3.924011428383877 669 -3.924011428383877
+		 671 -3.924011428383877 672 -3.924011428383877 674 -3.924011428383877 675 -3.924011428383877
+		 677 -3.924011428383877 678 -3.924011428383877 680 -3.924011428383877 681 -3.924011428383877
+		 683 -3.924011428383877 684 -3.924011428383877 686 -3.924011428383877 689 -3.924011428383877
+		 692 -3.924011428383877 695 -3.924011428383877 698 0 705 0 710 0 711 0 720 0 734 0
+		 758 0 800 0 900 0 910 0 952 0 958 0 966 -17.915427752700911 976 0 977 0 978 -23.511852913979016
+		 982 -12.109229161175431 984 -12.109229161175431 986 -12.109229161175431 989 -12.109229161175431
+		 992 0 997 0 999 0 1003 0 1008 0 1010 0 1011 0 1015 0 1020 0 1025 0 1043 0 1049 -11.574863966583015
+		 1050 0 1060 0 1070 0 1072 0 1075 0 1085 0 1087 0 1089 0 1091 0 1093 0 1104 0 1105 0
+		 1107 0 1121 0 1131 0 1134 0 1136 0 1138 0 1147 0 1149 0 1151 0 1164 0 1178 0;
 	setAttr -s 109 ".kit[20:108]"  1 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 1 18 18 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 18 18 18 18 18 18 18 18 
@@ -8895,53 +8918,57 @@ createNode animCurveTA -n "Fk_Right_Elbow_Ctrl_rotateX";
 		 138 -1.5953853916003073 188 -1.5953853916003073 218 -32.588056644567509 238 -1.5953853916003073
 		 268 -0.55874768237570349 298 -1.5953853916003073 328 -1.2304889179532472 358 -1.5953853916003073
 		 388 -1.2304889179532472 406 -0.55874768237570349 456 -8.6822248323249589 478 -8.6822248323249589
-		 483 -8.6822248323249589 500 -8.6822248323249589 510 -37.905358578683632 600 -37.905358578683632
+		 483 -8.6822248323249589 500 -8.6822248323249589 510 -11.547070297574752 600 -47.641223233028121
 		 609 0 610 0 617 0 620 -9.1255649308389373 624 0 631 0 634 9.1134156186975286 638 0
 		 640 -19.290415487910721 641 -19.290415487910721 647 -46.49052558699109 652 -19.290415487910721
-		 655 -37.905358578683632 658 -49.140412732162012 668 -42.89547896680233 669 -42.89547896680233
+		 655 -36.357335687578981 658 -53.006259493258021 668 -42.89547896680233 669 -42.89547896680233
 		 671 -42.89547896680233 672 -42.89547896680233 674 -42.89547896680233 675 -42.89547896680233
 		 677 -42.89547896680233 678 -42.89547896680233 680 -42.89547896680233 681 -42.89547896680233
 		 683 -42.89547896680233 684 -42.89547896680233 686 -42.89547896680233 689 -42.89547896680233
 		 692 -42.89547896680233 695 -42.89547896680233 698 0 705 -11.104340287101142 710 -11.104340287101142
 		 711 -92.951529251100368 720 -112.03860938682925 734 -112.03860938682925 758 -112.03860938682925
-		 800 -50.138662343734232 900 -50.138662343734232 952 -112.03860938682925 958 -65.317433455969905
-		 966 -0.95940372855685752 976 0 978 -25.959321533997233 982 -38.189832678071497 984 -38.189832678071497
+		 800 -50.138662343734239 900 -50.138662343734239 952 -112.03860938682925 958 -65.317433455969905
+		 966 -0.95940372855685752 976 0 978 -0.15123874936767723 982 -38.189832678071497 984 -38.189832678071497
 		 986 -38.189832678071497 989 -38.189832678071497 992 -123.74796166113968 997 -54.693827054318874
-		 999 -54.693827054318874 1003 -76.05373034303453 1008 -49.140412732162012 1010 -49.140412732162012
-		 1011 -49.140412732162012 1015 -36.470417713527816 1020 -18.757431256554977 1025 -18.757431256554977
-		 1031 0.71248534754626269 1037 20.182401951647496 1043 20.182401951647496 1049 -49.140412732162012
+		 999 -54.693827054318874 1003 -47.489281799620564 1008 -28.737057792253779 1010 -25.959321533997233
+		 1011 -25.959321533997233 1015 -36.470417713527816 1020 -18.757431256554977 1025 -18.757431256554977
+		 1031 -6.4674252481036634 1037 2.9445224191045205 1043 -30.030497895087073 1049 -25.959321533997233
 		 1050 -8.6822248323249589 1062 -8.6822248323249589 1065 -7.6225643896216617 1070 -8.6822248323249589
 		 1151 -8.6822248323249589 1153 -9.8940827817925108 1164 -8.6822248323249589 1178 -8.6822248323249589;
 	setAttr -s 93 ".kit[22:92]"  1 18 18 18 18 18 18 18 
 		18 18 1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 18 18 18 18 18 18 18 18 1 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 18 1 18 18 18 18 18 18 18 18;
 	setAttr -s 93 ".kot[22:92]"  1 18 18 18 18 18 18 18 
 		18 18 1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 18 18 18 18 18 18 18 18 1 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 18 1 18 18 18 18 18 18 18 18;
 	setAttr -s 93 ".kix[22:92]"  0.98791828550444871 1 1 1 1 1 1 1 0.45027980155280306 
 		1 0.41952092533979474 1 1 0.98791828550444871 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 0.35130910179388219 1 1 1 1 1 1 0.28812901123685902 0.99281065451996064 1 0.98791828550444871 
-		1 0.9960302501057523 1 1 1 1 1 1 1 1 1 0.57738439849474099 1 1 0.5926006822908173 
-		1 1 1 1 1 1 1 1 1 1 1;
+		1 0.9960302501057523 1 1 1 1 1 0.63764614655749163 0.98791828550444871 0.98791828550444871 
+		0.98791828550444871 1 1 1 0.79710544832235697 1 1 0.98791828550444871 1 1 1 1 1 1 
+		1 1;
 	setAttr -s 93 ".kiy[22:92]"  -0.15497567927242797 0 0 0 0 0 0 0 -0.89288750708785725 
 		0 -0.90774566548237645 0 0 -0.15497567927242797 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 -0.93625953399512873 0 0 0 0 0 0 0.95759160025747414 0.11969546470793017 0 
-		-0.15497567927242797 0 -0.089015396838257307 0 0 0 0 0 0 0 0 0 0.81647244679466446 
-		0 0 0.80549638816599145 0 0 0 0 0 0 0 0 0 0 0;
+		-0.15497567927242797 0 -0.089015396838257307 0 0 0 0 0 0.7703294047226692 -0.15497567927242797 
+		-0.15497567927242797 -0.15497567927242797 0 0 0 0.60384013137155312 0 0 -0.15497567927242797 
+		0 0 0 0 0 0 0 0;
 	setAttr -s 93 ".kox[22:92]"  0.98791828550444871 1 1 1 1 1 1 1 0.45027980155280301 
 		1 0.41952092533979479 1 1 0.98791828550444871 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 0.35130910179388219 1 1 1 1 1 1 0.28812901123685902 0.99281065451996064 1 0.98791828550444871 
-		1 0.9960302501057523 1 1 1 1 1 1 1 1 1 0.57738439849474088 1 1 0.5926006822908173 
-		1 1 1 1 1 1 1 1 1 1 1;
+		1 0.9960302501057523 1 1 1 1 1 0.63764614655749163 0.98791828550444871 0.98791828550444871 
+		0.98791828550444871 1 1 1 0.79710544832235697 1 1 0.98791828550444871 1 1 1 1 1 1 
+		1 1;
 	setAttr -s 93 ".koy[22:92]"  -0.15497567927242797 0 0 0 0 0 0 0 -0.89288750708785714 
 		0 -0.90774566548237645 0 0 -0.15497567927242797 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 -0.93625953399512862 0 0 0 0 0 0 0.95759160025747403 0.11969546470793017 0 
-		-0.15497567927242797 0 -0.089015396838257307 0 0 0 0 0 0 0 0 0 0.81647244679466435 
-		0 0 0.80549638816599145 0 0 0 0 0 0 0 0 0 0 0;
+		-0.15497567927242797 0 -0.089015396838257307 0 0 0 0 0 0.77032940472266931 -0.15497567927242797 
+		-0.15497567927242797 -0.15497567927242797 0 0 0 0.60384013137155312 0 0 -0.15497567927242797 
+		0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "Fk_Right_Elbow_Ctrl_rotateY";
 	rename -uid "A42C2A7D-4021-640B-9F51-5F94B129DA3B";
 	setAttr ".tan" 18;
@@ -8951,55 +8978,57 @@ createNode animCurveTA -n "Fk_Right_Elbow_Ctrl_rotateY";
 		 138 -1.4072352132646688 188 -1.4072352132646688 218 -1.4072352132646659 238 -1.4072352132646688
 		 268 1.7510250274707058 298 -1.4072352132646688 328 -0.295527608525817 358 -1.4072352132646688
 		 388 -0.295527608525817 406 1.7510250274707058 456 9.5807859811131451 478 9.5807859811131451
-		 483 9.5807859811131451 500 9.5807859811131451 510 34.503831428603817 600 34.503831428603817
+		 483 9.5807859811131451 500 9.5807859811131451 510 34.503831428603881 600 6.6703460101099541
 		 609 0 610 0 617 0 620 2.3431877549805207 624 0 631 0 634 -4.3304119747663288 638 0
 		 640 8.3981507546254672 641 8.3981507546254672 647 12.940432136801238 652 8.3981507546254672
-		 655 34.503831428603817 658 37.634525078344062 668 15.765116769192852 669 15.765116769192852
+		 655 15.043678228231848 658 30.572146557035733 668 15.765116769192852 669 15.765116769192852
 		 671 15.765116769192852 672 15.765116769192852 674 15.765116769192852 675 15.765116769192852
 		 677 15.765116769192852 678 15.765116769192852 680 15.765116769192852 681 15.765116769192852
 		 683 15.765116769192852 684 15.765116769192852 686 15.765116769192852 689 15.765116769192852
 		 692 15.765116769192852 695 15.765116769192852 698 0 705 0 710 0 711 22.909779554472468
 		 720 71.066286060606672 734 71.066286060606672 758 71.066286060606672 800 0 900 0
-		 952 71.066286060606672 958 41.430962381011803 966 26.340435651181174 976 0 978 23.449689366988228
+		 952 71.066286060606672 958 41.430962381011803 966 26.340435651181178 976 0 978 23.449689366988231
 		 982 38.696928069332024 984 38.696928069332024 986 38.696928069332024 989 38.696928069332024
-		 992 36.097888545392756 997 -40.015694241361786 999 -40.015694241361786 1003 7.7366764650013362
-		 1008 37.634525078344062 1010 37.634525078344062 1011 37.634525078344062 1015 25.46193181448713
-		 1020 8.4443261002128018 1025 8.4443261002128018 1031 26.094104395128273 1037 43.743882690043741
-		 1043 43.743882690043741 1049 37.634525078344062 1050 9.5807859811131451 1062 9.5807859811131451
+		 992 36.097888545392756 997 -40.015694241361786 999 -40.015694241361786 1003 7.7366764650013273
+		 1008 33.358111310872964 1010 23.449689366988228 1011 23.449689366988228 1015 25.46193181448713
+		 1020 8.4443261002128018 1025 8.4443261002128018 1031 25.34389905309148 1037 43.719874778482939
+		 1043 37.678083046185712 1049 23.449689366988228 1050 9.5807859811131451 1062 9.5807859811131451
 		 1065 10.440754097658035 1070 9.5807859811131451 1151 9.5807859811131451 1153 8.3225884702220831
 		 1164 9.5807859811131451 1178 9.5807859811131451;
 	setAttr -s 93 ".kit[22:92]"  1 18 18 18 18 18 18 18 
 		18 18 1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 18 18 18 18 18 18 18 18 1 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 18 1 18 18 18 18 18 18 18 18;
 	setAttr -s 93 ".kot[22:92]"  1 18 18 18 18 18 18 18 
 		18 18 1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 18 18 18 18 18 18 18 18 1 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 18 1 18 18 18 18 18 18 18 18;
 	setAttr -s 93 ".kix[22:92]"  0.99904596564447645 1 1 1 1 1 1 1 0.74750862763669601 
 		1 0.85663192442181413 1 1 0.99904596564447645 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 0.31844157350753516 1 1 1 1 1 1 0.598602383879412 0.71989589019036282 1 0.99904596564447645 
-		1 0.6046431371123514 1 1 0.67647434030507103 1 1 0.26668056385357547 1 1 1 0.59279394267576146 
-		1 1 0.63015528534930354 1 1 0.61578119506696161 1 1 1 1 1 1 1 1;
+		1 0.6046431371123514 1 1 0.67647434030507103 1 1 0.28102714351495633 0.99904596564447645 
+		0.99904596564447645 0.99904596564447645 1 1 1 0.63041374962761243 1 0.81632100116224604 
+		0.99904596564447645 1 1 1 1 1 1 1 1;
 	setAttr -s 93 ".kiy[22:92]"  0.043671026201538968 0 0 0 0 0 0 0 0.66425209943868702 
 		0 0.51592804349189958 0 0 0.043671026201538968 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0.94794248995497876 0 0 0 0 0 0 -0.80104630703467139 -0.69408206091716929 0 
-		0.043671026201538968 0 0.79649650140031003 0 0 -0.73646620214971092 0 0 0.96378497439145583 
-		0 0 0 -0.80535417148415267 0 0 0.77646913418779107 0 0 -0.7879172036463632 0 0 0 
-		0 0 0 0 0;
+		0.043671026201538968 0 0.79649650140031003 0 0 -0.73646620214971092 0 0 0.95969982005199106 
+		0.043671026201538968 0.043671026201538968 0.043671026201538968 0 0 0 0.77625930221830775 
+		0 -0.57759849641551886 0.043671026201538968 0 0 0 0 0 0 0 0;
 	setAttr -s 93 ".kox[22:92]"  0.99904596564447656 1 1 1 1 1 1 1 0.74750862763669612 
 		1 0.85663192442181413 1 1 0.99904596564447656 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 0.31844157350753516 1 1 1 1 1 1 0.598602383879412 0.71989589019036282 1 0.99904596564447656 
-		1 0.60464313711235151 1 1 0.67647434030507114 1 1 0.26668056385357547 1 1 1 0.59279394267576146 
-		1 1 0.63015528534930354 1 1 0.61578119506696172 1 1 1 1 1 1 1 1;
+		1 0.60464313711235151 1 1 0.67647434030507114 1 1 0.28102714351495633 0.99904596564447656 
+		0.99904596564447656 0.99904596564447656 1 1 1 0.63041374962761243 1 0.81632100116224604 
+		0.99904596564447656 1 1 1 1 1 1 1 1;
 	setAttr -s 93 ".koy[22:92]"  0.043671026201538975 0 0 0 0 0 0 0 0.66425209943868702 
 		0 0.51592804349189958 0 0 0.043671026201538975 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0.94794248995497887 0 0 0 0 0 0 -0.80104630703467128 -0.69408206091716929 0 
-		0.043671026201538975 0 0.79649650140031014 0 0 -0.73646620214971092 0 0 0.96378497439145583 
-		0 0 0 -0.80535417148415256 0 0 0.77646913418779107 0 0 -0.78791720364636331 0 0 0 
-		0 0 0 0 0;
+		0.043671026201538975 0 0.79649650140031014 0 0 -0.73646620214971092 0 0 0.95969982005199106 
+		0.043671026201538975 0.043671026201538975 0.043671026201538975 0 0 0 0.77625930221830775 
+		0 -0.57759849641551886 0.043671026201538975 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "Fk_Right_Elbow_Ctrl_rotateZ";
 	rename -uid "BE73092F-4663-9F3A-9364-FAB9F0EA87D4";
 	setAttr ".tan" 18;
@@ -9009,53 +9038,49 @@ createNode animCurveTA -n "Fk_Right_Elbow_Ctrl_rotateZ";
 		 138 0.89766839655620623 188 0.89766839655620623 218 0.89766839655620101 238 0.89766839655620623
 		 268 11.040873277977587 298 0.89766839655620623 328 4.4680765148165325 358 0.89766839655620623
 		 388 4.4680765148165325 406 11.040873277977587 456 0.78889449579516169 478 0.78889449579516169
-		 483 0.78889449579516169 500 0.78889449579516169 510 39.480129500050268 600 39.480129500050268
+		 483 0.78889449579516169 500 0.78889449579516169 510 39.480129500050303 600 31.325848471509133
 		 609 0 610 0 617 0 620 0.90413747568180647 624 0 631 0 634 -0.53965276201566015 638 0
 		 640 -8.3217069742377259 641 -8.3217069742377259 647 -13.79499675398359 652 -8.3217069742377259
-		 655 39.480129500050268 658 18.423224023816655 668 33.289116807852849 669 33.289116807852849
+		 655 39.287639039891687 658 11.547130386827583 668 33.289116807852849 669 33.289116807852849
 		 671 33.289116807852849 672 33.289116807852849 674 33.289116807852849 675 33.289116807852849
 		 677 33.289116807852849 678 33.289116807852849 680 33.289116807852849 681 33.289116807852849
 		 683 33.289116807852849 684 33.289116807852849 686 33.289116807852849 689 33.289116807852849
 		 692 33.289116807852849 695 33.289116807852849 698 0 705 0 710 0 711 -10.238089612235235
 		 720 -51.436115929067981 734 -51.436115929067981 758 -51.436115929067981 800 0 900 0
-		 952 -51.436115929067981 958 -29.986761687042133 966 8.4854933557915366 976 0 978 52.735049090396089
+		 952 -51.436115929067981 958 -29.986761687042133 966 8.4854933557915366 976 0 978 52.735049090396195
 		 982 38.235256023366539 984 38.235256023366539 986 38.235256023366539 989 38.235256023366539
-		 992 -21.11228197863279 997 20.906933008848849 999 20.906933008848849 1003 19.18667119903915
-		 1008 18.423224023816655 1010 18.423224023816655 1011 18.423224023816655 1015 15.2330471232649
-		 1020 10.773095864269674 1025 10.773095864269674 1031 34.942735156676214 1037 59.112374449082743
-		 1043 59.112374449082743 1049 18.423224023816655 1050 0.78889449579516169 1062 0.78889449579516169
+		 992 -21.11228197863279 997 20.906933008848849 999 20.906933008848849 1003 19.186671199039157
+		 1008 46.921262896024089 1010 52.735049090396089 1011 52.735049090396089 1015 15.2330471232649
+		 1020 10.773095864269674 1025 10.773095864269674 1031 18.490216997691778 1037 33.5397498266396
+		 1043 41.497916935452729 1049 52.735049090396089 1050 0.78889449579516169 1062 0.78889449579516169
 		 1065 6.8789991810003759 1070 0.78889449579516169 1151 0.78889449579516169 1153 -6.9871798580678943
 		 1164 0.78889449579516169 1178 0.78889449579516169;
 	setAttr -s 93 ".kit[22:92]"  1 18 18 18 18 18 18 18 
 		18 18 1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 18 18 18 18 18 18 18 18 1 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 18 1 18 18 18 18 18 18 18 18;
 	setAttr -s 93 ".kot[22:92]"  1 18 18 18 18 18 18 18 
 		18 18 1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 18 18 18 18 18 18 18 18 1 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 18 1 18 18 18 18 18 18 18 18;
 	setAttr -s 93 ".kix[22:92]"  1 1 1 1 1 1 1 1 1 1 0.84148793766385377 
 		1 0.58800728942922764 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.42099796555963404 
-		1 1 1 1 1 1 0.48712075795581711 1 1 1 1 0.93131096720743578 1 1 1 1 1 0.99338488270153413 
-		1 1 1 0.9420666368421643 1 1 0.50983388686972964 1 1 0.27544362570689218 1 1 1 1 
-		1 1 1 1;
+		1 1 1 1 1 1 0.48712075795581711 1 1 1 1 0.93131096720743578 1 1 1 1 1 1 1 1 1 0.66571540814040009 
+		1 1 0.78288642214376247 0.77968067531441776 0.8307537100618092 1 1 1 1 1 1 1 1 1;
 	setAttr -s 93 ".kiy[22:92]"  0 0 0 0 0 0 0 0 0 0 -0.54027590244821599 
 		0 0.80885562838994496 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.90706158169919715 
-		0 0 0 0 0 0 0.87333462496831671 0 0 0 0 -0.36422504356393531 0 0 0 0 0 -0.11483237705481615 
-		0 0 0 -0.33542577681044977 0 0 0.86027286822223081 0 0 -0.96131722602762171 0 0 0 
-		0 0 0 0 0;
+		0 0 0 0 0 0 0.87333462496831671 0 0 0 0 -0.36422504356393531 0 0 0 0 0 0 0 0 0 -0.74620573259956957 
+		0 0 0.62216464864450349 0.62617732675437354 0.55664016493470858 0 0 0 0 0 0 0 0 0;
 	setAttr -s 93 ".kox[22:92]"  1 1 1 1 1 1 1 1 1 1 0.84148793766385377 
 		1 0.58800728942922764 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.42099796555963398 
-		1 1 1 1 1 1 0.48712075795581705 1 1 1 1 0.93131096720743578 1 1 1 1 1 0.99338488270153402 
-		1 1 1 0.9420666368421643 1 1 0.50983388686972964 1 1 0.27544362570689224 1 1 1 1 
-		1 1 1 1;
+		1 1 1 1 1 1 0.48712075795581705 1 1 1 1 0.93131096720743578 1 1 1 1 1 1 1 1 1 0.66571540814040009 
+		1 1 0.78288642214376247 0.77968067531441776 0.8307537100618092 1 1 1 1 1 1 1 1 1;
 	setAttr -s 93 ".koy[22:92]"  0 0 0 0 0 0 0 0 0 0 -0.54027590244821599 
 		0 0.80885562838994485 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.90706158169919704 
-		0 0 0 0 0 0 0.8733346249683166 0 0 0 0 -0.36422504356393526 0 0 0 0 0 -0.11483237705481615 
-		0 0 0 -0.33542577681044977 0 0 0.86027286822223081 0 0 -0.96131722602762171 0 0 0 
-		0 0 0 0 0;
+		0 0 0 0 0 0 0.8733346249683166 0 0 0 0 -0.36422504356393526 0 0 0 0 0 0 0 0 0 -0.74620573259956979 
+		0 0 0.62216464864450349 0.62617732675437354 0.55664016493470858 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "Fk_Right_Elbow_Ctrl_scaleX";
 	rename -uid "42D21DF4-48CD-AB5A-7385-2DA7BA53420A";
 	setAttr ".tan" 18;
@@ -9071,13 +9096,13 @@ createNode animCurveTU -n "Fk_Right_Elbow_Ctrl_scaleX";
 	setAttr -s 93 ".kit[22:92]"  1 18 18 18 18 18 18 18 
 		18 18 1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 18 18 18 18 18 18 18 18 1 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 18 1 18 18 18 18 18 18 18 18;
 	setAttr -s 93 ".kot[22:92]"  1 18 18 18 18 18 18 18 
 		18 18 1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 18 18 18 18 18 18 18 18 1 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 18 1 18 18 18 18 18 18 18 18;
 	setAttr -s 93 ".kix[22:92]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1;
@@ -9105,13 +9130,13 @@ createNode animCurveTU -n "Fk_Right_Elbow_Ctrl_scaleY";
 	setAttr -s 93 ".kit[22:92]"  1 18 18 18 18 18 18 18 
 		18 18 1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 18 18 18 18 18 18 18 18 1 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 18 1 18 18 18 18 18 18 18 18;
 	setAttr -s 93 ".kot[22:92]"  1 18 18 18 18 18 18 18 
 		18 18 1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 18 18 18 18 18 18 18 18 1 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 18 1 18 18 18 18 18 18 18 18;
 	setAttr -s 93 ".kix[22:92]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1;
@@ -9139,13 +9164,13 @@ createNode animCurveTU -n "Fk_Right_Elbow_Ctrl_scaleZ";
 	setAttr -s 93 ".kit[22:92]"  1 18 18 18 18 18 18 18 
 		18 18 1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 18 18 18 18 18 18 18 18 1 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 18 1 18 18 18 18 18 18 18 18;
 	setAttr -s 93 ".kot[22:92]"  1 18 18 18 18 18 18 18 
 		18 18 1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 18 18 18 18 18 18 18 18 1 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 18 1 18 18 18 18 18 18 18 18;
 	setAttr -s 93 ".kix[22:92]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1;
@@ -9196,16 +9221,16 @@ createNode animCurveTA -n "Fk_Right_Shoulder_Ctrl_rotateX";
 	rename -uid "8BBCBA8C-470E-68B8-EAEC-77A200A28974";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 98 ".ktv[0:97]"  0 0 1 1.3397396778662645 19 0.83084922123152671
+	setAttr -s 98 ".ktv[0:97]"  0 0 1 1.3397396778662645 19 1.1946252811581182
 		 36 -0.10521494155432085 52 -1.2161880341801088 72 -3.7389229102076835 88 -3.7389229102076835
 		 108 -3.7389229102076835 138 -3.7389229102076835 158 -3.7389229102076835 188 -3.7389229102076835
-		 202 16.522785752559329 218 5.0432325809530791 238 -3.7389229102076835 268 -2.6957304951352703
+		 202 16.522785752559329 218 5.0432325809530791 238 -3.7389229102076835 268 -3.9338121446902172
 		 298 -3.7389229102076835 328 -2.6957304951352703 358 -3.7389229102076835 388 -3.3717191801021942
-		 406 -2.6957304951352703 432 0.26578907477903224 458 1.629349880671924 478 1.3397396778662645
-		 483 1.3397396778662645 500 1.3397396778662645 510 -27.333195947202736 600 -27.333195947202736
+		 406 -2.6957304951352703 432 -0.077267032961772633 458 1.629349880671924 478 1.3397396778662645
+		 483 1.3397396778662645 500 1.3397396778662645 510 -27.333195947202736 600 -10.226239012756661
 		 609 5.9663351132310485 610 5.9663351132310485 617 -23.12937259401593 624 -4.8641408462240072
 		 631 23.386307125164649 638 5.9663351132310485 640 22.450872904854123 641 26.086869132214503
-		 647 -28.813637937839637 652 22.450872904854123 655 -27.333195947202736 662 -10.226239012756661
+		 647 -28.813637937839637 652 22.450872904854123 655 -8.9812168266051078 662 -10.226239012756661
 		 668 -22.938251837739205 669 -22.938251837739205 671 -22.938251837739205 672 -22.938251837739205
 		 674 -22.938251837739205 675 -22.938251837739205 677 -22.938251837739205 678 -22.938251837739205
 		 680 -22.938251837739205 681 -22.938251837739205 683 -22.938251837739205 684 -22.938251837739205
@@ -9213,71 +9238,74 @@ createNode animCurveTA -n "Fk_Right_Shoulder_Ctrl_rotateX";
 		 698 -82.75176341745194 705 -10.591440301844957 710 -13.089668689679819 711 0 720 -122.20434199132499
 		 734 -122.20434199132499 758 -122.20434199132499 800 -115.78473414672258 845 -115.78473414672258
 		 900 -118.88994475909033 952 -122.20434199132499 958 -71.243957951046255 969 -32.563597774439444
-		 974 0 977 -10.226239012756661 978 -27.333195947202736 982 -25.010989360749225 984 -15.804317028959213
+		 974 0 977 -22.965447883187419 978 -27.333195947202736 982 -25.010989360749225 984 -15.804317028959213
 		 986 -25.010989360749225 989 -25.010989360749225 992 52.719652982799616 997 -29.893737499356746
-		 999 -29.893737499356746 1003 12.409110542861196 1008 -10.226239012756661 1010 -10.226239012756661
-		 1011 -10.226239012756661 1015 -10.316163743873727 1020 -10.44188088441568 1025 -15.166271409854817
-		 1037 -29.069950314935323 1043 -29.069950314935323 1049 -10.226239012756661 1050 1.3397396778662645
+		 999 -29.893737499356746 1003 12.409110542861196 1008 -27.333195947202736 1010 -27.333195947202736
+		 1011 -27.333195947202736 1015 -10.316163743873727 1020 -10.44188088441568 1025 -15.166271409854817
+		 1037 -29.069950314935323 1043 -41.373675306749021 1049 -23.077008606274429 1050 1.3397396778662645
 		 1063 1.3397396778662645 1069 2.0402868395920466 1074 1.3397396778662645 1089 5.0634868558753716
 		 1111 -1.5582630388275533 1150 1.3397396778662645 1155 1.3397396778662645 1168 1.3397396778662645
 		 1178 1.3397396778662645;
 	setAttr -s 98 ".kit[26:97]"  1 18 18 18 18 18 18 18 
 		1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 18 18 18 18 18 18 18 1 1 1 18 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 1 18 18 18 18 18 18 18 18 18 18;
 	setAttr -s 98 ".kot[26:97]"  1 18 18 18 18 18 18 18 
 		1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 18 18 18 18 18 18 18 1 1 1 18 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 98 ".kix[26:97]"  1 1 1 1 0.58351393960537257 1 1 0.33534238704621894 
-		1 1 1 1 1 1 0.48681336934711084 0.48681336934711084 0.48681336934711084 0.48681336934711084 
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 1 18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 98 ".kix[26:97]"  0.97592104639311639 1 1 1 0.58351393960537257 
+		1 1 0.33534238704621894 1 1 1 0.32981738857493093 0.97592104639311639 1 0.48681336934711084 
 		0.48681336934711084 0.48681336934711084 0.48681336934711084 0.48681336934711084 0.48681336934711084 
 		0.48681336934711084 0.48681336934711084 0.48681336934711084 0.48681336934711084 0.48681336934711084 
-		0.48681336934711084 1 1 1 1 1 1 1 1 1 1 1 0.41244409481342909 0.47251724437497 1 
-		0.32981738857493098 1 0.80786288226534553 0.80786288226534553 0.80786288226534553 
-		0.80786288226534553 1 1 1 1 1 1 1 0.99994963885669064 0.99950121465105823 0.90883706963269861 
-		1 1 0.48160761506024252 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 98 ".kiy[26:97]"  0 0 0 0 0.81210312293834797 0 0 0.94209632387041187 
-		0 0 0 0 0 0 -0.8735060065190815 -0.8735060065190815 -0.8735060065190815 -0.8735060065190815 
+		0.48681336934711084 0.48681336934711084 0.48681336934711084 0.48681336934711084 1 
+		1 1 1 1 1 1 1 1 1 1 0.41244409481342909 0.47251724437497 1 0.32981738857493093 1 
+		0.80786288226534519 0.80786288226534553 0.80786288226534553 0.80786288226534553 1 
+		1 1 1 1 1 1 1 0.99950121465105823 0.90883706963269861 0.8537514371719257 1 1 1 1 
+		1 1 1 1 1 1 1 1;
+	setAttr -s 98 ".kiy[26:97]"  -0.21812407296528444 0 0 0 0.81210312293834797 
+		0 0 0.94209632387041187 0 0 0 -0.94404475010118727 -0.21812407296528444 0 -0.8735060065190815 
 		-0.8735060065190815 -0.8735060065190815 -0.8735060065190815 -0.8735060065190815 -0.8735060065190815 
 		-0.8735060065190815 -0.8735060065190815 -0.8735060065190815 -0.8735060065190815 -0.8735060065190815 
-		-0.8735060065190815 0 0 0 0 0 0 0 0 0 0 0 0.91098291348056093 0.88132142477548159 
-		0 -0.94404475010118727 0 0.58937048064687492 0.58937048064687492 0.58937048064687492 
-		0.58937048064687492 0 0 0 0 0 0 0 -0.010035922995623336 -0.031580403909060001 -0.41715126856027818 
-		0 0 0.87638696083179235 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 98 ".kox[26:97]"  1 1 1 1 0.58351393960537257 1 1 0.33534238704621888 
-		1 1 1 1 1 1 0.48681336934711078 0.48681336934711078 0.48681336934711078 0.48681336934711078 
+		-0.8735060065190815 -0.8735060065190815 -0.8735060065190815 -0.8735060065190815 0 
+		0 0 0 0 0 0 0 0 0 0 0.91098291348056093 0.88132142477548159 0 -0.94404475010118727 
+		0 0.58937048064687547 0.58937048064687492 0.58937048064687492 0.58937048064687492 
+		0 0 0 0 0 0 0 0 -0.031580403909060001 -0.41715126856027818 -0.5206807885133381 0 
+		0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 98 ".kox[26:97]"  0.9759210463931165 1 1 1 0.58351393960537257 
+		1 1 0.33534238704621888 1 1 1 0.32981738857493093 0.9759210463931165 1 0.48681336934711078 
 		0.48681336934711078 0.48681336934711078 0.48681336934711078 0.48681336934711078 0.48681336934711078 
 		0.48681336934711078 0.48681336934711078 0.48681336934711078 0.48681336934711078 0.48681336934711078 
-		0.48681336934711078 1 1 1 1 1 1 1 1 1 1 1 0.41244409481342909 0.47251724437497006 
-		1 0.32981738857493093 1 0.80786288226534553 0.80786288226534553 0.80786288226534553 
-		0.80786288226534553 1 1 1 1 1 1 1 0.99994963885669064 0.99950121465105823 0.90883706963269861 
-		1 1 0.48160761506024247 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 98 ".koy[26:97]"  0 0 0 0 0.81210312293834797 0 0 0.94209632387041187 
-		0 0 0 0 0 0 -0.87350600651908139 -0.87350600651908139 -0.87350600651908139 -0.87350600651908139 
+		0.48681336934711078 0.48681336934711078 0.48681336934711078 0.48681336934711078 1 
+		1 1 1 1 1 1 1 1 1 1 0.41244409481342909 0.47251724437497006 1 0.32981738857493093 
+		1 0.80786288226534519 0.80786288226534553 0.80786288226534553 0.80786288226534553 
+		1 1 1 1 1 1 1 1 0.99950121465105823 0.90883706963269861 0.8537514371719257 1 1 1 
+		1 1 1 1 1 1 1 1 1;
+	setAttr -s 98 ".koy[26:97]"  -0.21812407296528444 0 0 0 0.81210312293834797 
+		0 0 0.94209632387041187 0 0 0 -0.94404475010118727 -0.21812407296528444 0 -0.87350600651908139 
 		-0.87350600651908139 -0.87350600651908139 -0.87350600651908139 -0.87350600651908139 
 		-0.87350600651908139 -0.87350600651908139 -0.87350600651908139 -0.87350600651908139 
-		-0.87350600651908139 -0.87350600651908139 -0.87350600651908139 0 0 0 0 0 0 0 0 0 
-		0 0 0.91098291348056093 0.8813214247754817 0 -0.94404475010118716 0 0.58937048064687492 
-		0.58937048064687492 0.58937048064687492 0.58937048064687492 0 0 0 0 0 0 0 -0.010035922995623336 
-		-0.031580403909060001 -0.41715126856027812 0 0 0.87638696083179224 0 0 0 0 0 0 0 
-		0 0 0;
+		-0.87350600651908139 -0.87350600651908139 -0.87350600651908139 -0.87350600651908139 
+		-0.87350600651908139 -0.87350600651908139 0 0 0 0 0 0 0 0 0 0 0 0.91098291348056093 
+		0.8813214247754817 0 -0.94404475010118727 0 0.58937048064687547 0.58937048064687492 
+		0.58937048064687492 0.58937048064687492 0 0 0 0 0 0 0 0 -0.031580403909060001 -0.41715126856027812 
+		-0.5206807885133381 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "Fk_Right_Shoulder_Ctrl_rotateY";
 	rename -uid "1BF39625-4307-3FA6-3627-D7952F55F1DC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 98 ".ktv[0:97]"  0 0 1 -3.520002724309756 19 -3.6733769761335213
+	setAttr -s 98 ".ktv[0:97]"  0 0 1 -3.520002724309756 19 -3.5718038073292013
 		 36 -9.0608168776917068 52 -13.66012518198198 72 -13.260146445500189 88 -13.260146445500189
 		 108 -13.260146445500189 138 -13.260146445500189 158 -13.260146445500189 188 -13.260146445500189
-		 202 4.7653447655939232 218 17.414487932760398 238 -13.260146445500189 268 14.496339380649967
+		 202 4.7653447655939232 218 17.414487932760398 238 -13.260146445500189 268 14.21615841250105
 		 298 -13.260146445500189 328 14.496339380649967 358 -13.260146445500189 388 -3.4898634346953328
-		 406 14.496339380649967 432 4.9428736865617893 458 -3.3957901960782486 478 -3.520002724309756
-		 483 -3.520002724309756 500 -3.520002724309756 510 -15.779693954189399 600 -15.779693954189399
+		 406 14.496339380649967 432 4.9493952596041213 458 -3.3957901960782486 478 -3.520002724309756
+		 483 -3.520002724309756 500 -3.520002724309756 510 -15.779693954189399 600 7.2639793124527117
 		 609 -6.0068410053612897 610 -6.0068410053612897 617 15.860635081277941 624 5.7656553496417908
 		 631 -10.248297693308325 638 -6.0068410053612897 640 -9.0484885184984378 641 -13.25707666522788
-		 647 15.468948066428759 652 -9.0484885184984378 655 -15.779693954189399 662 7.2639793124527117
+		 647 15.468948066428759 652 -9.0484885184984378 655 4.9036031947946608 662 7.2639793124527117
 		 668 -22.452682612095362 669 -22.452682612095362 671 -22.452682612095362 672 -22.452682612095362
 		 674 -22.452682612095362 675 -22.452682612095362 677 -22.452682612095362 678 -22.452682612095362
 		 680 -22.452682612095362 681 -22.452682612095362 683 -22.452682612095362 684 -22.452682612095362
@@ -9285,54 +9313,54 @@ createNode animCurveTA -n "Fk_Right_Shoulder_Ctrl_rotateY";
 		 698 -40.642791218610881 705 -21.094151416074418 710 -40.781859970466456 711 0 720 1.9937884582691359
 		 734 1.9937884582691359 758 1.9937884582691359 800 -6.5592641516511216 845 -6.5592641516511216
 		 900 -26.55964751336063 952 1.9937884582691359 958 0.36641485224607384 969 0.055192933484616825
-		 974 0 977 7.2639793124527117 978 -15.779693954189399 982 -12.332812654865938 984 -12.332812654865933
+		 974 0 977 7.2639793124527499 978 -15.779693954189399 982 -12.332812654865938 984 -12.332812654865933
 		 986 -12.332812654865938 989 -12.332812654865938 992 -27.260785096113132 997 17.040554314424675
-		 999 17.040554314424675 1003 -24.154974141816741 1008 7.2639793124527117 1010 7.2639793124527117
-		 1011 7.2639793124527117 1015 -1.4620930234374039 1020 -13.661371782494774 1025 -8.0685272955444418
-		 1037 -22.367841509330976 1043 -22.367841509330976 1049 7.2639793124527117 1050 -3.520002724309756
+		 999 17.040554314424675 1003 -24.154974141816741 1008 -15.779693954189399 1010 -15.779693954189399
+		 1011 -15.779693954189399 1015 -1.4620930234374039 1020 -13.661371782494774 1025 -8.0685272955444418
+		 1037 -22.367841509330976 1043 -22.367841509330933 1049 -21.684666429071747 1050 -3.520002724309756
 		 1063 -3.520002724309756 1069 -3.1661539423808227 1074 -3.520002724309756 1089 -3.5200027243097534
 		 1111 -3.520002724309748 1150 -3.520002724309756 1155 -3.520002724309756 1168 -3.520002724309756
 		 1178 -3.520002724309756;
 	setAttr -s 98 ".kit[26:97]"  1 18 18 18 18 18 18 18 
 		1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 18 18 18 18 18 18 18 1 1 1 18 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 1 18 18 18 18 18 18 18 18 18 18;
 	setAttr -s 98 ".kot[26:97]"  1 18 18 18 18 18 18 18 
 		1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 18 18 18 18 18 18 18 1 1 1 18 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 1 18 18 18 18 18 18 18 18 18 18;
 	setAttr -s 98 ".kix[26:97]"  1 1 1 1 0.78805211316836798 1 1 0.70276314029491149 
-		1 1 0.52149376281950444 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.96336680676475428 
-		1 1 1 1 1 1 1 0.99936855836417182 0.99995399305200428 1 1 1 1 0.76339782279320589 
-		1 1 1 1 1 1 1 1 1 0.71639031267529896 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.96336680676475428 1 1 1 1 1 1 1 
+		0.99936855836417182 0.99995399305200428 1 1 1 1 0.76339782279320589 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
 	setAttr -s 98 ".kiy[26:97]"  0 0 0 0 -0.61560853383531788 0 0 -0.71142390221501173 
-		0 0 -0.85325509394339649 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.26818723986028969 
-		0 0 0 0 0 0 0 -0.035531458640434034 -0.0095922770681571654 0 0 0 0 0.64592860608165747 
-		0 0 0 0 0 0 0 0 0 -0.69769973477491543 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.26818723986028969 0 0 0 0 0 0 0 
+		-0.035531458640434034 -0.0095922770681571654 0 0 0 0 0.64592860608165747 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 	setAttr -s 98 ".kox[26:97]"  1 1 1 1 0.78805211316836798 1 1 0.70276314029491138 
-		1 1 0.52149376281950444 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.96336680676475417 
-		1 1 1 1 1 1 1 0.99936855836417182 0.99995399305200428 1 1 1 1 0.76339782279320589 
-		1 1 1 1 1 1 1 1 1 0.71639031267529896 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.96336680676475417 1 1 1 1 1 1 1 
+		0.99936855836417182 0.99995399305200428 1 1 1 1 0.76339782279320589 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
 	setAttr -s 98 ".koy[26:97]"  0 0 0 0 -0.61560853383531788 0 0 -0.71142390221501173 
-		0 0 -0.85325509394339649 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.26818723986028964 
-		0 0 0 0 0 0 0 -0.035531458640434034 -0.0095922770681571654 0 0 0 0 0.64592860608165747 
-		0 0 0 0 0 0 0 0 0 -0.69769973477491554 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.26818723986028964 0 0 0 0 0 0 0 
+		-0.035531458640434034 -0.0095922770681571654 0 0 0 0 0.64592860608165747 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "Fk_Right_Shoulder_Ctrl_rotateZ";
 	rename -uid "A68F068C-4833-76F4-194D-319FE928B9D3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 98 ".ktv[0:97]"  0 0 1 20.289593896192052 19 28.388153444371838
+	setAttr -s 98 ".ktv[0:97]"  0 0 1 20.289593896192052 19 22.635566971216253
 		 36 20.467704577406209 52 13.235788742101732 72 23.184420159689115 88 23.184420159689115
 		 108 23.184420159689115 138 23.184420159689115 158 23.184420159689115 188 23.184420159689115
-		 202 23.636457398707464 218 15.889095804911756 238 23.184420159689115 268 18.189776059263917
+		 202 23.636457398707464 218 15.889095804911756 238 23.184420159689115 268 13.199486406388514
 		 298 23.184420159689115 328 18.189776059263917 358 23.184420159689115 388 21.426305436339444
-		 406 18.189776059263917 432 24.029696380894382 458 15.490769439166224 478 20.289593896192052
-		 483 20.289593896192052 500 20.289593896192052 510 -6.0956819819337849 600 -6.0956819819337849
+		 406 18.189776059263917 432 20.052397150746945 458 15.490769439166224 478 20.289593896192052
+		 483 20.289593896192052 500 20.289593896192052 510 -6.0956819819337849 600 -22.128548997113036
 		 609 22.142238421563263 610 22.142238421563263 617 19.482409233649516 624 24.129414294582151
 		 631 18.204006180846754 638 22.142238421563263 640 20.837162059011572 641 21.91200257385702
-		 647 12.498954514630782 652 20.837162059011572 655 -6.0956819819337849 662 -22.128548997113036
+		 647 12.498954514630782 652 20.837162059011572 655 -38.696031142688497 662 -22.128548997113036
 		 668 -65.623393741011313 669 -65.623393741011313 671 -65.623393741011313 672 -65.623393741011313
 		 674 -65.623393741011313 675 -65.623393741011313 677 -65.623393741011313 678 -65.623393741011313
 		 680 -65.623393741011313 681 -65.623393741011313 683 -65.623393741011313 684 -65.623393741011313
@@ -9340,58 +9368,60 @@ createNode animCurveTA -n "Fk_Right_Shoulder_Ctrl_rotateZ";
 		 698 -34.073565583218446 705 1.1033608401807022 710 5.8891165305195177 711 0 720 -5.036692250097941
 		 734 -5.036692250097941 758 -5.036692250097941 800 14.596366935823292 845 14.596366935823292
 		 900 25.297339431310903 952 -5.036692250097941 958 3.0428019771827577 969 10.201167911516299
-		 974 14.338147525190093 977 -22.128548997113036 978 -6.0956819819337849 982 -13.255909586920851
+		 974 14.338147525190093 977 -22.128548997113032 978 -6.0956819819337849 982 -13.255909586920851
 		 984 -13.255909586920872 986 -13.255909586920851 989 -13.255909586920851 992 -15.532492632474858
-		 997 -52.671124927269979 999 -52.671124927269979 1003 -30.319077072636624 1008 -22.128548997113036
-		 1010 -22.128548997113036 1011 -22.128548997113036 1015 -20.544333609152069 1020 -18.329558806903918
-		 1025 6.33070066504858 1037 2.4366841527803635 1043 2.4366841527803635 1049 -22.128548997113036
+		 997 -52.671124927269979 999 -52.671124927269979 1003 -30.319077072636624 1008 -6.0956819819337849
+		 1010 -6.0956819819337849 1011 -6.0956819819337849 1015 -20.544333609152069 1020 -18.329558806903918
+		 1025 6.33070066504858 1037 2.4366841527803635 1043 2.4366841527803524 1049 -19.278874714320057
 		 1050 20.289593896192052 1063 20.289593896192052 1069 13.839913079641869 1074 20.289593896192052
 		 1089 20.289593896192059 1111 20.289593896192059 1150 20.289593896192052 1155 22.367160704112354
 		 1168 20.289593896192052 1178 20.289593896192052;
 	setAttr -s 98 ".kit[26:97]"  1 18 18 18 18 18 18 18 
 		1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 18 18 18 18 18 18 18 1 1 1 18 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 1 18 18 18 18 18 18 18 18 18 18;
 	setAttr -s 98 ".kot[26:97]"  1 18 18 18 18 18 18 18 
 		1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 18 18 18 18 18 18 18 1 1 1 18 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 98 ".kix[26:97]"  0.98457897472840361 1 1 1 1 1 1 1 0.91232433431158866 
-		1 1 0.98457897472840361 0.46229993235339478 1 0.32892646968105821 0.32892646968105821 
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 1 18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 98 ".kix[26:97]"  1 1 1 1 1 1 1 1 0.91232433431158866 1 1 
+		1 1 1 0.32892646968105821 0.32892646968105821 0.32892646968105821 0.32892646968105821 
 		0.32892646968105821 0.32892646968105821 0.32892646968105821 0.32892646968105821 0.32892646968105821 
 		0.32892646968105821 0.32892646968105821 0.32892646968105821 0.32892646968105821 0.32892646968105821 
-		0.32892646968105821 0.32892646968105821 0.32892646968105821 0.33686517169732594 0.63930626876820096 
-		1 0.90929685784333358 1 1 1 1 1 1 1 0.93618752022878859 0.95895073594842983 1 1 0.98457897472840361 
-		1 0.71650032455672941 1 1 0.72369254314507314 1 1 0.57536791406188381 1 1 1 0.98472579350090439 
-		0.8737570884073167 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 98 ".kiy[26:97]"  -0.17494068286926692 0 0 0 0 0 0 0 -0.40946832481025502 
-		0 0 -0.17494068286926692 -0.88672361677472356 0 -0.94435553556018081 -0.94435553556018081 
+		0.32892646968105821 0.33686517169732594 0.63930626876820096 1 0.90929685784333358 
+		1 1 1 1 1 1 1 0.93618752022878859 0.95895073594842983 1 1 0.98457897472840361 1 0.71650032455672941 
+		1 1 0.72369254314507314 1 1 0.41889035948765335 0.98457897472840361 0.98457897472840361 
+		0.98457897472840361 1 0.8737570884073167 1 1 1 0.98457897472840361 1 1 1 1 1 1 1 
+		1 1 1;
+	setAttr -s 98 ".kiy[26:97]"  0 0 0 0 0 0 0 0 -0.40946832481025502 0 
+		0 0 0 0 -0.94435553556018081 -0.94435553556018081 -0.94435553556018081 -0.94435553556018081 
 		-0.94435553556018081 -0.94435553556018081 -0.94435553556018081 -0.94435553556018081 
 		-0.94435553556018081 -0.94435553556018081 -0.94435553556018081 -0.94435553556018081 
-		-0.94435553556018081 -0.94435553556018081 -0.94435553556018081 -0.94435553556018081 
-		-0.94435553556018081 0.94155289606974879 0.76895220574082546 0 -0.41614807979400809 
-		0 0 0 0 0 0 0 0.35150096296862665 0.28357271734771106 0 0 -0.17494068286926692 0 
-		-0.69758675798075565 0 0 -0.69012252752407399 0 0 0.81789471417051995 0 0 0 0.17411235342161768 
-		0.48636257098790864 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 98 ".kox[26:97]"  0.98457897472840361 1 1 1 1 1 1 1 0.91232433431158866 
-		1 1 0.98457897472840361 0.46229993235339473 1 0.32892646968105821 0.32892646968105821 
+		-0.94435553556018081 -0.94435553556018081 -0.94435553556018081 0.94155289606974879 
+		0.76895220574082546 0 -0.41614807979400809 0 0 0 0 0 0 0 0.35150096296862665 0.28357271734771106 
+		0 0 -0.17494068286926692 0 -0.69758675798075565 0 0 -0.69012252752407399 0 0 0.90803682013908693 
+		-0.17494068286926692 -0.17494068286926692 -0.17494068286926692 0 0.48636257098790864 
+		0 0 0 -0.17494068286926692 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 98 ".kox[26:97]"  1 1 1 1 1 1 1 1 0.91232433431158866 1 1 
+		1 1 1 0.32892646968105821 0.32892646968105821 0.32892646968105821 0.32892646968105821 
 		0.32892646968105821 0.32892646968105821 0.32892646968105821 0.32892646968105821 0.32892646968105821 
 		0.32892646968105821 0.32892646968105821 0.32892646968105821 0.32892646968105821 0.32892646968105821 
-		0.32892646968105821 0.32892646968105821 0.32892646968105821 0.33686517169732594 0.63930626876820096 
-		1 0.90929685784333369 1 1 1 1 1 1 1 0.93618752022878837 0.95895073594842972 1 1 0.98457897472840361 
-		1 0.71650032455672941 1 1 0.72369254314507314 1 1 0.57536791406188392 1 1 1 0.98472579350090439 
-		0.8737570884073167 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 98 ".koy[26:97]"  -0.17494068286926695 0 0 0 0 0 0 0 -0.40946832481025502 
-		0 0 -0.17494068286926695 -0.88672361677472344 0 -0.94435553556018081 -0.94435553556018081 
+		0.32892646968105821 0.33686517169732594 0.63930626876820096 1 0.90929685784333369 
+		1 1 1 1 1 1 1 0.93618752022878837 0.95895073594842972 1 1 0.98457897472840361 1 0.71650032455672941 
+		1 1 0.72369254314507314 1 1 0.41889035948765341 0.98457897472840361 0.98457897472840361 
+		0.98457897472840361 1 0.8737570884073167 1 1 1 0.98457897472840361 1 1 1 1 1 1 1 
+		1 1 1;
+	setAttr -s 98 ".koy[26:97]"  0 0 0 0 0 0 0 0 -0.40946832481025502 0 
+		0 0 0 0 -0.94435553556018081 -0.94435553556018081 -0.94435553556018081 -0.94435553556018081 
 		-0.94435553556018081 -0.94435553556018081 -0.94435553556018081 -0.94435553556018081 
 		-0.94435553556018081 -0.94435553556018081 -0.94435553556018081 -0.94435553556018081 
-		-0.94435553556018081 -0.94435553556018081 -0.94435553556018081 -0.94435553556018081 
-		-0.94435553556018081 0.94155289606974879 0.76895220574082546 0 -0.41614807979400809 
-		0 0 0 0 0 0 0 0.35150096296862665 0.28357271734771106 0 0 -0.17494068286926695 0 
-		-0.69758675798075565 0 0 -0.6901225275240741 0 0 0.81789471417052007 0 0 0 0.17411235342161768 
-		0.48636257098790864 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+		-0.94435553556018081 -0.94435553556018081 -0.94435553556018081 0.94155289606974879 
+		0.76895220574082546 0 -0.41614807979400809 0 0 0 0 0 0 0 0.35150096296862665 0.28357271734771106 
+		0 0 -0.17494068286926695 0 -0.69758675798075565 0 0 -0.6901225275240741 0 0 0.90803682013908693 
+		-0.17494068286926695 -0.17494068286926695 -0.17494068286926695 0 0.48636257098790864 
+		0 0 0 -0.17494068286926695 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "Fk_Right_Shoulder_Ctrl_scaleX";
 	rename -uid "2A765A49-4DA7-83D4-6AE9-7F983FF4EDED";
 	setAttr ".tan" 18;
@@ -9407,13 +9437,13 @@ createNode animCurveTU -n "Fk_Right_Shoulder_Ctrl_scaleX";
 	setAttr -s 98 ".kit[26:97]"  1 18 18 18 18 18 18 18 
 		1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 18 18 18 18 18 18 18 1 1 1 18 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 1 18 18 18 18 18 18 18 18 18 18;
 	setAttr -s 98 ".kot[26:97]"  1 18 18 18 18 18 18 18 
 		1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 18 18 18 18 18 18 18 1 1 1 18 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 1 18 18 18 18 18 18 18 18 18 18;
 	setAttr -s 98 ".kix[26:97]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1;
@@ -9441,13 +9471,13 @@ createNode animCurveTU -n "Fk_Right_Shoulder_Ctrl_scaleY";
 	setAttr -s 98 ".kit[26:97]"  1 18 18 18 18 18 18 18 
 		1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 18 18 18 18 18 18 18 1 1 1 18 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 1 18 18 18 18 18 18 18 18 18 18;
 	setAttr -s 98 ".kot[26:97]"  1 18 18 18 18 18 18 18 
 		1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 18 18 18 18 18 18 18 1 1 1 18 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 1 18 18 18 18 18 18 18 18 18 18;
 	setAttr -s 98 ".kix[26:97]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1;
@@ -9475,13 +9505,13 @@ createNode animCurveTU -n "Fk_Right_Shoulder_Ctrl_scaleZ";
 	setAttr -s 98 ".kit[26:97]"  1 18 18 18 18 18 18 18 
 		1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 18 18 18 18 18 18 18 1 1 1 18 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 1 18 18 18 18 18 18 18 18 18 18;
 	setAttr -s 98 ".kot[26:97]"  1 18 18 18 18 18 18 18 
 		1 18 18 1 18 18 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 18 18 18 18 18 18 18 1 1 1 18 18 18 
-		18 18 1 18 1 1 1 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 1 18 1 1 1 18 18 18 18 1 1 1 18 18 18 
+		18 18 1 18 18 18 18 18 18 18 18 18 18;
 	setAttr -s 98 ".kix[26:97]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1;
@@ -10103,10 +10133,10 @@ createNode animCurveTA -n "Left_Clavical_Ctrl_rotateZ";
 		 624 0 631 0 638 0 640 0 641 0 643 0 644 0 646 0 647 0 649 0 650 0 652 0 655 0 658 0
 		 668 0 669 0 671 0 672 0 674 0 675 0 677 0 678 0 680 0 681 0 683 0 684 0 686 0 689 0
 		 692 0 695 0 698 0 705 0 710 0 711 0 763 0 775 0 779 0 781 0 798 0 800 0 900 0 915 0
-		 952 0 953 0 958 0 966 0 976 0 977 0 982 0 984 0 986 0 989 0 992 0 997 0 999 0 1003 0
-		 1008 0 1010 0 1011 0 1015 0 1020 0 1025 0 1043 0 1049 0 1050 0 1060 0 1070 0 1072 0
-		 1075 0 1085 0 1087 0 1089 0 1091 0 1093 0 1104 0 1105 0 1107 0 1121 0 1131 0 1134 0
-		 1136 0 1138 0 1147 0 1149 0 1151 0 1164 0 1178 0;
+		 952 0 953 0 958 0 966 0 976 0 977 -11.520250035456964 982 0 984 0 986 0 989 0 992 0
+		 997 0 999 0 1003 0 1008 0 1010 0 1011 0 1015 0 1020 0 1025 0 1043 0 1049 0 1050 0
+		 1060 0 1070 0 1072 0 1075 0 1085 0 1087 0 1089 0 1091 0 1093 0 1104 0 1105 0 1107 0
+		 1121 0 1131 0 1134 0 1136 0 1138 0 1147 0 1149 0 1151 0 1164 0 1178 0;
 createNode animCurveTU -n "Left_Clavical_Ctrl_scaleX";
 	rename -uid "895202CB-40E3-7309-B6B0-AA979A54C407";
 	setAttr ".tan" 18;
@@ -10928,10 +10958,10 @@ createNode animCurveTA -n "Spear_Ctrl_rotateX";
 		 1159 180 1164 0 1178 0;
 	setAttr -s 96 ".kit[58:95]"  1 1 18 18 18 1 1 1 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 18 18 18 18 1 18 18 18 18 18 18;
 	setAttr -s 96 ".kot[58:95]"  1 1 18 18 18 1 1 1 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 18 18 18 18 1 18 18 18 18 18 18;
 	setAttr -s 96 ".kix[58:95]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
 	setAttr -s 96 ".kiy[58:95]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
@@ -10955,10 +10985,10 @@ createNode animCurveTA -n "Spear_Ctrl_rotateY";
 		 1164 0 1178 0;
 	setAttr -s 96 ".kit[58:95]"  1 1 18 18 18 1 1 1 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 18 18 18 18 1 18 18 18 18 18 18;
 	setAttr -s 96 ".kot[58:95]"  1 1 18 18 18 1 1 1 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 18 18 18 18 1 18 18 18 18 18 18;
 	setAttr -s 96 ".kix[58:95]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
 	setAttr -s 96 ".kiy[58:95]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
@@ -10982,10 +11012,10 @@ createNode animCurveTA -n "Spear_Ctrl_rotateZ";
 		 1164 0 1178 0;
 	setAttr -s 96 ".kit[58:95]"  1 1 18 18 18 1 1 1 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 18 18 18 18 1 18 18 18 18 18 18;
 	setAttr -s 96 ".kot[58:95]"  1 1 18 18 18 1 1 1 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 18 18 18 18 1 18 18 18 18 18 18;
 	setAttr -s 96 ".kix[58:95]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
 	setAttr -s 96 ".kiy[58:95]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
@@ -11008,15 +11038,15 @@ createNode animCurveTL -n "Spear_Ctrl_translateX";
 		 781 -0.13195792823236233 797 -0.19422191629735869 900 -0.1274572264695068 915 -0.062451215877398797
 		 953 -0.11680960687509497 958 -0.11680960687509497 966 0.047969975166825024 976 0
 		 977 0 982 0 984 0 986 0 989 0 992 0 997 0 999 0 1003 0 1008 0 1010 0 1011 0 1015 0
-		 1020 0 1025 0 1043 0 1049 0 1050 0 1060 0 1065 0 1070 -0.0075182584080627501 1071 -0.25214701702683984
-		 1148 -0.25214701702683984 1149 -0.0075182584080627501 1151 -0.0075182584080627501
+		 1020 0 1025 0 1043 0 1049 0 1050 0 1060 0 1065 0 1070 -0.0075182584080627501 1071 -0.82689243426759207
+		 1148 -0.82689243426759207 1149 -0.0075182584080627501 1151 -0.0075182584080627501
 		 1156 0 1159 0 1164 0 1178 0;
 	setAttr -s 96 ".kit[58:95]"  1 1 18 18 18 1 1 1 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 18 18 18 18 1 18 18 18 18 18 18;
 	setAttr -s 96 ".kot[58:95]"  1 1 18 18 18 1 1 1 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 18 18 18 18 1 18 18 18 18 18 18;
 	setAttr -s 96 ".kix[58:95]"  1 1 1 0.99964105137100534 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.99419058884120237 1 1 1 1 1 1 1 1;
 	setAttr -s 96 ".kiy[58:95]"  0 0 0 0.026791200306651362 0 0 0 0 0 0 
@@ -11039,27 +11069,27 @@ createNode animCurveTL -n "Spear_Ctrl_translateY";
 		 781 0.16677360196473545 797 0.22409872125488767 900 0.33882532914502045 915 0.29904706804069847
 		 953 0.061983389310326514 958 0.061983389310326514 966 0.1930643635636381 976 0 977 0
 		 982 0 984 0 986 0 989 0 992 0 997 0 999 0 1003 0 1008 0 1010 0 1011 0 1015 0 1020 0
-		 1025 0 1043 0 1049 0 1050 0 1060 0 1065 0 1070 -0.027791654970534707 1071 0.095064410805623778
-		 1148 0.095064410805623778 1149 -0.027791654970534707 1151 -0.027791654970534707 1156 0
+		 1025 0 1043 0 1049 0 1050 0 1060 0 1065 0 1070 -0.027791654970534707 1071 -1.5077132089664176
+		 1148 -1.5077132089664176 1149 -0.027791654970534707 1151 -0.027791654970534707 1156 0
 		 1159 0 1164 0 1178 0;
 	setAttr -s 96 ".kit[58:95]"  1 1 18 18 18 1 1 1 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 18 18 18 18 1 18 18 18 18 18 18;
 	setAttr -s 96 ".kot[58:95]"  1 1 18 18 18 1 1 1 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 18 18 18 18 1 18 18 18 18 18 18;
 	setAttr -s 96 ".kix[58:95]"  0.99254511057242001 0.99254511057242001 
 		0.99939851518370271 1 0.99223355836732696 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1;
+		1 1 1 1 0.9284127025677027 1 1 1 1 1 1 1 1;
 	setAttr -s 96 ".kiy[58:95]"  0.12187782193156609 0.12187782193156609 
 		0.034678636775549901 0 -0.12438876818150559 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+		0 0 0 0 0 -0.37155060720033067 0 0 0 0 0 0 0 0;
 	setAttr -s 96 ".kox[58:95]"  0.99254511057242001 0.99254511057242001 
 		0.99939851518370248 1 0.99223355836732707 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1;
+		1 1 1 1 0.9284127025677027 1 1 1 1 1 1 1 1;
 	setAttr -s 96 ".koy[58:95]"  0.12187782193156609 0.12187782193156609 
 		0.034678636775549894 0 -0.1243887681815056 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+		0 0 0 0 0 -0.37155060720033067 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "Spear_Ctrl_translateZ";
 	rename -uid "BA8A8A20-4011-6077-1130-208ED1883001";
 	setAttr ".tan" 18;
@@ -11074,15 +11104,15 @@ createNode animCurveTL -n "Spear_Ctrl_translateZ";
 		 781 1.5391071499378266 797 3.630016826071639 900 3.0157880823112269 915 2.7654808905559278
 		 953 1.4951642884828718 958 1.4951642884828718 966 1.0147168007730933 976 0 977 0
 		 982 0 984 0 986 0 989 0 992 0 997 0 999 0 1003 0 1008 0 1010 0 1011 0 1015 0 1020 0
-		 1025 0 1043 0 1049 0 1050 0 1060 0 1065 0 1070 -0.34568675184209363 1071 0.29187786778170699
-		 1148 0.29187786778170699 1149 -0.34568675184209363 1151 -0.34568675184209363 1156 0
+		 1025 0 1043 0 1049 0 1050 0 1060 0 1065 0 1070 -0.34568675184209363 1071 1.1191978852338127
+		 1148 1.1191978852338127 1149 -0.34568675184209363 1151 -0.34568675184209363 1156 0
 		 1159 0 1164 0 1178 0;
 	setAttr -s 96 ".kit[58:95]"  1 1 18 18 18 1 1 1 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 18 18 18 18 1 18 18 18 18 18 18;
 	setAttr -s 96 ".kot[58:95]"  1 1 18 18 18 1 1 1 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 18 18 18 18 1 18 18 18 18 18 18;
 	setAttr -s 96 ".kix[58:95]"  0.63451912760487728 0.63451912760487728 
 		1 0.9848900300460004 0.82362476062653234 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1;
@@ -11109,10 +11139,10 @@ createNode animCurveTU -n "Spear_Ctrl_scaleX";
 		 1149 1 1151 1 1156 1 1159 1 1164 1 1178 1;
 	setAttr -s 96 ".kit[58:95]"  1 1 18 18 18 1 1 1 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 18 18 18 18 1 18 18 18 18 18 18;
 	setAttr -s 96 ".kot[58:95]"  1 1 18 18 18 1 1 1 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 18 18 18 18 1 18 18 18 18 18 18;
 	setAttr -s 96 ".kix[58:95]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
 	setAttr -s 96 ".kiy[58:95]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
@@ -11135,10 +11165,10 @@ createNode animCurveTU -n "Spear_Ctrl_scaleY";
 		 1149 1 1151 1 1156 1 1159 1 1164 1 1178 1;
 	setAttr -s 96 ".kit[58:95]"  1 1 18 18 18 1 1 1 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 18 18 18 18 1 18 18 18 18 18 18;
 	setAttr -s 96 ".kot[58:95]"  1 1 18 18 18 1 1 1 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 18 18 18 18 1 18 18 18 18 18 18;
 	setAttr -s 96 ".kix[58:95]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
 	setAttr -s 96 ".kiy[58:95]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
@@ -11161,10 +11191,10 @@ createNode animCurveTU -n "Spear_Ctrl_scaleZ";
 		 1149 1 1151 1 1156 1 1159 1 1164 1 1178 1;
 	setAttr -s 96 ".kit[58:95]"  1 1 18 18 18 1 1 1 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 18 18 18 18 1 18 18 18 18 18 18;
 	setAttr -s 96 ".kot[58:95]"  1 1 18 18 18 1 1 1 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 18 18 18 18 1 18 18 18 18 18 18;
 	setAttr -s 96 ".kix[58:95]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
 	setAttr -s 96 ".kiy[58:95]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
@@ -11636,10 +11666,10 @@ createNode animCurveTU -n "Spear_Ctrl_HipHandGrip";
 		 1070 0 1071 1 1148 1 1149 0 1151 0 1156 0 1159 0 1164 0 1178 0;
 	setAttr -s 42 ".kit[4:41]"  1 1 18 18 18 1 1 1 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 18 18 18 18 1 18 18 18 18 18 18;
 	setAttr -s 42 ".kot[4:41]"  1 1 18 18 18 1 1 1 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18;
+		18 18 18 18 18 18 1 18 18 18 18 18 18;
 	setAttr -s 42 ".kix[4:41]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
 	setAttr -s 42 ".kiy[4:41]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
@@ -11748,14 +11778,16 @@ createNode animCurveTU -n "Fk_Left_Elbow_Ctrl_visibility1";
 	rename -uid "BCBFAA3B-406D-FCE3-1FBA-23A9BC07ADD8";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 26 ".ktv[0:25]"  78 1 88 1 138 1 188 1 218 1 238 1 278 1
+	setAttr -s 33 ".ktv[0:32]"  78 1 88 1 138 1 188 1 218 1 238 1 278 1
 		 298 1 328 1 359 1 388 1 403 1 406 1 410 1 511 1 600 1 655 1 800 1 900 1 966 1 977 1
-		 982 1 983 1 984 1 986 1 992 1;
-	setAttr -s 26 ".kit[0:25]"  9 9 9 9 9 9 9 9 
+		 982 1 983 1 984 1 986 1 989 1 992 1 1003 1 1008 1 1009 1 1010 1 1011 1 1049 1;
+	setAttr -s 33 ".kit[0:32]"  9 9 9 9 9 9 9 9 
 		9 1 9 1 1 1 1 1 1 9 9 9 1 9 9 9 9 
-		9;
-	setAttr -s 26 ".kix[9:25]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 26 ".kiy[9:25]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+		9 9 9 9 1 1 1 1;
+	setAttr -s 33 ".kix[9:32]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1;
+	setAttr -s 33 ".kiy[9:32]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0;
 createNode animCurveTA -n "Right_Index_Ctrl_rotateX";
 	rename -uid "24F74265-4529-0290-C4DA-21890C0F91A0";
 	setAttr ".tan" 18;
@@ -13087,7 +13119,7 @@ createNode animCurveTU -n "Fk_Left_Shoulder_Ctrl_visibility1";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 21 ".ktv[0:20]"  278 1 298 1 328 1 359 1 388 1 403 1 406 1
-		 410 1 510 1 600 1 655 1 900 1 977 1 982 1 983 1 985 1 986 1 987 1 989 1 990 1 992 1;
+		 410 1 511 1 600 1 655 1 900 1 977 1 982 1 983 1 985 1 986 1 987 1 989 1 990 1 992 1;
 	setAttr -s 21 ".kit[0:20]"  9 9 1 1 9 1 1 1 
 		9 1 1 9 1 9 9 9 9 9 9 9 9;
 	setAttr -s 21 ".kix[2:20]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
@@ -13096,64 +13128,69 @@ createNode animCurveTU -n "Fk_Left_Wrist_Ctrl_visibility1";
 	rename -uid "B91F2331-4F08-E83A-B343-A3A628C36F67";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  278 1 298 1 328 1 359 1 388 1 403 1 406 1
-		 410 1 511 1 600 1 655 1 966 1 977 1 982 1 983 1 984 1 992 1;
-	setAttr -s 17 ".kit[0:16]"  9 9 9 1 9 1 1 1 
-		1 1 1 9 1 9 9 9 9;
-	setAttr -s 17 ".kix[3:16]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 17 ".kiy[3:16]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 25 ".ktv[0:24]"  278 1 298 1 328 1 359 1 388 1 403 1 406 1
+		 410 1 511 1 600 1 655 1 966 1 977 1 982 1 983 1 984 1 986 1 989 1 992 1 1003 1 1008 1
+		 1009 1 1010 1 1011 1 1049 1;
+	setAttr -s 25 ".kit[0:24]"  9 9 9 1 9 1 1 1 
+		1 1 1 9 1 9 1 9 9 9 9 9 9 1 1 1 1;
+	setAttr -s 25 ".kix[3:24]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1;
+	setAttr -s 25 ".kiy[3:24]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0;
 createNode animCurveTU -n "Fk_Right_Wrist_Ctrl_visibility1";
 	rename -uid "CA8771D6-4400-383E-70C3-5A8CBFF3D085";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 26 ".ktv[0:25]"  406 1 510 1 600 1 655 1 668 1 669 1 671 1
+	setAttr -s 27 ".ktv[0:26]"  406 1 510 1 600 1 655 1 668 1 669 1 671 1
 		 672 1 674 1 675 1 677 1 678 1 680 1 681 1 683 1 684 1 686 1 689 1 692 1 695 1 966 1
-		 978 1 982 1 984 1 986 1 989 1;
-	setAttr -s 26 ".kit[0:25]"  9 9 1 1 9 1 1 1 
+		 978 1 982 1 984 1 986 1 989 1 1049 1;
+	setAttr -s 27 ".kit[0:26]"  9 9 1 1 9 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 9 1 9 1 1 
-		1;
-	setAttr -s 26 ".kix[2:25]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1;
-	setAttr -s 26 ".kiy[2:25]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0;
+		1 9;
+	setAttr -s 27 ".kix[2:26]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1;
+	setAttr -s 27 ".kiy[2:26]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0;
 createNode animCurveTU -n "Fk_Right_Elbow_Ctrl_visibility1";
 	rename -uid "0D03D9A7-443B-9FE3-7444-3895B92F155C";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 27 ".ktv[0:26]"  510 1 600 1 655 1 668 1 669 1 671 1 672 1
-		 674 1 675 1 677 1 678 1 680 1 681 1 683 1 684 1 686 1 689 1 692 1 695 1 800 1 900 1
-		 966 1 978 1 982 1 984 1 986 1 989 1;
-	setAttr -s 27 ".kit[0:26]"  9 9 1 9 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 9 1 9 1 9 1 
-		1 1;
-	setAttr -s 27 ".kix[2:26]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1;
-	setAttr -s 27 ".kiy[2:26]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0;
+	setAttr -s 36 ".ktv[0:35]"  510 1 600 1 655 1 658 1 668 1 669 1 671 1
+		 672 1 674 1 675 1 677 1 678 1 680 1 681 1 683 1 684 1 686 1 689 1 692 1 695 1 800 1
+		 900 1 966 1 978 1 982 1 984 1 986 1 989 1 1003 1 1008 1 1010 1 1011 1 1031 1 1037 1
+		 1043 1 1049 1;
+	setAttr -s 36 ".kit[0:35]"  9 1 1 9 9 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 9 1 9 1 9 
+		1 1 1 9 1 1 1 9 9 9 1;
+	setAttr -s 36 ".kix[1:35]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 36 ".kiy[1:35]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "Fk_Right_Shoulder_Ctrl_visibility1";
 	rename -uid "2CB96EB6-49B6-6CBD-0147-F49B61987317";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 27 ".ktv[0:26]"  510 1 600 1 655 1 668 1 669 1 671 1 672 1
-		 674 1 675 1 677 1 678 1 680 1 681 1 683 1 684 1 686 1 689 1 692 1 695 1 800 1 845 1
-		 900 1 978 1 982 1 984 1 986 1 989 1;
-	setAttr -s 27 ".kit[0:26]"  9 9 1 9 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 9 1 
-		1 1;
-	setAttr -s 27 ".kix[2:26]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1;
-	setAttr -s 27 ".kiy[2:26]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0;
+	setAttr -s 36 ".ktv[0:35]"  19 1 268 1 432 1 510 1 600 1 655 1 668 1
+		 669 1 671 1 672 1 674 1 675 1 677 1 678 1 680 1 681 1 683 1 684 1 686 1 689 1 692 1
+		 695 1 800 1 845 1 900 1 977 1 978 1 982 1 984 1 986 1 989 1 1008 1 1010 1 1011 1
+		 1043 1 1049 1;
+	setAttr -s 36 ".kit[0:35]"  9 9 9 9 9 1 9 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		9 1 9 1 1 1 1 1 1 9 1;
+	setAttr -s 36 ".kix[5:35]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 36 ".kiy[5:35]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "Spear_Ctrl_visibility";
 	rename -uid "5A20BB4F-45D3-30EF-47AD-96B350F4EF28";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  711 1 775 1 779 1 781 1 797 1 900 1 915 1
-		 953 1 958 1 966 1;
-	setAttr -s 10 ".kit[0:9]"  9 9 9 9 9 9 9 1 
-		1 1;
-	setAttr -s 10 ".kix[7:9]"  1 1 1;
-	setAttr -s 10 ".kiy[7:9]"  0 0 0;
+	setAttr -s 12 ".ktv[0:11]"  711 1 775 1 779 1 781 1 797 1 900 1 915 1
+		 953 1 958 1 966 1 1071 1 1148 1;
+	setAttr -s 12 ".kit[0:11]"  9 9 9 9 9 9 9 1 
+		1 1 9 1;
+	setAttr -s 12 ".kix[7:11]"  1 1 1 1 1;
+	setAttr -s 12 ".kiy[7:11]"  0 0 0 0 0;
 createNode animCurveTU -n "Transform_Ctrl_visibility";
 	rename -uid "72F3106D-4CD5-89BA-EE23-1B8A0A62F34B";
 	setAttr ".tan" 9;
@@ -13172,9 +13209,15 @@ createNode animCurveTU -n "Ik_Left_Leg_Ctrl_visibility";
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  976 1;
 	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "Left_Clavical_Ctrl_visibility";
+	rename -uid "CCE6EE06-4CF2-9727-D632-BA8C9B383D50";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  977 1;
+	setAttr ".kot[0]"  5;
 select -ne :time1;
-	setAttr ".o" 982;
-	setAttr ".unw" 982;
+	setAttr ".o" -1;
+	setAttr ".unw" -1;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -13383,680 +13426,682 @@ connectAttr "Left_Clavical_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1229]";
 connectAttr "Left_Clavical_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1230]";
 connectAttr "Left_Clavical_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1231]";
 connectAttr "Left_Clavical_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1232]";
-connectAttr "Right_Clavical_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1233]"
+connectAttr "Left_Clavical_Ctrl_visibility.o" "DividedBaseBrotherMaleRN.phl[1233]"
 		;
-connectAttr "Right_Clavical_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1234]"
+connectAttr "Right_Clavical_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1234]"
 		;
-connectAttr "Right_Clavical_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1235]"
+connectAttr "Right_Clavical_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1235]"
 		;
-connectAttr "Right_Clavical_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1236]"
+connectAttr "Right_Clavical_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1236]"
 		;
-connectAttr "Right_Clavical_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1237]"
+connectAttr "Right_Clavical_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1237]"
 		;
-connectAttr "Right_Clavical_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1238]"
+connectAttr "Right_Clavical_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1238]"
 		;
-connectAttr "Right_Clavical_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1239]";
-connectAttr "Right_Clavical_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1240]";
-connectAttr "Right_Clavical_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1241]";
-connectAttr "Right_Hand_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1242]";
-connectAttr "Right_Hand_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1243]";
-connectAttr "Right_Hand_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1244]";
-connectAttr "Right_Hand_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1245]";
-connectAttr "Right_Hand_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1246]";
-connectAttr "Right_Hand_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1247]";
-connectAttr "Right_Hand_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1248]";
-connectAttr "Right_Hand_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1249]";
-connectAttr "Right_Hand_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1250]";
-connectAttr "Right_Thumb_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1251]"
+connectAttr "Right_Clavical_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1239]"
 		;
-connectAttr "Right_Thumb_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1252]"
+connectAttr "Right_Clavical_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1240]";
+connectAttr "Right_Clavical_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1241]";
+connectAttr "Right_Clavical_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1242]";
+connectAttr "Right_Hand_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1243]";
+connectAttr "Right_Hand_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1244]";
+connectAttr "Right_Hand_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1245]";
+connectAttr "Right_Hand_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1246]";
+connectAttr "Right_Hand_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1247]";
+connectAttr "Right_Hand_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1248]";
+connectAttr "Right_Hand_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1249]";
+connectAttr "Right_Hand_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1250]";
+connectAttr "Right_Hand_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1251]";
+connectAttr "Right_Thumb_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1252]"
 		;
-connectAttr "Right_Thumb_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1253]"
+connectAttr "Right_Thumb_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1253]"
 		;
-connectAttr "Right_Thumb_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1254]";
-connectAttr "Right_Thumb_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1255]";
-connectAttr "Right_Thumb_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1256]";
-connectAttr "Right_Thumb_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1257]";
-connectAttr "Right_Thumb_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1258]";
-connectAttr "Right_Thumb_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1259]";
-connectAttr "Right_Thumb_Ctrl_visibility.o" "DividedBaseBrotherMaleRN.phl[1260]"
+connectAttr "Right_Thumb_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1254]"
 		;
-connectAttr "Right_Index_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1261]"
+connectAttr "Right_Thumb_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1255]";
+connectAttr "Right_Thumb_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1256]";
+connectAttr "Right_Thumb_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1257]";
+connectAttr "Right_Thumb_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1258]";
+connectAttr "Right_Thumb_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1259]";
+connectAttr "Right_Thumb_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1260]";
+connectAttr "Right_Thumb_Ctrl_visibility.o" "DividedBaseBrotherMaleRN.phl[1261]"
 		;
-connectAttr "Right_Index_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1262]"
+connectAttr "Right_Index_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1262]"
 		;
-connectAttr "Right_Index_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1263]"
+connectAttr "Right_Index_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1263]"
 		;
-connectAttr "Right_Index_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1264]";
-connectAttr "Right_Index_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1265]";
-connectAttr "Right_Index_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1266]";
-connectAttr "Right_Index_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1267]";
-connectAttr "Right_Index_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1268]";
-connectAttr "Right_Index_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1269]";
-connectAttr "Right_Index_Ctrl_visibility.o" "DividedBaseBrotherMaleRN.phl[1270]"
+connectAttr "Right_Index_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1264]"
 		;
-connectAttr "Right_Index_Ctrl_1_translateX.o" "DividedBaseBrotherMaleRN.phl[1271]"
+connectAttr "Right_Index_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1265]";
+connectAttr "Right_Index_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1266]";
+connectAttr "Right_Index_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1267]";
+connectAttr "Right_Index_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1268]";
+connectAttr "Right_Index_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1269]";
+connectAttr "Right_Index_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1270]";
+connectAttr "Right_Index_Ctrl_visibility.o" "DividedBaseBrotherMaleRN.phl[1271]"
 		;
-connectAttr "Right_Index_Ctrl_1_translateY.o" "DividedBaseBrotherMaleRN.phl[1272]"
+connectAttr "Right_Index_Ctrl_1_translateX.o" "DividedBaseBrotherMaleRN.phl[1272]"
 		;
-connectAttr "Right_Index_Ctrl_1_translateZ.o" "DividedBaseBrotherMaleRN.phl[1273]"
+connectAttr "Right_Index_Ctrl_1_translateY.o" "DividedBaseBrotherMaleRN.phl[1273]"
 		;
-connectAttr "Right_Index_Ctrl_1_rotateX.o" "DividedBaseBrotherMaleRN.phl[1274]";
-connectAttr "Right_Index_Ctrl_1_rotateY.o" "DividedBaseBrotherMaleRN.phl[1275]";
-connectAttr "Right_Index_Ctrl_1_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1276]";
-connectAttr "Right_Index_Ctrl_1_scaleX.o" "DividedBaseBrotherMaleRN.phl[1277]";
-connectAttr "Right_Index_Ctrl_1_scaleY.o" "DividedBaseBrotherMaleRN.phl[1278]";
-connectAttr "Right_Index_Ctrl_1_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1279]";
-connectAttr "Right_Index_Ctrl_1_visibility.o" "DividedBaseBrotherMaleRN.phl[1280]"
+connectAttr "Right_Index_Ctrl_1_translateZ.o" "DividedBaseBrotherMaleRN.phl[1274]"
 		;
-connectAttr "Right_Index_Ctrl_2_translateX.o" "DividedBaseBrotherMaleRN.phl[1281]"
+connectAttr "Right_Index_Ctrl_1_rotateX.o" "DividedBaseBrotherMaleRN.phl[1275]";
+connectAttr "Right_Index_Ctrl_1_rotateY.o" "DividedBaseBrotherMaleRN.phl[1276]";
+connectAttr "Right_Index_Ctrl_1_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1277]";
+connectAttr "Right_Index_Ctrl_1_scaleX.o" "DividedBaseBrotherMaleRN.phl[1278]";
+connectAttr "Right_Index_Ctrl_1_scaleY.o" "DividedBaseBrotherMaleRN.phl[1279]";
+connectAttr "Right_Index_Ctrl_1_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1280]";
+connectAttr "Right_Index_Ctrl_1_visibility.o" "DividedBaseBrotherMaleRN.phl[1281]"
 		;
-connectAttr "Right_Index_Ctrl_2_translateY.o" "DividedBaseBrotherMaleRN.phl[1282]"
+connectAttr "Right_Index_Ctrl_2_translateX.o" "DividedBaseBrotherMaleRN.phl[1282]"
 		;
-connectAttr "Right_Index_Ctrl_2_translateZ.o" "DividedBaseBrotherMaleRN.phl[1283]"
+connectAttr "Right_Index_Ctrl_2_translateY.o" "DividedBaseBrotherMaleRN.phl[1283]"
 		;
-connectAttr "Right_Index_Ctrl_2_rotateX.o" "DividedBaseBrotherMaleRN.phl[1284]";
-connectAttr "Right_Index_Ctrl_2_rotateY.o" "DividedBaseBrotherMaleRN.phl[1285]";
-connectAttr "Right_Index_Ctrl_2_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1286]";
-connectAttr "Right_Index_Ctrl_2_scaleX.o" "DividedBaseBrotherMaleRN.phl[1287]";
-connectAttr "Right_Index_Ctrl_2_scaleY.o" "DividedBaseBrotherMaleRN.phl[1288]";
-connectAttr "Right_Index_Ctrl_2_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1289]";
-connectAttr "Right_Index_Ctrl_2_visibility.o" "DividedBaseBrotherMaleRN.phl[1290]"
+connectAttr "Right_Index_Ctrl_2_translateZ.o" "DividedBaseBrotherMaleRN.phl[1284]"
 		;
-connectAttr "Right_Middle_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1291]"
+connectAttr "Right_Index_Ctrl_2_rotateX.o" "DividedBaseBrotherMaleRN.phl[1285]";
+connectAttr "Right_Index_Ctrl_2_rotateY.o" "DividedBaseBrotherMaleRN.phl[1286]";
+connectAttr "Right_Index_Ctrl_2_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1287]";
+connectAttr "Right_Index_Ctrl_2_scaleX.o" "DividedBaseBrotherMaleRN.phl[1288]";
+connectAttr "Right_Index_Ctrl_2_scaleY.o" "DividedBaseBrotherMaleRN.phl[1289]";
+connectAttr "Right_Index_Ctrl_2_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1290]";
+connectAttr "Right_Index_Ctrl_2_visibility.o" "DividedBaseBrotherMaleRN.phl[1291]"
 		;
-connectAttr "Right_Middle_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1292]"
+connectAttr "Right_Middle_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1292]"
 		;
-connectAttr "Right_Middle_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1293]"
+connectAttr "Right_Middle_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1293]"
 		;
-connectAttr "Right_Middle_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1294]";
-connectAttr "Right_Middle_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1295]";
-connectAttr "Right_Middle_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1296]";
-connectAttr "Right_Middle_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1297]";
-connectAttr "Right_Middle_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1298]";
-connectAttr "Right_Middle_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1299]";
-connectAttr "Right_Middle_Ctrl_visibility1.o" "DividedBaseBrotherMaleRN.phl[1300]"
+connectAttr "Right_Middle_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1294]"
 		;
-connectAttr "Right_Middle_Ctrl_1_translateX.o" "DividedBaseBrotherMaleRN.phl[1301]"
+connectAttr "Right_Middle_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1295]";
+connectAttr "Right_Middle_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1296]";
+connectAttr "Right_Middle_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1297]";
+connectAttr "Right_Middle_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1298]";
+connectAttr "Right_Middle_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1299]";
+connectAttr "Right_Middle_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1300]";
+connectAttr "Right_Middle_Ctrl_visibility1.o" "DividedBaseBrotherMaleRN.phl[1301]"
 		;
-connectAttr "Right_Middle_Ctrl_1_translateY.o" "DividedBaseBrotherMaleRN.phl[1302]"
+connectAttr "Right_Middle_Ctrl_1_translateX.o" "DividedBaseBrotherMaleRN.phl[1302]"
 		;
-connectAttr "Right_Middle_Ctrl_1_translateZ.o" "DividedBaseBrotherMaleRN.phl[1303]"
+connectAttr "Right_Middle_Ctrl_1_translateY.o" "DividedBaseBrotherMaleRN.phl[1303]"
 		;
-connectAttr "Right_Middle_Ctrl_1_rotateX.o" "DividedBaseBrotherMaleRN.phl[1304]"
+connectAttr "Right_Middle_Ctrl_1_translateZ.o" "DividedBaseBrotherMaleRN.phl[1304]"
 		;
-connectAttr "Right_Middle_Ctrl_1_rotateY.o" "DividedBaseBrotherMaleRN.phl[1305]"
+connectAttr "Right_Middle_Ctrl_1_rotateX.o" "DividedBaseBrotherMaleRN.phl[1305]"
 		;
-connectAttr "Right_Middle_Ctrl_1_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1306]"
+connectAttr "Right_Middle_Ctrl_1_rotateY.o" "DividedBaseBrotherMaleRN.phl[1306]"
 		;
-connectAttr "Right_Middle_Ctrl_1_scaleX.o" "DividedBaseBrotherMaleRN.phl[1307]";
-connectAttr "Right_Middle_Ctrl_1_scaleY.o" "DividedBaseBrotherMaleRN.phl[1308]";
-connectAttr "Right_Middle_Ctrl_1_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1309]";
-connectAttr "Right_Middle_Ctrl_1_visibility1.o" "DividedBaseBrotherMaleRN.phl[1310]"
+connectAttr "Right_Middle_Ctrl_1_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1307]"
 		;
-connectAttr "Right_Middle_Ctrl_2_translateX.o" "DividedBaseBrotherMaleRN.phl[1311]"
+connectAttr "Right_Middle_Ctrl_1_scaleX.o" "DividedBaseBrotherMaleRN.phl[1308]";
+connectAttr "Right_Middle_Ctrl_1_scaleY.o" "DividedBaseBrotherMaleRN.phl[1309]";
+connectAttr "Right_Middle_Ctrl_1_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1310]";
+connectAttr "Right_Middle_Ctrl_1_visibility1.o" "DividedBaseBrotherMaleRN.phl[1311]"
 		;
-connectAttr "Right_Middle_Ctrl_2_translateY.o" "DividedBaseBrotherMaleRN.phl[1312]"
+connectAttr "Right_Middle_Ctrl_2_translateX.o" "DividedBaseBrotherMaleRN.phl[1312]"
 		;
-connectAttr "Right_Middle_Ctrl_2_translateZ.o" "DividedBaseBrotherMaleRN.phl[1313]"
+connectAttr "Right_Middle_Ctrl_2_translateY.o" "DividedBaseBrotherMaleRN.phl[1313]"
 		;
-connectAttr "Right_Middle_Ctrl_2_rotateX.o" "DividedBaseBrotherMaleRN.phl[1314]"
+connectAttr "Right_Middle_Ctrl_2_translateZ.o" "DividedBaseBrotherMaleRN.phl[1314]"
 		;
-connectAttr "Right_Middle_Ctrl_2_rotateY.o" "DividedBaseBrotherMaleRN.phl[1315]"
+connectAttr "Right_Middle_Ctrl_2_rotateX.o" "DividedBaseBrotherMaleRN.phl[1315]"
 		;
-connectAttr "Right_Middle_Ctrl_2_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1316]"
+connectAttr "Right_Middle_Ctrl_2_rotateY.o" "DividedBaseBrotherMaleRN.phl[1316]"
 		;
-connectAttr "Right_Middle_Ctrl_2_scaleX.o" "DividedBaseBrotherMaleRN.phl[1317]";
-connectAttr "Right_Middle_Ctrl_2_scaleY.o" "DividedBaseBrotherMaleRN.phl[1318]";
-connectAttr "Right_Middle_Ctrl_2_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1319]";
-connectAttr "Right_Middle_Ctrl_2_visibility1.o" "DividedBaseBrotherMaleRN.phl[1320]"
+connectAttr "Right_Middle_Ctrl_2_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1317]"
 		;
-connectAttr "Right_Ring_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1321]";
-connectAttr "Right_Ring_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1322]";
-connectAttr "Right_Ring_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1323]";
-connectAttr "Right_Ring_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1324]";
-connectAttr "Right_Ring_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1325]";
-connectAttr "Right_Ring_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1326]";
-connectAttr "Right_Ring_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1327]";
-connectAttr "Right_Ring_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1328]";
-connectAttr "Right_Ring_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1329]";
-connectAttr "Right_Ring_Ctrl_visibility1.o" "DividedBaseBrotherMaleRN.phl[1330]"
-		;
-connectAttr "Right_Ring_Ctrl_1_translateX.o" "DividedBaseBrotherMaleRN.phl[1331]"
-		;
-connectAttr "Right_Ring_Ctrl_1_translateY.o" "DividedBaseBrotherMaleRN.phl[1332]"
-		;
-connectAttr "Right_Ring_Ctrl_1_translateZ.o" "DividedBaseBrotherMaleRN.phl[1333]"
-		;
-connectAttr "Right_Ring_Ctrl_1_rotateX.o" "DividedBaseBrotherMaleRN.phl[1334]";
-connectAttr "Right_Ring_Ctrl_1_rotateY.o" "DividedBaseBrotherMaleRN.phl[1335]";
-connectAttr "Right_Ring_Ctrl_1_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1336]";
-connectAttr "Right_Ring_Ctrl_1_scaleX.o" "DividedBaseBrotherMaleRN.phl[1337]";
-connectAttr "Right_Ring_Ctrl_1_scaleY.o" "DividedBaseBrotherMaleRN.phl[1338]";
-connectAttr "Right_Ring_Ctrl_1_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1339]";
-connectAttr "Right_Ring_Ctrl_1_visibility1.o" "DividedBaseBrotherMaleRN.phl[1340]"
-		;
-connectAttr "Right_Ring_Ctrl_2_translateX.o" "DividedBaseBrotherMaleRN.phl[1341]"
-		;
-connectAttr "Right_Ring_Ctrl_2_translateY.o" "DividedBaseBrotherMaleRN.phl[1342]"
-		;
-connectAttr "Right_Ring_Ctrl_2_translateZ.o" "DividedBaseBrotherMaleRN.phl[1343]"
-		;
-connectAttr "Right_Ring_Ctrl_2_rotateX.o" "DividedBaseBrotherMaleRN.phl[1344]";
-connectAttr "Right_Ring_Ctrl_2_rotateY.o" "DividedBaseBrotherMaleRN.phl[1345]";
-connectAttr "Right_Ring_Ctrl_2_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1346]";
-connectAttr "Right_Ring_Ctrl_2_scaleX.o" "DividedBaseBrotherMaleRN.phl[1347]";
-connectAttr "Right_Ring_Ctrl_2_scaleY.o" "DividedBaseBrotherMaleRN.phl[1348]";
-connectAttr "Right_Ring_Ctrl_2_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1349]";
-connectAttr "Right_Ring_Ctrl_2_visibility1.o" "DividedBaseBrotherMaleRN.phl[1350]"
-		;
-connectAttr "Right_Pinky_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1351]"
-		;
-connectAttr "Right_Pinky_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1352]"
-		;
-connectAttr "Right_Pinky_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1353]"
+connectAttr "Right_Middle_Ctrl_2_scaleX.o" "DividedBaseBrotherMaleRN.phl[1318]";
+connectAttr "Right_Middle_Ctrl_2_scaleY.o" "DividedBaseBrotherMaleRN.phl[1319]";
+connectAttr "Right_Middle_Ctrl_2_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1320]";
+connectAttr "Right_Middle_Ctrl_2_visibility1.o" "DividedBaseBrotherMaleRN.phl[1321]"
 		;
-connectAttr "Right_Pinky_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1354]";
-connectAttr "Right_Pinky_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1355]";
-connectAttr "Right_Pinky_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1356]";
-connectAttr "Right_Pinky_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1357]";
-connectAttr "Right_Pinky_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1358]";
-connectAttr "Right_Pinky_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1359]";
-connectAttr "Right_Pinky_Ctrl_visibility1.o" "DividedBaseBrotherMaleRN.phl[1360]"
-		;
-connectAttr "Right_Pinky_Ctrl_1_translateX.o" "DividedBaseBrotherMaleRN.phl[1361]"
-		;
-connectAttr "Right_Pinky_Ctrl_1_translateY.o" "DividedBaseBrotherMaleRN.phl[1362]"
+connectAttr "Right_Ring_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1322]";
+connectAttr "Right_Ring_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1323]";
+connectAttr "Right_Ring_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1324]";
+connectAttr "Right_Ring_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1325]";
+connectAttr "Right_Ring_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1326]";
+connectAttr "Right_Ring_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1327]";
+connectAttr "Right_Ring_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1328]";
+connectAttr "Right_Ring_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1329]";
+connectAttr "Right_Ring_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1330]";
+connectAttr "Right_Ring_Ctrl_visibility1.o" "DividedBaseBrotherMaleRN.phl[1331]"
+		;
+connectAttr "Right_Ring_Ctrl_1_translateX.o" "DividedBaseBrotherMaleRN.phl[1332]"
+		;
+connectAttr "Right_Ring_Ctrl_1_translateY.o" "DividedBaseBrotherMaleRN.phl[1333]"
+		;
+connectAttr "Right_Ring_Ctrl_1_translateZ.o" "DividedBaseBrotherMaleRN.phl[1334]"
+		;
+connectAttr "Right_Ring_Ctrl_1_rotateX.o" "DividedBaseBrotherMaleRN.phl[1335]";
+connectAttr "Right_Ring_Ctrl_1_rotateY.o" "DividedBaseBrotherMaleRN.phl[1336]";
+connectAttr "Right_Ring_Ctrl_1_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1337]";
+connectAttr "Right_Ring_Ctrl_1_scaleX.o" "DividedBaseBrotherMaleRN.phl[1338]";
+connectAttr "Right_Ring_Ctrl_1_scaleY.o" "DividedBaseBrotherMaleRN.phl[1339]";
+connectAttr "Right_Ring_Ctrl_1_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1340]";
+connectAttr "Right_Ring_Ctrl_1_visibility1.o" "DividedBaseBrotherMaleRN.phl[1341]"
+		;
+connectAttr "Right_Ring_Ctrl_2_translateX.o" "DividedBaseBrotherMaleRN.phl[1342]"
+		;
+connectAttr "Right_Ring_Ctrl_2_translateY.o" "DividedBaseBrotherMaleRN.phl[1343]"
+		;
+connectAttr "Right_Ring_Ctrl_2_translateZ.o" "DividedBaseBrotherMaleRN.phl[1344]"
 		;
-connectAttr "Right_Pinky_Ctrl_1_translateZ.o" "DividedBaseBrotherMaleRN.phl[1363]"
+connectAttr "Right_Ring_Ctrl_2_rotateX.o" "DividedBaseBrotherMaleRN.phl[1345]";
+connectAttr "Right_Ring_Ctrl_2_rotateY.o" "DividedBaseBrotherMaleRN.phl[1346]";
+connectAttr "Right_Ring_Ctrl_2_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1347]";
+connectAttr "Right_Ring_Ctrl_2_scaleX.o" "DividedBaseBrotherMaleRN.phl[1348]";
+connectAttr "Right_Ring_Ctrl_2_scaleY.o" "DividedBaseBrotherMaleRN.phl[1349]";
+connectAttr "Right_Ring_Ctrl_2_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1350]";
+connectAttr "Right_Ring_Ctrl_2_visibility1.o" "DividedBaseBrotherMaleRN.phl[1351]"
+		;
+connectAttr "Right_Pinky_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1352]"
+		;
+connectAttr "Right_Pinky_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1353]"
 		;
-connectAttr "Right_Pinky_Ctrl_1_rotateX.o" "DividedBaseBrotherMaleRN.phl[1364]";
-connectAttr "Right_Pinky_Ctrl_1_rotateY.o" "DividedBaseBrotherMaleRN.phl[1365]";
-connectAttr "Right_Pinky_Ctrl_1_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1366]";
-connectAttr "Right_Pinky_Ctrl_1_scaleX.o" "DividedBaseBrotherMaleRN.phl[1367]";
-connectAttr "Right_Pinky_Ctrl_1_scaleY.o" "DividedBaseBrotherMaleRN.phl[1368]";
-connectAttr "Right_Pinky_Ctrl_1_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1369]";
-connectAttr "Right_Pinky_Ctrl_1_visibility1.o" "DividedBaseBrotherMaleRN.phl[1370]"
-		;
-connectAttr "Right_Pinky_Ctrl_2_translateX.o" "DividedBaseBrotherMaleRN.phl[1371]"
+connectAttr "Right_Pinky_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1354]"
 		;
-connectAttr "Right_Pinky_Ctrl_2_translateY.o" "DividedBaseBrotherMaleRN.phl[1372]"
+connectAttr "Right_Pinky_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1355]";
+connectAttr "Right_Pinky_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1356]";
+connectAttr "Right_Pinky_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1357]";
+connectAttr "Right_Pinky_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1358]";
+connectAttr "Right_Pinky_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1359]";
+connectAttr "Right_Pinky_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1360]";
+connectAttr "Right_Pinky_Ctrl_visibility1.o" "DividedBaseBrotherMaleRN.phl[1361]"
+		;
+connectAttr "Right_Pinky_Ctrl_1_translateX.o" "DividedBaseBrotherMaleRN.phl[1362]"
 		;
-connectAttr "Right_Pinky_Ctrl_2_translateZ.o" "DividedBaseBrotherMaleRN.phl[1373]"
+connectAttr "Right_Pinky_Ctrl_1_translateY.o" "DividedBaseBrotherMaleRN.phl[1363]"
 		;
-connectAttr "Right_Pinky_Ctrl_2_rotateX.o" "DividedBaseBrotherMaleRN.phl[1374]";
-connectAttr "Right_Pinky_Ctrl_2_rotateY.o" "DividedBaseBrotherMaleRN.phl[1375]";
-connectAttr "Right_Pinky_Ctrl_2_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1376]";
-connectAttr "Right_Pinky_Ctrl_2_scaleX.o" "DividedBaseBrotherMaleRN.phl[1377]";
-connectAttr "Right_Pinky_Ctrl_2_scaleY.o" "DividedBaseBrotherMaleRN.phl[1378]";
-connectAttr "Right_Pinky_Ctrl_2_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1379]";
-connectAttr "Right_Pinky_Ctrl_2_visibility.o" "DividedBaseBrotherMaleRN.phl[1380]"
+connectAttr "Right_Pinky_Ctrl_1_translateZ.o" "DividedBaseBrotherMaleRN.phl[1364]"
 		;
-connectAttr "Left_Hand_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1381]";
-connectAttr "Left_Hand_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1382]";
-connectAttr "Left_Hand_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1383]";
-connectAttr "Left_Hand_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1384]";
-connectAttr "Left_Hand_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1385]";
-connectAttr "Left_Hand_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1386]";
-connectAttr "Left_Hand_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1387]";
-connectAttr "Left_Hand_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1388]";
-connectAttr "Left_Hand_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1389]";
-connectAttr "Left_Thumb_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1390]";
-connectAttr "Left_Thumb_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1391]";
-connectAttr "Left_Thumb_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1392]";
-connectAttr "Left_Thumb_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1393]";
-connectAttr "Left_Thumb_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1394]";
-connectAttr "Left_Thumb_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1395]";
-connectAttr "Left_Thumb_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1396]";
-connectAttr "Left_Thumb_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1397]";
-connectAttr "Left_Thumb_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1398]";
-connectAttr "Left_Thumb_Ctrl_visibility.o" "DividedBaseBrotherMaleRN.phl[1399]";
-connectAttr "Left_Index_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1400]";
-connectAttr "Left_Index_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1401]";
-connectAttr "Left_Index_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1402]";
-connectAttr "Left_Index_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1403]";
-connectAttr "Left_Index_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1404]";
-connectAttr "Left_Index_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1405]";
-connectAttr "Left_Index_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1406]";
-connectAttr "Left_Index_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1407]";
-connectAttr "Left_Index_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1408]";
-connectAttr "Left_Index_Ctrl_visibility.o" "DividedBaseBrotherMaleRN.phl[1409]";
-connectAttr "Left_Index_Ctrl_1_translateX.o" "DividedBaseBrotherMaleRN.phl[1410]"
-		;
-connectAttr "Left_Index_Ctrl_1_translateY.o" "DividedBaseBrotherMaleRN.phl[1411]"
-		;
-connectAttr "Left_Index_Ctrl_1_translateZ.o" "DividedBaseBrotherMaleRN.phl[1412]"
-		;
-connectAttr "Left_Index_Ctrl_1_rotateX.o" "DividedBaseBrotherMaleRN.phl[1413]";
-connectAttr "Left_Index_Ctrl_1_rotateY.o" "DividedBaseBrotherMaleRN.phl[1414]";
-connectAttr "Left_Index_Ctrl_1_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1415]";
-connectAttr "Left_Index_Ctrl_1_scaleX.o" "DividedBaseBrotherMaleRN.phl[1416]";
-connectAttr "Left_Index_Ctrl_1_scaleY.o" "DividedBaseBrotherMaleRN.phl[1417]";
-connectAttr "Left_Index_Ctrl_1_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1418]";
-connectAttr "Left_Index_Ctrl_1_visibility.o" "DividedBaseBrotherMaleRN.phl[1419]"
-		;
-connectAttr "Left_Index_Ctrl_2_translateX.o" "DividedBaseBrotherMaleRN.phl[1420]"
-		;
-connectAttr "Left_Index_Ctrl_2_translateY.o" "DividedBaseBrotherMaleRN.phl[1421]"
-		;
-connectAttr "Left_Index_Ctrl_2_translateZ.o" "DividedBaseBrotherMaleRN.phl[1422]"
-		;
-connectAttr "Left_Index_Ctrl_2_rotateX.o" "DividedBaseBrotherMaleRN.phl[1423]";
-connectAttr "Left_Index_Ctrl_2_rotateY.o" "DividedBaseBrotherMaleRN.phl[1424]";
-connectAttr "Left_Index_Ctrl_2_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1425]";
-connectAttr "Left_Index_Ctrl_2_scaleX.o" "DividedBaseBrotherMaleRN.phl[1426]";
-connectAttr "Left_Index_Ctrl_2_scaleY.o" "DividedBaseBrotherMaleRN.phl[1427]";
-connectAttr "Left_Index_Ctrl_2_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1428]";
-connectAttr "Left_Index_Ctrl_2_visibility.o" "DividedBaseBrotherMaleRN.phl[1429]"
-		;
-connectAttr "Left_Middle_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1430]"
-		;
-connectAttr "Left_Middle_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1431]"
-		;
-connectAttr "Left_Middle_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1432]"
-		;
-connectAttr "Left_Middle_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1433]";
-connectAttr "Left_Middle_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1434]";
-connectAttr "Left_Middle_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1435]";
-connectAttr "Left_Middle_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1436]";
-connectAttr "Left_Middle_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1437]";
-connectAttr "Left_Middle_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1438]";
-connectAttr "Left_Middle_Ctrl_visibility1.o" "DividedBaseBrotherMaleRN.phl[1439]"
-		;
-connectAttr "Left_Middle_Ctrl_1_translateX.o" "DividedBaseBrotherMaleRN.phl[1440]"
-		;
-connectAttr "Left_Middle_Ctrl_1_translateY.o" "DividedBaseBrotherMaleRN.phl[1441]"
-		;
-connectAttr "Left_Middle_Ctrl_1_translateZ.o" "DividedBaseBrotherMaleRN.phl[1442]"
-		;
-connectAttr "Left_Middle_Ctrl_1_rotateX.o" "DividedBaseBrotherMaleRN.phl[1443]";
-connectAttr "Left_Middle_Ctrl_1_rotateY.o" "DividedBaseBrotherMaleRN.phl[1444]";
-connectAttr "Left_Middle_Ctrl_1_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1445]";
-connectAttr "Left_Middle_Ctrl_1_scaleX.o" "DividedBaseBrotherMaleRN.phl[1446]";
-connectAttr "Left_Middle_Ctrl_1_scaleY.o" "DividedBaseBrotherMaleRN.phl[1447]";
-connectAttr "Left_Middle_Ctrl_1_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1448]";
-connectAttr "Left_Middle_Ctrl_1_visibility1.o" "DividedBaseBrotherMaleRN.phl[1449]"
-		;
-connectAttr "Left_Middle_Ctrl_2_translateX.o" "DividedBaseBrotherMaleRN.phl[1450]"
-		;
-connectAttr "Left_Middle_Ctrl_2_translateY.o" "DividedBaseBrotherMaleRN.phl[1451]"
-		;
-connectAttr "Left_Middle_Ctrl_2_translateZ.o" "DividedBaseBrotherMaleRN.phl[1452]"
+connectAttr "Right_Pinky_Ctrl_1_rotateX.o" "DividedBaseBrotherMaleRN.phl[1365]";
+connectAttr "Right_Pinky_Ctrl_1_rotateY.o" "DividedBaseBrotherMaleRN.phl[1366]";
+connectAttr "Right_Pinky_Ctrl_1_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1367]";
+connectAttr "Right_Pinky_Ctrl_1_scaleX.o" "DividedBaseBrotherMaleRN.phl[1368]";
+connectAttr "Right_Pinky_Ctrl_1_scaleY.o" "DividedBaseBrotherMaleRN.phl[1369]";
+connectAttr "Right_Pinky_Ctrl_1_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1370]";
+connectAttr "Right_Pinky_Ctrl_1_visibility1.o" "DividedBaseBrotherMaleRN.phl[1371]"
 		;
-connectAttr "Left_Middle_Ctrl_2_rotateX.o" "DividedBaseBrotherMaleRN.phl[1453]";
-connectAttr "Left_Middle_Ctrl_2_rotateY.o" "DividedBaseBrotherMaleRN.phl[1454]";
-connectAttr "Left_Middle_Ctrl_2_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1455]";
-connectAttr "Left_Middle_Ctrl_2_scaleX.o" "DividedBaseBrotherMaleRN.phl[1456]";
-connectAttr "Left_Middle_Ctrl_2_scaleY.o" "DividedBaseBrotherMaleRN.phl[1457]";
-connectAttr "Left_Middle_Ctrl_2_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1458]";
-connectAttr "Left_Middle_Ctrl_2_visibility1.o" "DividedBaseBrotherMaleRN.phl[1459]"
+connectAttr "Right_Pinky_Ctrl_2_translateX.o" "DividedBaseBrotherMaleRN.phl[1372]"
 		;
-connectAttr "Left_Ring_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1460]";
-connectAttr "Left_Ring_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1461]";
-connectAttr "Left_Ring_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1462]";
-connectAttr "Left_Ring_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1463]";
-connectAttr "Left_Ring_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1464]";
-connectAttr "Left_Ring_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1465]";
-connectAttr "Left_Ring_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1466]";
-connectAttr "Left_Ring_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1467]";
-connectAttr "Left_Ring_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1468]";
-connectAttr "Left_Ring_Ctrl_visibility1.o" "DividedBaseBrotherMaleRN.phl[1469]";
-connectAttr "Left_Ring_Ctrl_1_translateX.o" "DividedBaseBrotherMaleRN.phl[1470]"
+connectAttr "Right_Pinky_Ctrl_2_translateY.o" "DividedBaseBrotherMaleRN.phl[1373]"
 		;
-connectAttr "Left_Ring_Ctrl_1_translateY.o" "DividedBaseBrotherMaleRN.phl[1471]"
+connectAttr "Right_Pinky_Ctrl_2_translateZ.o" "DividedBaseBrotherMaleRN.phl[1374]"
 		;
-connectAttr "Left_Ring_Ctrl_1_translateZ.o" "DividedBaseBrotherMaleRN.phl[1472]"
+connectAttr "Right_Pinky_Ctrl_2_rotateX.o" "DividedBaseBrotherMaleRN.phl[1375]";
+connectAttr "Right_Pinky_Ctrl_2_rotateY.o" "DividedBaseBrotherMaleRN.phl[1376]";
+connectAttr "Right_Pinky_Ctrl_2_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1377]";
+connectAttr "Right_Pinky_Ctrl_2_scaleX.o" "DividedBaseBrotherMaleRN.phl[1378]";
+connectAttr "Right_Pinky_Ctrl_2_scaleY.o" "DividedBaseBrotherMaleRN.phl[1379]";
+connectAttr "Right_Pinky_Ctrl_2_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1380]";
+connectAttr "Right_Pinky_Ctrl_2_visibility.o" "DividedBaseBrotherMaleRN.phl[1381]"
 		;
-connectAttr "Left_Ring_Ctrl_1_rotateX.o" "DividedBaseBrotherMaleRN.phl[1473]";
-connectAttr "Left_Ring_Ctrl_1_rotateY.o" "DividedBaseBrotherMaleRN.phl[1474]";
-connectAttr "Left_Ring_Ctrl_1_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1475]";
-connectAttr "Left_Ring_Ctrl_1_scaleX.o" "DividedBaseBrotherMaleRN.phl[1476]";
-connectAttr "Left_Ring_Ctrl_1_scaleY.o" "DividedBaseBrotherMaleRN.phl[1477]";
-connectAttr "Left_Ring_Ctrl_1_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1478]";
-connectAttr "Left_Ring_Ctrl_1_visibility1.o" "DividedBaseBrotherMaleRN.phl[1479]"
+connectAttr "Left_Hand_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1382]";
+connectAttr "Left_Hand_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1383]";
+connectAttr "Left_Hand_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1384]";
+connectAttr "Left_Hand_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1385]";
+connectAttr "Left_Hand_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1386]";
+connectAttr "Left_Hand_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1387]";
+connectAttr "Left_Hand_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1388]";
+connectAttr "Left_Hand_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1389]";
+connectAttr "Left_Hand_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1390]";
+connectAttr "Left_Thumb_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1391]";
+connectAttr "Left_Thumb_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1392]";
+connectAttr "Left_Thumb_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1393]";
+connectAttr "Left_Thumb_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1394]";
+connectAttr "Left_Thumb_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1395]";
+connectAttr "Left_Thumb_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1396]";
+connectAttr "Left_Thumb_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1397]";
+connectAttr "Left_Thumb_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1398]";
+connectAttr "Left_Thumb_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1399]";
+connectAttr "Left_Thumb_Ctrl_visibility.o" "DividedBaseBrotherMaleRN.phl[1400]";
+connectAttr "Left_Index_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1401]";
+connectAttr "Left_Index_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1402]";
+connectAttr "Left_Index_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1403]";
+connectAttr "Left_Index_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1404]";
+connectAttr "Left_Index_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1405]";
+connectAttr "Left_Index_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1406]";
+connectAttr "Left_Index_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1407]";
+connectAttr "Left_Index_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1408]";
+connectAttr "Left_Index_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1409]";
+connectAttr "Left_Index_Ctrl_visibility.o" "DividedBaseBrotherMaleRN.phl[1410]";
+connectAttr "Left_Index_Ctrl_1_translateX.o" "DividedBaseBrotherMaleRN.phl[1411]"
+		;
+connectAttr "Left_Index_Ctrl_1_translateY.o" "DividedBaseBrotherMaleRN.phl[1412]"
+		;
+connectAttr "Left_Index_Ctrl_1_translateZ.o" "DividedBaseBrotherMaleRN.phl[1413]"
+		;
+connectAttr "Left_Index_Ctrl_1_rotateX.o" "DividedBaseBrotherMaleRN.phl[1414]";
+connectAttr "Left_Index_Ctrl_1_rotateY.o" "DividedBaseBrotherMaleRN.phl[1415]";
+connectAttr "Left_Index_Ctrl_1_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1416]";
+connectAttr "Left_Index_Ctrl_1_scaleX.o" "DividedBaseBrotherMaleRN.phl[1417]";
+connectAttr "Left_Index_Ctrl_1_scaleY.o" "DividedBaseBrotherMaleRN.phl[1418]";
+connectAttr "Left_Index_Ctrl_1_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1419]";
+connectAttr "Left_Index_Ctrl_1_visibility.o" "DividedBaseBrotherMaleRN.phl[1420]"
+		;
+connectAttr "Left_Index_Ctrl_2_translateX.o" "DividedBaseBrotherMaleRN.phl[1421]"
+		;
+connectAttr "Left_Index_Ctrl_2_translateY.o" "DividedBaseBrotherMaleRN.phl[1422]"
+		;
+connectAttr "Left_Index_Ctrl_2_translateZ.o" "DividedBaseBrotherMaleRN.phl[1423]"
+		;
+connectAttr "Left_Index_Ctrl_2_rotateX.o" "DividedBaseBrotherMaleRN.phl[1424]";
+connectAttr "Left_Index_Ctrl_2_rotateY.o" "DividedBaseBrotherMaleRN.phl[1425]";
+connectAttr "Left_Index_Ctrl_2_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1426]";
+connectAttr "Left_Index_Ctrl_2_scaleX.o" "DividedBaseBrotherMaleRN.phl[1427]";
+connectAttr "Left_Index_Ctrl_2_scaleY.o" "DividedBaseBrotherMaleRN.phl[1428]";
+connectAttr "Left_Index_Ctrl_2_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1429]";
+connectAttr "Left_Index_Ctrl_2_visibility.o" "DividedBaseBrotherMaleRN.phl[1430]"
+		;
+connectAttr "Left_Middle_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1431]"
+		;
+connectAttr "Left_Middle_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1432]"
+		;
+connectAttr "Left_Middle_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1433]"
+		;
+connectAttr "Left_Middle_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1434]";
+connectAttr "Left_Middle_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1435]";
+connectAttr "Left_Middle_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1436]";
+connectAttr "Left_Middle_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1437]";
+connectAttr "Left_Middle_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1438]";
+connectAttr "Left_Middle_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1439]";
+connectAttr "Left_Middle_Ctrl_visibility1.o" "DividedBaseBrotherMaleRN.phl[1440]"
+		;
+connectAttr "Left_Middle_Ctrl_1_translateX.o" "DividedBaseBrotherMaleRN.phl[1441]"
+		;
+connectAttr "Left_Middle_Ctrl_1_translateY.o" "DividedBaseBrotherMaleRN.phl[1442]"
+		;
+connectAttr "Left_Middle_Ctrl_1_translateZ.o" "DividedBaseBrotherMaleRN.phl[1443]"
+		;
+connectAttr "Left_Middle_Ctrl_1_rotateX.o" "DividedBaseBrotherMaleRN.phl[1444]";
+connectAttr "Left_Middle_Ctrl_1_rotateY.o" "DividedBaseBrotherMaleRN.phl[1445]";
+connectAttr "Left_Middle_Ctrl_1_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1446]";
+connectAttr "Left_Middle_Ctrl_1_scaleX.o" "DividedBaseBrotherMaleRN.phl[1447]";
+connectAttr "Left_Middle_Ctrl_1_scaleY.o" "DividedBaseBrotherMaleRN.phl[1448]";
+connectAttr "Left_Middle_Ctrl_1_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1449]";
+connectAttr "Left_Middle_Ctrl_1_visibility1.o" "DividedBaseBrotherMaleRN.phl[1450]"
+		;
+connectAttr "Left_Middle_Ctrl_2_translateX.o" "DividedBaseBrotherMaleRN.phl[1451]"
+		;
+connectAttr "Left_Middle_Ctrl_2_translateY.o" "DividedBaseBrotherMaleRN.phl[1452]"
 		;
-connectAttr "Left_Ring_Ctrl_2_translateX.o" "DividedBaseBrotherMaleRN.phl[1480]"
+connectAttr "Left_Middle_Ctrl_2_translateZ.o" "DividedBaseBrotherMaleRN.phl[1453]"
 		;
-connectAttr "Left_Ring_Ctrl_2_translateY.o" "DividedBaseBrotherMaleRN.phl[1481]"
+connectAttr "Left_Middle_Ctrl_2_rotateX.o" "DividedBaseBrotherMaleRN.phl[1454]";
+connectAttr "Left_Middle_Ctrl_2_rotateY.o" "DividedBaseBrotherMaleRN.phl[1455]";
+connectAttr "Left_Middle_Ctrl_2_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1456]";
+connectAttr "Left_Middle_Ctrl_2_scaleX.o" "DividedBaseBrotherMaleRN.phl[1457]";
+connectAttr "Left_Middle_Ctrl_2_scaleY.o" "DividedBaseBrotherMaleRN.phl[1458]";
+connectAttr "Left_Middle_Ctrl_2_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1459]";
+connectAttr "Left_Middle_Ctrl_2_visibility1.o" "DividedBaseBrotherMaleRN.phl[1460]"
 		;
-connectAttr "Left_Ring_Ctrl_2_translateZ.o" "DividedBaseBrotherMaleRN.phl[1482]"
+connectAttr "Left_Ring_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1461]";
+connectAttr "Left_Ring_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1462]";
+connectAttr "Left_Ring_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1463]";
+connectAttr "Left_Ring_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1464]";
+connectAttr "Left_Ring_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1465]";
+connectAttr "Left_Ring_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1466]";
+connectAttr "Left_Ring_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1467]";
+connectAttr "Left_Ring_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1468]";
+connectAttr "Left_Ring_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1469]";
+connectAttr "Left_Ring_Ctrl_visibility1.o" "DividedBaseBrotherMaleRN.phl[1470]";
+connectAttr "Left_Ring_Ctrl_1_translateX.o" "DividedBaseBrotherMaleRN.phl[1471]"
 		;
-connectAttr "Left_Ring_Ctrl_2_rotateX.o" "DividedBaseBrotherMaleRN.phl[1483]";
-connectAttr "Left_Ring_Ctrl_2_rotateY.o" "DividedBaseBrotherMaleRN.phl[1484]";
-connectAttr "Left_Ring_Ctrl_2_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1485]";
-connectAttr "Left_Ring_Ctrl_2_scaleX.o" "DividedBaseBrotherMaleRN.phl[1486]";
-connectAttr "Left_Ring_Ctrl_2_scaleY.o" "DividedBaseBrotherMaleRN.phl[1487]";
-connectAttr "Left_Ring_Ctrl_2_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1488]";
-connectAttr "Left_Ring_Ctrl_2_visibility1.o" "DividedBaseBrotherMaleRN.phl[1489]"
+connectAttr "Left_Ring_Ctrl_1_translateY.o" "DividedBaseBrotherMaleRN.phl[1472]"
 		;
-connectAttr "Left_Pinky_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1490]";
-connectAttr "Left_Pinky_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1491]";
-connectAttr "Left_Pinky_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1492]";
-connectAttr "Left_Pinky_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1493]";
-connectAttr "Left_Pinky_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1494]";
-connectAttr "Left_Pinky_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1495]";
-connectAttr "Left_Pinky_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1496]";
-connectAttr "Left_Pinky_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1497]";
-connectAttr "Left_Pinky_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1498]";
-connectAttr "Left_Pinky_Ctrl_visibility.o" "DividedBaseBrotherMaleRN.phl[1499]";
-connectAttr "Left_Pinky_Ctrl_1_translateX.o" "DividedBaseBrotherMaleRN.phl[1500]"
+connectAttr "Left_Ring_Ctrl_1_translateZ.o" "DividedBaseBrotherMaleRN.phl[1473]"
 		;
-connectAttr "Left_Pinky_Ctrl_1_translateY.o" "DividedBaseBrotherMaleRN.phl[1501]"
+connectAttr "Left_Ring_Ctrl_1_rotateX.o" "DividedBaseBrotherMaleRN.phl[1474]";
+connectAttr "Left_Ring_Ctrl_1_rotateY.o" "DividedBaseBrotherMaleRN.phl[1475]";
+connectAttr "Left_Ring_Ctrl_1_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1476]";
+connectAttr "Left_Ring_Ctrl_1_scaleX.o" "DividedBaseBrotherMaleRN.phl[1477]";
+connectAttr "Left_Ring_Ctrl_1_scaleY.o" "DividedBaseBrotherMaleRN.phl[1478]";
+connectAttr "Left_Ring_Ctrl_1_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1479]";
+connectAttr "Left_Ring_Ctrl_1_visibility1.o" "DividedBaseBrotherMaleRN.phl[1480]"
 		;
-connectAttr "Left_Pinky_Ctrl_1_translateZ.o" "DividedBaseBrotherMaleRN.phl[1502]"
+connectAttr "Left_Ring_Ctrl_2_translateX.o" "DividedBaseBrotherMaleRN.phl[1481]"
 		;
-connectAttr "Left_Pinky_Ctrl_1_rotateX.o" "DividedBaseBrotherMaleRN.phl[1503]";
-connectAttr "Left_Pinky_Ctrl_1_rotateY.o" "DividedBaseBrotherMaleRN.phl[1504]";
-connectAttr "Left_Pinky_Ctrl_1_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1505]";
-connectAttr "Left_Pinky_Ctrl_1_scaleX.o" "DividedBaseBrotherMaleRN.phl[1506]";
-connectAttr "Left_Pinky_Ctrl_1_scaleY.o" "DividedBaseBrotherMaleRN.phl[1507]";
-connectAttr "Left_Pinky_Ctrl_1_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1508]";
-connectAttr "Left_Pinky_Ctrl_1_visibility.o" "DividedBaseBrotherMaleRN.phl[1509]"
+connectAttr "Left_Ring_Ctrl_2_translateY.o" "DividedBaseBrotherMaleRN.phl[1482]"
 		;
-connectAttr "Left_Pinky_Ctrl_2_translateX.o" "DividedBaseBrotherMaleRN.phl[1510]"
+connectAttr "Left_Ring_Ctrl_2_translateZ.o" "DividedBaseBrotherMaleRN.phl[1483]"
 		;
-connectAttr "Left_Pinky_Ctrl_2_translateY.o" "DividedBaseBrotherMaleRN.phl[1511]"
+connectAttr "Left_Ring_Ctrl_2_rotateX.o" "DividedBaseBrotherMaleRN.phl[1484]";
+connectAttr "Left_Ring_Ctrl_2_rotateY.o" "DividedBaseBrotherMaleRN.phl[1485]";
+connectAttr "Left_Ring_Ctrl_2_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1486]";
+connectAttr "Left_Ring_Ctrl_2_scaleX.o" "DividedBaseBrotherMaleRN.phl[1487]";
+connectAttr "Left_Ring_Ctrl_2_scaleY.o" "DividedBaseBrotherMaleRN.phl[1488]";
+connectAttr "Left_Ring_Ctrl_2_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1489]";
+connectAttr "Left_Ring_Ctrl_2_visibility1.o" "DividedBaseBrotherMaleRN.phl[1490]"
 		;
-connectAttr "Left_Pinky_Ctrl_2_translateZ.o" "DividedBaseBrotherMaleRN.phl[1512]"
+connectAttr "Left_Pinky_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1491]";
+connectAttr "Left_Pinky_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1492]";
+connectAttr "Left_Pinky_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1493]";
+connectAttr "Left_Pinky_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1494]";
+connectAttr "Left_Pinky_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1495]";
+connectAttr "Left_Pinky_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1496]";
+connectAttr "Left_Pinky_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1497]";
+connectAttr "Left_Pinky_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1498]";
+connectAttr "Left_Pinky_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1499]";
+connectAttr "Left_Pinky_Ctrl_visibility.o" "DividedBaseBrotherMaleRN.phl[1500]";
+connectAttr "Left_Pinky_Ctrl_1_translateX.o" "DividedBaseBrotherMaleRN.phl[1501]"
 		;
-connectAttr "Left_Pinky_Ctrl_2_rotateX.o" "DividedBaseBrotherMaleRN.phl[1513]";
-connectAttr "Left_Pinky_Ctrl_2_rotateY.o" "DividedBaseBrotherMaleRN.phl[1514]";
-connectAttr "Left_Pinky_Ctrl_2_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1515]";
-connectAttr "Left_Pinky_Ctrl_2_scaleX.o" "DividedBaseBrotherMaleRN.phl[1516]";
-connectAttr "Left_Pinky_Ctrl_2_scaleY.o" "DividedBaseBrotherMaleRN.phl[1517]";
-connectAttr "Left_Pinky_Ctrl_2_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1518]";
-connectAttr "Left_Pinky_Ctrl_2_visibility.o" "DividedBaseBrotherMaleRN.phl[1519]"
+connectAttr "Left_Pinky_Ctrl_1_translateY.o" "DividedBaseBrotherMaleRN.phl[1502]"
 		;
-connectAttr "Fk_Right_Shoulder_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1520]"
+connectAttr "Left_Pinky_Ctrl_1_translateZ.o" "DividedBaseBrotherMaleRN.phl[1503]"
 		;
-connectAttr "Fk_Right_Shoulder_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1521]"
+connectAttr "Left_Pinky_Ctrl_1_rotateX.o" "DividedBaseBrotherMaleRN.phl[1504]";
+connectAttr "Left_Pinky_Ctrl_1_rotateY.o" "DividedBaseBrotherMaleRN.phl[1505]";
+connectAttr "Left_Pinky_Ctrl_1_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1506]";
+connectAttr "Left_Pinky_Ctrl_1_scaleX.o" "DividedBaseBrotherMaleRN.phl[1507]";
+connectAttr "Left_Pinky_Ctrl_1_scaleY.o" "DividedBaseBrotherMaleRN.phl[1508]";
+connectAttr "Left_Pinky_Ctrl_1_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1509]";
+connectAttr "Left_Pinky_Ctrl_1_visibility.o" "DividedBaseBrotherMaleRN.phl[1510]"
 		;
-connectAttr "Fk_Right_Shoulder_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1522]"
+connectAttr "Left_Pinky_Ctrl_2_translateX.o" "DividedBaseBrotherMaleRN.phl[1511]"
 		;
-connectAttr "Fk_Right_Shoulder_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1523]"
+connectAttr "Left_Pinky_Ctrl_2_translateY.o" "DividedBaseBrotherMaleRN.phl[1512]"
 		;
-connectAttr "Fk_Right_Shoulder_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1524]"
+connectAttr "Left_Pinky_Ctrl_2_translateZ.o" "DividedBaseBrotherMaleRN.phl[1513]"
 		;
-connectAttr "Fk_Right_Shoulder_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1525]"
+connectAttr "Left_Pinky_Ctrl_2_rotateX.o" "DividedBaseBrotherMaleRN.phl[1514]";
+connectAttr "Left_Pinky_Ctrl_2_rotateY.o" "DividedBaseBrotherMaleRN.phl[1515]";
+connectAttr "Left_Pinky_Ctrl_2_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1516]";
+connectAttr "Left_Pinky_Ctrl_2_scaleX.o" "DividedBaseBrotherMaleRN.phl[1517]";
+connectAttr "Left_Pinky_Ctrl_2_scaleY.o" "DividedBaseBrotherMaleRN.phl[1518]";
+connectAttr "Left_Pinky_Ctrl_2_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1519]";
+connectAttr "Left_Pinky_Ctrl_2_visibility.o" "DividedBaseBrotherMaleRN.phl[1520]"
 		;
-connectAttr "Fk_Right_Shoulder_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1526]"
+connectAttr "Fk_Right_Shoulder_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1521]"
 		;
-connectAttr "Fk_Right_Shoulder_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1527]"
+connectAttr "Fk_Right_Shoulder_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1522]"
 		;
-connectAttr "Fk_Right_Shoulder_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1528]"
+connectAttr "Fk_Right_Shoulder_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1523]"
 		;
-connectAttr "Fk_Right_Shoulder_Ctrl_visibility1.o" "DividedBaseBrotherMaleRN.phl[1529]"
+connectAttr "Fk_Right_Shoulder_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1524]"
 		;
-connectAttr "Fk_Right_Elbow_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1530]"
+connectAttr "Fk_Right_Shoulder_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1525]"
 		;
-connectAttr "Fk_Right_Elbow_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1531]"
+connectAttr "Fk_Right_Shoulder_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1526]"
 		;
-connectAttr "Fk_Right_Elbow_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1532]"
+connectAttr "Fk_Right_Shoulder_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1527]"
 		;
-connectAttr "Fk_Right_Elbow_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1533]"
+connectAttr "Fk_Right_Shoulder_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1528]"
 		;
-connectAttr "Fk_Right_Elbow_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1534]"
+connectAttr "Fk_Right_Shoulder_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1529]"
 		;
-connectAttr "Fk_Right_Elbow_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1535]"
+connectAttr "Fk_Right_Shoulder_Ctrl_visibility1.o" "DividedBaseBrotherMaleRN.phl[1530]"
 		;
-connectAttr "Fk_Right_Elbow_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1536]";
-connectAttr "Fk_Right_Elbow_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1537]";
-connectAttr "Fk_Right_Elbow_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1538]";
-connectAttr "Fk_Right_Elbow_Ctrl_visibility1.o" "DividedBaseBrotherMaleRN.phl[1539]"
+connectAttr "Fk_Right_Elbow_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1531]"
 		;
-connectAttr "Fk_Right_Wrist_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1540]"
+connectAttr "Fk_Right_Elbow_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1532]"
 		;
-connectAttr "Fk_Right_Wrist_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1541]"
+connectAttr "Fk_Right_Elbow_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1533]"
 		;
-connectAttr "Fk_Right_Wrist_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1542]"
+connectAttr "Fk_Right_Elbow_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1534]"
 		;
-connectAttr "Fk_Right_Wrist_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1543]"
+connectAttr "Fk_Right_Elbow_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1535]"
 		;
-connectAttr "Fk_Right_Wrist_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1544]"
+connectAttr "Fk_Right_Elbow_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1536]"
 		;
-connectAttr "Fk_Right_Wrist_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1545]"
+connectAttr "Fk_Right_Elbow_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1537]";
+connectAttr "Fk_Right_Elbow_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1538]";
+connectAttr "Fk_Right_Elbow_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1539]";
+connectAttr "Fk_Right_Elbow_Ctrl_visibility1.o" "DividedBaseBrotherMaleRN.phl[1540]"
 		;
-connectAttr "Fk_Right_Wrist_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1546]";
-connectAttr "Fk_Right_Wrist_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1547]";
-connectAttr "Fk_Right_Wrist_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1548]";
-connectAttr "Fk_Right_Wrist_Ctrl_visibility1.o" "DividedBaseBrotherMaleRN.phl[1549]"
+connectAttr "Fk_Right_Wrist_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1541]"
 		;
-connectAttr "Fk_Left_Shoulder_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1550]"
+connectAttr "Fk_Right_Wrist_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1542]"
 		;
-connectAttr "Fk_Left_Shoulder_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1551]"
+connectAttr "Fk_Right_Wrist_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1543]"
 		;
-connectAttr "Fk_Left_Shoulder_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1552]"
+connectAttr "Fk_Right_Wrist_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1544]"
 		;
-connectAttr "Fk_Left_Shoulder_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1553]"
+connectAttr "Fk_Right_Wrist_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1545]"
 		;
-connectAttr "Fk_Left_Shoulder_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1554]"
+connectAttr "Fk_Right_Wrist_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1546]"
 		;
-connectAttr "Fk_Left_Shoulder_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1555]"
+connectAttr "Fk_Right_Wrist_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1547]";
+connectAttr "Fk_Right_Wrist_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1548]";
+connectAttr "Fk_Right_Wrist_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1549]";
+connectAttr "Fk_Right_Wrist_Ctrl_visibility1.o" "DividedBaseBrotherMaleRN.phl[1550]"
 		;
-connectAttr "Fk_Left_Shoulder_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1556]"
+connectAttr "Fk_Left_Shoulder_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1551]"
 		;
-connectAttr "Fk_Left_Shoulder_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1557]"
+connectAttr "Fk_Left_Shoulder_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1552]"
 		;
-connectAttr "Fk_Left_Shoulder_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1558]"
+connectAttr "Fk_Left_Shoulder_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1553]"
 		;
-connectAttr "Fk_Left_Shoulder_Ctrl_visibility1.o" "DividedBaseBrotherMaleRN.phl[1559]"
+connectAttr "Fk_Left_Shoulder_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1554]"
 		;
-connectAttr "Fk_Left_Elbow_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1560]"
+connectAttr "Fk_Left_Shoulder_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1555]"
 		;
-connectAttr "Fk_Left_Elbow_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1561]"
+connectAttr "Fk_Left_Shoulder_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1556]"
 		;
-connectAttr "Fk_Left_Elbow_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1562]"
+connectAttr "Fk_Left_Shoulder_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1557]"
 		;
-connectAttr "Fk_Left_Elbow_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1563]";
-connectAttr "Fk_Left_Elbow_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1564]";
-connectAttr "Fk_Left_Elbow_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1565]";
-connectAttr "Fk_Left_Elbow_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1566]";
-connectAttr "Fk_Left_Elbow_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1567]";
-connectAttr "Fk_Left_Elbow_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1568]";
-connectAttr "Fk_Left_Elbow_Ctrl_visibility1.o" "DividedBaseBrotherMaleRN.phl[1569]"
+connectAttr "Fk_Left_Shoulder_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1558]"
 		;
-connectAttr "Fk_Left_Wrist_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1570]"
+connectAttr "Fk_Left_Shoulder_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1559]"
 		;
-connectAttr "Fk_Left_Wrist_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1571]"
+connectAttr "Fk_Left_Shoulder_Ctrl_visibility1.o" "DividedBaseBrotherMaleRN.phl[1560]"
 		;
-connectAttr "Fk_Left_Wrist_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1572]"
+connectAttr "Fk_Left_Elbow_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1561]"
 		;
-connectAttr "Fk_Left_Wrist_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1573]";
-connectAttr "Fk_Left_Wrist_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1574]";
-connectAttr "Fk_Left_Wrist_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1575]";
-connectAttr "Fk_Left_Wrist_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1576]";
-connectAttr "Fk_Left_Wrist_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1577]";
-connectAttr "Fk_Left_Wrist_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1578]";
-connectAttr "Fk_Left_Wrist_Ctrl_visibility1.o" "DividedBaseBrotherMaleRN.phl[1579]"
+connectAttr "Fk_Left_Elbow_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1562]"
 		;
-connectAttr "Waist_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1580]";
-connectAttr "Waist_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1581]";
-connectAttr "Waist_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1582]";
-connectAttr "Waist_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1583]";
-connectAttr "Waist_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1584]";
-connectAttr "Waist_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1585]";
-connectAttr "Waist_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1586]";
-connectAttr "Waist_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1587]";
-connectAttr "Waist_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1588]";
-connectAttr "Ik_Left_Foor_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1589]"
+connectAttr "Fk_Left_Elbow_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1563]"
 		;
-connectAttr "Ik_Left_Foor_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1590]"
+connectAttr "Fk_Left_Elbow_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1564]";
+connectAttr "Fk_Left_Elbow_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1565]";
+connectAttr "Fk_Left_Elbow_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1566]";
+connectAttr "Fk_Left_Elbow_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1567]";
+connectAttr "Fk_Left_Elbow_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1568]";
+connectAttr "Fk_Left_Elbow_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1569]";
+connectAttr "Fk_Left_Elbow_Ctrl_visibility1.o" "DividedBaseBrotherMaleRN.phl[1570]"
 		;
-connectAttr "Ik_Left_Foor_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1591]"
+connectAttr "Fk_Left_Wrist_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1571]"
 		;
-connectAttr "Ik_Left_Foor_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1592]";
-connectAttr "Ik_Left_Foor_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1593]";
-connectAttr "Ik_Left_Foor_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1594]";
-connectAttr "Ik_Left_Foor_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1595]";
-connectAttr "Ik_Left_Foor_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1596]";
-connectAttr "Ik_Left_Foor_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1597]";
-connectAttr "Ik_Left_Heel_CTrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1598]"
+connectAttr "Fk_Left_Wrist_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1572]"
 		;
-connectAttr "Ik_Left_Heel_CTrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1599]"
+connectAttr "Fk_Left_Wrist_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1573]"
 		;
-connectAttr "Ik_Left_Heel_CTrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1600]"
+connectAttr "Fk_Left_Wrist_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1574]";
+connectAttr "Fk_Left_Wrist_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1575]";
+connectAttr "Fk_Left_Wrist_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1576]";
+connectAttr "Fk_Left_Wrist_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1577]";
+connectAttr "Fk_Left_Wrist_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1578]";
+connectAttr "Fk_Left_Wrist_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1579]";
+connectAttr "Fk_Left_Wrist_Ctrl_visibility1.o" "DividedBaseBrotherMaleRN.phl[1580]"
 		;
-connectAttr "Ik_Left_Heel_CTrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1601]";
-connectAttr "Ik_Left_Heel_CTrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1602]";
-connectAttr "Ik_Left_Heel_CTrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1603]";
-connectAttr "Ik_Left_Heel_CTrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1604]";
-connectAttr "Ik_Left_Heel_CTrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1605]";
-connectAttr "Ik_Left_Heel_CTrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1606]";
-connectAttr "Ik_Toe_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1607]";
-connectAttr "Ik_Toe_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1608]";
-connectAttr "Ik_Toe_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1609]";
-connectAttr "Ik_Toe_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1610]";
-connectAttr "Ik_Toe_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1611]";
-connectAttr "Ik_Toe_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1612]";
-connectAttr "Ik_Toe_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1613]";
-connectAttr "Ik_Toe_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1614]";
-connectAttr "Ik_Toe_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1615]";
-connectAttr "Ik_Toe_Lifter_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1616]"
+connectAttr "Waist_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1581]";
+connectAttr "Waist_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1582]";
+connectAttr "Waist_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1583]";
+connectAttr "Waist_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1584]";
+connectAttr "Waist_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1585]";
+connectAttr "Waist_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1586]";
+connectAttr "Waist_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1587]";
+connectAttr "Waist_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1588]";
+connectAttr "Waist_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1589]";
+connectAttr "Ik_Left_Foor_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1590]"
 		;
-connectAttr "Ik_Toe_Lifter_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1617]"
+connectAttr "Ik_Left_Foor_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1591]"
 		;
-connectAttr "Ik_Toe_Lifter_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1618]"
+connectAttr "Ik_Left_Foor_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1592]"
 		;
-connectAttr "Ik_Toe_Lifter_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1619]";
-connectAttr "Ik_Toe_Lifter_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1620]";
-connectAttr "Ik_Toe_Lifter_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1621]";
-connectAttr "Ik_Toe_Lifter_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1622]";
-connectAttr "Ik_Toe_Lifter_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1623]";
-connectAttr "Ik_Toe_Lifter_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1624]";
-connectAttr "Ik_Left_Leg_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1625]"
+connectAttr "Ik_Left_Foor_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1593]";
+connectAttr "Ik_Left_Foor_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1594]";
+connectAttr "Ik_Left_Foor_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1595]";
+connectAttr "Ik_Left_Foor_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1596]";
+connectAttr "Ik_Left_Foor_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1597]";
+connectAttr "Ik_Left_Foor_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1598]";
+connectAttr "Ik_Left_Heel_CTrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1599]"
 		;
-connectAttr "Ik_Left_Leg_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1626]"
+connectAttr "Ik_Left_Heel_CTrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1600]"
 		;
-connectAttr "Ik_Left_Leg_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1627]"
+connectAttr "Ik_Left_Heel_CTrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1601]"
 		;
-connectAttr "Ik_Left_Leg_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1628]";
-connectAttr "Ik_Left_Leg_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1629]";
-connectAttr "Ik_Left_Leg_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1630]";
-connectAttr "Ik_Left_Leg_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1631]";
-connectAttr "Ik_Left_Leg_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1632]";
-connectAttr "Ik_Left_Leg_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1633]";
-connectAttr "Ik_Left_Leg_Ctrl_visibility.o" "DividedBaseBrotherMaleRN.phl[1634]"
+connectAttr "Ik_Left_Heel_CTrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1602]";
+connectAttr "Ik_Left_Heel_CTrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1603]";
+connectAttr "Ik_Left_Heel_CTrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1604]";
+connectAttr "Ik_Left_Heel_CTrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1605]";
+connectAttr "Ik_Left_Heel_CTrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1606]";
+connectAttr "Ik_Left_Heel_CTrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1607]";
+connectAttr "Ik_Toe_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1608]";
+connectAttr "Ik_Toe_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1609]";
+connectAttr "Ik_Toe_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1610]";
+connectAttr "Ik_Toe_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1611]";
+connectAttr "Ik_Toe_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1612]";
+connectAttr "Ik_Toe_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1613]";
+connectAttr "Ik_Toe_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1614]";
+connectAttr "Ik_Toe_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1615]";
+connectAttr "Ik_Toe_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1616]";
+connectAttr "Ik_Toe_Lifter_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1617]"
 		;
-connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1635]"
+connectAttr "Ik_Toe_Lifter_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1618]"
 		;
-connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1636]"
+connectAttr "Ik_Toe_Lifter_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1619]"
 		;
-connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1637]"
+connectAttr "Ik_Toe_Lifter_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1620]";
+connectAttr "Ik_Toe_Lifter_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1621]";
+connectAttr "Ik_Toe_Lifter_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1622]";
+connectAttr "Ik_Toe_Lifter_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1623]";
+connectAttr "Ik_Toe_Lifter_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1624]";
+connectAttr "Ik_Toe_Lifter_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1625]";
+connectAttr "Ik_Left_Leg_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1626]"
 		;
-connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1638]"
+connectAttr "Ik_Left_Leg_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1627]"
 		;
-connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1639]"
+connectAttr "Ik_Left_Leg_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1628]"
 		;
-connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1640]"
+connectAttr "Ik_Left_Leg_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1629]";
+connectAttr "Ik_Left_Leg_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1630]";
+connectAttr "Ik_Left_Leg_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1631]";
+connectAttr "Ik_Left_Leg_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1632]";
+connectAttr "Ik_Left_Leg_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1633]";
+connectAttr "Ik_Left_Leg_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1634]";
+connectAttr "Ik_Left_Leg_Ctrl_visibility.o" "DividedBaseBrotherMaleRN.phl[1635]"
 		;
-connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1641]"
+connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1636]"
 		;
-connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1642]"
+connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1637]"
 		;
-connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1643]"
+connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1638]"
 		;
-connectAttr "Ik_Right_Leg_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1644]"
+connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1639]"
 		;
-connectAttr "Ik_Right_Leg_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1645]"
+connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1640]"
 		;
-connectAttr "Ik_Right_Leg_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1646]"
+connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1641]"
 		;
-connectAttr "Ik_Right_Leg_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1647]";
-connectAttr "Ik_Right_Leg_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1648]";
-connectAttr "Ik_Right_Leg_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1649]";
-connectAttr "Ik_Right_Leg_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1650]";
-connectAttr "Ik_Right_Leg_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1651]";
-connectAttr "Ik_Right_Leg_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1652]";
-connectAttr "Ik_Right_Leg_Ctrl_visibility1.o" "DividedBaseBrotherMaleRN.phl[1653]"
+connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1642]"
 		;
-connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1654]"
+connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1643]"
 		;
-connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1655]"
+connectAttr "Ik_Left_Leg_Pole_Vector_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1644]"
 		;
-connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1656]"
+connectAttr "Ik_Right_Leg_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1645]"
 		;
-connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1657]"
+connectAttr "Ik_Right_Leg_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1646]"
 		;
-connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1658]"
+connectAttr "Ik_Right_Leg_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1647]"
 		;
-connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1659]"
+connectAttr "Ik_Right_Leg_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1648]";
+connectAttr "Ik_Right_Leg_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1649]";
+connectAttr "Ik_Right_Leg_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1650]";
+connectAttr "Ik_Right_Leg_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1651]";
+connectAttr "Ik_Right_Leg_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1652]";
+connectAttr "Ik_Right_Leg_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1653]";
+connectAttr "Ik_Right_Leg_Ctrl_visibility1.o" "DividedBaseBrotherMaleRN.phl[1654]"
 		;
-connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1660]"
+connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1655]"
 		;
-connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1661]"
+connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1656]"
 		;
-connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1662]"
+connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1657]"
 		;
-connectAttr "Ik_Right_Foor_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1663]"
+connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1658]"
 		;
-connectAttr "Ik_Right_Foor_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1664]"
+connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1659]"
 		;
-connectAttr "Ik_Right_Foor_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1665]"
+connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1660]"
 		;
-connectAttr "Ik_Right_Foor_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1666]";
-connectAttr "Ik_Right_Foor_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1667]";
-connectAttr "Ik_Right_Foor_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1668]";
-connectAttr "Ik_Right_Foor_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1669]";
-connectAttr "Ik_Right_Foor_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1670]";
-connectAttr "Ik_Right_Foor_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1671]";
-connectAttr "Ik_Right_Heel_CTrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1672]"
+connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1661]"
 		;
-connectAttr "Ik_Right_Heel_CTrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1673]"
+connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1662]"
 		;
-connectAttr "Ik_Right_Heel_CTrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1674]"
+connectAttr "Ik_Right_Leg_Pole_Vector_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1663]"
 		;
-connectAttr "Ik_Right_Heel_CTrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1675]";
-connectAttr "Ik_Right_Heel_CTrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1676]";
-connectAttr "Ik_Right_Heel_CTrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1677]";
-connectAttr "Ik_Right_Heel_CTrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1678]";
-connectAttr "Ik_Right_Heel_CTrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1679]";
-connectAttr "Ik_Right_Heel_CTrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1680]";
-connectAttr "Ik_Toe_Ctrl_translateX1.o" "DividedBaseBrotherMaleRN.phl[1681]";
-connectAttr "Ik_Toe_Ctrl_translateY1.o" "DividedBaseBrotherMaleRN.phl[1682]";
-connectAttr "Ik_Toe_Ctrl_translateZ1.o" "DividedBaseBrotherMaleRN.phl[1683]";
-connectAttr "Ik_Toe_Ctrl_rotateX1.o" "DividedBaseBrotherMaleRN.phl[1684]";
-connectAttr "Ik_Toe_Ctrl_rotateY1.o" "DividedBaseBrotherMaleRN.phl[1685]";
-connectAttr "Ik_Toe_Ctrl_rotateZ1.o" "DividedBaseBrotherMaleRN.phl[1686]";
-connectAttr "Ik_Toe_Ctrl_scaleX1.o" "DividedBaseBrotherMaleRN.phl[1687]";
-connectAttr "Ik_Toe_Ctrl_scaleY1.o" "DividedBaseBrotherMaleRN.phl[1688]";
-connectAttr "Ik_Toe_Ctrl_scaleZ1.o" "DividedBaseBrotherMaleRN.phl[1689]";
-connectAttr "Ik_Toe_Lifter_Ctrl_translateX1.o" "DividedBaseBrotherMaleRN.phl[1690]"
+connectAttr "Ik_Right_Foor_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1664]"
 		;
-connectAttr "Ik_Toe_Lifter_Ctrl_translateY1.o" "DividedBaseBrotherMaleRN.phl[1691]"
+connectAttr "Ik_Right_Foor_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1665]"
 		;
-connectAttr "Ik_Toe_Lifter_Ctrl_translateZ1.o" "DividedBaseBrotherMaleRN.phl[1692]"
+connectAttr "Ik_Right_Foor_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1666]"
 		;
-connectAttr "Ik_Toe_Lifter_Ctrl_rotateX1.o" "DividedBaseBrotherMaleRN.phl[1693]"
+connectAttr "Ik_Right_Foor_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1667]";
+connectAttr "Ik_Right_Foor_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1668]";
+connectAttr "Ik_Right_Foor_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1669]";
+connectAttr "Ik_Right_Foor_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1670]";
+connectAttr "Ik_Right_Foor_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1671]";
+connectAttr "Ik_Right_Foor_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1672]";
+connectAttr "Ik_Right_Heel_CTrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1673]"
 		;
-connectAttr "Ik_Toe_Lifter_Ctrl_rotateY1.o" "DividedBaseBrotherMaleRN.phl[1694]"
+connectAttr "Ik_Right_Heel_CTrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1674]"
 		;
-connectAttr "Ik_Toe_Lifter_Ctrl_rotateZ1.o" "DividedBaseBrotherMaleRN.phl[1695]"
+connectAttr "Ik_Right_Heel_CTrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1675]"
 		;
-connectAttr "Ik_Toe_Lifter_Ctrl_scaleX1.o" "DividedBaseBrotherMaleRN.phl[1696]";
-connectAttr "Ik_Toe_Lifter_Ctrl_scaleY1.o" "DividedBaseBrotherMaleRN.phl[1697]";
-connectAttr "Ik_Toe_Lifter_Ctrl_scaleZ1.o" "DividedBaseBrotherMaleRN.phl[1698]";
-connectAttr "Spear_Ctrl_HipHandGrip.o" "DividedBaseBrotherMaleRN.phl[1699]";
-connectAttr "Spear_Ctrl_visibility.o" "DividedBaseBrotherMaleRN.phl[1700]";
-connectAttr "Spear_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1701]";
-connectAttr "Spear_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1702]";
-connectAttr "Spear_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1703]";
-connectAttr "Spear_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1704]";
-connectAttr "Spear_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1705]";
-connectAttr "Spear_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1706]";
-connectAttr "Spear_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1707]";
-connectAttr "Spear_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1708]";
-connectAttr "Spear_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1709]";
-connectAttr "Revive_Ctrl_Hip_HandGrip.o" "DividedBaseBrotherMaleRN.phl[1710]";
-connectAttr "Revive_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1711]";
-connectAttr "Revive_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1712]";
-connectAttr "Revive_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1713]";
-connectAttr "Revive_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1714]";
-connectAttr "Revive_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1715]";
-connectAttr "Revive_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1716]";
-connectAttr "Revive_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1717]";
-connectAttr "Revive_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1718]";
-connectAttr "Revive_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1719]";
-connectAttr "DividedBaseBrotherMaleRN.phl[1720]" "DividedBaseBrotherMaleRN.phl[1721]"
+connectAttr "Ik_Right_Heel_CTrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1676]";
+connectAttr "Ik_Right_Heel_CTrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1677]";
+connectAttr "Ik_Right_Heel_CTrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1678]";
+connectAttr "Ik_Right_Heel_CTrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1679]";
+connectAttr "Ik_Right_Heel_CTrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1680]";
+connectAttr "Ik_Right_Heel_CTrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1681]";
+connectAttr "Ik_Toe_Ctrl_translateX1.o" "DividedBaseBrotherMaleRN.phl[1682]";
+connectAttr "Ik_Toe_Ctrl_translateY1.o" "DividedBaseBrotherMaleRN.phl[1683]";
+connectAttr "Ik_Toe_Ctrl_translateZ1.o" "DividedBaseBrotherMaleRN.phl[1684]";
+connectAttr "Ik_Toe_Ctrl_rotateX1.o" "DividedBaseBrotherMaleRN.phl[1685]";
+connectAttr "Ik_Toe_Ctrl_rotateY1.o" "DividedBaseBrotherMaleRN.phl[1686]";
+connectAttr "Ik_Toe_Ctrl_rotateZ1.o" "DividedBaseBrotherMaleRN.phl[1687]";
+connectAttr "Ik_Toe_Ctrl_scaleX1.o" "DividedBaseBrotherMaleRN.phl[1688]";
+connectAttr "Ik_Toe_Ctrl_scaleY1.o" "DividedBaseBrotherMaleRN.phl[1689]";
+connectAttr "Ik_Toe_Ctrl_scaleZ1.o" "DividedBaseBrotherMaleRN.phl[1690]";
+connectAttr "Ik_Toe_Lifter_Ctrl_translateX1.o" "DividedBaseBrotherMaleRN.phl[1691]"
+		;
+connectAttr "Ik_Toe_Lifter_Ctrl_translateY1.o" "DividedBaseBrotherMaleRN.phl[1692]"
+		;
+connectAttr "Ik_Toe_Lifter_Ctrl_translateZ1.o" "DividedBaseBrotherMaleRN.phl[1693]"
+		;
+connectAttr "Ik_Toe_Lifter_Ctrl_rotateX1.o" "DividedBaseBrotherMaleRN.phl[1694]"
+		;
+connectAttr "Ik_Toe_Lifter_Ctrl_rotateY1.o" "DividedBaseBrotherMaleRN.phl[1695]"
+		;
+connectAttr "Ik_Toe_Lifter_Ctrl_rotateZ1.o" "DividedBaseBrotherMaleRN.phl[1696]"
+		;
+connectAttr "Ik_Toe_Lifter_Ctrl_scaleX1.o" "DividedBaseBrotherMaleRN.phl[1697]";
+connectAttr "Ik_Toe_Lifter_Ctrl_scaleY1.o" "DividedBaseBrotherMaleRN.phl[1698]";
+connectAttr "Ik_Toe_Lifter_Ctrl_scaleZ1.o" "DividedBaseBrotherMaleRN.phl[1699]";
+connectAttr "Spear_Ctrl_HipHandGrip.o" "DividedBaseBrotherMaleRN.phl[1700]";
+connectAttr "Spear_Ctrl_visibility.o" "DividedBaseBrotherMaleRN.phl[1701]";
+connectAttr "Spear_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1702]";
+connectAttr "Spear_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1703]";
+connectAttr "Spear_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1704]";
+connectAttr "Spear_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1705]";
+connectAttr "Spear_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1706]";
+connectAttr "Spear_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1707]";
+connectAttr "Spear_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1708]";
+connectAttr "Spear_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1709]";
+connectAttr "Spear_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1710]";
+connectAttr "Revive_Ctrl_Hip_HandGrip.o" "DividedBaseBrotherMaleRN.phl[1711]";
+connectAttr "Revive_Ctrl_translateX.o" "DividedBaseBrotherMaleRN.phl[1712]";
+connectAttr "Revive_Ctrl_translateY.o" "DividedBaseBrotherMaleRN.phl[1713]";
+connectAttr "Revive_Ctrl_translateZ.o" "DividedBaseBrotherMaleRN.phl[1714]";
+connectAttr "Revive_Ctrl_rotateX.o" "DividedBaseBrotherMaleRN.phl[1715]";
+connectAttr "Revive_Ctrl_rotateY.o" "DividedBaseBrotherMaleRN.phl[1716]";
+connectAttr "Revive_Ctrl_rotateZ.o" "DividedBaseBrotherMaleRN.phl[1717]";
+connectAttr "Revive_Ctrl_scaleX.o" "DividedBaseBrotherMaleRN.phl[1718]";
+connectAttr "Revive_Ctrl_scaleY.o" "DividedBaseBrotherMaleRN.phl[1719]";
+connectAttr "Revive_Ctrl_scaleZ.o" "DividedBaseBrotherMaleRN.phl[1720]";
+connectAttr "DividedBaseBrotherMaleRN.phl[1721]" "DividedBaseBrotherMaleRN.phl[1722]"
 		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
