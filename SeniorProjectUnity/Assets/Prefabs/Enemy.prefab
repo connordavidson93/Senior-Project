@@ -9622,7 +9622,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4096
   enemyManager: {fileID: 0}
-  height: 0.75
+  height: 0.5
   sightDist: 20
   ragdoll: {fileID: 3489896704315060394}
 --- !u!114 &3489896704315060388
