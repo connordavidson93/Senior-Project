@@ -4953,7 +4953,7 @@ GameObject:
   - component: {fileID: 1337984661}
   - component: {fileID: 1337984662}
   - component: {fileID: 1337984663}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: hurtbox
   m_TagString: hitbox
   m_Icon: {fileID: 0}
