@@ -50,6 +50,7 @@ public abstract class BaseState
     private void EnemyFound(RaycastHit _hit)
     {
         if (!ai.IsEnemy(_hit.collider.tag) || ai.currentTarget != null) return;
+
         ai.currentTarget = _hit.collider.gameObject;
         ai.enemyFound = true;
     }

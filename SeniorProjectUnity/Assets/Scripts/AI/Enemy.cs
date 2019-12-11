@@ -4,6 +4,8 @@ using System;
 
 public class Enemy : Base_AI
 {
+    public RagdollController ragdoll;
+    
     protected override void InitializeFSM()
     {
         //sets the states that the enemy can use
@@ -43,6 +45,8 @@ public class Enemy : Base_AI
     public override void Die()
     {
         StaticVars.DeathAction(gameObject);
-        gameObject.SetActive(false);
+        ragdoll.ToggleColliders();
+        ragdoll.ToggleRigidbodies();
+        anim.enabled = false;
     }
 }

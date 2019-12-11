@@ -1,0 +1,1813 @@
+fileFormatVersion: 2
+guid: c637511be20d6c7458a5fa908b98ad44
+ModelImporter:
+  serializedVersion: 25
+  internalIDToNameTable:
+  - first:
+      74: 1827226128182048838
+    second: Enemy_Walk
+  - first:
+      74: 7512548334199227809
+    second: Enemy_Run
+  - first:
+      74: -4779348543030137861
+    second: Enemy_Idle
+  - first:
+      74: 7350760600242018479
+    second: Enemy_Attack1
+  - first:
+      74: -7286061035539836507
+    second: Enemy_Attack2
+  - first:
+      74: 3682714348161966593
+    second: Enemy_Attack3
+  - first:
+      74: -360986824111631841
+    second: Enemy_TakeDamage
+  - first:
+      74: -8442409832597444089
+    second: Enemy_BeCountered
+  - first:
+      74: -943653588022614539
+    second: Enemy_CombatIdle
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'DividedBaseEnemyMale:Hip_Jnt' has translation
+      animation that will be discarded.\n\t'DividedBaseEnemyMale:Hip_Jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'DividedBaseEnemyMale:L_Leg_02_Jnt
+      2' has translation animation that will be discarded.\n\t'DividedBaseEnemyMale:R_Leg_02_Jnt
+      2' has translation animation that will be discarded.\n\t'DividedBaseEnemyMale:Spine_01_Jnt'
+      has translation animation that will be discarded.\n\t'DividedBaseEnemyMale:Spine_01_Jnt'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'DividedBaseEnemyMale:Spine_02_Jnt'
+      has translation animation that will be discarded.\n\t'DividedBaseEnemyMale:Spine_05_Jnt'
+      has translation animation that will be discarded.\n\t'DividedBaseEnemyMale:L_Arm_01_Jnt
+      2' has translation animation that will be discarded.\n\t'DividedBaseEnemyMale:L_Arm_02_Jnt
+      2' has translation animation that will be discarded.\n\t'DividedBaseEnemyMale:R_Arm_01_Jnt
+      2' has translation animation that will be discarded.\n\t'DividedBaseEnemyMale:R_Arm_02_Jnt
+      2' has translation animation that will be discarded.\n\t'DividedBaseEnemyMale:R_Arm_03_Jnt
+      2' has translation animation that will be discarded.\n\t'DividedBaseEnemyMale:R_Arm_03_Jnt
+      2' is inbetween humanoid transforms and has rotation animation that will be
+      discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Enemy_Walk
+      takeName: Take 001
+      internalID: 1827226128182048838
+      firstFrame: 1
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Enemy_Run
+      takeName: Take 001
+      internalID: 7512548334199227809
+      firstFrame: 30
+      lastFrame: 42
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Enemy_Idle
+      takeName: Take 001
+      internalID: -4779348543030137861
+      firstFrame: 45
+      lastFrame: 290
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Enemy_Attack1
+      takeName: Take 001
+      internalID: 7350760600242018479
+      firstFrame: 335
+      lastFrame: 346
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Enemy_Attack2
+      takeName: Take 001
+      internalID: -7286061035539836507
+      firstFrame: 346
+      lastFrame: 360
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Enemy_Attack3
+      takeName: Take 001
+      internalID: 3682714348161966593
+      firstFrame: 360
+      lastFrame: 375
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Enemy_TakeDamage
+      takeName: Take 001
+      internalID: -360986824111631841
+      firstFrame: 380
+      lastFrame: 406
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Enemy_BeCountered
+      takeName: Take 001
+      internalID: -8442409832597444089
+      firstFrame: 407
+      lastFrame: 420
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Enemy_CombatIdle
+      takeName: Take 001
+      internalID: -943653588022614539
+      firstFrame: 296
+      lastFrame: 329
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: Enemy_Anim(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Mannequin
+      parentName: Enemy_Anim(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Skeleton
+      parentName: DividedBaseEnemyMale:Mannequin
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:FK
+      parentName: DividedBaseEnemyMale:Skeleton
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:L_Arm_01_Jnt
+      parentName: DividedBaseEnemyMale:FK
+      position: {x: -0.010635538, y: 0.10093062, z: -0.0054775802}
+      rotation: {x: 0.00904203, y: -0.019572692, z: 0.41928494, w: 0.9075987}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:L_Arm_02_Jnt
+      parentName: DividedBaseEnemyMale:L_Arm_01_Jnt
+      position: {x: -0.02053652, y: 8.881784e-18, z: -4.440892e-18}
+      rotation: {x: -6.9388927e-18, y: 0.13719745, z: 1.115644e-16, w: 0.9905437}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:L_Arm_03_Jnt
+      parentName: DividedBaseEnemyMale:L_Arm_02_Jnt
+      position: {x: -0.016379781, y: 0, z: 2.220446e-18}
+      rotation: {x: 6.938894e-18, y: 8.326673e-17, z: 8.6736174e-19, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:R_Arm_01_Jnt
+      parentName: DividedBaseEnemyMale:FK
+      position: {x: 0.0106355, y: 0.100930996, z: -0.00547758}
+      rotation: {x: 0.01957231, y: -0.009041958, z: 0.9075968, w: 0.4192889}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:R_Arm_02_Jnt
+      parentName: DividedBaseEnemyMale:R_Arm_01_Jnt
+      position: {x: -0.020536806, y: -6.217249e-17, z: -8.881784e-18}
+      rotation: {x: 0.00000058950474, y: 0.13719645, z: -0.00000008165004, w: 0.9905439}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:R_Arm_03_Jnt
+      parentName: DividedBaseEnemyMale:R_Arm_02_Jnt
+      position: {x: -0.016379835, y: 8.881784e-18, z: 7.771561e-18}
+      rotation: {x: 4.8572257e-17, y: 2.7755576e-17, z: -1.0581813e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:L_Leg_01_Jnt
+      parentName: DividedBaseEnemyMale:FK
+      position: {x: -0.0069860183, y: 0.06239875, z: -0.00043083602}
+      rotation: {x: -0.0061683957, y: 0.0066582635, z: 0.67957795, w: 0.73354715}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:L_Leg_02_Jnt
+      parentName: DividedBaseEnemyMale:L_Leg_01_Jnt
+      position: {x: -0.027003838, y: 2.220446e-18, z: 8.3266725e-19}
+      rotation: {x: -3.469447e-18, y: -0.046464596, z: -5.4210105e-20, w: 0.99891996}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:L_Leg_03_Jnt
+      parentName: DividedBaseEnemyMale:L_Leg_02_Jnt
+      position: {x: -0.030595167, y: -4.440892e-18, z: -2.8310687e-17}
+      rotation: {x: -6.938894e-18, y: -6.938894e-18, z: -1.1091388e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:L_Toe_Jnt 1
+      parentName: DividedBaseEnemyMale:L_Leg_03_Jnt
+      position: {x: -0.0050844233, y: 0.0019243652, z: 0.008484277}
+      rotation: {x: -0.025414586, y: 0.027432904, z: -0.6791306, w: 0.7330643}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:R_Leg_01_Jnt
+      parentName: DividedBaseEnemyMale:FK
+      position: {x: 0.00698602, y: 0.0623988, z: -0.000430836}
+      rotation: {x: -0.006658249, y: 0.006168384, z: 0.73354703, w: 0.67957807}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:R_Leg_02_Jnt
+      parentName: DividedBaseEnemyMale:R_Leg_01_Jnt
+      position: {x: -0.027003895, y: 8.881784e-18, z: -1.3877787e-19}
+      rotation: {x: -9.986979e-10, y: -0.046464663, z: -0.00000003524496, w: 0.99891996}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:R_Leg_03_Jnt
+      parentName: DividedBaseEnemyMale:R_Leg_02_Jnt
+      position: {x: -0.030595154, y: 0, z: -4.1078252e-17}
+      rotation: {x: 6.4280153e-10, y: 1.3877788e-17, z: -8.380883e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:R_Toe_Jnt 1
+      parentName: DividedBaseEnemyMale:R_Leg_03_Jnt
+      position: {x: -0.0050844275, y: -0.0019244305, z: 0.008484283}
+      rotation: {x: -0.027432956, y: 0.025414646, z: -0.7330641, w: 0.67913073}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:IK
+      parentName: DividedBaseEnemyMale:Skeleton
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:L_Arm_01_Jnt 1
+      parentName: DividedBaseEnemyMale:IK
+      position: {x: -0.010635538, y: 0.10093062, z: -0.0054775802}
+      rotation: {x: -0.018918883, y: -0.024768066, z: 0.42042157, w: 0.9067934}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:L_Arm_02_Jnt 1
+      parentName: DividedBaseEnemyMale:L_Arm_01_Jnt 1
+      position: {x: -0.02053652, y: 6.2640915e-18, z: 8.3266725e-19}
+      rotation: {x: -1.6893086e-17, y: 0.121401116, z: 1.10923636e-16, w: 0.99260354}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:L_Arm_03_Jnt 1
+      parentName: DividedBaseEnemyMale:L_Arm_02_Jnt 1
+      position: {x: -0.016379781, y: 3.462853e-17, z: -1.110223e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:R_Arm_01_Jnt 1
+      parentName: DividedBaseEnemyMale:IK
+      position: {x: 0.0106355, y: 0.100930996, z: -0.00547758}
+      rotation: {x: 0.0060764835, y: -0.038228296, z: 0.9084822, w: 0.4161271}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:R_Arm_02_Jnt 1
+      parentName: DividedBaseEnemyMale:R_Arm_01_Jnt 1
+      position: {x: -0.020536806, y: -4.3671662e-18, z: -1.9428903e-18}
+      rotation: {x: 0.00000058950474, y: 0.13719645, z: -0.00000008165004, w: 0.9905439}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:R_Arm_03_Jnt 1
+      parentName: DividedBaseEnemyMale:R_Arm_02_Jnt 1
+      position: {x: -0.016379835, y: -1.26287864e-17, z: 3.330669e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:L_Leg_01_Jnt 1
+      parentName: DividedBaseEnemyMale:IK
+      position: {x: -0.0069860183, y: 0.06239875, z: -0.00043083602}
+      rotation: {x: -0.031269506, y: -0.016603341, z: 0.67816687, w: 0.73405474}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:L_Leg_02_Jnt 1
+      parentName: DividedBaseEnemyMale:L_Leg_01_Jnt 1
+      position: {x: -0.027003838, y: 1.9122786e-18, z: 5.551115e-19}
+      rotation: {x: -6.5965155e-31, y: -0.046464596, z: -2.9199376e-29, w: 0.99891996}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:L_Leg_03_Jnt 1
+      parentName: DividedBaseEnemyMale:L_Leg_02_Jnt 1
+      position: {x: -0.030595167, y: -6.661338e-18, z: -2.8865798e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:L_Toe_Jnt 2
+      parentName: DividedBaseEnemyMale:L_Leg_03_Jnt 1
+      position: {x: -0.0023925859, y: 0.0010961863, z: 0.008225365}
+      rotation: {x: -0.025414586, y: 0.027432904, z: -0.6791306, w: 0.7330643}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:R_Leg_01_Jnt 1
+      parentName: DividedBaseEnemyMale:IK
+      position: {x: 0.00698602, y: 0.0623988, z: -0.000430836}
+      rotation: {x: 0.015784457, y: 0.030386092, z: 0.73405135, w: 0.67823017}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:R_Leg_02_Jnt 1
+      parentName: DividedBaseEnemyMale:R_Leg_01_Jnt 1
+      position: {x: -0.027003895, y: 5.838774e-18, z: 9.8662394e-20}
+      rotation: {x: -0.0000000016408052, y: -0.046464663, z: -0.000000035274827, w: 0.99891996}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:R_Leg_03_Jnt 1
+      parentName: DividedBaseEnemyMale:R_Leg_02_Jnt 1
+      position: {x: -0.030595154, y: -3.2119488e-19, z: -4.1312437e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:R_Toe_Jnt 2
+      parentName: DividedBaseEnemyMale:R_Leg_03_Jnt 1
+      position: {x: -0.0022631027, y: -0.0016543338, z: 0.007842872}
+      rotation: {x: -0.031933878, y: 0.12448641, z: -0.72244555, w: 0.679379}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Left_Foot_Jnt
+      parentName: DividedBaseEnemyMale:IK
+      position: {x: -0.011372317, y: 0.0050572883, z: -0.002227336}
+      rotation: {x: 0.0002750251, y: -0.050692968, z: 0.67888737, w: 0.7324904}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:L_Toe_Jnt
+      parentName: DividedBaseEnemyMale:Ik_Left_Foot_Jnt
+      position: {x: -0.0028272446, y: 0.0006904666, z: 0.00714539}
+      rotation: {x: -0.025414586, y: 0.027432904, z: -0.6791306, w: 0.7330643}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Heel_Jnt
+      parentName: DividedBaseEnemyMale:IK
+      position: {x: -0.011329984, y: 0.00049263355, z: -0.0055255652}
+      rotation: {x: 0.010975954, y: 0.7070216, z: 0.010975954, w: 0.7070216}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Toe_Jnt
+      parentName: DividedBaseEnemyMale:Left_Heel_Jnt
+      position: {x: -0.015255782, y: 0.00082850043, z: -0.0024031636}
+      rotation: {x: -0.21732277, y: 0.97609985, z: -7.307606e-17, w: -4.6461696e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ball__Jnt
+      parentName: DividedBaseEnemyMale:Left_Toe_Jnt
+      position: {x: -0.004570002, y: -0.0007791112, z: -0.00057011744}
+      rotation: {x: -6.938894e-17, y: -1.3877788e-17, z: 0.059847582, w: 0.9982075}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Ankle_Jnt
+      parentName: DividedBaseEnemyMale:Ball__Jnt
+      position: {x: -0.00806322, y: 0.00008319635, z: -0.0017907141}
+      rotation: {x: -0.12291146, y: 0.69634247, z: 0.12291146, w: 0.69634247}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Left_Leg_Handle
+      parentName: DividedBaseEnemyMale:Left_Ankle_Jnt
+      position: {x: -4.440892e-18, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Left_Foot_Handle
+      parentName: DividedBaseEnemyMale:Ball__Jnt
+      position: {x: -0.00051329104, y: -0.00062745967, z: -0.00036938014}
+      rotation: {x: 0.38912883, y: 0.5582413, z: 0.56880873, w: 0.4619546}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Toe_Lifter_Jnt
+      parentName: DividedBaseEnemyMale:Left_Toe_Jnt
+      position: {x: -0.004570002, y: -0.0007791112, z: -0.00057011744}
+      rotation: {x: -5.551115e-17, y: -1.3877788e-17, z: 0.059847582, w: 0.9982075}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Left_Foot_Handle_1
+      parentName: DividedBaseEnemyMale:Toe_Lifter_Jnt
+      position: {x: -0.00051329104, y: -0.00062745967, z: -0.00036938014}
+      rotation: {x: 0.38912883, y: 0.5582413, z: 0.56880873, w: 0.4619546}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Heel_Jnt
+      parentName: DividedBaseEnemyMale:IK
+      position: {x: 0.010974552, y: 0.00049263355, z: -0.0055255652}
+      rotation: {x: 0.010975954, y: 0.7070216, z: 0.010975954, w: 0.7070216}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Toe_Jnt
+      parentName: DividedBaseEnemyMale:Right_Heel_Jnt
+      position: {x: -0.015255782, y: 0.00082850043, z: 0.0038536077}
+      rotation: {x: -0.21732277, y: 0.97609985, z: -7.307606e-17, w: -4.6461696e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ball__Jnt 1
+      parentName: DividedBaseEnemyMale:Right_Toe_Jnt
+      position: {x: -0.004570002, y: -0.0007791112, z: 0.0011761681}
+      rotation: {x: -6.938894e-17, y: -1.3877788e-17, z: 0.059847582, w: 0.9982075}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Ankle_Jnt
+      parentName: DividedBaseEnemyMale:Ball__Jnt 1
+      position: {x: -0.008108981, y: 0.000065353466, z: 0.0023784502}
+      rotation: {x: -0.12291146, y: 0.69634247, z: 0.12291146, w: 0.69634247}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Right_Leg_Handle
+      parentName: DividedBaseEnemyMale:Right_Ankle_Jnt
+      position: {x: 0.000098759694, y: 0.000001100035, z: 0.000049099996}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Right_Foot_Handle
+      parentName: DividedBaseEnemyMale:Ball__Jnt 1
+      position: {x: -0.000079643345, y: 0.0001548784, z: -0.00009230941}
+      rotation: {x: 0.48525697, y: 0.60617113, z: 0.51786304, w: 0.3590266}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Toe_Lifter_Jnt 1
+      parentName: DividedBaseEnemyMale:Right_Toe_Jnt
+      position: {x: -0.004570002, y: -0.0007791112, z: 0.0011761681}
+      rotation: {x: -6.938894e-17, y: -1.3877788e-17, z: 0.059847582, w: 0.9982075}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Right_Foot_Handle_1
+      parentName: DividedBaseEnemyMale:Toe_Lifter_Jnt 1
+      position: {x: -0.000079643345, y: 0.0001548784, z: -0.00009230941}
+      rotation: {x: 0.48525697, y: 0.60617113, z: 0.51786304, w: 0.3590266}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Right_Foot
+      parentName: DividedBaseEnemyMale:IK
+      position: {x: 0.0113723, y: 0.00505729, z: -0.00222734}
+      rotation: {x: 0.0959289, y: 0.048802283, z: 0.7288919, w: 0.6761158}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:R_Toe_Jnt
+      parentName: DividedBaseEnemyMale:Ik_Right_Foot
+      position: {x: -0.002256437, y: -0.00058822957, z: 0.007995722}
+      rotation: {x: -0.027432956, y: 0.025414646, z: -0.7330641, w: 0.67913073}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:RK
+      parentName: DividedBaseEnemyMale:Skeleton
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:COG_Jnt
+      parentName: DividedBaseEnemyMale:RK
+      position: {x: 0, y: 0.073370546, z: -0.0017850561}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Hip_Jnt
+      parentName: DividedBaseEnemyMale:COG_Jnt
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:L_Leg_01_Jnt 2
+      parentName: DividedBaseEnemyMale:Hip_Jnt
+      position: {x: -0.0069860183, y: -0.008601626, z: 0.0013542202}
+      rotation: {x: -0.0061683888, y: 0.0066582733, z: 0.679578, w: 0.73354715}
+      scale: {x: 1.000001, y: 1.0000005, z: 1}
+    - name: DividedBaseEnemyMale:L_Leg_02_Jnt 2
+      parentName: DividedBaseEnemyMale:L_Leg_01_Jnt 2
+      position: {x: -0.027003838, y: -1.11022296e-17, z: 1.110223e-18}
+      rotation: {x: -0.0000000027939675, y: -0.046464607, z: 8.003552e-10, w: 0.9989199}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: DividedBaseEnemyMale:L_Leg_03_Jnt 2
+      parentName: DividedBaseEnemyMale:L_Leg_02_Jnt 2
+      position: {x: -0.030595167, y: -1.7763568e-17, z: -2.7200463e-17}
+      rotation: {x: 2.2204458e-16, y: 0.0000000037252899, z: -1.3877786e-17, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: DividedBaseEnemyMale:L_Toe_Jnt 3
+      parentName: DividedBaseEnemyMale:L_Leg_03_Jnt 2
+      position: {x: -0.0050844233, y: 0.0019243652, z: 0.008484277}
+      rotation: {x: -0.025414595, y: 0.0274329, z: -0.6791307, w: 0.73306423}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: DividedBaseEnemyMale:R_Leg_01_Jnt 2
+      parentName: DividedBaseEnemyMale:Hip_Jnt
+      position: {x: 0.00698602, y: -0.00860158, z: 0.0013542202}
+      rotation: {x: -0.006658248, y: 0.0061683836, z: 0.73354703, w: 0.67957807}
+      scale: {x: 1.0000002, y: 1.0000002, z: 0.9999999}
+    - name: DividedBaseEnemyMale:R_Leg_02_Jnt 2
+      parentName: DividedBaseEnemyMale:R_Leg_01_Jnt 2
+      position: {x: -0.027003895, y: 1.11022296e-17, z: -1.3877787e-19}
+      rotation: {x: -0.0000000013969839, y: -0.046464656, z: -0.000000059022568, w: 0.99891996}
+      scale: {x: 1.0000008, y: 1.0000007, z: 1}
+    - name: DividedBaseEnemyMale:R_Leg_03_Jnt 2
+      parentName: DividedBaseEnemyMale:R_Leg_02_Jnt 2
+      position: {x: -0.030595154, y: -2.220446e-18, z: -3.8302694e-17}
+      rotation: {x: -0, y: -0, z: 1.2559397e-15, w: 1}
+      scale: {x: 1.0000007, y: 1.0000005, z: 1}
+    - name: DividedBaseEnemyMale:R_Toe_Jnt 3
+      parentName: DividedBaseEnemyMale:R_Leg_03_Jnt 2
+      position: {x: -0.0050844275, y: -0.0019244305, z: 0.008484283}
+      rotation: {x: -0.027432956, y: 0.025414636, z: -0.73306406, w: 0.6791308}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+    - name: DividedBaseEnemyMale:Spine_01_Jnt
+      parentName: DividedBaseEnemyMale:COG_Jnt
+      position: {x: -2.1684043e-21, y: 0, z: 0}
+      rotation: {x: -0.03740254, y: -0.03740254, z: -0.7061169, w: 0.7061169}
+      scale: {x: 1.000001, y: 1.000001, z: 1}
+    - name: DividedBaseEnemyMale:Spine_02_Jnt
+      parentName: DividedBaseEnemyMale:Spine_01_Jnt
+      position: {x: -0.011407086, y: -2.1684043e-21, z: 2.220446e-18}
+      rotation: {x: -0, y: 0.025435582, z: 2.910383e-10, w: 0.99967647}
+      scale: {x: 0.9999996, y: 0.9999998, z: 0.99999994}
+    - name: DividedBaseEnemyMale:Spine_03_Jnt
+      parentName: DividedBaseEnemyMale:Spine_02_Jnt
+      position: {x: -0.008423178, y: -5.481726e-18, z: 9.436896e-18}
+      rotation: {x: -2.3747884e-10, y: 0.03041943, z: 0.000000009681526, w: 0.9995372}
+      scale: {x: 1.0000002, y: 1.0000002, z: 0.9999999}
+    - name: DividedBaseEnemyMale:Spine_04_Jnt
+      parentName: DividedBaseEnemyMale:Spine_03_Jnt
+      position: {x: -0.013822884, y: 5.20417e-19, z: -0.00002010333}
+      rotation: {x: 0.0000000010435115, y: 0.035913993, z: -0.00000004560486, w: 0.9993549}
+      scale: {x: 1.0000006, y: 1.0000008, z: 1.0000002}
+    - name: DividedBaseEnemyMale:Spine_05_Jnt
+      parentName: DividedBaseEnemyMale:Spine_04_Jnt
+      position: {x: -0.0071057105, y: -4.1633362e-19, z: 0.00026525088}
+      rotation: {x: 9.567274e-10, y: 0.0000000074505797, z: 0.000000030250163, w: 1}
+      scale: {x: 1.0000002, y: 1.0000004, z: 0.99999994}
+    - name: DividedBaseEnemyMale:L_Clavical_Jnt
+      parentName: DividedBaseEnemyMale:Spine_03_Jnt
+      position: {x: -0.0104337465, y: -0.004468623, z: 0.0045483983}
+      rotation: {x: -0.1817023, y: 0.17767766, z: 0.67709166, w: 0.6906243}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+    - name: DividedBaseEnemyMale:L_Arm_01_Jnt 2
+      parentName: DividedBaseEnemyMale:L_Clavical_Jnt
+      position: {x: -0.0061669145, y: -0.00023026964, z: -0.006634447}
+      rotation: {x: 0.119887635, y: -0.24153239, z: 0.058855623, w: 0.9611582}
+      scale: {x: 1.0000002, y: 1, z: 0.99999994}
+    - name: DividedBaseEnemyMale:L_Arm_02_Jnt 2
+      parentName: DividedBaseEnemyMale:L_Arm_01_Jnt 2
+      position: {x: -0.02053652, y: -2.6645352e-17, z: -1.110223e-18}
+      rotation: {x: -0.0014022064, y: 0.02444304, z: -0.014706565, w: 0.99959207}
+      scale: {x: 0.9999999, y: 1.0000001, z: 0.9999999}
+    - name: DividedBaseEnemyMale:L_Arm_03_Jnt 2
+      parentName: DividedBaseEnemyMale:L_Arm_02_Jnt 2
+      position: {x: -0.016379781, y: 0, z: -3.330669e-18}
+      rotation: {x: -1.7763566e-15, y: -0.000000014901159, z: 6.6613376e-16, w: 1}
+      scale: {x: 1, y: 1.0000002, z: 0.99999994}
+    - name: DividedBaseEnemyMale:L_Hand_Jnt
+      parentName: DividedBaseEnemyMale:L_Arm_03_Jnt 2
+      position: {x: -0.000059201637, y: -0.00008932861, z: -0.000016763985}
+      rotation: {x: -0.0000000057771796, y: 0.00000002980232, z: -0.00000012120627,
+        w: 1}
+      scale: {x: 1, y: 1.0000001, z: 0.99999976}
+    - name: DividedBaseEnemyMale:L_Pinky_01_Jnt
+      parentName: DividedBaseEnemyMale:L_Hand_Jnt
+      position: {x: -0.0071274918, y: -0.002021605, z: -0.003039952}
+      rotation: {x: 0.74342144, y: 0.108244814, z: -0.1075622, w: -0.6511821}
+      scale: {x: 1.0000008, y: 1.000001, z: 1.0000008}
+    - name: DividedBaseEnemyMale:L_Pinky_02_Jnt
+      parentName: DividedBaseEnemyMale:L_Pinky_01_Jnt
+      position: {x: -0.002208386, y: -2.220446e-18, z: 3.5527136e-17}
+      rotation: {x: 0.0109615, y: 0.037798002, z: -0.008384427, w: -0.99919015}
+      scale: {x: 1.0000002, y: 1.0000006, z: 1.0000004}
+    - name: DividedBaseEnemyMale:L_Pinky_03_Jnt
+      parentName: DividedBaseEnemyMale:L_Pinky_02_Jnt
+      position: {x: -0.0019652601, y: -3.330669e-18, z: 0}
+      rotation: {x: 9.3132235e-10, y: -0, z: -0.000000003608874, w: 1}
+      scale: {x: 1.0000001, y: 1.0000011, z: 1.0000002}
+    - name: DividedBaseEnemyMale:L_RingFinger_01_Jnt
+      parentName: DividedBaseEnemyMale:L_Hand_Jnt
+      position: {x: -0.0085507985, y: -0.0017941128, z: -0.0013370282}
+      rotation: {x: 0.74466884, y: 0.107658595, z: -0.10871589, w: -0.6496606}
+      scale: {x: 1.0000006, y: 1.000001, z: 1.0000005}
+    - name: DividedBaseEnemyMale:L_RingFinger_02_Jnt
+      parentName: DividedBaseEnemyMale:L_RingFinger_01_Jnt
+      position: {x: -0.002806976, y: 3.8857806e-18, z: -1.7763568e-17}
+      rotation: {x: 0.008471695, y: 0.03832555, z: 0.0052400213, w: -0.9992157}
+      scale: {x: 0.99999994, y: 1, z: 1.0000001}
+    - name: DividedBaseEnemyMale:L_RingFinger_03_Jnt
+      parentName: DividedBaseEnemyMale:L_RingFinger_02_Jnt
+      position: {x: -0.0024746943, y: 0, z: 4.4408918e-17}
+      rotation: {x: 9.3132235e-10, y: -0, z: 2.9103825e-10, w: 1}
+      scale: {x: 1.0000006, y: 1.0000005, z: 1.0000005}
+    - name: DividedBaseEnemyMale:L_MiddleFinger_01_Jnt
+      parentName: DividedBaseEnemyMale:L_Hand_Jnt
+      position: {x: -0.009236297, y: -0.0015317585, z: 0.00059185986}
+      rotation: {x: -0.73498154, y: -0.11297932, z: 0.10091174, w: 0.66094995}
+      scale: {x: 1.0000002, y: 1.0000008, z: 1.0000005}
+    - name: DividedBaseEnemyMale:L_MiddleFinger_02_Jnt
+      parentName: DividedBaseEnemyMale:L_MiddleFinger_01_Jnt
+      position: {x: -0.0029438196, y: 1.110223e-18, z: 0}
+      rotation: {x: 0.006312666, y: 0.039534844, z: 0.00442878, w: -0.9991885}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:L_MiddleFinger_03_Jnt
+      parentName: DividedBaseEnemyMale:L_MiddleFinger_02_Jnt
+      position: {x: -0.0024432822, y: -5.551115e-19, z: 8.881784e-18}
+      rotation: {x: -4.6566118e-10, y: -0, z: -2.0372677e-10, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000004}
+    - name: DividedBaseEnemyMale:L_Forefinger_01_Jnt
+      parentName: DividedBaseEnemyMale:L_Hand_Jnt
+      position: {x: -0.008641284, y: -0.0020096211, z: 0.0024903475}
+      rotation: {x: -0.7327925, y: -0.1131877, z: 0.10780433, w: 0.6622552}
+      scale: {x: 1.0000006, y: 1.0000007, z: 1.0000002}
+    - name: DividedBaseEnemyMale:L_Forefinger_02_Jnt
+      parentName: DividedBaseEnemyMale:L_Forefinger_01_Jnt
+      position: {x: -0.0028661164, y: 4.440892e-18, z: 8.881784e-18}
+      rotation: {x: -0.012597648, y: -0.03136388, z: -0.01694308, w: 0.99928504}
+      scale: {x: 0.9999995, y: 0.9999996, z: 0.9999994}
+    - name: DividedBaseEnemyMale:L_Forefinger_03_Jnt
+      parentName: DividedBaseEnemyMale:L_Forefinger_02_Jnt
+      position: {x: -0.0022353434, y: -1.110223e-18, z: -3.9968027e-17}
+      rotation: {x: 0.0002289135, y: -0.000000044703484, z: 0.00000006589107, w: 1}
+      scale: {x: 1.0000001, y: 1.0000007, z: 1.0000002}
+    - name: DividedBaseEnemyMale:L_Thumb_01_Jnt
+      parentName: DividedBaseEnemyMale:L_Hand_Jnt
+      position: {x: -0.0030698332, y: -0.0016309172, z: 0.0028262516}
+      rotation: {x: -0.24365222, y: 0.35418224, z: 0.14032052, w: 0.89190733}
+      scale: {x: 1.0000005, y: 1.0000004, z: 0.9999999}
+    - name: DividedBaseEnemyMale:L_Thumb_02_Jnt
+      parentName: DividedBaseEnemyMale:L_Thumb_01_Jnt
+      position: {x: -0.002491362, y: -1.3322676e-17, z: -1.7763568e-17}
+      rotation: {x: 0.0021252036, y: -0.034873962, z: 0.02071371, w: 0.99917483}
+      scale: {x: 1.0000002, y: 0.99999994, z: 1.0000002}
+    - name: DividedBaseEnemyMale:L_Thumb_03_Jnt
+      parentName: DividedBaseEnemyMale:L_Thumb_02_Jnt
+      position: {x: -0.0021512795, y: 8.881784e-18, z: 1.7763568e-17}
+      rotation: {x: -0, y: -0, z: 7.1304374e-10, w: 1}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1}
+    - name: DividedBaseEnemyMale:R_Clavical_Jnt
+      parentName: DividedBaseEnemyMale:Spine_03_Jnt
+      position: {x: -0.010433856, y: 0.00446862, z: 0.0045484016}
+      rotation: {x: 0.17767873, y: -0.18170337, z: 0.6906164, w: 0.6770991}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+    - name: DividedBaseEnemyMale:R_Arm_01_Jnt 2
+      parentName: DividedBaseEnemyMale:R_Clavical_Jnt
+      position: {x: 0.00616688, y: -0.00022999999, z: -0.0066344496}
+      rotation: {x: 0.24153559, y: -0.11989051, z: 0.9611577, w: 0.058845416}
+      scale: {x: 1.0000008, y: 1.0000007, z: 1}
+    - name: DividedBaseEnemyMale:R_Arm_02_Jnt 2
+      parentName: DividedBaseEnemyMale:R_Arm_01_Jnt 2
+      position: {x: -0.020536806, y: -8.881784e-18, z: -1.110223e-18}
+      rotation: {x: 0.002113579, y: 0.0232855, z: 0.010578696, w: 0.9996706}
+      scale: {x: 1.0000005, y: 1.0000008, z: 1.0000002}
+    - name: DividedBaseEnemyMale:R_Arm_03_Jnt 2
+      parentName: DividedBaseEnemyMale:R_Arm_02_Jnt 2
+      position: {x: -0.016379835, y: -4.4408918e-17, z: 5.5511148e-18}
+      rotation: {x: -5.6843412e-14, y: -0, z: -1.4210853e-14, w: 1}
+      scale: {x: 1.0000001, y: 0.9999999, z: 0.99999994}
+    - name: DividedBaseEnemyMale:R_Hand_Jnt
+      parentName: DividedBaseEnemyMale:R_Arm_03_Jnt 2
+      position: {x: 0.000057706675, y: -0.00008938801, z: 0.000025560834}
+      rotation: {x: 0.000020438332, y: -0.0017670277, z: 0.006838469, w: 0.99997514}
+      scale: {x: 1.0000008, y: 1.000001, z: 1.0000002}
+    - name: DividedBaseEnemyMale:R_Pinky_01_Jnt
+      parentName: DividedBaseEnemyMale:R_Hand_Jnt
+      position: {x: -0.007127528, y: 0.0020215462, z: -0.003039952}
+      rotation: {x: -0.6511822, y: 0.107560635, z: -0.108241014, w: 0.7434222}
+      scale: {x: 1.0000002, y: 1.0000005, z: 0.9999999}
+    - name: DividedBaseEnemyMale:R_Pinky_02_Jnt
+      parentName: DividedBaseEnemyMale:R_Pinky_01_Jnt
+      position: {x: -0.0022083835, y: 0, z: -2.7755576e-17}
+      rotation: {x: 0.010962003, y: 0.03779135, z: 0.008383299, w: 0.9991904}
+      scale: {x: 1, y: 1.0000005, z: 1.0000008}
+    - name: DividedBaseEnemyMale:R_Pinky_03_Jnt
+      parentName: DividedBaseEnemyMale:R_Pinky_02_Jnt
+      position: {x: -0.0019652112, y: -3.0531133e-18, z: -7.105427e-17}
+      rotation: {x: 0.000000093132236, y: -0.00000012665984, z: -0.00000006461049,
+        w: 1}
+      scale: {x: 0.9999999, y: 1.0000002, z: 0.9999995}
+    - name: DividedBaseEnemyMale:R_RingFinger_01_Jnt
+      parentName: DividedBaseEnemyMale:R_Hand_Jnt
+      position: {x: -0.008550794, y: 0.0017940796, z: -0.0013370074}
+      rotation: {x: -0.6496613, y: 0.1087154, z: -0.10765614, w: 0.74466866}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1.0000005}
+    - name: DividedBaseEnemyMale:R_RingFinger_02_Jnt
+      parentName: DividedBaseEnemyMale:R_RingFinger_01_Jnt
+      position: {x: -0.0028070116, y: 4.440892e-18, z: -1.11022296e-17}
+      rotation: {x: 0.0084699625, y: 0.038329538, z: -0.0052411146, w: 0.99921554}
+      scale: {x: 1.0000002, y: 1.0000006, z: 1.0000004}
+    - name: DividedBaseEnemyMale:R_RingFinger_03_Jnt
+      parentName: DividedBaseEnemyMale:R_RingFinger_02_Jnt
+      position: {x: -0.0024746573, y: 9.020562e-18, z: 0}
+      rotation: {x: 0.00000015273685, y: 0.00000008195636, z: -0.000000058847924,
+        w: 1}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1}
+    - name: DividedBaseEnemyMale:R_MiddleFinger_01_Jnt
+      parentName: DividedBaseEnemyMale:R_Hand_Jnt
+      position: {x: -0.009236316, y: 0.0015316879, z: 0.00059187016}
+      rotation: {x: -0.66095024, y: 0.10091096, z: -0.11297641, w: 0.7349817}
+      scale: {x: 1.0000011, y: 1.0000012, z: 1.0000006}
+    - name: DividedBaseEnemyMale:R_MiddleFinger_02_Jnt
+      parentName: DividedBaseEnemyMale:R_MiddleFinger_01_Jnt
+      position: {x: -0.0029437721, y: 0, z: 6.661338e-18}
+      rotation: {x: 0.006312724, y: 0.03953612, z: -0.004429695, w: 0.9991884}
+      scale: {x: 0.99999964, y: 1.0000004, z: 1.0000005}
+    - name: DividedBaseEnemyMale:R_MiddleFinger_03_Jnt
+      parentName: DividedBaseEnemyMale:R_MiddleFinger_02_Jnt
+      position: {x: -0.0024433578, y: 8.3266725e-19, z: -2.6645352e-17}
+      rotation: {x: -0, y: -0, z: -2.9103825e-10, w: 1}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1.0000002}
+    - name: DividedBaseEnemyMale:R_Forefinger_01_Jnt
+      parentName: DividedBaseEnemyMale:R_Hand_Jnt
+      position: {x: -0.008641287, y: 0.0020096067, z: 0.0024903559}
+      rotation: {x: -0.662257, y: 0.10780344, z: -0.113186546, w: 0.73279124}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1}
+    - name: DividedBaseEnemyMale:R_Forefinger_02_Jnt
+      parentName: DividedBaseEnemyMale:R_Forefinger_01_Jnt
+      position: {x: -0.0028660898, y: -4.440892e-18, z: -1.3322676e-17}
+      rotation: {x: 0.012597524, y: 0.031362217, z: -0.016945196, w: 0.99928504}
+      scale: {x: 1.0000002, y: 1.0000007, z: 1.0000008}
+    - name: DividedBaseEnemyMale:R_Forefinger_03_Jnt
+      parentName: DividedBaseEnemyMale:R_Forefinger_02_Jnt
+      position: {x: -0.0022353441, y: -1.110223e-18, z: -8.881784e-18}
+      rotation: {x: -0, y: -0, z: 5.8207655e-10, w: 1}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1.0000007}
+    - name: DividedBaseEnemyMale:R_Thumb_01_Jnt
+      parentName: DividedBaseEnemyMale:R_Hand_Jnt
+      position: {x: -0.0030697873, y: 0.0016309407, z: 0.002826269}
+      rotation: {x: 0.24341717, y: 0.3540698, z: -0.14098525, w: 0.8919114}
+      scale: {x: 1.000001, y: 0.9999989, z: 0.9999999}
+    - name: DividedBaseEnemyMale:R_Thumb_02_Jnt
+      parentName: DividedBaseEnemyMale:R_Thumb_01_Jnt
+      position: {x: -0.002491355, y: -1.3322676e-17, z: 1.3322676e-17}
+      rotation: {x: -0.0021258136, y: -0.034874536, z: -0.020711673, w: 0.9991748}
+      scale: {x: 1.0000001, y: 1.0000008, z: 1.0000005}
+    - name: DividedBaseEnemyMale:R_Thumb_03_Jnt
+      parentName: DividedBaseEnemyMale:R_Thumb_02_Jnt
+      position: {x: -0.0021513156, y: -4.440892e-18, z: 3.8857805e-17}
+      rotation: {x: 0.000000056345016, y: -0.000000007450581, z: -0.000000074112904,
+        w: 1}
+      scale: {x: 0.99999964, y: 1.0000004, z: 1.0000005}
+    - name: DividedBaseEnemyMale:Geometry
+      parentName: DividedBaseEnemyMale:Mannequin
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:BaseMesh
+      parentName: DividedBaseEnemyMale:Geometry
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ctrls
+      parentName: Enemy_Anim(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Transform_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Ctrls
+      position: {x: -0, y: 0.07100038, z: -0.0017850561}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Transform_Ctrl
+      parentName: DividedBaseEnemyMale:Transform_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Waist_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Transform_Ctrl
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Waist_Ctrl
+      parentName: DividedBaseEnemyMale:Waist_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Ctrl_Grp 1
+      parentName: DividedBaseEnemyMale:Waist_Ctrl
+      position: {x: -0, y: -0.07100038, z: 0.0017850561}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Right_Leg_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Fk_Ctrl_Grp 1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Right_Hip_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Fk_Right_Leg_Ctrl_Grp
+      position: {x: 0.00698602, y: 0.0623988, z: -0.000430836}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Right_Hip_Ctrl
+      parentName: DividedBaseEnemyMale:Fk_Right_Hip_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Right_Knee_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Fk_Right_Leg_Ctrl_Grp
+      position: {x: 0.0090453, y: 0.035478, z: 0.0000593407}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Right_Knee_Ctrl
+      parentName: DividedBaseEnemyMale:Fk_Right_Knee_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Right_Ankle_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Fk_Right_Leg_Ctrl_Grp
+      position: {x: 0.0113723, y: 0.00505729, z: -0.00222734}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Right_Ankle_Ctrl
+      parentName: DividedBaseEnemyMale:Fk_Right_Ankle_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Right_Foot_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Fk_Right_Leg_Ctrl_Grp
+      position: {x: 0.0137262, y: -0.000483637, z: 0.0058532036}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Right_Foot_Ctrl
+      parentName: DividedBaseEnemyMale:Fk_Right_Foot_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Left_Legt_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Fk_Ctrl_Grp 1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Left_Hip_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Fk_Left_Legt_Ctrl_Grp
+      position: {x: -0.0069860183, y: 0.06239875, z: -0.00043083602}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Left_Hip_Ctrl
+      parentName: DividedBaseEnemyMale:Fk_Left_Hip_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Left_Knee_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Fk_Left_Legt_Ctrl_Grp
+      position: {x: -0.009045303, y: 0.03547801, z: 0.00005934066}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Left_Knee_Ctrl
+      parentName: DividedBaseEnemyMale:Fk_Left_Knee_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Left_Ankle_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Fk_Left_Legt_Ctrl_Grp
+      position: {x: -0.011372317, y: 0.0050572883, z: -0.002227336}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Left_Ankle_Ctrl
+      parentName: DividedBaseEnemyMale:Fk_Left_Ankle_Ctrl_Grp
+      position: {x: -0, y: 4.440892e-18, z: -2.7755575e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Left_Foot_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Fk_Left_Legt_Ctrl_Grp
+      position: {x: -0.013726153, y: -0.00048363695, z: 0.005853202}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Left_Foot_Ctrl
+      parentName: DividedBaseEnemyMale:Fk_Left_Foot_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Transform_Ctrl
+      position: {x: -0, y: -0.07100038, z: 0.0017850561}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp 1
+      parentName: DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp
+      position: {x: 0.00698602, y: 0.0623988, z: -0.000430836}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Right_Leg_Ctrl
+      parentName: DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp 1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp
+      position: {x: 0.011154601, y: 0.035478, z: 0.03050672}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl
+      parentName: DividedBaseEnemyMale:Ik_Right_Leg_Pole_Vector_Ctrl_Grp
+      position: {x: 4.440892e-18, y: 0, z: -1.110223e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Ik_Right_Leg_Ctrl_Grp
+      position: {x: 0.012567673, y: -0.000459064, z: 0.00040740694}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Right_Foor_Ctrl
+      parentName: DividedBaseEnemyMale:Ik_Right_Foot_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Ik_Right_Foor_Ctrl
+      position: {x: -0.0015931217, y: 0.0009516976, z: -0.005932972}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Right_Heel_CTrl
+      parentName: DividedBaseEnemyMale:Ik_Right_Heel_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Toe_Crtl_Grp 1
+      parentName: DividedBaseEnemyMale:Ik_Right_Heel_CTrl
+      position: {x: 0.0038536077, y: 0.00035454743, z: 0.015274148}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Toe_Ctrl 1
+      parentName: DividedBaseEnemyMale:Ik_Toe_Crtl_Grp 1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp 1
+      parentName: DividedBaseEnemyMale:Ik_Toe_Ctrl 1
+      position: {x: -0.0014127059, y: 0.0012720689, z: -0.0044187135}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl 1
+      parentName: DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp 1
+      position: {x: 0.0014127059, y: 0.0013929717, z: 0.0049672015}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Ball_Ctrl_Grp 1
+      parentName: DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl 1
+      position: {x: -0.0014697978, y: -0.0013484404, z: -0.004889574}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Bal_Ctrl 1
+      parentName: DividedBaseEnemyMale:Ik_Ball_Ctrl_Grp 1
+      position: {x: -0.0019425532, y: 0.0039665173, z: -0.0045544435}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Ik_Leg_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp
+      position: {x: -0.011219797, y: -0.000459064, z: 0.00040740694}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Left_Foor_Ctrl
+      parentName: DividedBaseEnemyMale:Ik_Left_Foot_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Ik_Left_Foor_Ctrl
+      position: {x: -0.000110187255, y: 0.0009516976, z: -0.005932972}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Left_Heel_CTrl
+      parentName: DividedBaseEnemyMale:Ik_Left_Heel_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Toe_Crtl_Grp
+      parentName: DividedBaseEnemyMale:Ik_Left_Heel_CTrl
+      position: {x: -0.0024031636, y: 0.00035454743, z: 0.015274148}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Toe_Ctrl
+      parentName: DividedBaseEnemyMale:Ik_Toe_Crtl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Ik_Toe_Ctrl
+      position: {x: 0.00057011744, y: 0.001371464, z: -0.0044284333}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl
+      parentName: DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl_Grp
+      position: {x: -0.0011236545, y: 0.0013929717, z: 0.005040459}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Ball_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Ik_Toe_Lifter_Ctrl
+      position: {x: 0.0011236545, y: -0.0013929717, z: -0.005040459}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Bal_Ctrl
+      parentName: DividedBaseEnemyMale:Ik_Ball_Ctrl_Grp
+      position: {x: 0.0004611737, y: 0.0039665173, z: -0.004929887}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp 1
+      parentName: DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp
+      position: {x: -0.0069860183, y: 0.06239875, z: -0.00043083602}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Left_Leg_Ctrl
+      parentName: DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp 1
+      position: {x: 6.661338e-18, y: -8.881784e-18, z: -1.3877787e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Ik_Left_Leg_Ctrl_Grp
+      position: {x: -0.011231814, y: 0.035478, z: 0.03050672}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl
+      parentName: DividedBaseEnemyMale:Ik_Left_Leg_Pole_Vector_Ctrl_Grp
+      position: {x: -0, y: 0, z: 2.220446e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Transform_Ctrl
+      position: {x: 0.000025660398, y: 0.019753898, z: -0.0016637243}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Upper_Torso_Ctrl
+      parentName: DividedBaseEnemyMale:Upper_Torso_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Neck_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Upper_Torso_Ctrl
+      position: {x: 0.000042344767, y: 0.013822667, z: 0.000067946385}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Neck_Ctrl
+      parentName: DividedBaseEnemyMale:Neck_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Head_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Neck_Ctrl
+      position: {x: 0.000021802565, y: 0.007063228, z: 0.00081963465}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Head_Ctrl
+      parentName: DividedBaseEnemyMale:Head_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Clavical_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Upper_Torso_Ctrl
+      position: {x: -0.0044357697, y: 0.010418195, z: -0.0010148999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Clavical_Ctrl
+      parentName: DividedBaseEnemyMale:Left_Clavical_Ctrl_Grp
+      position: {x: -1.110223e-18, y: 1.7763568e-17, z: -5.551115e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Clavical_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Upper_Torso_Ctrl
+      position: {x: 0.0045014312, y: 0.0103909355, z: -0.0010167733}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Clavical_Ctrl
+      parentName: DividedBaseEnemyMale:Right_Clavical_Ctrl_Grp
+      position: {x: -3.330669e-18, y: -1.7763568e-17, z: -2.220446e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Hand_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Upper_Torso_Ctrl
+      position: {x: 0.034243137, y: -0.017584164, z: 0.0008541804}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Hand_Ctrl
+      parentName: DividedBaseEnemyMale:Right_Hand_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Right_Hand_Ctrl
+      position: {x: 0.0002732, y: -0.0028368996, z: 0.003456692}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Thumb_Ctrl
+      parentName: DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp
+      position: {x: -0, y: 8.881784e-18, z: 6.8001157e-18}
+      rotation: {x: 0.123609826, y: -0.42178926, z: 0.0137347, w: 0.8981235}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_1
+      parentName: DividedBaseEnemyMale:Right_Thumb_Ctrl
+      position: {x: 0.00017829999, y: -0.0016753, z: 0.001835328}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Thumb_Ctrl_1
+      parentName: DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_1
+      position: {x: -0, y: 0, z: -3.8857806e-18}
+      rotation: {x: 0.17106219, y: 0.14011474, z: 0.024584504, w: 0.97493654}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_2
+      parentName: DividedBaseEnemyMale:Right_Thumb_Ctrl_1
+      position: {x: 0.000019399999, y: -0.0016094, z: 0.00142745}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Thumb_Ctrl_2
+      parentName: DividedBaseEnemyMale:Right_Thumb_Ctrl_Grp_2
+      position: {x: -4.440892e-18, y: 0, z: 1.4432899e-17}
+      rotation: {x: 0.33143115, y: -0, z: -0, w: 0.9434794}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Index_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Right_Hand_Ctrl
+      position: {x: 0.0035497, y: -0.0072698, z: 0.00441156}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Index_Ctrl
+      parentName: DividedBaseEnemyMale:Right_Index_Ctrl_Grp
+      position: {x: 8.881784e-18, y: 1.7763568e-17, z: 2.7755575e-19}
+      rotation: {x: 0, y: -0, z: -0.18416269, w: 0.9828958}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Index_Ctrl_Grp_1
+      parentName: DividedBaseEnemyMale:Right_Index_Ctrl
+      position: {x: 0.00068899995, y: -0.0027418, z: 0.00047146998}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Index_Ctrl_1
+      parentName: DividedBaseEnemyMale:Right_Index_Ctrl_Grp_1
+      position: {x: 8.881784e-18, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0.51873904, w: 0.8549326}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Index_Ctrl_Grp_2
+      parentName: DividedBaseEnemyMale:Right_Index_Ctrl_1
+      position: {x: -0.0000742, y: -0.0022339, z: 0.000030799998}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Index_Ctrl_2
+      parentName: DividedBaseEnemyMale:Right_Index_Ctrl_Grp_2
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0.31854394, w: 0.9479081}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Middle_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Right_Hand_Ctrl
+      position: {x: 0.0045721, y: -0.0077334996, z: 0.002700889}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Middle_Ctrl
+      parentName: DividedBaseEnemyMale:Right_Middle_Ctrl_Grp
+      position: {x: -0, y: 1.7763568e-17, z: 1.7347234e-20}
+      rotation: {x: 0, y: -0, z: -0.38450998, w: 0.92312086}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_1
+      parentName: DividedBaseEnemyMale:Right_Middle_Ctrl
+      position: {x: 0.00048439996, y: -0.0028913, z: 0.000267459}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Middle_Ctrl_1
+      parentName: DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_1
+      position: {x: 8.881784e-18, y: 8.881784e-18, z: 0}
+      rotation: {x: 0, y: -0, z: -0.5038513, w: 0.86379045}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_2
+      parentName: DividedBaseEnemyMale:Right_Middle_Ctrl_1
+      position: {x: 0.0000312, y: -0.0024365, z: 0.00018025699}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Middle_Ctrl_2
+      parentName: DividedBaseEnemyMale:Right_Middle_Ctrl_Grp_2
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Ring_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Right_Hand_Ctrl
+      position: {x: 0.0042275, y: -0.0077334996, z: 0.00066604}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Ring_Ctrl
+      parentName: DividedBaseEnemyMale:Right_Ring_Ctrl_Grp
+      position: {x: -0, y: 1.7763568e-17, z: 2.7755575e-19}
+      rotation: {x: 0, y: -0, z: -0.38450998, w: 0.92312086}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_1
+      parentName: DividedBaseEnemyMale:Right_Ring_Ctrl
+      position: {x: 0.000099499994, y: -0.0027913, z: 0.00027939}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Ring_Ctrl_1
+      parentName: DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_1
+      position: {x: -8.881784e-18, y: 8.881784e-18, z: 0}
+      rotation: {x: 0, y: -0, z: -0.3922869, w: 0.91984296}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_2
+      parentName: DividedBaseEnemyMale:Right_Ring_Ctrl_1
+      position: {x: -0.0003942, y: -0.0024364, z: 0.00018024999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Ring_Ctrl_2
+      parentName: DividedBaseEnemyMale:Right_Ring_Ctrl_Grp_2
+      position: {x: 8.881784e-18, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0.40888008, w: 0.9125881}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Right_Hand_Ctrl
+      position: {x: 0.0034104, y: -0.0071246005, z: -0.0013186599}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Pinky_Ctrl
+      parentName: DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0.2351186, w: 0.9719667}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_1
+      parentName: DividedBaseEnemyMale:Right_Pinky_Ctrl
+      position: {x: 0.000099499994, y: -0.0021966998, z: 0.00020387999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Pinky_Ctrl_1
+      parentName: DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_1
+      position: {x: 8.881784e-18, y: 8.881784e-18, z: -5.551115e-19}
+      rotation: {x: 0, y: -0, z: -0.48354042, w: 0.87532204}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_2
+      parentName: DividedBaseEnemyMale:Right_Pinky_Ctrl_1
+      position: {x: -0.000286, y: -0.0019261999, z: 0.00026459998}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Right_Pinky_Ctrl_2
+      parentName: DividedBaseEnemyMale:Right_Pinky_Ctrl_Grp_2
+      position: {x: -0, y: 8.881784e-18, z: 0}
+      rotation: {x: 0, y: -0, z: -0.34989646, w: 0.9367884}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Hand_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Upper_Torso_Ctrl
+      position: {x: -0.034294512, y: -0.017584072, z: 0.0008541852}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Hand_Ctrl
+      parentName: DividedBaseEnemyMale:Left_Hand_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Left_Hand_Ctrl
+      position: {x: -0.0002732691, y: -0.0028369182, z: 0.0034566866}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Thumb_Ctrl
+      parentName: DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp
+      position: {x: -0, y: -8.881784e-18, z: -6.8001157e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_1
+      parentName: DividedBaseEnemyMale:Left_Thumb_Ctrl
+      position: {x: -0.00017829081, y: -0.0016753062, z: 0.0018353327}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Thumb_Ctrl_1
+      parentName: DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_1
+      position: {x: -0, y: -8.881784e-18, z: 7.216449e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_2
+      parentName: DividedBaseEnemyMale:Left_Thumb_Ctrl_1
+      position: {x: -0.000019407225, y: -0.0016093542, z: 0.0014274474}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Thumb_Ctrl_2
+      parentName: DividedBaseEnemyMale:Left_Thumb_Ctrl_Grp_2
+      position: {x: 4.440892e-18, y: -1.7763568e-17, z: -9.992007e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Index_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Left_Hand_Ctrl
+      position: {x: -0.0035497467, y: -0.0072697755, z: 0.004411559}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Index_Ctrl
+      parentName: DividedBaseEnemyMale:Left_Index_Ctrl_Grp
+      position: {x: -0, y: 0, z: 2.7755575e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Index_Ctrl_Grp_1
+      parentName: DividedBaseEnemyMale:Left_Index_Ctrl
+      position: {x: -0.00068899244, y: -0.00274183, z: 0.00047146747}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Index_Ctrl_1
+      parentName: DividedBaseEnemyMale:Left_Index_Ctrl_Grp_1
+      position: {x: -8.881784e-18, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Index_Ctrl_Grp_2
+      parentName: DividedBaseEnemyMale:Left_Index_Ctrl_1
+      position: {x: 0.00007422315, y: -0.0022338985, z: 0.00003080171}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Index_Ctrl_2
+      parentName: DividedBaseEnemyMale:Left_Index_Ctrl_Grp_2
+      position: {x: -8.881784e-18, y: 0, z: 5.551115e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Middle_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Left_Hand_Ctrl
+      position: {x: -0.0045721005, y: -0.0077334903, z: 0.0027008844}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Middle_Ctrl
+      parentName: DividedBaseEnemyMale:Left_Middle_Ctrl_Grp
+      position: {x: -8.881784e-18, y: 8.881784e-18, z: 1.7347234e-20}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_1
+      parentName: DividedBaseEnemyMale:Left_Middle_Ctrl
+      position: {x: -0.00048444688, y: -0.0028913408, z: 0.00026745917}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Middle_Ctrl_1
+      parentName: DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_1
+      position: {x: -8.881784e-18, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_2
+      parentName: DividedBaseEnemyMale:Left_Middle_Ctrl_1
+      position: {x: -0.000031238393, y: -0.0024364234, z: 0.00018025664}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Middle_Ctrl_2
+      parentName: DividedBaseEnemyMale:Left_Middle_Ctrl_Grp_2
+      position: {x: -8.881784e-18, y: 8.881784e-18, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Ring_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Left_Hand_Ctrl
+      position: {x: -0.00422755, y: -0.0077334903, z: 0.0006660303}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Ring_Ctrl
+      parentName: DividedBaseEnemyMale:Left_Ring_Ctrl_Grp
+      position: {x: 8.881784e-18, y: 8.881784e-18, z: 5.551115e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_1
+      parentName: DividedBaseEnemyMale:Left_Ring_Ctrl
+      position: {x: -0.00009953541, y: -0.0027912625, z: 0.00027939238}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Ring_Ctrl_1
+      parentName: DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_1
+      position: {x: -1.7763568e-17, y: -8.881784e-18, z: 8.3266725e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_2
+      parentName: DividedBaseEnemyMale:Left_Ring_Ctrl_1
+      position: {x: 0.00039428435, y: -0.0024364234, z: 0.00018025664}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Ring_Ctrl_2
+      parentName: DividedBaseEnemyMale:Left_Ring_Ctrl_Grp_2
+      position: {x: -8.881784e-18, y: 2.6645352e-17, z: 8.3266725e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Left_Hand_Ctrl
+      position: {x: -0.003410399, y: -0.00712458, z: -0.0013186608}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Pinky_Ctrl
+      parentName: DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp
+      position: {x: 1.7763568e-17, y: 0, z: -5.551115e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_1
+      parentName: DividedBaseEnemyMale:Left_Pinky_Ctrl
+      position: {x: -0.00009953541, y: -0.0021967015, z: 0.00020387556}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Pinky_Ctrl_1
+      parentName: DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_1
+      position: {x: -0, y: 0, z: 1.110223e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_2
+      parentName: DividedBaseEnemyMale:Left_Pinky_Ctrl_1
+      position: {x: 0.0002859625, y: -0.0019262546, z: 0.0002646049}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Left_Pinky_Ctrl_2
+      parentName: DividedBaseEnemyMale:Left_Pinky_Ctrl_Grp_2
+      position: {x: 8.881784e-18, y: -1.7763568e-17, z: 5.551115e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Upper_Torso_Ctrl
+      position: {x: -0.000025660398, y: -0.09075428, z: 0.0034487804}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Fk_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp
+      position: {x: 0.0106355, y: 0.100930996, z: -0.00547758}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl
+      parentName: DividedBaseEnemyMale:Fk_Right_Shoulder_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp
+      position: {x: 0.0239357, y: 0.0853079, z: -0.0063629197}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl
+      parentName: DividedBaseEnemyMale:Fk_Right_Elbow_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Fk_Right_Arm_Ctrl_Grp
+      position: {x: 0.034268796, y: 0.07317011, z: -0.0025946}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl
+      parentName: DividedBaseEnemyMale:Fk_Right_Wrist_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Fk_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp
+      position: {x: -0.010635538, y: 0.10093062, z: -0.0054775802}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl
+      parentName: DividedBaseEnemyMale:Fk_Left_Shoulder_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp
+      position: {x: -0.023935687, y: 0.08530785, z: -0.0063629234}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl
+      parentName: DividedBaseEnemyMale:Fk_Left_Elbow_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Fk_Left_Arm_Ctrl_Grp
+      position: {x: -0.034268852, y: 0.0731702, z: -0.0025945953}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl
+      parentName: DividedBaseEnemyMale:Fk_Left_Wrist_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Upper_Torso_Ctrl
+      position: {x: -0.000025660398, y: -0.09075428, z: 0.0034487804}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Left_Arm_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Ik_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Left_Arm_Ctrl_Grp 1
+      parentName: DividedBaseEnemyMale:Ik_Left_Arm_Ctrl_Grp
+      position: {x: -0.010635538, y: 0.10093062, z: -0.0054775802}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Left_Arm_Ctrl
+      parentName: DividedBaseEnemyMale:Ik_Left_Arm_Ctrl_Grp 1
+      position: {x: -0, y: 1.7763568e-17, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Left_Arm_Handle
+      parentName: DividedBaseEnemyMale:Ik_Left_Arm_Ctrl_Grp
+      position: {x: -0.0343849, y: 0.07317022, z: -0.0025945972}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Left_Arm_Pole_Vector_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Ik_Left_Arm_Ctrl_Grp
+      position: {x: -0.024043122, y: 0.084051244, z: -0.01799102}
+      rotation: {x: 0.5388214, y: -0, z: -0, w: 0.84242004}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Left_Arm_Pole_Vector_Ctrl
+      parentName: DividedBaseEnemyMale:Ik_Left_Arm_Pole_Vector_Ctrl_Grp
+      position: {x: 4.440892e-18, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Left_Arm_Point_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Ik_Left_Arm_Ctrl_Grp
+      position: {x: -0.0343849, y: 0.07317022, z: -0.0025945972}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Left_Arm_Point_Ctrl
+      parentName: DividedBaseEnemyMale:Ik_Left_Arm_Point_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Right_Arm_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Ik_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Right_Arm_Ctrl_Grp 1
+      parentName: DividedBaseEnemyMale:Ik_Right_Arm_Ctrl_Grp
+      position: {x: 0.0106355, y: 0.100930996, z: -0.00547758}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Right_Arm_Ctrl
+      parentName: DividedBaseEnemyMale:Ik_Right_Arm_Ctrl_Grp 1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Right_Arm_Handle
+      parentName: DividedBaseEnemyMale:Ik_Right_Arm_Ctrl_Grp
+      position: {x: 0.034268796, y: 0.07317011, z: -0.0025946}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Right_Arm_Pole_Vector_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Ik_Right_Arm_Ctrl_Grp
+      position: {x: 0.02621995, y: 0.084051244, z: -0.01799102}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Right_Arm_Pole_Vector_Ctrl
+      parentName: DividedBaseEnemyMale:Ik_Right_Arm_Pole_Vector_Ctrl_Grp
+      position: {x: 4.440892e-18, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Right_Arm_Point_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Ik_Right_Arm_Ctrl_Grp
+      position: {x: 0.034268796, y: 0.07317011, z: -0.0025946}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Ik_Right_Arm_Point_Ctrl
+      parentName: DividedBaseEnemyMale:Ik_Right_Arm_Point_Ctrl_Grp
+      position: {x: -4.440892e-18, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:COG_Ctrl_Grp
+      parentName: DividedBaseEnemyMale:Transform_Ctrl
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:COG_Ctrl
+      parentName: DividedBaseEnemyMale:COG_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Props
+      parentName: Enemy_Anim(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Geometry 1
+      parentName: DividedBaseEnemyMale:Props
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Club
+      parentName: DividedBaseEnemyMale:Geometry 1
+      position: {x: 0.036027607, y: 0.06650628, z: -0.0011891031}
+      rotation: {x: 2.0816682e-17, y: -1.3877788e-17, z: 1.7347235e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Club_Ctrl
+      parentName: DividedBaseEnemyMale:Club
+      position: {x: -4.440892e-18, y: -8.881784e-18, z: 1.3877787e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Club 1
+      parentName: DividedBaseEnemyMale:Club_Ctrl
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Sheild
+      parentName: DividedBaseEnemyMale:Geometry 1
+      position: {x: -0.038431477, y: 0.06878185, z: -0.0029341993}
+      rotation: {x: -1.3877788e-17, y: -6.938894e-18, z: 5.7245875e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Sheild_Ctrl
+      parentName: DividedBaseEnemyMale:Sheild
+      position: {x: -8.881784e-18, y: -8.881784e-18, z: 5.551115e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DividedBaseEnemyMale:Sheild 1
+      parentName: DividedBaseEnemyMale:Sheild_Ctrl
+      position: {x: 4.440892e-18, y: -8.881784e-18, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

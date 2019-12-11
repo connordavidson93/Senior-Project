@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
 	//variables for shielding
 	[Header("Defense")] 
 	public GameObject shield; 
-	public GameObject explosion;
+	//public GameObject explosion;
 	private bool shielding;
 	public Image powerSlider;
 
@@ -199,6 +199,9 @@ public class PlayerController : MonoBehaviour
 			yield return StaticVars.oneHundredth;
 		}
 
+		//end the roll animation
+		anim.SetInteger(StaticVars.jump, 0);
+
 		//makes the character face forward again and enables move input
 		characterArt.transform.localRotation = Quaternion.identity;
 		canMove = true;
@@ -260,7 +263,7 @@ public class PlayerController : MonoBehaviour
 					}
 				}
 			}
-			//sends a squad-mate to heal another downed squad member
+			//heals a downed squad member if the player is close enough
 			else if (Input.GetKeyDown(KeyCode.F) && downedSquad)
 			{
 				//bug check to make sure the squad member has health componenet
@@ -273,6 +276,7 @@ public class PlayerController : MonoBehaviour
 				else if(!squadHealth.alive && Vector3.Distance(transform.position, squadHealth.transform.position) <= healDistance)
 				{
 					//play healing animation
+					anim.SetBool(StaticVars.heal, true);
 					squadHealth.Heal(healPower);
 					squadHealth.alive = true;
 				}
@@ -337,11 +341,7 @@ public class PlayerController : MonoBehaviour
 		if(IsGrounded())
 		{
 			verticalVelocity = 0;
-			//if the player is not rolling, let the animator know
-			if(!rolling)
-			{
-				anim.SetInteger(StaticVars.jump, 0);
-			}
+			
 			//makes the player start the roll on player input
 			if(Input.GetButtonDown("Jump"))
 			{
@@ -424,9 +424,9 @@ public class PlayerController : MonoBehaviour
 		{
 			lastTimeClicked = Time.time;
 		}
-		//unleashes the power attack
-		if (Input.GetKeyDown(KeyCode.G))
-			ReleasePower();
+//		//unleashes the power attack
+//		if (Input.GetKeyDown(KeyCode.G))
+//			ReleasePower();
 	}
 
 	//input for defending
@@ -449,7 +449,7 @@ public class PlayerController : MonoBehaviour
 	private void CounterInput()
 	{
 		//prevents glitches
-		if (!Input.GetKeyDown(KeyCode.V) || attackingEnemy == null) return;
+		if (!Input.GetKeyDown(KeyCode.E) || attackingEnemy == null) return;
 		print("COUNTER ATTACK");
 		//starts the paired animation for counter attacks
 		StaticVars.PairCounterAction(this, attackingEnemy.GetComponent<Enemy>());
@@ -493,18 +493,18 @@ public class PlayerController : MonoBehaviour
 		loosePower = StartCoroutine(LoosePower());
 	}
 
-	//releases pent up power when it is full
-	private void ReleasePower()
-	{
-		//the power attack can only be used when at max power
-		if (currentPower < powerBuildUpMax) return;
-
-		//returns player strength to normal and unleashes the EXPLOSION
-		playerStats.strength = tempStrength;
-		currentPower = 0;
-		explosion.transform.localScale = new Vector3(20f, 20f, 20f);
-		UpdatePowerUI();
-	}
+//	//releases pent up power when it is full
+//	private void ReleasePower()
+//	{
+//		//the power attack can only be used when at max power
+//		if (currentPower < powerBuildUpMax) return;
+//
+//		//returns player strength to normal and unleashes the EXPLOSION
+//		playerStats.strength = tempStrength;
+//		currentPower = 0;
+//		explosion.transform.localScale = new Vector3(20f, 20f, 20f);
+//		UpdatePowerUI();
+//	}
 
 	//checks if the player is on the ground
 	//parameters: none
@@ -553,7 +553,10 @@ public class PlayerController : MonoBehaviour
 	//updates the power level UI element
 	private void UpdatePowerUI()
 	{
-		powerSlider.fillAmount = (float)currentPower / 100;
+		if(powerSlider != null)
+			powerSlider.fillAmount = (float)currentPower / 100;
+		else
+			Debug.Log("ERROR: No power slider");
 	}
 
 	//summons a squad member to come revive the player

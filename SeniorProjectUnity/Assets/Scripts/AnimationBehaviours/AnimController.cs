@@ -35,12 +35,18 @@ public class AnimController : MonoBehaviour
     //toggles the given hitbox
     public void ToggleHitBox(int _index)
     {
-        hitBoxes[_index].SetActive(!hitBoxes[_index].activeSelf);
+        if(hitBoxes.Count > 0)
+            hitBoxes[_index].SetActive(!hitBoxes[_index].activeSelf);
+        else
+            Debug.Log("WARNING: No hitbox assigned");
     }
 
     public void ToggleVFX(int _index)
     {
-        vfx[_index].SetActive(!vfx[_index].activeSelf);
+        if(vfx.Count > 0)
+            vfx[_index].SetActive(!vfx[_index].activeSelf);
+        else
+            Debug.Log("WARNING: No vfx assigned");
     }
 
     //makes an ai realize that the damaged animation is over and it can do stuff again
