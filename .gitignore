@@ -42,6 +42,7 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
+*.dwlt
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -57,3 +58,8 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+SeniorProjectUnity/Library/
+
+SeniorProjectUnity/Assets/UI/Videos/NeedRevive.avi
+
+SeniorProjectUnity/Assets/UI/Videos/
