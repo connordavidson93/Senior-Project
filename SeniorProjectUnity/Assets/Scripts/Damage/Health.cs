@@ -79,6 +79,8 @@ public class Health : MonoBehaviour
         //if the unit is an AI set's their state machine to damaged
         if(ai != null)
             ai.damaged = true;
+        else
+            player.anim.SetBool(StaticVars.damaged, true);
         currentHealth -= _damage;
         //if they are dead, die
         if(currentHealth <= 0)

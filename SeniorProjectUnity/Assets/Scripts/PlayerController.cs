@@ -63,7 +63,6 @@ public class PlayerController : MonoBehaviour
 
 	//variables for shielding
 	[Header("Defense")] 
-	public GameObject shield; 
 	//public GameObject explosion;
 	private bool shielding;
 	public Image powerSlider;
@@ -119,6 +118,7 @@ public class PlayerController : MonoBehaviour
 	//restarts the PlayGame coroutine
 	public void Restart()
 	{
+		anim.SetBool(StaticVars.dead, false);
 		StopCoroutine(playGame);
 		playGame = StartCoroutine(PlayGame());
 	}
@@ -459,7 +459,6 @@ public class PlayerController : MonoBehaviour
 	public void ToggleShield(bool _state)
 	{
 		shielding = _state;
-		shield.SetActive(_state);
 		health.shielded = _state;
 		
 		//prevents the player from countering while their shield is up
@@ -563,6 +562,7 @@ public class PlayerController : MonoBehaviour
 	//this should be changed so the player can choose to have them come or not
 	private void Die()
 	{
+		anim.SetBool(StaticVars.dead, true);
 		StaticVars.DeathAction(gameObject);
 		squadMembers[0].currentOrder = gameObject;
 		squadMembers[0].givenOrder = true;
