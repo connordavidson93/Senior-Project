@@ -5154,7 +5154,7 @@ MonoBehaviour:
   runSpeed: 15
   walkSpeed: 5
   gravity: 30
-  rollDist: 10
+  rollDist: 8
   ground:
     serializedVersion: 2
     m_Bits: 512
@@ -5173,7 +5173,6 @@ MonoBehaviour:
   - {fileID: 0}
   playerDefinedRam: {fileID: 0}
   playerDefinedRamEnd: {fileID: 0}
-  shield: {fileID: 1134460482}
   powerSlider: {fileID: 0}
   counterSymbol: {fileID: 1463527983}
   counterDamage: 100

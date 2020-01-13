@@ -1964,7 +1964,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Roll
-  m_Speed: 1
+  m_Speed: 2.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -6406178613257197370}
@@ -3452,7 +3452,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: Mouse0
-    m_EventTreshold: 1
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8804793073695201359}
   m_Solo: 0
@@ -4105,7 +4105,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Heal
+  m_Name: HealOther
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -4133,7 +4133,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 5e22e86edd6fb5849adeaf7d4297dbe8, type: 2}
+  m_Motion: {fileID: 7400000, guid: ba4862e99f3f3f64da451febbd08296f, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -5208,7 +5208,7 @@ AnimatorStateMachine:
   m_AnyStatePosition: {x: 560, y: 260, z: 0}
   m_EntryPosition: {x: 70, y: 380, z: 0}
   m_ExitPosition: {x: 360, y: 360, z: 0}
-  m_ParentStateMachinePosition: {x: 50, y: 230, z: 0}
+  m_ParentStateMachinePosition: {x: 50, y: 240, z: 0}
   m_DefaultState: {fileID: -8804793073695201359}
 --- !u!1101 &4855421996534489100
 AnimatorStateTransition:
@@ -5430,7 +5430,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400000, guid: ebdd256967c87074f876bcb7d7c34154, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

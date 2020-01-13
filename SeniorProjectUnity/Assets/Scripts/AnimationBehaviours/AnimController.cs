@@ -91,4 +91,12 @@ public class AnimController : MonoBehaviour
     {
         enemyManager.RemoveFromQueue(GetComponentInParent<Enemy>());
     }
+
+    public void TurnOffInvincibility()
+    {
+        if(pc != null)
+        {
+            pc.ToggleShield(false);
+        }
+    }
 }

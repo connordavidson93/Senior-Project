@@ -133,6 +133,11 @@ public class PlayerController : MonoBehaviour
 				//if the player can move, activates the move input
 				if (canMove)
 					MoveInput();
+				else
+				{
+					anim.SetFloat(StaticVars.moveX, 0);
+					anim.SetFloat(StaticVars.moveZ, 0);
+				}
 
 				AttackInput();
 				DefendInput();
@@ -400,6 +405,7 @@ public class PlayerController : MonoBehaviour
 		if (!IsGrounded())
 			return;
 		
+		health.shielded = true;
 		//used to make the combo attack animations work, if the delay runs out goes back to the first attack in the combo
 		if(Time.time - lastTimeClicked > maxAttackDelay)
 		{
