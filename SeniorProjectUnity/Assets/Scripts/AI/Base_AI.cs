@@ -16,7 +16,7 @@ public abstract class Base_AI : MonoBehaviour
     public List<string> enemyTags;
     public GameObject currentTarget;
     public bool damaged;
-    public float occupiedSpaceRadius, wanderRange = 5;
+    public float occupiedSpaceRadius, wanderRange = 5, walkSpeed = 3.5f, runSpeed = 10f;
     public LayerMask mask;
     public EnemyManager enemyManager;
 

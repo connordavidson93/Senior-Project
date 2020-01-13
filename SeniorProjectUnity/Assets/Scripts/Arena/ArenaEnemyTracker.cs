@@ -15,8 +15,9 @@ public class ArenaEnemyTracker : MonoBehaviour
     {
         foreach(GameObject enemy in enemies)
         {
-            enemy.GetComponent<Enemy>().currentTarget = player;
-            enemy.GetComponent<Enemy>().SetDestination(player.transform.position);
+            Enemy ai = enemy.GetComponent<Enemy>();
+            ai.currentTarget = player;
+            ai.enemyFound = true;
         }
     }
 
@@ -38,7 +39,7 @@ public class ArenaEnemyTracker : MonoBehaviour
             bool allDead = true;
             foreach(GameObject enemy in enemies)
             {
-                if(enemy.activeSelf)
+                if(enemy.GetComponent<Health>().alive)
                 {
                     allDead = false;
                     break;
