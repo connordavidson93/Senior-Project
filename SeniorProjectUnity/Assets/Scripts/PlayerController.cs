@@ -79,6 +79,7 @@ public class PlayerController : MonoBehaviour
 	public float healDistance = 5f;
 	public int healPower = 20;
 
+	//variables for squad orders UI
 	[Header("Order UI")]
 	public UnityEvent ramOrderEvent;
 	public UnityEvent killOrderEvent;
@@ -405,7 +406,6 @@ public class PlayerController : MonoBehaviour
 		if (!IsGrounded())
 			return;
 		
-		health.shielded = true;
 		//used to make the combo attack animations work, if the delay runs out goes back to the first attack in the combo
 		if(Time.time - lastTimeClicked > maxAttackDelay)
 		{
@@ -415,6 +415,8 @@ public class PlayerController : MonoBehaviour
 		//starts the attack
 		if (Input.GetMouseButtonDown(0) && !rolling)
 		{
+			health.shielded = true;
+
 			attaking = true;
 			//attack num is used by the animator to determine which animation should be used
 			attackNum++;
