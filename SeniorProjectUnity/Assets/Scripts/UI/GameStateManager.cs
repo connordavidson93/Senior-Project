@@ -23,6 +23,7 @@ public class GameStateManager : MonoBehaviour {
 		}
 		
 		gameStateMachine = GetComponent<Animator>();
+		DontDestroyOnLoad(gameObject);
 	}
 
 	//call this method to reset the game to its initial boot state (ie before the player started their match).
@@ -55,8 +56,4 @@ public class GameStateManager : MonoBehaviour {
 		print("endgame");
 	}
 
-	/*public void ChangeRound()
-	{
-		gameStateMachine.SetTrigger("nextRound");
-	}*/
 }

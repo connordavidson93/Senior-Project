@@ -7,8 +7,10 @@ public class ShieldBehaviour : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        //gets the player
         var player = animator.gameObject.GetComponent<PlayerController>();
         
+        //if it is the player toggles the player's shield on
         if(player != null)
             player.ToggleShield(true);
     }
