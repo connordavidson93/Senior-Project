@@ -10,7 +10,7 @@ public class Squad : Base_AI
     public UnitType unitType;
     public bool givenOrder, recalled;
     public GameObject currentOrder, ramHurtBox;
-    public float followDistance = 10;
+    public float followDistance = 10, ramOffset = 1.5f;
     public int healPower;
     public Health healTargetHealth;
     public SquadCommandUI scui;
@@ -61,5 +61,11 @@ public class Squad : Base_AI
     public override void Die()
     {
         StaticVars.DeathAction(gameObject);
+    }
+
+    //heals the player
+    public void HealOther()
+    {
+        healTargetHealth.Heal(healPower);
     }
 }
