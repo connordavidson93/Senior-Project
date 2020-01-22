@@ -10,10 +10,13 @@ public class DamagedState : BaseState
 
     public override Type Tick()
     {
+        //if dead die
         if (!health.alive)
             return typeof(DeathState);
+        //if no longer hurt and found an enemy, chase
         else if (!ai.damaged && ai.enemyFound && ai.currentTarget != null)
             return typeof(ChaseState);
+        //if no longer hurt but no enemy, search
         else if (!ai.damaged && (!ai.enemyFound || ai.currentTarget == null))
             return typeof(SearchState);
         else
