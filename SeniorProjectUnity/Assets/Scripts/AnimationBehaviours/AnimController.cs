@@ -52,7 +52,8 @@ public class AnimController : MonoBehaviour
     //makes an ai realize that the damaged animation is over and it can do stuff again
     public void RecoverFromDamage()
     {
-        ai.damaged = false;
+        if (ai != null)
+            ai.damaged = false;
     }
 
     //lets the player know they can counter
@@ -89,5 +90,13 @@ public class AnimController : MonoBehaviour
     public void RemoveEnemyFromQueue()
     {
         enemyManager.RemoveFromQueue(GetComponentInParent<Enemy>());
+    }
+
+    public void TurnOffInvincibility()
+    {
+        if(pc != null)
+        {
+            pc.ToggleShield(false);
+        }
     }
 }
