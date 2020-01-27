@@ -87,7 +87,7 @@ public class AttackState : BaseState
             return typeof(ChaseState);
         }
         //if too close to other ai, make space
-        else if (ai.CheckSpace() != null)
+        else if (enemy != null && ai.CheckSpace() != null)
         {
             var position = transform.position;
             Vector3 direction = position - ai.CheckSpace().transform.position;

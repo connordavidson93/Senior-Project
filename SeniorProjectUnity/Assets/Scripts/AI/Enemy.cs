@@ -15,7 +15,7 @@ public class Enemy : Base_AI
             { typeof(ChaseState), new ChaseState(this) },
             { typeof(AttackState), new AttackState(this, enemyManager) },
             { typeof(DeathState), new DeathState(this) },
-            { typeof(WanderState), new WanderState(this) },
+            //{ typeof(WanderState), new WanderState(this) },
             { typeof(DamagedState), new DamagedState(this) },
             { typeof(SearchState), new SearchState(this) }
         };
