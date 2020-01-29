@@ -38,8 +38,8 @@ ModelImporter:
       name: MC_NeedRevive
       takeName: NeedRevive
       internalID: -6794372953467665768
-      firstFrame: 860
-      lastFrame: 900
+      firstFrame: 875
+      lastFrame: 960
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
