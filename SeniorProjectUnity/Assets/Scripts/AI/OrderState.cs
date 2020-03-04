@@ -1,15 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using System;
-using System.Runtime.InteropServices;
-using UnityEngine.Rendering;
 
 public class OrderState : BaseState
 {
     private Squad squad;
     private bool endRam;
-    private float ramOffset = 1.5f;
     
     public OrderState(Squad _ai) : base(_ai.gameObject, _ai)
     {
@@ -45,11 +40,11 @@ public class OrderState : BaseState
         else if (squad.currentOrder.name == "Player")
         {
             squad.SetStoppingDist(5);
+            squad.SetDestination(squad.currentOrder.transform.position);
             //checks that the squad member is near to the player
             if (Vector3.Distance(gameObject.transform.position, squad.currentOrder.transform.position) <= 5f)
             {
                 squad.anim.SetBool(StaticVars.heal, true);
-                squad.healTargetHealth.Heal(squad.healPower);
                 squad.currentOrder = null;
                 squad.givenOrder = false;
             }
@@ -57,22 +52,23 @@ public class OrderState : BaseState
             return typeof(OrderState);
         }
         //if the order is ram, ram
-        else if (squad.currentOrder.name == "Ram")
+        else if (squad.currentOrder.name.Contains("Ram"))
         {
             //if the ram isn't over, move the the position of the order
             if(!endRam)
                 squad.SetDestination(squad.currentOrder.transform.position);
             squad.SetStoppingDist(0);
             //if the memeber is at the order
-            if(Vector3.Distance(squad.transform.position, squad.ai.destination) <= ramOffset)
+            if(Vector3.Distance(squad.transform.position, squad.ai.destination) <= squad.ramOffset)
             {
                 //start ram animation
                 endRam = true;
+                squad.anim.SetBool(StaticVars.walk, false);
                 squad.anim.SetBool(StaticVars.ram, true);
                 OrderController order = squad.currentOrder.GetComponent<OrderController>();
 
                 //find the end location of the ram, run to it
-                if(order.endLocation != null && Vector3.Distance(order.endLocation.position, squad.ai.destination) > ramOffset)
+                if(order.endLocation != null && Vector3.Distance(order.endLocation.position, squad.ai.destination) > squad.ramOffset)
                 {
                     squad.SetDestination(order.endLocation.position);
                     squad.SetSpeed(10);
@@ -86,7 +82,7 @@ public class OrderState : BaseState
                     return typeof(IdleState);
                 }
                 //if the squad has reaced the end of the ram go idle and reset order data
-                else if (Vector3.Distance(order.endLocation.position, squad.ai.destination) <= ramOffset && Vector3.Distance(squad.transform.position, squad.ai.destination) <= ramOffset)
+                else if (Vector3.Distance(squad.transform.position, squad.ai.destination) <= squad.ramOffset)
                 {
                     squad.anim.SetBool(StaticVars.ram, false);
                     order.inProgress = false;

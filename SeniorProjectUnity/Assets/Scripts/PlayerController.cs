@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
 
     //basic movement
     private CharacterController cc;
+	public GameObject sheathedSword;
     
     [Header("Basic Movement")]
     public Camera maincam;
@@ -55,6 +56,7 @@ public class PlayerController : MonoBehaviour
 	public LayerMask squad;
 	public List<Squad> squadMembers;
 	private OrderController order;
+	private Health squadHealth;
 
 	//variables for attack ram
 	public OrderController playerDefinedRam;
@@ -63,7 +65,6 @@ public class PlayerController : MonoBehaviour
 
 	//variables for shielding
 	[Header("Defense")] 
-	public GameObject shield; 
 	//public GameObject explosion;
 	private bool shielding;
 	public Image powerSlider;
@@ -80,6 +81,7 @@ public class PlayerController : MonoBehaviour
 	public float healDistance = 5f;
 	public int healPower = 20;
 
+	//variables for squad orders UI
 	[Header("Order UI")]
 	public UnityEvent ramOrderEvent;
 	public UnityEvent killOrderEvent;
@@ -109,6 +111,7 @@ public class PlayerController : MonoBehaviour
 
 	private void Start()
 	{
+		sheathedSword.SetActive(false);
 		tempStrength = playerStats.strength;
 		anim = GetComponent<Animator>();
 		cc = GetComponent<CharacterController>();
@@ -119,6 +122,7 @@ public class PlayerController : MonoBehaviour
 	//restarts the PlayGame coroutine
 	public void Restart()
 	{
+		anim.SetBool(StaticVars.dead, false);
 		StopCoroutine(playGame);
 		playGame = StartCoroutine(PlayGame());
 	}
@@ -133,6 +137,11 @@ public class PlayerController : MonoBehaviour
 				//if the player can move, activates the move input
 				if (canMove)
 					MoveInput();
+				else
+				{
+					anim.SetFloat(StaticVars.moveX, 0);
+					anim.SetFloat(StaticVars.moveZ, 0);
+				}
 
 				AttackInput();
 				DefendInput();
@@ -240,7 +249,6 @@ public class PlayerController : MonoBehaviour
 						{
 							member.recalled = true;
 							order.inProgress = false;
-							print("Belay that soldier!");
 						}
 						//if that squad member is not doing the order, send them to do it
 						else
@@ -249,7 +257,6 @@ public class PlayerController : MonoBehaviour
 							member.givenOrder = true;
 							member.currentOrder = order.gameObject;
 							order.inProgress = true;
-							print("Do the thing, soldier!");
 							ramOrderEvent.Invoke();
 						}
 					}
@@ -258,7 +265,6 @@ public class PlayerController : MonoBehaviour
 					{
 						member.givenOrder = true;
 						member.currentOrder = hit.collider.gameObject;
-						print("attack that fool, soldier!");
 						killOrderEvent.Invoke();
 					}
 				}
@@ -267,7 +273,7 @@ public class PlayerController : MonoBehaviour
 			else if (Input.GetKeyDown(KeyCode.F) && downedSquad)
 			{
 				//bug check to make sure the squad member has health componenet
-				var squadHealth = hit.collider.gameObject.GetComponent<Health>();
+				squadHealth = hit.collider.gameObject.GetComponent<Health>();
 				if(health == null)
 				{
 					Debug.Log("Squad member doesn't have health assigned!");
@@ -277,8 +283,6 @@ public class PlayerController : MonoBehaviour
 				{
 					//play healing animation
 					anim.SetBool(StaticVars.heal, true);
-					squadHealth.Heal(healPower);
-					squadHealth.alive = true;
 				}
 			}
 		}
@@ -286,7 +290,6 @@ public class PlayerController : MonoBehaviour
 		//recalls the squad to the player
 		if(Input.GetKeyDown(KeyCode.R))
 		{
-			print("Form up!");
 			//calls each member of the squad, cancels their orders, and sets them to follow the player
 			foreach (var member in squadMembers)
 			{
@@ -326,7 +329,6 @@ public class PlayerController : MonoBehaviour
 					member.currentOrder = playerDefinedRam.gameObject;
 					playerDefinedRam.inProgress = true;
 					ramPlaced = false;
-					print("RAM ATTACK SOLDIER!");
 					ramOrderEvent.Invoke();
 				}
 			}
@@ -409,6 +411,8 @@ public class PlayerController : MonoBehaviour
 		//starts the attack
 		if (Input.GetMouseButtonDown(0) && !rolling)
 		{
+			health.shielded = true;
+
 			attaking = true;
 			//attack num is used by the animator to determine which animation should be used
 			attackNum++;
@@ -459,7 +463,6 @@ public class PlayerController : MonoBehaviour
 	public void ToggleShield(bool _state)
 	{
 		shielding = _state;
-		shield.SetActive(_state);
 		health.shielded = _state;
 		
 		//prevents the player from countering while their shield is up
@@ -468,6 +471,12 @@ public class PlayerController : MonoBehaviour
 			counterSymbol.SetActive(false);
 			counterWindow = false;
 		}
+	}
+
+	//toggles the two swords for the heal animation
+	public void ToggleSwords()
+	{
+		sheathedSword.SetActive(!sheathedSword.activeSelf);
 	}
 	
 
@@ -536,6 +545,13 @@ public class PlayerController : MonoBehaviour
 		return false;
 	}
 
+	public void HealOther()
+	{
+		
+		squadHealth.Heal(healPower);
+		squadHealth.alive = true;
+	}
+
 	//calculates how much power the player has after attacking
 	//called from Animator Behaviour
 	public void CalcAttackPower()
@@ -563,6 +579,13 @@ public class PlayerController : MonoBehaviour
 	//this should be changed so the player can choose to have them come or not
 	private void Die()
 	{
+		//set all the animations to zero except death
+		anim.SetInteger(StaticVars.mouse0, 0);
+		anim.SetFloat(StaticVars.mouse1, 0);
+		anim.SetFloat(StaticVars.moveX, 0);
+		anim.SetFloat(StaticVars.moveZ, 0);
+		anim.SetBool(StaticVars.dead, true);
+
 		StaticVars.DeathAction(gameObject);
 		squadMembers[0].currentOrder = gameObject;
 		squadMembers[0].givenOrder = true;
