@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
-//Name: Enemy_BrotherAnimations WIP.ma
-//Last modified: Mon, Mar 09, 2020 01:23:35 AM
+//Name: Enemy_BrotherAnimations FInal.ma
+//Last modified: Mon, Mar 09, 2020 01:24:26 AM
 //Codeset: 1252
 file -rdi 1 -ns "DividedBaseEnemyMale" -rfn "DividedBaseEnemyMaleRN" -op "v=0;p=17;f=0"
 		 -typ "mayaAscii" "C:/Users/cdog1/Documents/Senior Project/Senior-Project/MayaModels/scenes/Characters/Animated Models/Character models/Enemy Character/Enemy Rig Final.ma";
@@ -15566,4 +15566,4 @@ connectAttr "directionalLightShape2.ltd" ":lightList1.l" -na;
 connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "directionalLight2.iog" ":defaultLightSet.dsm" -na;
 connectAttr "directionalLight3.iog" ":defaultLightSet.dsm" -na;
-// End of Enemy_BrotherAnimations WIP.ma
+// End of Enemy_BrotherAnimations FInal.ma
